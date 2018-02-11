@@ -1,8 +1,5 @@
 markdown:         redcarpet
-highlighter:      pygments
-
 permalink:        pretty
-
 title:            Desenhando com Mack
 url:              http://desenhandocommack.com.br
 baseurl:          /
