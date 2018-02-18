@@ -8,19 +8,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://desenhandocommack.com.br"
 twitter_username: jekyllrb
 
-# Build settings
 markdown: kramdown
 permalink: /blog/:title/
-include: ['_pages']
-
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+include:
+  - _pages

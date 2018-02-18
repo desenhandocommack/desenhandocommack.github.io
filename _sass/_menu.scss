@@ -1,0 +1,16 @@
+.menu {
+  display: flex;
+  list-style: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+
+  a {
+    display: block;
+    padding: 1rem;
+
+    &:hover {
+      background: #ddd;
+    }
+  }
+}
