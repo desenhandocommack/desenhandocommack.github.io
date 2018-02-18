@@ -1,5 +1,32 @@
 ---
-layout: page
+layout:  blog
 ---
 
-{{ page.title }}
+<div class="post-header">
+  <h1 class="post-title">{{ page.title }}</h1>
+
+  <div class="post-data">
+    <div class="post-author-data">
+      <div class="post-author-image">
+        <img src="https://placeimg.com/45/45/people">
+      </div>
+
+      <div class="post-author">Escrito por <span class="post-author-name">{{ page.author | default: site.author }}</span></div>
+
+      <div class="post-date">Em {{ page.date | date: "%d/%m/%Y" }}</div>
+    </div>
+
+    <div class="post-share">
+      <i class="fab fa-facebook-square fa-3x"></i>
+      <i class="fab fa-twitter-square fa-3x"></i>
+    </div>
+  </div>
+</div>
+
+<div class="post-body">
+  {{ content }}
+</div>
+
+<div class="post-ad">
+  <a href="https://placeholder.com"><img src="http://via.placeholder.com/728x90"></a>
+</div>

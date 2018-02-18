@@ -8,7 +8,27 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://desenhandocommack.com.br"
 twitter_username: jekyllrb
 
+author: Mack
+
+topbar_pages:
+  - Início
+  - O Projeto
+  - Blog
+  - Now
+  - Contato
+
 markdown: kramdown
 permalink: /blog/:title/
 include:
   - _pages
+
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "posts" # previously `post` in Jekyll 2.2.
+    values:
+      layout: post
+      section: "section-blog"
+      page_title: "Blog"
+      page_description: "Conteúdo exclusivo e complementar. Fique a vontade para explorar"

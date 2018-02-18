@@ -2,10 +2,32 @@
   <div class="logo"><img src="{{ "/assets/img/logo.png" | relative_url }}" alt="Logo" width="30"></div>
 
   <ul class="menu">
-    <li><a href="/">Início</a></li>
-    <li><a href="/o-projeto/">O Projeto</a></li>
-    <li><a href="/blog/">Blog</a></li>
-    <li><a href="/now/">Now</a></li>
-    <li><a href="/contato/">Contato</a></li>
+    <button class="toggle"><i class="fas fa-bars"></i></button>
+
+    {% assign current_url = page.url | remove: "/" %}
+
+    {% for topbar_page in site.topbar_pages  %}
+
+      {% if topbar_page == "Início" %}
+      {% assign topbar_page_url = "" %}
+      {% else %}
+      {% assign topbar_page_url = topbar_page | slugify %}
+      {% endif %}
+
+      {% if topbar_page_url == current_url %}
+      {% assign current_url_class = " current" %}
+      {% else %}
+      {% assign current_url_class = "" %}
+      {% endif %}
+
+      <li class="item{{ current_url_class }}">
+        {% if current_url_class == "" %}
+        <a class="item-inner" href="{{ topbar_page_url | slugify | relative_url }}/">{{ topbar_page }}</a>
+        {% else %}
+        <span class="item-inner">{{ topbar_page }}</span>
+        {% endif %}
+      </li>
+
+    {% endfor %}
   </ul>
 </div>

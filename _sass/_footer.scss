@@ -1,14 +1,43 @@
+.footer-outer {
+  background-color: #383C58;
+}
+
 .footer {
-  display: flex;
-  align-items: baseline;
-}
+  text-align: center;
+  padding: 3rem 0;
 
-.copy {
-  flex-grow: 1;
-}
+  .copy {
+    color: #ddd;
+  }
 
-.social {
-  width: 17rem;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  .menu {
+    display: block;
+
+    a:hover {
+      background: lighten(#383C58, 50%);
+    }
+  }
+
+  .social {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 1rem auto;
+  }
+
+  @media all and (min-width: 300px) {
+    .social {
+      width: 300px;
+      justify-content: space-around;
+    }
+  }
+
+  @media all and (min-width: 500px) {
+    align-items: center;
+
+    .menu {
+      display: flex;
+      justify-content: center;
+    }
+  }
 }

@@ -7,3 +7,23 @@
 @import "menu";
 @import "header";
 @import "footer";
+@import "topbar";
+@import "navbar";
+@import "blog";
+@import "post";
+
+// @import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #808080;
+}
+
+.container {
+  max-width: 60rem;
+  margin: auto;
+  padding: 0 1rem;
+  overflow: hidden;
+}

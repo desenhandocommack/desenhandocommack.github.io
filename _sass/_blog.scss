@@ -1,0 +1,47 @@
+.section-blog {
+  background-color: #E0DEDE;
+}
+
+.blog {
+  text-align: center;
+  margin: 4rem 0;
+
+  .post {
+    padding: 2rem 1rem;
+
+    &.index {
+      font-family: "Roboto Condensed";
+    }
+  }
+
+  .post-category {
+    text-align: left;
+    color: #EE4C8B;
+    font-weight: bolder;
+  }
+
+  .post-thumbnail {
+    height: 160px;
+    border-radius: 5px 5px 0 0;
+  }
+
+  @media all and (min-width: 400px) {
+    display: flex;
+    flex-wrap: wrap;
+
+    .post {
+      width: 50%;
+    }
+  }
+
+  @media all and (min-width: 700px) {
+    .post {
+      width: 33.3333%
+    }
+  }
+
+  .post-title-index {
+    margin: 1rem 0 0;
+    font-weight: lighter;
+  }
+}

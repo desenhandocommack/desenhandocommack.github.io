@@ -12,27 +12,14 @@
   </head>
 
   <body>
-    <div class="wrapper">
-      <div class="container">
-        {% include topbar.html %}
-
-        {% if page.h1 %}
-          {% include header.html %}
-          {% include navbar.html %}
-        {% endif %}
-      </div>
+    <div class="wrapper {{ page.section }}">
+      <div class="container">{% include topbar.html %}</div>
     </div>
 
-    <div class="wrapper">
-      <div class="container">
-        {{ content }}
-      </div>
-    </div>
+    {{ content }}
 
-    <div class="wrapper">
-      <div class="container">
-        {% include footer.html %}
-      </div>
+    <div class="wrapper footer-outer">
+      <div class="container">{% include footer.html %}</div>
     </div>
   </body>
 </html>

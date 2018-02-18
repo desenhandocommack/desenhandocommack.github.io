@@ -1,0 +1,57 @@
+.topbar {
+  text-align: right;
+
+  .current .item-inner {
+    font-weight: bolder;
+  }
+
+  .item-inner {
+    color: #808080;
+  }
+
+  .logo {
+    float: left;
+  }
+
+  .menu {
+    display: inline-block;
+
+    &:hover {
+      display: block;
+
+      .item {
+        display: block;
+      }
+    }
+  }
+
+  .item {
+    display: none;
+  }
+
+  @media all and (min-width: 500px) {
+    display: flex;
+    text-align: left;
+    align-items: center;
+
+    .logo {
+      flex-grow: 1;
+    }
+
+    .menu {
+      display: flex;
+
+      &:hover {
+        display: flex;
+      }
+    }
+
+    .toggle {
+      display: none;
+    }
+
+    .item {
+      display: block;
+    }
+  }
+}
