@@ -1,33 +1,41 @@
-<div class="topbar">
-  <div class="logo"><img src="{{ "/assets/img/logo.png" | relative_url }}" alt="Logo" width="30"></div>
+<nav class="navbar navbar-expand-sm navbar-light">
+  <a class="navbar-brand" href="/"><img src="{{ "/assets/img/logo.png" | relative_url }}" alt="Logo" width="50"></a>
 
-  <ul class="menu">
-    <button class="toggle"><i class="fas fa-bars"></i></button>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-    {% assign current_url = page.url | remove: "/" %}
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      {% assign current_url = page.url | remove: "/" %}
 
-    {% for topbar_page in site.topbar_pages  %}
+      {% for topbar_page in site.topbar_pages  %}
 
-      {% if topbar_page == "Início" %}
-      {% assign topbar_page_url = "" %}
-      {% else %}
-      {% assign topbar_page_url = topbar_page | slugify %}
-      {% endif %}
-
-      {% if topbar_page_url == current_url %}
-      {% assign current_url_class = " current" %}
-      {% else %}
-      {% assign current_url_class = "" %}
-      {% endif %}
-
-      <li class="item{{ current_url_class }}">
-        {% if current_url_class == "" %}
-        <a class="item-inner" href="{{ topbar_page_url | slugify | relative_url }}/">{{ topbar_page }}</a>
+        {% if topbar_page == "Início" %}
+        {% assign topbar_page_url = "" %}
         {% else %}
-        <span class="item-inner">{{ topbar_page }}</span>
+        {% assign topbar_page_url = topbar_page | slugify %}
         {% endif %}
-      </li>
 
-    {% endfor %}
-  </ul>
-</div>
+        {% if topbar_page_url == current_url %}
+        {% assign current_url_class = " active" %}
+        {% else %}
+        {% assign current_url_class = "" %}
+        {% endif %}
+
+        <li class="nav-item{{ current_url_class }}">
+          {% if current_url_class == "" %}
+          <a class="nav-link" href="{{ topbar_page_url | slugify | relative_url }}/">{{ topbar_page }}</a>
+          {% else %}
+          <span class="nav-link">{{ topbar_page }}</span>
+          {% endif %}
+        </li>
+      {% endfor %}
+
+      <!-- <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Dropdown</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Disabled</a></li> -->
+    </ul>
+  </div>
+</nav>

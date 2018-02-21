@@ -10,6 +10,13 @@ twitter_username: jekyllrb
 
 author: Mack
 
+paginate: 6
+paginate_path: "/blog/page:num/"
+
+plugins:
+  - jekyll-paginate
+  - jekyll-octicons
+
 topbar_pages:
   - Início
   - O Projeto
@@ -22,6 +29,9 @@ permalink: /blog/:title/
 include:
   - _pages
   - node_modules
+
+sass:
+    style: compressed
 
 defaults:
   -

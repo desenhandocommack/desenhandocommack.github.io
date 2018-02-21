@@ -1,0 +1,46 @@
+---
+layout: blog
+section: section-blog
+page_title: BLOG
+page_description: Conteúdo exclusivo e complementar. Fique a vontade para explorar
+---
+
+<div class="blog blog-index row">
+{% if paginator.posts.size > 0 %}
+    {% for post in paginator.posts %}
+      <div class="col-sm-6 col-lg-4">
+        <div class="card bg-light p-4 mt-5">
+          <a class="font-weight-bold post-category" href="#">{{ post.category | upcase }}</a>
+          <img class="card-img-top" src="{{ post.thumbnail }}" alt="Card image cap">
+          <div class="card-body text-center p-0 pt-4">
+            <h5 class="card-title font-weight-light m-0">{{ post.title }}</h5>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+  {% endif %}
+</div>
+
+
+<div class="pagi row mt-5">
+  <div class="pagi-prev col-6">
+    {% if paginator.previous_page %}
+      {% octicon chevron-left height:24 class:"left" aria-label:hi %}
+      <a href="{{ paginator.previous_page_path }}" class="previous control">Mais Recentes</a>
+    {% else %}
+      {% octicon chevron-left height:24 class:"left disabled" aria-label:hi %}
+      <span class="previous control disabled">Mais Recentes</span>
+    {% endif %}
+  </div>
+
+  <div class="pagi-next col-6 text-right">
+    {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path }}" class="next control">Mais Antigas</a>
+      {% octicon chevron-right height:24 class:"right" aria-label:hi %}
+    {% else %}
+      <span class="next control disabled">Mais Antigas</span>
+      {% octicon chevron-right height:24 class:"right disabled" aria-label:hi %}
+    {% endif %}
+  </div>
+</div>
+</div>
