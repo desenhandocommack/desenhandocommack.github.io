@@ -1,34 +1,38 @@
 title: Desenhando com Mack
 email: your-email@example.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+description: Este é o site oficial do canal Desenhando com Mack
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://desenhandocommack.com.br"
-twitter_username: jekyllrb
 
-author: Mack
+social:
+  - twitter: mackdesenhos
+  - facebook: desenhandocommack
+  - youtube: desenhandocommack
+  - instagram: desenhandocommack
+
+author:
+  - name: Mack
+  - avatar: https://placeimg.com/50/50/people
 
 paginate: 6
-paginate_path: "/blog/page:num/"
+paginate_path: "/blog/page-:num/"
+permalink: /blog/:title/
+
+meu_map:
+ - title: "Início"
+   url: "/"
+ - title: "O Projeto"
+   url: "o-projeto"
+ - title: "Blog"
+   url: "blog"
+ - title: "Now"
+   url: "now"
+ - title: "Contato"
+   url: "contato"
 
 plugins:
   - jekyll-paginate
   - jekyll-octicons
-
-topbar_pages:
-  - Início
-  - O Projeto
-  - Blog
-  - Now
-  - Contato
-
-markdown: kramdown
-permalink: /blog/:title/
-include:
-  - _pages
-  - node_modules
 
 sass:
     style: compressed
@@ -40,6 +44,3 @@ defaults:
       type: "posts" # previously `post` in Jekyll 2.2.
     values:
       layout: post
-      section: "section-blog"
-      page_title: "Blog"
-      page_description: "Conteúdo exclusivo e complementar. Fique a vontade para explorar"
