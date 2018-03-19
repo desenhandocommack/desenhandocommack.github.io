@@ -18,17 +18,7 @@ paginate: 6
 paginate_path: "/blog/page-:num/"
 permalink: /blog/:title/
 
-meu_map:
- - title: "Início"
-   url: "/"
- - title: "O Projeto"
-   url: "o-projeto"
- - title: "Blog"
-   url: "blog"
- - title: "Now"
-   url: "now"
- - title: "Contato"
-   url: "contato"
+topbar: ["Início", "O Projeto", "Blog", "Now", "Contato"]
 
 plugins:
   - jekyll-paginate
