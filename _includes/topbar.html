@@ -1,18 +1,22 @@
 <div class="topbar">
-  <img src="/assets/img/logo.png" alt="Logo do site" width="30">
+    <img class="topbar-logo" src="/assets/img/logo.png" alt="Logo do site" height="50">
 
-  <ul class="topbar-list">
-    {% for i in site.topbar %}
+    <div class="topbar-menu">
+        <span id="toggle"><i class="topbar-toggle fas fa-bars fa-2x"></i></span>
 
-      {% capture url %}{{ i | downcase | slugify | append: "/" | prepend: "/" | replace: "/início/", "/" }}{% endcapture %}
+        <ul class="topbar-list" id="menu">
+            {% for i in site.topbar %}
 
-      <li class="topbar-item">
-        {% if page.url == url %}
-        <span class="topbar-text current">{{ i }}</span>
-        {% else %}
-        <a class="topbar-text" href="{{ url }}">{{ i }}</a>
-        {% endif %}
-      </li>
-    {% endfor %}
-  </ul>
+            {% capture url %}{{ i | downcase | slugify | append: "/" | prepend: "/" | replace: "/início/", "/" }}{% endcapture %}
+
+            <li class="topbar-item">
+                {% if page.url == url %}
+                <span class="topbar-text current">{{ i }}</span>
+                {% else %}
+                <a class="topbar-text" href="{{ url }}">{{ i }}</a>
+                {% endif %}
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
 </div>

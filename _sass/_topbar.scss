@@ -1,0 +1,61 @@
+$min-width: 500px;
+
+.topbar {
+    background: #bbb;
+    max-width: 70rem;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topbar-logo {
+    z-index: 9999;
+}
+
+.topbar-menu {
+    text-align: right;
+    float: right;
+}
+
+.nojs .topbar-menu:hover {
+    .topbar-list {
+        display: block;
+    }
+}
+
+.topbar-toggle {
+    @media screen and (min-width: $min-width) {
+        display: none;
+    }
+}
+
+.topbar-list {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: none;
+
+    &.expanded {
+        @media screen and (max-width: $min-width) {
+            display: block;
+        }
+    }
+
+    @media screen and (min-width: $min-width) {
+        position: static;
+        display: flex;
+    }
+}
+
+.topbar-item {
+    list-style: none;
+}
+
+.topbar-text {
+    display: block;
+    padding: 1rem 1rem;
+}

@@ -5,3 +5,32 @@ has_navbar: true
 page_title: BLOG
 page_description: Conteúdo exclusivo e complementar. Fique a vontade para explorar
 ---
+
+<div class="card-container">
+    {% for post in paginator.posts %}
+
+    {% if forloop.index == 4 %}<hr class="card-separator w33">{% endif %}
+    {% if forloop.index == 3 %}<hr class="card-separator w50">{% endif %}
+    {% if forloop.index == 5 %}<hr class="card-separator w50">{% endif %}
+
+    <article class="card">
+        <p class="card-category">{{ post.category }}</p>
+        <img class="card-thumbnail" width="495" height="280" src="{{ post.thumbnail }}" alt="Imagem de capa do post {{ post.title }}">
+        <h1 class="card-title"><a href="{{ post.url }}">{{ post.title }}</a></h1>
+    </article>
+    {% endfor %}
+
+    <div class="card-pagination">
+        {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path }}" class="card-previous"><i class="card-arrow fas fa-angle-left"></i> Mais Recentes</a>
+        {% else %}
+        <span class="card-previous disabled"><i class="disabled card-arrow fas fa-angle-left"></i> Mais Recentes</span>
+        {% endif %}
+
+        {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path }}" class="card-next">Mais Antigas <i class="card-arrow fas fa-angle-right"></i></a>
+        {% else %}
+        <span class="card-next disabled">Mais Antigas <i class="disabled card-arrow fas fa-angle-right"></i></span>
+        {% endif %}
+    </div>
+</div>

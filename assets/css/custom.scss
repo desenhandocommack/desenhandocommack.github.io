@@ -2,4 +2,25 @@
 ---
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
 
-// @import "reboot";
+// Mixin itself
+@mixin clearfix() {
+  &::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+}
+
+@import "reboot";
+@import "card";
+@import "topbar";
+@import "navbar";
+@import "header";
+@import "footer";
+
+
+
+.main {
+    max-width: 70rem;
+    margin: 0 auto;
+}
