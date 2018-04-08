@@ -1,9 +1,17 @@
 ---
 layout: default
 ---
-
-<h1 class="post-title">{{ page.title }}</h1>
-<img class="post-author-avatar" src="{{ page.author.avatar | default: site.author.avatar }}" alt="Avatar do autor">
-<div class="post-author-name">{{ page.author.name | default: site.author.name }}</div>
-<div class="post-date">Em {{ page.date | date: "%d/%m/%Y" }}</div>
-<div class="post-body">{{ content }}</div>
+<div class="post">
+    <h1 class="post-title">{{ page.title }}</h1>
+    <div class="post-info">
+        <img class="post-author-avatar" src="{{ page.author.avatar | default: site.author.avatar }}" alt="Avatar do autor">
+        <div class="post-author-name">Escrito por {{ page.author.name | default: site.author.name }}</div>
+        <div class="post-date">Em {{ page.date | date: "%d/%m/%Y" }}</div>
+ 
+        <div class="post-share">
+            <i class="fab fa-twitter-square fa-3x"></i>
+            <i class="fab fa-facebook-square fa-3x"></i>
+        </div>
+    </div>
+    <div class="post-body">{{ content }}</div>
+</div>

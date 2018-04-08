@@ -34,3 +34,7 @@ defaults:
       type: "posts" # previously `post` in Jekyll 2.2.
     values:
       layout: post
+      has_header: true
+      has_navbar: true
+      page_title: BLOG
+      page_description: Conteúdo exclusivo e complementar. Fique a vontade para explorar
