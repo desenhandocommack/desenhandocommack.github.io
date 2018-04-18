@@ -1,9 +1,12 @@
 $min-width: 500px;
 
 .topbar {
-    background: #bbb;
+    // background: #bbb;
     max-width: 70rem;
     margin: 0 auto;
+    a {
+        color: #808080;
+    }
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -35,13 +38,19 @@ $min-width: 500px;
     position: absolute;
     right: 0;
     width: 100%;
-    margin: 0;
+    margin: 0 -1rem 0 0;
     padding: 0;
     display: none;
 
     &.expanded {
         @media screen and (max-width: $min-width) {
             display: block;
+            background: #ddd;
+            margin: 0;
+
+            a:hover {
+                background-color: #bbb;
+            }
         }
     }
 

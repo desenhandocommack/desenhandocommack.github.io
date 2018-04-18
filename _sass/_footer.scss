@@ -10,7 +10,7 @@
     margin: auto;
     text-align: center;
 
-    @media screen and (min-width: 1050px) {
+    @media screen and (min-width: 600px) {
         display: flex;
         justify-content: space-between;
         align-items: baseline;
@@ -25,7 +25,8 @@
     padding: 0;
     margin: 0;
     list-style: none;
-    display: flex;
+    display: none;
+    // display: flex;
     justify-content: center;
 
     a {
@@ -39,18 +40,18 @@
     text-align: center;
 }
 
+.social-email {
+    margin-bottom: 1rem;
+}
+
 .social-list {
     padding: 0;
     margin: 0;
     list-style: none;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
 
     a {
         display: block;
-        padding: 1rem;
-    }
-    @media screen and (min-width: 1050px) {
-        justify-content: space-between;
     }
 }

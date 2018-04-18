@@ -4,13 +4,13 @@ layout: default
 <div class="post">
     <h1 class="post-title">{{ page.title }}</h1>
     <div class="post-info">
-        <img class="post-author-avatar" src="{{ page.author.avatar | default: site.author.avatar }}" alt="Avatar do autor">
+        <img class="post-author-avatar" src="{{ page.author.avatar | default: site.author.avatar }}" width="64" alt="Avatar do autor">
         <div class="post-author-name">Escrito por {{ page.author.name | default: site.author.name }}</div>
         <div class="post-date">Em {{ page.date | date: "%d/%m/%Y" }}</div>
- 
+
         <div class="post-share">
-            <i class="fab fa-twitter-square fa-3x"></i>
-            <i class="fab fa-facebook-square fa-3x"></i>
+          <a href="#"><img src="/assets/img/icon-share-facebook.png"></a>
+          <a href="#"><img src="/assets/img/icon-share-twitter.png"></a>
         </div>
     </div>
     <div class="post-body">{{ content }}</div>

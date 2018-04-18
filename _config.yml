@@ -4,21 +4,22 @@ description: Este é o site oficial do canal Desenhando com Mack
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://desenhandocommack.com.br"
 
-social:
-    twitter: mackdesenhos
-    facebook: desenhandocommack
-    youtube: desenhandocommack
-    instagram: desenhandocommack
+contact:
+    email: desenhandocommack@gmail.com
+    twitter: twitter.com/mackdesenhos
+    facebook: facebook.com/desenhandocommack
+    youtube: youtube.com/desenhandocommack
+    instagram: instagram.com/desenhandocommack
 
 author:
     name: Mack
-    avatar: https://placeimg.com/50/50/people
+    avatar: /assets/img/logo.png
 
 paginate: 6
 paginate_path: "/blog/page-:num/"
 permalink: /blog/:title/
 
-topbar: ["Início", "O Projeto", "Blog", "Now", "Contato"]
+topbar: ["Início", "Blog", "Contato"]
 
 plugins:
   - jekyll-paginate
@@ -36,5 +37,6 @@ defaults:
       layout: post
       has_header: true
       has_navbar: true
+      bgcolor: gray
       page_title: BLOG
       page_description: Conteúdo exclusivo e complementar. Fique a vontade para explorar

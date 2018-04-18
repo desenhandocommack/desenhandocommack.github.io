@@ -18,9 +18,13 @@
 }
 
 .post-share {
-    position: absolute;
-    right: 0;
-    top: 0;
+    clear: both;
+
+    @media screen and (min-width: 430px) {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
 }
 
 .post-title {
