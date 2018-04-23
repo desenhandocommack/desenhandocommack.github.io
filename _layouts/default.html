@@ -19,10 +19,9 @@
       {% if page.has_navbar %}{% include navbar.html %}{% endif %}
     </header>
 
-    <main class="main">{{ content }}</main>
+    {{ content }}
 
     <footer class="footer">{% include footer.html %}</footer>
-
     <script src="{{ "/assets/js/functions.js" | relative_url }}" charset="utf-8"></script>
   </body>
 </html>

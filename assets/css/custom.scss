@@ -27,33 +27,37 @@
 .main {
     max-width: 70rem;
     padding: 0 1rem;
-    margin: 0 auto;
+    margin: 5rem auto;
 }
 
 img {
   max-width: 100%;
 }
 
-.section1 {
+.section-wrapper-1 {
   background-image: url("/assets/img/arte.jpg");
-  background-size: 100% 100%;
+  background-size: cover;
   text-align: center;
   padding: 10rem 0;
 }
 
-.section2 {
-  text-align: center;
+.section-wrapper-2 {
   background-image: url("/assets/img/trilha.jpg");
-  background-size: 100% auto;
-  background-position: center -1800px;
+  background-size: cover;
+  text-align: center;
   padding: 3rem 0;
+  display: none;
+}
+
+.section-wrapper-3 {
+  display: none;
 }
 
 .section3 {
   text-align: center;
   a {
     display: inline-block;
-    margin: 5rem 2rem;
+    margin: 5rem 2rem 0;
 
     &:hover img {
       filter: brightness(150%);

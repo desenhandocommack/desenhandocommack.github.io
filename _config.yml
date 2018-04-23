@@ -19,7 +19,7 @@ paginate: 6
 paginate_path: "/blog/page-:num/"
 permalink: /blog/:title/
 
-topbar: ["Início", "Blog", "Contato"]
+topbar: ["Início", "Blog"]
 
 plugins:
   - jekyll-paginate
