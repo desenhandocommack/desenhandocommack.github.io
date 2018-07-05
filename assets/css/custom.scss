@@ -35,14 +35,14 @@ img {
 }
 
 .section-wrapper-1 {
-  background-image: url("/assets/img/arte.jpg");
+  background: url("/assets/img/arte.jpg") no-repeat center center;
   background-size: cover;
   text-align: center;
   padding: 10rem 0;
 }
 
 .section-wrapper-2 {
-  background-image: url("/assets/img/trilha.jpg");
+  background: url("/assets/img/trilha.jpg") no-repeat center center;
   background-size: cover;
   text-align: center;
   padding: 3rem 0;

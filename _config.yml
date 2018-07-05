@@ -4,6 +4,8 @@ description: Este é o site oficial do canal Desenhando com Mack
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://desenhandocommack.com.br"
 
+incremental: true
+
 contact:
     email: desenhandocommack@gmail.com
     twitter: twitter.com/mackdesenhos
