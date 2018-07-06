@@ -25,7 +25,6 @@ topbar: ["Início", "Blog"]
 
 plugins:
   - jekyll-paginate
-  - jekyll-octicons
 
 sass:
     style: compressed
