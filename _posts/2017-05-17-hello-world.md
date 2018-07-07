@@ -4,7 +4,7 @@ category: Cartoon
 thumbnail: 'https://placeimg.com/500/168/architeture'
 ---
 
-<img src="https://via.placeholder.com/850x150">
+<img src="http://via.placeholder.com/850x150">
 
 <p>
 Lorem ipsum elementum taciti habitant justo volutpat semper aliquam nunc, fermentum non etiam scelerisque pharetra malesuada arcu accumsan fringilla est, dictumst viverra rutrum mauris risus suscipit fermentum non.
@@ -13,6 +13,18 @@ curae lobortis sit aliquet nibh at risus adipiscing, class ut condimentum tempor
 eget semper augue aliquam pellentesque habitasse duis, metus molestie mollis tortor tellus posuere sodales, eleifend quisque arcu vel senectus.
 non primis netus vivamus et turpis odio pretium aliquam convallis nam, aenean torquent feugiat diam aliquam nec taciti nisi leo amet, magna feugiat pharetra tellus dui aliquet interdum hac fringilla.
 </p>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-9490703409315867"
+     data-ad-slot="7989305895"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
 <p>
 Inceptos suspendisse torquent per litora fusce lobortis interdum elementum vitae luctus, inceptos nisl molestie convallis ultricies eros molestie rhoncus enim semper per, aptent dapibus fusce vel vulputate aenean nibh eu pretium.
 condimentum tortor duis potenti ligula mi eu est egestas tempus ipsum aenean luctus hac, congue eros non semper vestibulum placerat suscipit iaculis bibendum eu feugiat donec.
