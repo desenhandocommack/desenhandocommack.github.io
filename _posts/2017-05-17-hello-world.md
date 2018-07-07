@@ -4,7 +4,7 @@ category: Cartoon
 thumbnail: 'https://placeimg.com/500/168/architeture'
 ---
 
-<img src="http://via.placeholder.com/850x150">
+<img src="https://via.placeholder.com/850x150">
 
 <p>
 Lorem ipsum elementum taciti habitant justo volutpat semper aliquam nunc, fermentum non etiam scelerisque pharetra malesuada arcu accumsan fringilla est, dictumst viverra rutrum mauris risus suscipit fermentum non.
@@ -20,7 +20,7 @@ non primis netus vivamus et turpis odio pretium aliquam convallis nam, aenean to
      data-ad-layout="in-article"
      data-ad-format="fluid"
      data-ad-client="ca-pub-9490703409315867"
-     data-ad-slot="7989305895"></ins>
+     data-ad-slot="5225688985"></ins>
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
