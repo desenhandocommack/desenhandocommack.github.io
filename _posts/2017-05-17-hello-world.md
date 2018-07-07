@@ -14,7 +14,6 @@ eget semper augue aliquam pellentesque habitasse duis, metus molestie mollis tor
 non primis netus vivamus et turpis odio pretium aliquam convallis nam, aenean torquent feugiat diam aliquam nec taciti nisi leo amet, magna feugiat pharetra tellus dui aliquet interdum hac fringilla.
 </p>
 
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle"
      style="display:block; text-align:center;"
      data-ad-layout="in-article"
