@@ -25,9 +25,17 @@ pagination:
 autopages:
   enabled: true
   categories:
-    layouts: ['category.html']
+    slugfy:
+      mode: nil
+      case: true
+    layouts:
+      - 'category.html'
     title: 'Artigos da categoria :cat'
     permalink: '/blog/categoria/:cat/'
+  collections:
+    enabled: false
+  tags:
+    enabled: false
 
 permalink: /blog/:title/
 

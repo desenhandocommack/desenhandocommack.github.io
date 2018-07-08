@@ -6,7 +6,7 @@ bgcolor: gray
 page_title: BLOG
 page_description: Conteúdo exclusivo e complementar. Fique a vontade para explorar
 ---
-<h2 class="page-heading">Artigos da categoria <b>{{ page.autopage.display_name }}</b></h2>
+<h2 class="category-page-heading"><span class="category-page-text">ARTIGOS DA CATEGORIA</span> {{ page.autopage.display_name | upcase }}</h2>
 
 <div class="card-container">
     {% for post in paginator.posts %}
