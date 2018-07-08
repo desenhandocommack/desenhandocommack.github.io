@@ -23,6 +23,9 @@
 
 .post-share {
     clear: both;
+    iframe {
+      vertical-align: middle;
+    }
 
     @media screen and (min-width: 430px) {
         position: absolute;
