@@ -1,0 +1,41 @@
+.faq-list {
+  list-style: none;
+  font-family: "Roboto Condensed";
+}
+
+.faq-item {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: solid 1px #ccc;
+
+  &:last-child {
+    border: none;
+  }
+}
+
+.faq-question {
+  cursor: pointer;
+  font-weight: lighter;
+  color: #333;
+  margin-bottom: 0;
+  display: inline-block;
+
+  .fa-plus, .fa-minus {
+    font-size: .8rem;
+    vertical-align: middle;
+    color: #EE4C8B;
+  }
+}
+
+.faq-answer {
+  margin-top: 1rem;
+  margin-left: 2rem;
+
+  .js & {
+    display: none;
+
+    &.expanded {
+      display: block;
+    }
+  }
+}

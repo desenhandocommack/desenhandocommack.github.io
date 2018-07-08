@@ -42,9 +42,6 @@
     <script src="{{ "/assets/js/functions.js" | relative_url }}" charset="utf-8"></script>
     <script>
       var facebookButton = document.getElementById('facebook-share-button');
-      console.log(facebookButton);
-      console.log( "{{ page.url | absolute_url }}" );
-      console.log( "{{ page.thumbnail | absolute_url }}" );
       if (facebookButton) {
         facebookButton.onclick = function() {
           FB.ui({

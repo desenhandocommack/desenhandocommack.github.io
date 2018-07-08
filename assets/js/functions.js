@@ -18,3 +18,31 @@ toggle2.onclick = function() {
     else
         menu2.classList.add("expanded");
 }
+
+var faq = document.getElementsByClassName("faq-item");
+var faqQuestions = document.getElementsByClassName("faq-question");
+var faqAnswers = document.getElementsByClassName("faq-answer");
+
+if (faq) {
+  for (var i = 0; i < faq.length; i++) {
+    faqQuestions[i].onclick = function() {
+      answer = this.parentElement.lastElementChild;
+      plus = this.parentElement.firstElementChild.firstElementChild;
+
+      if (answer.classList.contains("expanded")) {
+        answer.classList.remove("expanded");
+        plus.classList.replace("fa-minus", "fa-plus");
+      } else {
+        plus.classList.replace("fa-plus", "fa-minus");
+        answer.classList.add("expanded");
+      }
+
+      var pluses = document.getElementsByClassName("fa-minus");
+      for (var j = 0; j < pluses.length; j++)
+        if (pluses[j] != plus) pluses[j].classList.replace("fa-minus", "fa-plus");
+
+      for (var j = 0; j < faqAnswers.length; j++)
+        if (faqAnswers[j] != answer) faqAnswers[j].classList.remove("expanded");
+    }
+  }
+}

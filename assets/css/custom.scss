@@ -18,7 +18,12 @@
 @import "header";
 @import "footer";
 @import "post";
+@import "faq";
 
+html {
+  height: 100%;
+  background: #383C58;
+}
 
 .header, .footer {
     padding-left: 1rem;
