@@ -17,14 +17,24 @@ author:
     name: Mack
     avatar: /assets/img/logo.png
 
-paginate: 5
-paginate_path: "/blog/page-:num/"
+
+pagination:
+  enabled: true
+  per_page: 5
+  permalink: '/page-:num/'
+autopages:
+  enabled: true
+  categories:
+    layouts: ['category.html']
+    title: 'Artigos da categoria :cat'
+    permalink: '/blog/categoria/:cat/'
+
 permalink: /blog/:title/
 
 topbar: ["Início", "Blog"]
 
 plugins:
-  - jekyll-paginate
+  - jekyll-paginate-v2
 
 sass:
     style: compressed

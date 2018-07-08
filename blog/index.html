@@ -5,6 +5,8 @@ has_navbar: true
 bgcolor: gray
 page_title: BLOG
 page_description: Conteúdo exclusivo e complementar. Fique a vontade para explorar
+pagination:
+  enabled: true
 ---
 
 <div class="card-container">
@@ -15,7 +17,7 @@ page_description: Conteúdo exclusivo e complementar. Fique a vontade para explo
     {% if forloop.index == 5 %}<hr class="card-separator w50">{% endif %}
 
     <article class="card">
-        <p class="card-category">{{ post.category }}</p>
+        <p class="card-category"><a href="/blog/categoria/{{ post.category }}">{{ post.category }}</a></p>
         <img class="card-thumbnail" width="495" height="280" src="{{ post.thumbnail }}" alt="Imagem de capa do post {{ post.title }}">
         <h1 class="card-title"><a href="{{ post.url }}">{{ post.title }}</a></h1>
     </article>
