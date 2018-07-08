@@ -2,6 +2,13 @@
 <html lang="{{ page.lang | default: site.lang | default: "pt-br" }}">
   <head>
     <meta charset="utf-8">
+
+    <meta property="og:url"           content="{{ page.url | absolute_url }}" />
+    <meta property="og:type"          content="article" />
+    <meta property="og:title"         content="{{ page.title }}" />
+    <meta property="og:description"   content="{{ page.description | default: page.excerpt }}" />
+    <meta property="og:image"         content="{{ page.thumbnail | absolute_url }}" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="stylesheet" href="{{ "/assets/css/custom.css" | relative_url }}">
@@ -12,6 +19,25 @@
   </head>
 
   <body class="nojs">
+    <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            appId            : '192466878110093',
+            autoLogAppEvents : true,
+            xfbml            : true,
+            version          : 'v3.0'
+          });
+        };
+
+        (function(d, s, id){
+           var js, fjs = d.getElementsByTagName(s)[0];
+           if (d.getElementById(id)) {return;}
+           js = d.createElement(s); js.id = id;
+           js.src = "https://connect.facebook.net/en_US/sdk.js";
+           fjs.parentNode.insertBefore(js, fjs);
+         }(document, 'script', 'facebook-jssdk'));
+      </script>
+
     <header class="header {{ page.bgcolor }}">
       {% include topbar.html %}
 
@@ -23,5 +49,19 @@
 
     <footer class="footer">{% include footer.html %}</footer>
     <script src="{{ "/assets/js/functions.js" | relative_url }}" charset="utf-8"></script>
+    <script>
+      var facebookButton = document.getElementById('facebook-share-button');
+      console.log(facebookButton);
+      console.log( "{{ page.url | absolute_url }}" );
+      console.log( "{{ page.thumbnail | absolute_url }}" );
+      if (facebookButton) {
+        facebookButton.onclick = function() {
+          FB.ui({
+          method: 'share',
+          href: '{{ page.url | absolute_url }}',
+          }, function(response){});
+        }
+      }
+    </script>
   </body>
 </html>
