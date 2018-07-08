@@ -14,7 +14,7 @@ eget semper augue aliquam pellentesque habitasse duis, metus molestie mollis tor
 non primis netus vivamus et turpis odio pretium aliquam convallis nam, aenean torquent feugiat diam aliquam nec taciti nisi leo amet, magna feugiat pharetra tellus dui aliquet interdum hac fringilla.
 </p>
 
-<ins class="adsbygoogle"
+<div><ins class="adsbygoogle"
      style="display:block; text-align:center;"
      data-ad-layout="in-article"
      data-ad-format="fluid"
@@ -23,7 +23,7 @@ non primis netus vivamus et turpis odio pretium aliquam convallis nam, aenean to
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-
+</div>
 <p>
 Inceptos suspendisse torquent per litora fusce lobortis interdum elementum vitae luctus, inceptos nisl molestie convallis ultricies eros molestie rhoncus enim semper per, aptent dapibus fusce vel vulputate aenean nibh eu pretium.
 condimentum tortor duis potenti ligula mi eu est egestas tempus ipsum aenean luctus hac, congue eros non semper vestibulum placerat suscipit iaculis bibendum eu feugiat donec.
