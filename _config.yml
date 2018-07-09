@@ -17,7 +17,6 @@ author:
     name: Mack
     avatar: /assets/img/logo.png
 
-
 pagination:
   enabled: true
   per_page: 5
