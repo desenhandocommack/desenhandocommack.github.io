@@ -1,7 +1,7 @@
 ---
 title: Ferramentas de prototipagem para designers de interface
 category: Cartoon
-thumbnail: https://placeimg.com/500/168/architeture
+thumbnail: https://placeimg.com/500/200/architeture
 ---
 
 <img src="http://via.placeholder.com/850x150">
