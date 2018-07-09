@@ -8,9 +8,10 @@
             {% for i in site.topbar %}
 
             {% capture url %}{{ i | downcase | slugify | append: "/" | prepend: "/" | replace: "/início/", "/" }}{% endcapture %}
+            {% capture page_url %}{{ page.url | replace: "index.html", "" }}{% endcapture %}
 
             <li class="topbar-item">
-                {% if page.url == url %}
+                {% if page_url == url %}
                 <span class="topbar-text current">{{ i }}</span>
                 {% else %}
                 <a class="topbar-text" href="{{ url }}">{{ i }}</a>
