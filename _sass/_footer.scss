@@ -1,17 +1,7 @@
 .footer {
     background: #383C58;
     color: #ddd;
-
-    // a {
-    //   color: #ddd;
-    //   &:hover {
-    //     text-decoration: none;
-    //     color: #999;
-    //   }
-    // }
-
     padding: 3rem 0;
-    // margin-top: 5rem;
 }
 
 .footer-info {
@@ -19,7 +9,7 @@
     margin: auto;
     text-align: center;
 
-    @media screen and (min-width: 600px) {
+    @media screen and (min-width: 700px) {
         display: flex;
         justify-content: space-between;
         align-items: baseline;
