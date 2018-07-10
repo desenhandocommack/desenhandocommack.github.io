@@ -1,7 +1,6 @@
 ---
 title: Conheça as principais Ferramentas para pintura digital com Photoshop
 category: Photoshop
-thumbnail: https://placeimg.com/500/200/tech
+thumbnail: 'https://placeimg.com/500/200/tech'
 ---
-
-Postagem de teste
+Postagem de testes
