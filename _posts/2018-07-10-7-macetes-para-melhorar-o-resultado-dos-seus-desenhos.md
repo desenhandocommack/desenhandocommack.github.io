@@ -69,3 +69,7 @@ Depois de um tempo eu continuei insistindo, e foi aí que em um dia eu finalment
 Quando passamos um certo tempo olhando para o desenho na mesma posição a nossa visão deixa de perceber alguns detalhes, e nisso erros bobos passam despercebidos. E aí que entra o famoso espelhar a imagem horizontalmente para mudar a situação.
 
 Sabe quando a gente deixa o desenho por um dia ou mais guardado, e quando volta a olhar percebe vários erros? Pois é, quando mudamos a posição também conseguimos enxergar tudo de uma forma diferente, e por esse motivo o recurso é utilizado frequentemente e diariamente por artistas profissionais.
+
+## 3. Certifique-se que seu personagem tem uma boa silhueta
+
+As silhuetas nos dizem muitas coisas, tanto que só de bater o olho nas imagens abaixo você já deve ter reconhecido que são os personagens.
