@@ -76,9 +76,9 @@ Sabe quando a gente deixa o desenho por um dia ou mais guardado, e quando volta 
 
 As silhuetas nos dizem muitas coisas, tanto que só de bater o olho nas imagens abaixo você já deve ter reconhecido quem são os personagens, não é verdade?
 
-O básico do que uma silhueta precisa ter é legibilidade, é preciso poder ler um personagem através da sua silhueta. Se você só estiver enxergando um borrão sem sentido, provavelmente algo não está funcionando e pode ser melhorado.
+O básico do que uma boa silhueta precisa ter é legibilidade, é preciso poder ler um personagem através da sua silhueta. Se você só estiver enxergando um borrão sem sentido, provavelmente algo não está funcionando e pode ser melhorado.
 
-Tem interesse em aplicar a técnica? Leia o artigo Criando conceitos a partir do uso de silhuetas, lá eu mostro como fazer, que cuidados tomar e quais sãos os benefícios de se trabalhar com elas.
+Para mais detalhes sobre o uso de silhuetas na criação de personagens, leia o artigo Criando conceitos a partir do uso de silhuetas, lá eu mostro como fazer, que cuidados tomar e quais sãos os benefícios de se trabalhar com elas.
 
 ## 4. Formas básicas
 
