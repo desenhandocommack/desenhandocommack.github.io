@@ -1,10 +1,10 @@
 ---
 layout: post
-title: 7 macetes para melhorar o resultado dos seus desenhos
+title: 7 dicas para melhorar o resultado dos seus desenhos
 category: Dicas
 thumbnail: /images/uploads/thumbnail-test.png
 ---
-Todos nós queremos sempre desenhar melhor, e isso é um fato! Por isso separei 7 truques e algumas dicas extras que vão te ajudar!
+Todos nós queremos sempre desenhar melhor, e isso é um fato! Por isso separei alguns truques e dicas que vão te ajudar!
 
 <!--more-->
 
@@ -84,7 +84,7 @@ Para mais detalhes sobre o uso de silhuetas na criação de personagens, leia o 
 
 Quando estamos começando a desenhar é bem comum fazer as coisas sem muito critério e pular etapas. Por isso é importante aprender desde cedo a estruturar primeiro para depois acrescentar detalhes.
 
-O uso de formas básicas como círculos, quadrados ou triângulos, são ótimos aliados em qualquer tipo de criação. A partir das formas mais simples e de suas variações, conseguimos estruturar um personagem, um veículo, objetos, e o que a gente quiser.
+O uso de formas básicas como círculos, quadrados ou triângulos, são ótimos aliados em qualquer tipo de criação. A partir das formas mais simples e de suas variações, conseguimos estruturar um personagem, um veículo, objetos, e o que a gente quiser sem acrescentar qualquer detalhe.
 
 Além disso as formas tem papel importante e podem influenciar diretamente na personalidade dos nossos personagens, e entender como aplicá-las pode trazer mais riqueza para o seu processo de criação.
 
@@ -102,7 +102,7 @@ Pense bem, se os melhores e mais experientes artistas utilizam, por que eu inici
 
 A verdade é que todos utilizam referências o tempo todo seja para o que for, e é assim que criamos novas possibilidades e conceitos mais interessantes.
 
-Faça o experimento, conte apenas com o que tem na sua cabeça sobre algo e transmita isso para o papel . Logo em seguida faça o mesmo, mas esteja com pelo menos uma referência visual ao lado.
+Faça o experimento, conte apenas com o que tem na sua cabeça sobre algo e transmita isso rapidamente (1 minuto) para o papel . Logo em seguida faça o mesmo, mas esteja com pelo menos uma referência visual ao lado.
 
 Provavelmente o resultado será bem melhor, o que você acha?
 
@@ -110,11 +110,13 @@ Se você como eu também acredita na eficácia desse recurso e quer agregar mais
 
 ## 6. Linhas
 
-A linha é parte fundamental em um desenho, e trabalhar na variação de espessura, em alguns pontos mais finos e em outros mais grossos, conseguimos gerar mais interesse para a nossa criação.
+A linha é parte fundamental em um desenho. Digo, em um desenho que utilize linhas. E trabalhar na variação de espessura, em alguns pontos mais finos e em outros mais grossos, conseguimos gerar mais interesse para a nossa criação.
 
 Quando temos um desenho inteiramente com o mesmo peso de linha, ou seja, tudo na mesma espessura, temos a sensação de que o desenho está monótono e chato. 
 
 Por outro lado, quando aplicamos pesos de linha diferentes tornamos os traços mais dinâmicos e atraentes.
+
+Então se você segue esse estilo de desenho que usa linhas, tenta buscar um pouco disso, o estilo Disney é uma ótima referência de inspiração.
 
 ## 7. Aprenda com outros artistas
 
@@ -123,3 +125,7 @@ Durante muitos anos eu não tive contato como outras pessoas faziam para desenha
 Há mais ou menos 2 anos eu acabei consumindo com mais frequência conteúdo na internet, e dentro disso temos podcasts, vídeos no YouTube, palestras online, PDFs, artigos e dezenas de imagens. E foi a partir disso que eu comecei realmente a evoluir.
 
 Antes eu não consumia esses conteúdos porque eu realmente nunca tive o costume de assistir vídeos, eu sempre gostei mais da ideia de ler artigos em blogs. Mas acabei descobrindo que eu gosto muito de ouvir esses conteúdos enquanto desenho ou faço outras atividades, e agora, não deixo um só passar.
+
+Ouvir e ver o que os mais experientes que já passaram por tudo isso tem a dizer, pode e vai acrescentar muito em como você pensa e resolve as coisas, além de ser uma fonte riquíssima de inspiração.
+
+Se você não tem o costume de ouvir Podcasts que falam sobre arte, posso te indicar o[ IconicCast](http://cast.iconic.network/) e o [SALA 1604 - REVONOW](http://revolutionnow.com.br/sala-1604/). São ótimos para ouvir em qualquer lugar. E o mais interessante é que tem artistas das mais variadas falando um pouco sobre a profissão de artista.
