@@ -89,3 +89,27 @@ O uso de formas básicas como círculos, quadrados ou triângulos, são ótimos 
 Além disso as formas básicas como círculos, quadrados ou triângulos tem papel importante e podem influenciar diretamente na personalidade dos nossos personagens, e entender como aplicá-las pode trazer mais riqueza para o seu processo de criação.
 
 Tem interesse em tornar os seus personagens mais interessantes? Leia o artigo Criando personagens a partir das formas mais básicas.
+
+
+
+## 5. O uso de referências e indispensável
+
+Há quem ache que usar referências é errado ou torna o valor de um trabalho menor. E não, isso não é verdade!
+
+Se você já ouviu algo assim por aí, exclua do seu pensamento agora. Referências não só podem como são essenciais para enriquecer o valor e o conceito de um projeto.
+
+Pense bem, se os melhores e mais experientes artistas utilizam, por que eu iniciante não deveria?
+
+A verdade é que todos utilizam referências o tempo todo seja para o que for, e é assim que criamos novas possibilidades e conceitos mais interessantes.
+
+Faça o experimento, conte apenas com o que tem na sua cabeça sobre algo e transmita isso para o papel . Logo em seguida faça o mesmo, mas esteja com pelo menos uma referência ao lado.
+
+Provavelmente o resultado será bem melhor, o que você acha?
+
+Se você como eu também acredita na eficácia desse recurso, leia o artigo Agregando valor com o uso de referências - MoodBoard. Lá eu falo sobre o que é, como e porque utilizar referências.
+
+rnriquecer
+
+
+
+gasta uma hora ou mais
