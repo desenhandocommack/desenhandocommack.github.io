@@ -4,7 +4,7 @@ title: 7 macetes para melhorar o resultado dos seus desenhos
 category: Dicas
 thumbnail: /images/uploads/thumbnail-test.png
 ---
-Todos nós queremos sempre desenhar melhor, e isso é um fato! Por isso separei 7 truques e algumas dicas extras que vão te ajudar nisso!
+Todos nós queremos sempre desenhar melhor, e isso é um fato! Por isso separei 7 truques e algumas dicas extras que vão te ajudar!
 
 Seja qual for o seu nível de desenho atual, certamente você está sempre querendo que sua arte evolua.
 
