@@ -92,7 +92,7 @@ Tem interesse em tornar os seus personagens mais interessantes? Leia o artigo Cr
 
 
 
-## 5. O uso de referências e indispensável
+## 5. O uso de referências é indispensável
 
 Há quem ache que usar referências é errado ou torna o valor de um trabalho menor. E não, isso não é verdade!
 
@@ -110,7 +110,7 @@ Se você como eu também acredita na eficácia desse recurso e quer agregar mais
 
 ## 6. Linhas
 
-A linha é parte fundamental em um desenho, e trabalhar na variação de espessura, em alguns pontos mais finos e em outros mais grossos, podemos gerar mais interesse para a nossa criação.
+A linha é parte fundamental em um desenho, e trabalhar na variação de espessura, em alguns pontos mais finos e em outros mais grossos, conseguimos gerar mais interesse para a nossa criação.
 
 Quando temos um desenho inteiramente com o mesmo peso de linha, ou seja, tudo na mesma espessura, temos a sensação de que o desenho está monótono e chato. 
 
