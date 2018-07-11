@@ -80,6 +80,12 @@ O básico do que uma silhueta precisa ter é legibilidade, é preciso poder ler 
 
 Achou a técnica interessante? Leia o artigo Criando conceitos a partir do uso de silhuetas, lá eu mostro como fazer, que cuidados tomar e quais sãos os benefícios de se trabalhar com elas.
 
-velocidade
+## 4. Formas básicas
 
-cria possibilidades
+Quando estamos começando a desenhar é bem comum fazer as coisas sem muito critério e pular etapas. Por isso é importante aprender desde cedo a estruturar primeiro para depois acrescentar detalhes.
+
+O uso de formas básicas como círculos, quadrados ou triângulos, são ótimos aliados em qualquer tipo de criação. A partir das formas mais simples e de suas variações, conseguimos estruturar um personagem, um veículo, objetos, e o que a gente quiser.
+
+Além disso as formas básicas como círculos, quadrados ou triângulos tem papel importante e podem influenciar diretamente na personalidade dos nossos personagens, e entender como aplicá-las pode trazer mais riqueza para o seu processo de criação.
+
+Tem interesse em tornar os seus personagens mais interessantes? Leia o artigo Criando personagens a partir das formas mais básicas.
