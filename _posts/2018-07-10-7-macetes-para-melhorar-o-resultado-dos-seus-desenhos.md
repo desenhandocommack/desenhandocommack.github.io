@@ -64,9 +64,9 @@ Um dos melhores recursos para verificar o que está torto enquanto você está d
 
 Na verdade você pode virar o seu desenho em outras posições também, mas o horizontal é um dos mais utilizados, e tanto faz fazer no método tradicional ou no digital.
 
-A primeira vez que ouvi falar nisso não foi há muito tempo, e confesso que eu simplesmente fiz porque eu confiava na fonte, mas eu não entendi absolutamente nada.
+A primeira vez que ouvi falar nisso não foi há muito tempo, e confesso que eu simplesmente fiz porque confiava na fonte, mas eu não entendi absolutamente nada.
 
-Depois de um tempo continuei insistindo, e foi aí que em um dia eu finalmente consegui lidar com esse truque de girar a tela.
+Depois de um tempo continuei insistindo, e foi aí que em um dia finalmente consegui lidar com esse truque de girar a tela.
 
 Quando passamos um certo tempo olhando para o desenho na mesma posição a nossa visão deixa de perceber alguns detalhes, e nisso erros bobos passam despercebidos. E aí que entra o famoso espelhar a imagem horizontalmente para mudar a situação.
 
@@ -78,7 +78,7 @@ As silhuetas nos dizem muitas coisas, tanto que só de bater o olho nas imagens 
 
 O básico do que uma silhueta precisa ter é legibilidade, é preciso poder ler um personagem através da sua silhueta. Se você só estiver enxergando um borrão sem sentido, provavelmente algo não está funcionando e pode ser melhorado.
 
-Achou a técnica interessante? Leia o artigo Criando conceitos a partir do uso de silhuetas, lá eu mostro como fazer, que cuidados tomar e quais sãos os benefícios de se trabalhar com elas.
+Tem interesse em aplicar a técnica? Leia o artigo Criando conceitos a partir do uso de silhuetas, lá eu mostro como fazer, que cuidados tomar e quais sãos os benefícios de se trabalhar com elas.
 
 ## 4. Formas básicas
 
