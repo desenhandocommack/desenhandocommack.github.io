@@ -24,7 +24,7 @@ E sobre os obstáculos e aquelas outras coisas? Não se preocupe, pois é algo i
 >
 > Frank A. Clark
 
-Apesar de todos esses detalhes há sempre o que melhorar neste exato momento, por isso montei essa lista com 7 macetes que qualquer iniciante pode aplicar.
+Apesar de todos esses detalhes há sempre o que melhorar neste exato momento, por isso montei essa lista com 7 dicas e macetes que qualquer iniciante pode aplicar.
 
 Pronto(a) para começar a dar um UP no seu desenho?
 
@@ -35,9 +35,9 @@ INDICE DE CONTEÚDO
 1. 7 macetes para melhorar o resultado dos seus desenhos
 2. Dicas gerais para dar um UP nos desenhos
 
-# 7 macetes para um desenho melhor
+# 7 dicas para desenhar melhor
 
-## 1. Exercícios de aquecimento
+## Dica #1: Exercícios de aquecimento
 
 Seja você um desenhista iniciante ou experiente, fazer algum tipo de aquecimento antes de embarcar em um desenho importante, é primordial.
 
@@ -58,7 +58,7 @@ _“Mas por onde eu começo? Que exercícios são esses e como fazer?”_
 
 Nesse artigo sobre Exercícios de aquecimento – Para aquecer e melhorar o traço eu falo sobre tudo isso e mostro alguns exercícios e técnicas que você pode utilizar.
 
-## 2. Encontre os erros (Flip Horizontal)
+## Dica #2: Encontre os erros (Flip Horizontal)
 
 Um dos melhores recursos para verificar o que está torto enquanto você está desenhando é o espelhamento horizontal.
 
@@ -72,7 +72,7 @@ Quando passamos um certo tempo olhando para o desenho na mesma posição a nossa
 
 Sabe quando a gente deixa o desenho por um dia ou mais guardado, e quando volta a olhar percebe vários erros? Pois é, quando mudamos a posição também conseguimos enxergar tudo de uma forma diferente, e por esse motivo o recurso é utilizado frequentemente e diariamente por artistas profissionais.
 
-## 3. Verifique se você tem uma boa silhueta
+## Dica #3: Verifique se você tem uma boa silhueta
 
 As silhuetas nos dizem muitas coisas, tanto que só de bater o olho nas imagens abaixo você já deve ter reconhecido quem são os personagens, não é verdade?
 
@@ -80,7 +80,7 @@ O básico do que uma boa silhueta precisa ter é legibilidade, é preciso poder 
 
 Para mais detalhes sobre o uso de silhuetas na criação de personagens, leia o artigo Criando conceitos a partir do uso de silhuetas, lá eu mostro como fazer, que cuidados tomar e quais sãos os benefícios de se trabalhar com elas.
 
-## 4. Formas básicas
+## Dica #4: Formas básicas
 
 Quando estamos começando a desenhar é bem comum fazer as coisas sem muito critério e pular etapas. Por isso é importante aprender desde cedo a estruturar primeiro para depois acrescentar detalhes.
 
@@ -92,7 +92,7 @@ Tem interesse em tornar os seus personagens mais interessantes? Leia o artigo Cr
 
 
 
-## 5. O uso de referências é indispensável
+## Dica #5: O uso de referências é indispensável
 
 Há quem ache que usar referências é errado ou torna o valor de um trabalho menor. E não, isso não é verdade!
 
@@ -108,7 +108,7 @@ Provavelmente o resultado será bem melhor, o que você acha?
 
 Se você como eu também acredita na eficácia desse recurso e quer agregar mais valor ao seu projeto, leia o artigo Agregando valor com o uso de referências - MoodBoard. Lá eu falo sobre o que é, como e porque utilizar referências.
 
-## 6. Linhas
+## Dica #6: Linhas
 
 A linha é parte fundamental em um desenho. Digo, em um desenho que utilize linhas. E trabalhar na variação de espessura, em alguns pontos mais finos e em outros mais grossos, conseguimos gerar mais interesse para a nossa criação.
 
@@ -118,7 +118,7 @@ Por outro lado, quando aplicamos pesos de linha diferentes tornamos os traços m
 
 Então se você segue esse estilo de desenho que usa linhas, tenta buscar um pouco disso, o estilo Disney é uma ótima referência de inspiração.
 
-## 7. Aprenda com outros artistas
+## Dica #7: Aprenda com outros artistas
 
 Durante muitos anos eu não tive contato como outras pessoas faziam para desenhar, simplesmente ia fazendo o que eu estava com vontade.
 
