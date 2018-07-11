@@ -114,4 +114,12 @@ A linha é parte fundamental em um desenho, e trabalhar na variação de espessu
 
 Quando temos um desenho inteiramente com o mesmo peso de linha, ou seja, tudo na mesma espessura, temos a sensação de que o desenho está monótono e chato. 
 
-Por outro lado, quando aplicamos pesos de linha diferentes em um desenho, conseguimos o contrário. Temos linhas mais dinâmicas e atraentes.
+Por outro lado, quando aplicamos pesos de linha diferentes tornamos os traços mais dinâmicos e atraentes.
+
+## 7. Aprenda com outros artistas
+
+Durante muitos anos eu não tive contato como outras pessoas faziam para desenhar, simplesmente ia fazendo o que eu estava com vontade.
+
+Há mais ou menos 2 anos eu acabei consumindo com mais frequência conteúdo na internet, e dentro disso temos podcasts, vídeos no YouTube, palestras online, PDFs, artigos e dezenas de imagens. E foi a partir disso que eu comecei realmente a evoluir.
+
+Antes eu não consumia esses conteúdos porque eu realmente nunca tive o costume de assistir vídeos, eu sempre gostei mais da ideia de ler artigos em blogs. Mas acabei descobrindo que eu gosto muito de ouvir esses conteúdos enquanto desenho ou faço outras atividades, e agora, não deixo um só passar.
