@@ -86,7 +86,7 @@ Quando estamos começando a desenhar é bem comum fazer as coisas sem muito crit
 
 O uso de formas básicas como círculos, quadrados ou triângulos, são ótimos aliados em qualquer tipo de criação. A partir das formas mais simples e de suas variações, conseguimos estruturar um personagem, um veículo, objetos, e o que a gente quiser.
 
-Além disso as formas básicas como círculos, quadrados ou triângulos tem papel importante e podem influenciar diretamente na personalidade dos nossos personagens, e entender como aplicá-las pode trazer mais riqueza para o seu processo de criação.
+Além disso as formas tem papel importante e podem influenciar diretamente na personalidade dos nossos personagens, e entender como aplicá-las pode trazer mais riqueza para o seu processo de criação.
 
 Tem interesse em tornar os seus personagens mais interessantes? Leia o artigo Criando personagens a partir das formas mais básicas.
 
@@ -112,4 +112,6 @@ Se você como eu também acredita na eficácia desse recurso e quer agregar mais
 
 A linha é parte fundamental em um desenho, e trabalhar na variação de espessura, em alguns pontos mais finos e em outros mais grossos, podemos gerar mais interesse para a nossa criação.
 
-Quando temos um desenho inteiramente com o mesmo peso de linha, ou seja, a na mesma espessura, temos a sensação de que o desenho está monótono.
+Quando temos um desenho inteiramente com o mesmo peso de linha, ou seja, tudo na mesma espessura, temos a sensação de que o desenho está monótono e chato. 
+
+Por outro lado, quando aplicamos pesos de linha diferentes em um desenho, conseguimos o contrário. Temos linhas mais dinâmicas e atraentes.
