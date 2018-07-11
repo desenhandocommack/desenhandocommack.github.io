@@ -58,7 +58,7 @@ _“Mas por onde eu começo? Que exercícios são esses e como fazer?”_
 
 Nesse artigo sobre Exercícios de aquecimento – Para aquecer e melhorar o traço eu falo sobre tudo isso e mostro alguns exercícios e técnicas que você pode utilizar.
 
-## 2. Encontre os erros
+## 2. Encontre os erros (Flip Horizontal)
 
 Um dos melhores recursos para verificar o que está torto enquanto você está desenhando é o espelhamento horizontal.
 
@@ -102,13 +102,15 @@ Pense bem, se os melhores e mais experientes artistas utilizam, por que eu inici
 
 A verdade é que todos utilizam referências o tempo todo seja para o que for, e é assim que criamos novas possibilidades e conceitos mais interessantes.
 
-Faça o experimento, conte apenas com o que tem na sua cabeça sobre algo e transmita isso para o papel . Logo em seguida faça o mesmo, mas esteja com pelo menos uma referência ao lado.
+Faça o experimento, conte apenas com o que tem na sua cabeça sobre algo e transmita isso para o papel . Logo em seguida faça o mesmo, mas esteja com pelo menos uma referência visual ao lado.
 
 Provavelmente o resultado será bem melhor, o que você acha?
 
-Se você como eu também acredita na eficácia desse recurso, leia o artigo Agregando valor com o uso de referências - MoodBoard. Lá eu falo sobre o que é, como e porque utilizar referências.
+Se você como eu também acredita na eficácia desse recurso e quer agregar mais valor ao seu projeto, leia o artigo Agregando valor com o uso de referências - MoodBoard. Lá eu falo sobre o que é, como e porque utilizar referências.
 
-rnriquecer
+## 6. Linhas
+
+
 
 
 
