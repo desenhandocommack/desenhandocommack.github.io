@@ -6,6 +6,8 @@ thumbnail: /images/uploads/thumbnail-test.png
 ---
 Todos nós queremos sempre desenhar melhor, e isso é um fato! Por isso separei 7 truques e algumas dicas extras que vão te ajudar!
 
+<!--more-->
+
 Seja qual for o seu nível de desenho atual, certamente você está sempre querendo que sua arte evolua.
 
 Estou certa?
@@ -43,7 +45,7 @@ Aquecer também é parte do processo assim como quando nos preparamos para qualq
 
 Os exercícios de aquecimento servem basicamente como preparo antes de começar a desenhar de verdade, e contribuem em vários aspectos, como:
 
-*  Relaxamento do corpo;
+* Relaxamento do corpo;
 * Destravar e soltar o traço;
 * Entrar no ritmo da atividade para concentrar e focar;
 * E ainda de bônus melhorar a nossa coordenação motora e o aspecto dos nossos traços;
@@ -64,7 +66,7 @@ Na verdade você pode virar o seu desenho em outras posições também, mas o ho
 
 A primeira vez que ouvi falar nisso não foi há muito tempo, e confesso que eu simplesmente fiz porque eu confiava na fonte, mas eu não entendi absolutamente nada.
 
-Depois de um tempo eu continuei insistindo, e foi aí que em um dia eu finalmente consegui lidar com esse truque de girar a tela.
+Depois de um tempo continuei insistindo, e foi aí que em um dia eu finalmente consegui lidar com esse truque de girar a tela.
 
 Quando passamos um certo tempo olhando para o desenho na mesma posição a nossa visão deixa de perceber alguns detalhes, e nisso erros bobos passam despercebidos. E aí que entra o famoso espelhar a imagem horizontalmente para mudar a situação.
 
@@ -74,7 +76,7 @@ Sabe quando a gente deixa o desenho por um dia ou mais guardado, e quando volta 
 
 As silhuetas nos dizem muitas coisas, tanto que só de bater o olho nas imagens abaixo você já deve ter reconhecido quem são os personagens, não é verdade?
 
-O básico do que uma silhueta precisa ter é legibilidade, é preciso poder ler um personagem através da sua silhueta. Se você só estiver enxergando um borrão sem sentido, provavelmente algo pode ser melhorado.
+O básico do que uma silhueta precisa ter é legibilidade, é preciso poder ler um personagem através da sua silhueta. Se você só estiver enxergando um borrão sem sentido, provavelmente algo não está funcionando e pode ser melhorado.
 
 Achou a técnica interessante? Leia o artigo Criando conceitos a partir do uso de silhuetas, lá eu mostro como fazer, que cuidados tomar e quais sãos os benefícios de se trabalhar com elas.
 
