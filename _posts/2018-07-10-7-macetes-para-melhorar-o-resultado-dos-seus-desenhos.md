@@ -110,8 +110,6 @@ Se você como eu também acredita na eficácia desse recurso e quer agregar mais
 
 ## 6. Linhas
 
+A linha é parte fundamental em um desenho, e trabalhar na variação de espessura, em alguns pontos mais finos e em outros mais grossos, podemos gerar mais interesse para a nossa criação.
 
-
-
-
-gasta uma hora ou mais
+Quando temos um desenho inteiramente com o mesmo peso de linha, ou seja, a na mesma espessura, temos a sensação de que o desenho está monótono.
