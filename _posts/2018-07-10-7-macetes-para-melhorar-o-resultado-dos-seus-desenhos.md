@@ -30,11 +30,6 @@ Pronto(a) para começar a dar um UP no seu desenho?
 
 **Continue lendo** esse artigo.
 
-INDICE DE CONTEÚDO
-
-1. 7 macetes para melhorar o resultado dos seus desenhos
-2. Dicas gerais para dar um UP nos desenhos
-
 # 7 dicas para desenhar melhor
 
 ## Dica #1: Exercícios de aquecimento
@@ -56,7 +51,7 @@ O melhor de tudo é que não é preciso de muito tempo ou recursos mirabolantes 
 
 _“Mas por onde eu começo? Que exercícios são esses e como fazer?”_
 
-Nesse artigo sobre Exercícios de aquecimento – Para aquecer e melhorar o traço eu falo sobre tudo isso e mostro alguns exercícios e técnicas que você pode utilizar.
+No artigo A importância dos exercícios de aquecimento – Para aquecer e melhorar o traço eu falo com mais detalhes sobre tudo isso. 
 
 ## Dica #2: Encontre os erros (Flip Horizontal)
 
@@ -86,7 +81,7 @@ Quando estamos começando a desenhar é bem comum fazer as coisas sem muito crit
 
 O uso de formas básicas como círculos, quadrados ou triângulos, são ótimos aliados em qualquer tipo de criação. A partir das formas mais simples e de suas variações, conseguimos estruturar um personagem, um veículo, objetos, e o que a gente quiser sem acrescentar qualquer detalhe.
 
-Além disso as formas tem papel importante e podem influenciar diretamente na personalidade dos nossos personagens, e entender como aplicá-las pode trazer mais riqueza para o seu processo de criação.
+Além disso, as formas tem papel importante e podem influenciar diretamente na personalidade dos nossos personagens, e entender como aplicá-las pode trazer mais riqueza para o seu processo de criação.
 
 Tem interesse em tornar os seus personagens mais interessantes? Leia o artigo Criando personagens a partir das formas mais básicas.
 
@@ -110,11 +105,11 @@ Se você como eu também acredita na eficácia desse recurso e quer agregar mais
 
 ## Dica #6: Linhas
 
-A linha é parte fundamental em um desenho. Digo, em um desenho que utilize linhas. E trabalhar na variação de espessura, em alguns pontos mais finos e em outros mais grossos, conseguimos gerar mais interesse para a nossa criação.
+A linha é parte fundamental em um desenho. Digo, em um desenho que utilize linhas. E trabalhar na variação de espessura (alguns pontos mais finos e outros mais grossos) conseguimos gerar mais interesse para a nossa criação.
 
-Quando temos um desenho inteiramente com o mesmo peso de linha, ou seja, tudo na mesma espessura, temos a sensação de que o desenho está monótono e chato. 
+Quando temos um desenho inteiramente com o mesmo peso de linha, ou seja, tudo na mesma espessura, temos a sensação de que o desenho está monótono e chato.  E talvez não seja o que você quer passar com o seu.
 
-Por outro lado, quando aplicamos pesos de linha diferentes tornamos os traços mais dinâmicos e atraentes.
+Por outro lado, quando aplicamos pesos de linha diferentes tornamos os traços mais dinâmicos e atraentes, trazendo um pouco mais de interesse para o que você está expressando.
 
 Então se você segue esse estilo de desenho que usa linhas, tenta buscar um pouco disso, o estilo Disney é uma ótima referência de inspiração.
 
