@@ -119,6 +119,8 @@ Há mais ou menos 2 anos eu acabei consumindo com mais frequência conteúdo na 
 
 Antes eu não consumia esses conteúdos porque eu realmente nunca tive o costume de assistir vídeos, eu sempre gostei mais da ideia de ler artigos em blogs. Mas acabei descobrindo que eu gosto muito de ouvir esses conteúdos enquanto desenho ou faço outras atividades, e agora, não deixo um só passar.
 
-Ouvir e ver o que os mais experientes que já passaram por tudo isso tem a dizer, pode e vai acrescentar muito em como você pensa e resolve as coisas, além de ser uma fonte riquíssima de inspiração. Além do que, pra quem não tem um grupo de amigos que mora perto e gosta de desenhar, a internet acaba trazendo essa oportunidade de aproximar pessoas que tem o mesmo interesse.
+Ouvir e ver o que os mais experientes que já passaram por tudo isso tem a dizer, pode e vai acrescentar muito em como você pensa e resolve as coisas, além de ser uma fonte riquíssima de inspiração. 
 
 Se você não tem o costume de ouvir Podcasts que falam sobre arte, posso te indicar o[ IconicCast](http://cast.iconic.network/) e o [SALA 1604 - REVONOW](http://revolutionnow.com.br/sala-1604/). São ótimos para ouvir em qualquer lugar. E o mais interessante é que tem artistas das mais variadas falando um pouco sobre a profissão de artista.
+
+E se você tiver amigos que gostam de desenhar, melhor ainda, montar grupos de quem gosta da mesma coisa e também está nesse processo de aprender é super válido. Grupos, comunidades e canais na internet, são também ótimas opções.
