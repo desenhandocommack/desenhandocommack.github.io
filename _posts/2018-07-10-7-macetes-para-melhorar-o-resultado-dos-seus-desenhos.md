@@ -2,7 +2,8 @@
 layout: post
 title: 7 dicas para melhorar o resultado dos seus desenhos
 category: Dicas
-thumbnail: /images/uploads/thumbnail-test.png
+thumbnail: >-
+  /images/uploads/7-dicas-para-melhorar-e-turbinar-seus-desenhos_capa-700x250-blog.jpg
 ---
 Todos nós queremos sempre desenhar melhor, e isso é um fato! Por isso separei alguns truques e dicas que vão te ajudar!
 
