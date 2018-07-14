@@ -56,7 +56,7 @@ No artigo A importância dos exercícios de aquecimento – Para aquecer e melho
 
 ## Dica #2: Encontre os erros (Flip Horizontal)
 
-![](/images/uploads/dica-de-desenho_girar-a-imagem_flip-horizontal.png)
+![null](/images/uploads/dica-de-desenho_girar-a-imagem_flip-horizontal.png)
 
 Um dos melhores recursos para verificar o que está torto enquanto você está desenhando é o espelhamento horizontal.
 
@@ -71,6 +71,8 @@ Quando passamos um certo tempo olhando para o desenho na mesma posição a nossa
 Sabe quando a gente deixa o desenho por um dia ou mais guardado, e quando volta a olhar percebe vários erros? Pois é, quando mudamos a posição também conseguimos enxergar tudo de uma forma diferente, e por esse motivo o recurso é utilizado frequentemente e diariamente por artistas profissionais.
 
 ## Dica #3: Verifique se você tem uma boa silhueta
+
+![](/images/uploads/o-uso-de-silhuetas.jpg)
 
 As silhuetas nos dizem muitas coisas, tanto que só de bater o olho nas imagens abaixo você já deve ter reconhecido quem são os personagens, não é verdade?
 
@@ -115,6 +117,8 @@ Por outro lado, quando aplicamos pesos de linha diferentes tornamos os traços m
 Então se você segue esse estilo de desenho que usa linhas, tenta buscar um pouco disso, o estilo Disney é uma ótima referência de inspiração.
 
 ## Dica #7: Aprenda com outros artistas
+
+![](/images/uploads/aprenda-com-outros-artistas-compartilhe-ideias.jpg)
 
 Durante muitos anos eu não tive contato como outras pessoas faziam para desenhar, simplesmente ia fazendo o que eu estava com vontade.
 
