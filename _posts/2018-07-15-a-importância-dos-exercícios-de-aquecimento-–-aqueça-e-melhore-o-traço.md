@@ -22,9 +22,19 @@ Mas que treinos são esses, por onde começar, e por que eles são importantes?
 
 ## A importância dos exercícios de aquecimento antes de desenhar
 
-Antes de iniciar qualquer atividade é interessante fazer aquecimentos para se preparar para a atividade que está por vir, e isso também é válido para desenhistas.
+Antes de iniciar qualquer atividade é interessante fazer exercícios de aquecimento para se preparar para a atividade que está por vir, e isso também é válido para desenhistas.
 
-Basicamente o aquecimento traz benefícios como evitar lesões, acelera o metabolismo,  ajuda na concentração e deixa o seu corpo aquecido e pronto para o trabalho por pelo menos
+Quando já entramos de cara no projeto que estamos fazendo sem haver um preparo, as coisas podem dar muito errado, e é bem comum a gente sentir o traço travado.
+
+
+
+
+
+Quando começamos o nosso projeto já querendo soltar o traço, as coisas podem dar muito errado, e com isso vir a frustração.
+
+Ao aquecer nós conseguimos
+
+
 
 ## Melhorando os traços com exercícios
 
