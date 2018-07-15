@@ -35,6 +35,8 @@ Pronto(a) para começar a dar um UP no seu desenho?
 
 ## Dica #1: Exercícios de aquecimento
 
+![](/images/uploads/exercicios-de-aquecimento-para-melhorar-o-traco_flat-design.jpg)
+
 Seja você um desenhista iniciante ou experiente, fazer algum tipo de aquecimento antes de embarcar em um desenho importante, é primordial.
 
 Aquecer também é parte do processo assim como quando nos preparamos para qualquer outra atividade física, por isso querer sentar e já sair desenhando o seu projeto pessoal esperando bons resultados, não é a forma mais indicada.
@@ -121,8 +123,6 @@ Por outro lado, quando aplicamos pesos de linha diferentes tornamos os traços m
 Então se você segue esse estilo de desenho que usa linhas, tenta buscar um pouco disso, o estilo Disney é uma ótima referência de inspiração.
 
 ## Dica #7: Aprenda com outros artistas
-
-![null](/images/uploads/aprenda-com-outros-artistas-compartilhe-ideias.jpg)
 
 Durante muitos anos eu não tive contato como outras pessoas faziam para desenhar, simplesmente ia fazendo o que eu estava com vontade.
 
