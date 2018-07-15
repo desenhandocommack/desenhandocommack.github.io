@@ -72,7 +72,7 @@ Sabe quando a gente deixa o desenho por um dia ou mais guardado, e quando volta 
 
 ## Dica #3: Verifique se você tem uma boa silhueta
 
-![](/images/uploads/o-uso-de-silhuetas.jpg)
+![](/images/uploads/o-uso-de-silhuetas_flat-design.png)
 
 As silhuetas nos dizem muitas coisas, tanto que só de bater o olho nas imagens abaixo você já deve ter reconhecido quem são os personagens, não é verdade?
 
@@ -91,6 +91,8 @@ Além disso, as formas tem papel importante e podem influenciar diretamente na p
 Tem interesse em tornar os seus personagens mais interessantes? Leia o artigo Criando personagens a partir das formas mais básicas.
 
 ## Dica #5: O uso de referências é indispensável
+
+![](/images/uploads/o-uso-de-referencias-e-indispensavel_flat-design.jpg)
 
 Há quem ache que usar referências é errado ou torna o valor de um trabalho menor. E não, isso não é verdade!
 
@@ -118,7 +120,7 @@ Então se você segue esse estilo de desenho que usa linhas, tenta buscar um pou
 
 ## Dica #7: Aprenda com outros artistas
 
-![](/images/uploads/aprenda-com-outros-artistas-compartilhe-ideias.jpg)
+![null](/images/uploads/aprenda-com-outros-artistas-compartilhe-ideias.jpg)
 
 Durante muitos anos eu não tive contato como outras pessoas faziam para desenhar, simplesmente ia fazendo o que eu estava com vontade.
 
