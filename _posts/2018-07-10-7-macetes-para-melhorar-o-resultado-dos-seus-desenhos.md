@@ -56,7 +56,7 @@ No artigo A importância dos exercícios de aquecimento – Para aquecer e melho
 
 ## Dica #2: Encontre os erros (Flip Horizontal)
 
-![null](/images/uploads/dica-de-desenho_girar-a-imagem_flip-horizontal.png)
+![](/images/uploads/espelhar-a-imagem-para-encontrar-erros-no-desenho-flip-horizontal_flat-design.jpg)
 
 Um dos melhores recursos para verificar o que está torto enquanto você está desenhando é o espelhamento horizontal.
 
