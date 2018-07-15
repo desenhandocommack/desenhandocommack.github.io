@@ -12,10 +12,24 @@ Todos nós que gostamos de desenhar, é claro!
 
 Mas quantos de nós realmente fazemos ou estamos dispostos a fazer o que tem de ser feito para que isso aconteça? 
 
-Pois é, quando olhamos para os traços de um desenhista profissional notamos logo a diferença entre um trabalho de alguém experiente e alguém que começou agora. E com certeza o resultado de um trabalho como esses vem da combinação de uma quantidade enorme de horas de estudo, prática e dedicação.  Bagagem essa que nós desenhistas iniciantes ainda não temos.
+Pois é, quando olhamos para os traços de um desenhista profissional notamos logo a diferença entre um trabalho de alguém experiente e quem começou agora. E com certeza o resultado de um trabalho como esses vem da combinação de uma quantidade enorme de horas de estudo, prática e dedicação.  Bagagem essa que nós desenhistas iniciantes ainda não temos.
 
-A boa é que desenhar é uma habilidade, logo entende-se que pode ser desenvolvida. Então já podemos descartar aquela historinha de DOM e trabalhar com a realidade, que nada mais é do que TREINAR, TREINAR e TREINAR.
+A boa é que desenhar é uma habilidade, logo entende-se que pode ser desenvolvida. Então já podemos descartar aquela historinha de "DOM" e trabalhar com a realidade, que nada mais é do que treinar, treinar e treinar.
 
-Mas antes de entrar nos aspectos práticos dos exercícios para melhorar o traço, falaremos rapidamente sobre a importância disso.
+Mas que treinos são esses, por onde começar, e por que eles são importantes?
+
+É tudo o que vamos ver ao longo desse artigo.
 
 ## A importância dos exercícios de aquecimento antes de desenhar
+
+Antes de começar a desenhar de verdade é interessante fazer uma preparação, assim como fazemos
+
+
+
+## Melhorando os traços com exercícios
+
+
+
+Mas antes de entrar nos aspectos práticos dos exercícios para melhorar o traço, falaremos rapidamente sobre a importância de aquecer, alongar e manter a postura enquanto desenha.
+
+##
