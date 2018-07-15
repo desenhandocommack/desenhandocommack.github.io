@@ -12,4 +12,4 @@ Todos nós que gostamos de desenhar, é claro!
 
 Mas quantos de nós realmente fazemos ou estamos dispostos a fazer o que tem de ser feito para que isso aconteça? 
 
-Pois é, quando olhamos para os traços de um desenhista profissional notamos logo a diferença entre um trabalho de alguém experiente e alguém que começou agora. E com certeza o resultado de um trabalho como esses vem da combinação de uma quantidade enorme de horas de estudo, prática e dedicação.  Bagagem essa que nós desenhistas iniciantes não temos.
+Pois é, quando olhamos para os traços de um desenhista profissional notamos logo a diferença entre um trabalho de alguém experiente e alguém que começou agora. E com certeza o resultado de um trabalho como esses vem da combinação de uma quantidade enorme de horas de estudo, prática e dedicação.  Bagagem essa que nós desenhistas iniciantes ainda não temos.
