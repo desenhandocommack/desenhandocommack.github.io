@@ -14,4 +14,4 @@ Mas quantos de nós realmente fazemos ou estamos dispostos a fazer o que tem de 
 
 Pois é, quando olhamos para os traços de um desenhista profissional notamos logo a diferença entre um trabalho de alguém experiente e alguém que começou agora. E com certeza o resultado de um trabalho como esses vem da combinação de uma quantidade enorme de horas de estudo, prática e dedicação.  Bagagem essa que nós desenhistas iniciantes ainda não temos.
 
-A boa é que desenhar é uma habilidade, logo entende-se que pode ser desenvolvida. Então já podemos descartar aquela historinha de DOM.
+A boa é que desenhar é uma habilidade, logo entende-se que pode ser desenvolvida. Então já podemos descartar aquela historinha de DOM e trabalhar com a realidade, que nada mais é do que TREINAR, TREINAR e TREINAR.
