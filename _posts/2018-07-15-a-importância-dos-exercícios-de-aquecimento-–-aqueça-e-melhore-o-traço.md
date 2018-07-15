@@ -26,7 +26,14 @@ Antes de iniciar qualquer atividade é interessante fazer exercícios de aquecim
 
 Quando já entramos de cara no projeto que estamos fazendo sem haver um preparo, as coisas podem dar muito errado, e é bem comum a gente sentir o traço travado no início, por isso nós aquecemos antes.
 
-Como já falado no artigo ... conseguimos com simples exercícios de aquecimento benefícios como: o relaxamento do corpo, entrar no ritmo da atividade ajudando a concentrar e focar, melhorar a nossa coordenação motora e o aspecto dos nossos traços, e também a destravar o traço E é tudo isso que queremos, não?
+Como já falado no artigo ... conseguimos com simples exercícios de aquecimento benefícios como: 
+
+* Relaxamento do corpo
+* Entrar no ritmo da atividade ajudando a concentrar e focar
+* Melhorar a coordenação motora e o aspecto dos traços
+* Destravar e soltar o traço
+
+ E é tudo isso que queremos, não?
 
 ## Melhorando os traços com exercícios
 
