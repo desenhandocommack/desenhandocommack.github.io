@@ -16,4 +16,6 @@ Pois é, quando olhamos para os traços de um desenhista profissional notamos lo
 
 A boa é que desenhar é uma habilidade, logo entende-se que pode ser desenvolvida. Então já podemos descartar aquela historinha de DOM e trabalhar com a realidade, que nada mais é do que TREINAR, TREINAR e TREINAR.
 
-Mas antes de entrar nos aspectos práticos falaremos sobre algo ainda mais importante do que somente desenhar loucamente para melhorar os traços, que são os exercícios de aquecimento e alongamento antes de desenhar.
+Mas antes de entrar nos aspectos práticos dos exercícios para melhorar o traço, falaremos rapidamente sobre a importância disso.
+
+## A importância dos exercícios de aquecimento antes de desenhar
