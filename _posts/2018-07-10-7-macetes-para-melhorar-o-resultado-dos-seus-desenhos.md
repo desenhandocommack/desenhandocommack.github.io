@@ -82,6 +82,8 @@ Para mais detalhes sobre o uso de silhuetas na criação de personagens, leia o 
 
 ## Dica #4: Formas básicas
 
+![](/images/uploads/formas-basicas_flat-design.jpg)
+
 Quando estamos começando a desenhar é bem comum fazer as coisas sem muito critério e pular etapas. Por isso é importante aprender desde cedo a estruturar primeiro para depois acrescentar detalhes.
 
 O uso de formas básicas como círculos, quadrados ou triângulos, são ótimos aliados em qualquer tipo de criação. A partir das formas mais simples e de suas variações, conseguimos estruturar um personagem, um veículo, objetos, e o que a gente quiser sem acrescentar qualquer detalhe.
