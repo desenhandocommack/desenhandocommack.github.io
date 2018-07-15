@@ -10,6 +10,6 @@ Quem não quer um traço preciso, atraente e profissional?
 
 Todos nós que gostamos de desenhar, é claro!
 
-Mas quantos de nós realmente fazemos o que tem de ser feito para que isso aconteça? 
+Mas quantos de nós realmente fazemos ou estamos dispostos a fazer o que tem de ser feito para que isso aconteça? 
 
-Pois é, quando olhamos para os traços de um desenhista profissional notamos logo a diferença entre um trabalho de alguém experiente e alguém que começou agora.
+Pois é, quando olhamos para os traços de um desenhista profissional notamos logo a diferença entre um trabalho de alguém experiente e alguém que começou agora. E com certeza o resultado de um trabalho como esses vem de uma quantidade enorme de horas de estudo, prática e dedicação.
