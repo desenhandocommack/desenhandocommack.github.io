@@ -114,6 +114,8 @@ Se você como eu também acredita na eficácia desse recurso e quer agregar mais
 
 ## Dica #6: Linhas
 
+![](/images/uploads/variacao-de-linhas-no-desenho-flat-design.jpg)
+
 A linha é parte fundamental em um desenho. Digo, em um desenho que utilize linhas. E trabalhar na variação de espessura (alguns pontos mais finos e outros mais grossos) conseguimos gerar mais interesse para a nossa criação.
 
 Quando temos um desenho inteiramente com o mesmo peso de linha, ou seja, tudo na mesma espessura, temos a sensação de que o desenho está monótono e chato.  E talvez não seja o que você quer passar com o seu.
@@ -123,6 +125,8 @@ Por outro lado, quando aplicamos pesos de linha diferentes tornamos os traços m
 Então se você segue esse estilo de desenho que usa linhas, tenta buscar um pouco disso, o estilo Disney é uma ótima referência de inspiração.
 
 ## Dica #7: Aprenda com outros artistas
+
+![](/images/uploads/aprenda-com-outros-artistas-compartilhe-ideias_flat-design.jpg)
 
 Durante muitos anos eu não tive contato como outras pessoas faziam para desenhar, simplesmente ia fazendo o que eu estava com vontade.
 
