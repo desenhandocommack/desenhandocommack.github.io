@@ -14,11 +14,11 @@ Mas quantos de nós realmente fazemos ou estamos dispostos a fazer o que tem de 
 
 Pois é, quando olhamos para os traços de um desenhista profissional notamos logo a diferença entre o trabalho dele e de quem começou agora. E com certeza o resultado do trabalho de alguém experiente vem da combinação de uma quantidade enorme de horas de estudo, prática e dedicação.  Bagagem essa que nós desenhistas iniciantes ainda não temos.
 
-A boa é que desenhar é uma habilidade, logo entende-se que pode ser desenvolvida. Então já podemos descartar aquela historinha de "DOM" e trabalhar com a realidade, que nada mais é do que treinar, treinar e treinar.
+A boa é que desenhar é uma habilidade, logo entende-se que pode ser desenvolvida. Então já podemos descartar aquela historinha de "DOM" e trabalhar com a realidade, que nada mais é do que treinar, treinar e treinar. E se você não estiver disposto a isso, a recompensa não vai cair do céu.
 
 Quando olhamos o trabalho de alguém com um traço maravilhoso acabamos pensando somente em resultado, que é o que a gente está vendo e está bem claro. E é naquilo que a gente foca, na busca de um segredo que faça a gente pular do estágio que estamos para o que a gente quer alcançar.
 
-Nisso algumas pessoas acham que é o software que faz a diferença, outros ficam em busca do brush que fulano usa, alguns outros em busca da mesa digitalizadora perfeita, e por aí vai. Mas isso tudo é inútil, uma vez que o traço é uma habilidade que só depende de VOCÊ, so seu praticar diariamente e constantemente.
+Nisso algumas pessoas acham que é o software que faz a diferença, outros ficam em busca do brush que fulano usa, alguns outros em busca da mesa digitalizadora perfeita, e por aí vai. E uma vez que o traço é uma habilidade que só depende de VOCÊ, do seu praticar diariamente e constantemente, tudo isso não vai te servir pra muita coisa.
 
 Mas e se todos esses artistas que você admira pudessem te mostrar exatamente a quantidade de horas, esforço e dedicação que eles investiram para chegar ali. Será que você ainda pensaria da mesma forma?
 
