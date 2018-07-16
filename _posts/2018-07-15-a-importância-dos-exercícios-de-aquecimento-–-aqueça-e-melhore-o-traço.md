@@ -16,27 +16,27 @@ Pois é, quando olhamos para os traços de um desenhista profissional notamos lo
 
 A boa é que desenhar é uma habilidade, logo entende-se que pode ser desenvolvida. Então já podemos descartar aquela historinha de "DOM" e trabalhar com a realidade, que nada mais é do que treinar, treinar e treinar. E se você não estiver disposto a isso e quiser caminho fácil, esqueça!
 
-Mas por onde eu começo então? Quais exercícios devo fazer? Em quanto tempo o meu traço vai ficar legal, tem algum segredo? 
+Mas por onde eu começo então? Quais exercícios devo fazer? Em quanto tempo o meu traço vai ficar legal? Tem algum segredo? 
 
 É tudo o que vamos ver ao longo desse artigo. Continue lendo!
 
 ## Menos RESULTADO mais PROCESSO
 
-Quando olhamos o trabalho de alguém com um traço maravilhoso acabamos pensando somente em resultado, que é o que a gente está vendo e está bem claro. E é naquilo que a gente foca, na busca de um segredo que faça a gente pular do estágio que estamos para o que a gente quer alcançar.
+Quando olhamos o trabalho de alguém com um traço espetacular acabamos pensando somente em resultado, que é o que a gente está vendo e está bem claro. E é naquilo que a gente foca, na busca de um segredo que faça a gente pular do estágio que estamos para o que a gente quer alcançar.
 
 Nisso algumas pessoas acham que é o software que faz a diferença, outros ficam em busca do brush que fulano usa, alguns outros em busca da mesa digitalizadora perfeita, e por aí vai. E uma vez que o traço é uma habilidade que só depende de VOCÊ, do SEU praticar diariamente e constantemente, tudo isso não vai te servir pra muita coisa.
 
-Não há como você pular do início para o fim, existe um caminho a ser percorrido e ele não pode ser ignorado, e esse trabalho está todo em suas mãos. Além do que, o fim está sempre a uma distância infinita para aqueles que realmente acreditam que sempre podemos melhorar.
+Não há como você pular do início para o fim, existe um caminho a ser percorrido e ele não pode ser ignorado, e esse trabalho está todo em suas mãos. Além do que, o fim está sempre a uma distância infinita para aqueles que realmente acreditam que sempre podem continuar melhorando.
 
 O segredo?
 
 Treinar!
 
-Se você ainda estiver por aqui podemos entrar na importância desses exercícios, que vão além de somente melhorar o traço.
+Se você ainda estiver por aqui diposto a encarar o quanto antes o inevitável, podemos entrar na importância desses exercícios, que vão além de somente melhorar o traço.
 
 ## A importância dos exercícios de aquecimento antes de desenhar
 
-Antes de iniciar qualquer atividade é interessante fazer exercícios de aquecimento afim de se preparar para a atividade que está por vir, e isso também é válido para desenhistas.
+Antes de iniciar qualquer atividade é interessante fazer exercícios de aquecimento afim de se preparar para a atividade que está por vir, e isso também é válido para desenhistas profissionais ou não, já que passamos horas sentados desenhando. 
 
 Quando já entramos de cara no projeto que estamos fazendo sem haver um preparo, as coisas podem dar muito errado, e é bem comum a gente sentir o traço travado no início, por isso nós aquecemos antes.
 
@@ -50,21 +50,13 @@ Como já citado no artigo 7 dicas para melhorar o resultado dos seus desenhos co
 
  E é tudo isso que queremos, não?
 
+
+
+
+
 ## Melhorando os traços com exercícios
 
 Quanto tempo por dia devo
-
-
-
-
-
-
-
-
-
-
-
-
 
 se parar de treinar voce perde costume
 
