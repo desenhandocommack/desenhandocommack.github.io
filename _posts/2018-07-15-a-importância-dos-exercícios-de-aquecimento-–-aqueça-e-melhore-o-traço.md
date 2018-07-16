@@ -32,7 +32,7 @@ O segredo?
 
 Treinar!
 
-Se você ainda estiver por aqui diposto a encarar o quanto antes o inevitável, podemos entrar na importância desses exercícios, que vão além de somente melhorar o traço.
+Se você ainda estiver por aqui diposto a encarar o quanto antes o inevitável, podemos entrar na importância desses exercícios, que vão além de somente melhorar o traço. 
 
 ## A importância dos exercícios de aquecimento antes de desenhar
 
@@ -50,7 +50,11 @@ Como já citado no artigo 7 dicas para melhorar o resultado dos seus desenhos co
 
  E é tudo isso que queremos, não?
 
+Então por mais que seja um pouco chato fazer esses exercícios faz um esforço até que ele se torne um hábito, ou pelo menos tente fazer sempre que puder. Como podemos fazer de 10 a 15 minutinhos antes de começar a desenhar, pode ficar mais fácil lembrar e colocar em prática.
 
+E é aquilo, uma vez que a gente deixa de praticar o desenho em si e esses exercícios por um longo período precisamos voltar algum estágio pra começar a sentir o traço fluir de novo, o desenhista também enferruja.
+
+Por isso, continue praticando sempre que possível, um pouco todos os dias é o ideal para ver os resultados aconteceram ao longo das semanas.
 
 
 
