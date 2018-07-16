@@ -16,7 +16,7 @@ Pois é, quando olhamos para os traços de um desenhista profissional notamos lo
 
 A boa é que desenhar é uma habilidade, logo entende-se que pode ser desenvolvida. Então já podemos descartar aquela historinha de "DOM" e trabalhar com a realidade, que nada mais é do que treinar, treinar e treinar.
 
-Mas que treinos são esses, por onde começar, e por que eles são importantes?
+Mas que treinos são esses, por onde começar, por que eles são importantes, quanto tempo leva pra eu ter um traço bom e qual o segredo de um traço legal?
 
 É tudo o que vamos ver ao longo desse artigo.
 
@@ -26,18 +26,34 @@ Antes de iniciar qualquer atividade é interessante fazer exercícios de aquecim
 
 Quando já entramos de cara no projeto que estamos fazendo sem haver um preparo, as coisas podem dar muito errado, e é bem comum a gente sentir o traço travado no início, por isso nós aquecemos antes.
 
-Como já falado no artigo ... conseguimos com simples exercícios de aquecimento benefícios como: 
+Como já citado no artigo 7 dicas para melhorar o resultado dos seus desenhos conseguimos com simples exercícios de aquecimento benefícios como: 
 
-* Relaxamento do corpo
-* Entrar no ritmo da atividade ajudando a concentrar e focar
-* Melhorar a coordenação motora e o aspecto dos traços
-* Destravar e soltar o traço
+* Relaxamento do corpo;
+* Entrar no ritmo da atividade ajudando a concentrar e focar;
+* Melhorar a coordenação motora e o aspecto dos traços;
+* Destravar e soltar o traço;
 
  E é tudo isso que queremos, não?
 
+
+
 ## Melhorando os traços com exercícios
 
+Quanto tempo por dia devo
 
+
+
+
+
+
+
+
+
+
+
+
+
+se parar de treinar voce perde costume
 
 Mas antes de entrar nos aspectos práticos dos exercícios para melhorar o traço, falaremos rapidamente sobre a importância de aquecer, alongar e manter a postura enquanto desenha.
 
