@@ -20,7 +20,7 @@ Quando olhamos o trabalho de alguém com um traço maravilhoso acabamos pensando
 
 Nisso algumas pessoas acham que é o software que faz a diferença, outros ficam em busca do brush que fulano usa, alguns outros em busca da mesa digitalizadora perfeita, e por aí vai. E uma vez que o traço é uma habilidade que só depende de VOCÊ, do seu praticar diariamente e constantemente, tudo isso não vai te servir pra muita coisa.
 
-Mas e se todos esses artistas que você admira pudessem te mostrar exatamente a quantidade de horas, esforço e dedicação que eles investiram para chegar ali. Será que você ainda pensaria da mesma forma?
+Por traz dos trabalho de um artista muito bom não existe somente resultados, existe o processo, e é nesse que devemos nos focar, pois é o único caminho para o sucesso.
 
 Mas que treinos são esses, por onde começar, por que eles são importantes, quanto tempo leva pra eu ter um traço bom e qual o segredo de um traço legal?
 
