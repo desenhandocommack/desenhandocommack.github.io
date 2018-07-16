@@ -38,7 +38,7 @@ Se você ainda estiver por aqui disposto a encarar o quanto antes o inevitável,
 
 ## Melhorando a flexibilidade e precisão dos traços com exercícios simples
 
-![texto descritivo](/images/uploads/como-ganhar-mais-confianca-no-traco-flexibilidade-e-precisao.jpg)
+![](/images/uploads/como-ganhar-mais-confianca-no-traco-flexibilidade-e-precisao.jpg)
 
 Seja no método tradicional ou no digital com mesa digitalizadora (esqueça o mouse para essa atividade) precisamos fazer exercícios para aprender a controlar, trazer mais flexibilidade e ganhar confiança do nosso traço, e existem inúmeras opções para isso.
 
@@ -54,9 +54,9 @@ Mas antes é importante que a gente tente:
 
 Tudo isso vai te ajudar a ficar mais relaxado e soltar o traço, uma vez que travar o braço na mesa, trabalhar somente com o punho e segurar na pontinha do lápis, naturalmente vai travar os seus movimentos.
 
-E esse é um dos principais motivos que faz um iniciante ter aquele traço duro, tremido e inseguro.
+E esse é um dos principais motivos que faz um iniciante ter aquele traço duro e tremido.
 
-O outro motivo é a insegurança, nós quando estamos começando é natural ficar com medo de errar qualquer coisa que já temos "pronto", então ficamos ali nos segurando literalmente no papel, para não "estragar" o desenho.
+O outro motivo é a insegurança, nós quando estamos começando é natural ficar com medo de errar qualquer coisa que já temos "pronto", então ficamos ali nos segurando literalmente no papel para não "estragar" o desenho.
 
 Por isso outro fator importante no processo é o desapego, esteja pronto para errar e recomeçar quantas vezes forem necessárias. A etapa do esboço serve para isso mesmo, experimentar e errar sem preocupação.
 
