@@ -62,9 +62,9 @@ Importante saber que nada disso vai ser fácil no início, mas aos poucos você 
 
 O primeiro passo é preencher uma folha inteira ou mais com círculos e ovais de todos os tamanhos.
 
-Esses exercícios você pode ficar no mesmo ponto fazendo círculos em cima de círculos também. Aos poucos você vai notar que eles vão começar a ficar bem próximos do primeiro círculo feito.
+Nesse exercício você pode ficar no mesmo ponto fazendo círculos em cima de círculos também. Aos poucos você vai notar que eles vão começar a ficar bem próximos do primeiro círculo feito.
 
-Além dessas formas, cilindros, cubos, quadrados e triângulos também são bastante utilizados nos esboços, por isso é válido acrescentar aos seus treinos também.
+Além dessas formas, cilindros, cubos, quadrados e triângulos são bastante utilizados nos esboços, por isso é válido acrescentar aos seus treinos também.
 
 ### Exercício 2: Linhas e retas
 
@@ -72,7 +72,7 @@ Trace linhas em todas as direções: de cima para baixo, de baixo para cima, da 
 
 Faça os traços de uma única vez e não se preocupe se as coisas não saírem tão retas assim no início, é normal. O que não vale é ficar fazendo aquele tracinho rabiscado até completar um reta. Traços únicos.
 
-Um outro exercício com retas interessante é marcar dois pontos na folha e traça uma reta entre eles. A ideia é ligar um ponto ao outro.
+Um outro exercício com retas interessante é marcar dois pontos na folha e traçar uma reta entre eles. A ideia é ligar um ponto ao outro.
 
 ### Exercício 3:
 
