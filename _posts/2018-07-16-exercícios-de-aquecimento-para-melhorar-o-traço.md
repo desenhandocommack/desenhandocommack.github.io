@@ -86,7 +86,7 @@ Esses são apenas alguns exercícios, mas você pode fazer variações deles e i
 
 Todos são úteis e vão contribuir para que o seu traço melhore, mas é preciso ter paciência e persistir. A única maneira de obter resultados é através do exercício de praticar.
 
-INFO: Uma vez que você treinar no papel e ficar bom, não quer dizer que a transição do papel para uma mesa digitalizadora será fácil. Não, não é. São superfícies diferentes e materiais diferentes, você vai precisar praticar nas duas mídias de forma independente.
+INFO: Uma vez que você treinar no papel e ficar bom, não quer dizer que a transição do papel para uma mesa digitalizadora será fácil. Não, não é. São coisas bem diferentes e você vai precisar praticar nas duas mídias de forma independente.
 
 Além desses exercícios servirem para treinar a nossa mão em busca de um traço mais seguro, eles também contribuem em outros aspectos, por isso falaremos um pouco sobre:
 
@@ -112,9 +112,15 @@ E é tudo isso que queremos, não?
 
 Então por mais que seja um pouco chato fazer esses exercícios faz um esforço até que ele se torne um hábito, ou pelo menos tente fazer sempre que puder. Como podemos fazer de 10 a 15 minutinhos antes de começar a desenhar, pode ficar mais fácil lembrar e colocar em prática.
 
-E é aquilo, uma vez que a gente deixa de praticar o desenho em si e esses exercícios por um longo período, precisamos fazer uma reciclagem para começar a sentir o traço fluir de novo, o desenhista também enferruja.
+E é aquilo, uma vez que a gente deixa de praticar o desenho em si e esses exercícios por um longo período, precisamos fazer uma reciclagem para começar a sentir o traço fluir de novo. O desenhista também enferruja.
 
 Por isso, continue praticando sempre que possível, um pouco todos os dias é o ideal para ver os resultados aconteceram ao longo das semanas. Sem isso, as coisas vão ficar mais difíceis do que já são.
+
+E sobre o tempo que leva para conseguir um traço legal?
+
+Não tem resposta certa, demora bastante tempo e depende do que você considera um traço legal. Tudo vai depender do tempo que você investiu, do quenato você se dedicar diariamente e a qualidade desses treinos.
+
+Por isso não se apegue a quanto tempo as coisas levam para acontecerem, simplesmente faça porque você gosta e está disposto a melhorar um pouco a cada dia.
 
 ### Fique atento aos intervalos e sua postura
 
