@@ -16,7 +16,9 @@ Pois é, quando olhamos para os traços de um desenhista profissional notamos lo
 
 A boa é que desenhar é uma habilidade, logo entende-se que pode ser desenvolvida. Então já podemos descartar aquela historinha de "DOM" e trabalhar com a realidade, que nada mais é do que treinar, treinar e treinar.
 
-Quando olhamos o trabalho de alguém com um traço maravilhoso acabamos pensando somente em resultado, que é o que a gente está vendo. Mas e se todos esses artistas que você admira pudessem te mostrar exatamente a quantidade de horas, esforço e dedicação que eles investiram para chegar ali. Será que você ainda pensaria da mesma forma.
+Quando olhamos o trabalho de alguém com um traço maravilhoso acabamos pensando somente em resultado, que é o que a gente está vendo. E é naquilo que a gente foca, quero um traço assim!
+
+ Mas e se todos esses artistas que você admira pudessem te mostrar exatamente a quantidade de horas, esforço e dedicação que eles investiram para chegar ali. Será que você ainda pensaria da mesma forma.
 
 Mas que treinos são esses, por onde começar, por que eles são importantes, quanto tempo leva pra eu ter um traço bom e qual o segredo de um traço legal?
 
