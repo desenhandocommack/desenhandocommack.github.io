@@ -26,7 +26,7 @@ Quando olhamos o trabalho de alguém com um traço maravilhoso acabamos pensando
 
 Nisso algumas pessoas acham que é o software que faz a diferença, outros ficam em busca do brush que fulano usa, alguns outros em busca da mesa digitalizadora perfeita, e por aí vai. E uma vez que o traço é uma habilidade que só depende de VOCÊ, do SEU praticar diariamente e constantemente, tudo isso não vai te servir pra muita coisa.
 
-Por traz do trabalho de um artista muito bom não existe somente resultados, existe o processo, e é nesse que devemos nos focar, pois é o único caminho para o sucesso.
+Não há como você pular do início para o fim, existe um caminho a ser percorrido e ele não pode ser ignorado, e esse trabalho está todo em suas mãos. Além do que, o fim está sempre a uma distância infinita para aqueles que realmente acreditam que sempre podemos melhorar.
 
 O segredo?
 
