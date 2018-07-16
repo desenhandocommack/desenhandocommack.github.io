@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Exercícios de aquecimento para melhorar o traço
+title: Exercícios para melhorar o traço e a importância do aquecimento
 category: Dicas
 thumbnail: /images/uploads/aprenda-com-outros-artistas-compartilhe-ideias_flat-design.jpg
 ---
