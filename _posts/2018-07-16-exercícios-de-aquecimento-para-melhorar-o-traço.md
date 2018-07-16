@@ -20,7 +20,9 @@ Mas por onde eu começo então? Quais exercícios devo fazer? Em quanto tempo o 
 
 **Continue lendo**, porque é tudo o que vamos ver ao longo desse artigo.
 
-## Menos RESULTADO mais PROCESSO
+## Foque mais no PROCESSO
+
+![texto descritivo](/images/uploads/dicas-para-evoluir-no-desenho-foco-no-processo_flat-design.jpg)
 
 Quando olhamos o trabalho de alguém com um traço espetacular acabamos pensando somente em resultado, que é o que a gente está vendo. E é naquilo que a gente foca, na busca de um segredo que faça a gente pular do estágio que estamos para o que a gente quer alcançar.
 
@@ -36,7 +38,9 @@ Se você ainda estiver por aqui disposto a encarar o quanto antes o inevitável,
 
 ## Melhorando a flexibilidade e precisão dos traços com exercícios simples
 
-Seja no método tradicional ou no digital com mesa digitalizadora (esqueça o mouse para essa atividade) precisamos fazer exercícios para aprender a controlar e trazer mais flexibilidade para o nosso traço, e existem inúmeras opções para isso.
+![texto descritivo](/images/uploads/como-ganhar-mais-confianca-no-traco-flexibilidade-e-precisao.jpg)
+
+Seja no método tradicional ou no digital com mesa digitalizadora (esqueça o mouse para essa atividade) precisamos fazer exercícios para aprender a controlar, trazer mais flexibilidade e ganhar confiança do nosso traço, e existem inúmeras opções para isso.
 
 Mas antes é importante que a gente tente:
 
@@ -50,9 +54,9 @@ Mas antes é importante que a gente tente:
 
 Tudo isso vai te ajudar a ficar mais relaxado e soltar o traço, uma vez que travar o braço na mesa, trabalhar somente com o punho e segurar na pontinha do lápis, naturalmente vai travar os seus movimentos.
 
-E esse é um dos principais motivos que faz um iniciante ter aquele traço duro e tremido.
+E esse é um dos principais motivos que faz um iniciante ter aquele traço duro, tremido e inseguro.
 
-O outro motivo é a insegurança, nós quando estamos começando é natural ficar com medo de errar qualquer coisa que já temos "pronto", então ficamos ali nos segurando literalmente no papel, pra não "estragar" o desenho. 
+O outro motivo é a insegurança, nós quando estamos começando é natural ficar com medo de errar qualquer coisa que já temos "pronto", então ficamos ali nos segurando literalmente no papel, para não "estragar" o desenho.
 
 Por isso outro fator importante no processo é o desapego, esteja pronto para errar e recomeçar quantas vezes forem necessárias. A etapa do esboço serve para isso mesmo, experimentar e errar sem preocupação.
 
