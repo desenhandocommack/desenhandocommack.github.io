@@ -118,7 +118,7 @@ Por isso, continue praticando sempre que possível, um pouco todos os dias é o 
 
 E sobre o tempo que leva para conseguir um traço legal?
 
-Não tem resposta certa, demora bastante tempo e depende do que você considera um traço legal. Tudo vai depender do tempo que você investiu, do quenato você se dedicar diariamente e a qualidade desses treinos.
+Não tem resposta certa, demora bastante tempo e depende do que você considera um traço legal. Tudo vai depender do tempo que você investiu, do quanto você se dedica diariamente e a qualidade desses treinos.
 
 Por isso não se apegue a quanto tempo as coisas levam para acontecerem, simplesmente faça porque você gosta e está disposto a melhorar um pouco a cada dia.
 
@@ -137,3 +137,11 @@ Mas para boas condições de trabalho você precisa basicamente de:
 * Se estiver desenhando no computador sempre ajuste a altura do monitor buscando alinhar a sua visão ao centro dele. Nem muito para cima e nem muito para baixo.
 * Para desenho no método tradicional o ideal é utilizar um prancheta para alinhar a sua visão ao papel. Quando desenhamos na mesa ficamos um pouco distantes e  a nossa visão não fica alinhada com o papel como deveria, forçando a gente a se curvar sobre a mesa que é péssimo.
 * Sempre apoie as costas na cadeira;
+
+Anos atrás eu fiz tudo errado durante muito tempo, e grande parte das vezes as regiões mais afetadas eram lombar e punhos.
+
+Hoje a lombar ainda me causa problemas, por isso eu pratico atividade física diariamente. Já os punhos me incomodaram muito há algum tempo me forçando a ficar algumas semanas sem desenhar, mas hoje felizmente, nunca mais tive esses problemas.
+
+Por isso fica a mensagem de, cuidem do corpo de vocês desde o início. Dá muito trabalho deixar isso pra depois. E ficar sentindo dores, definitivamente não é legal.
+
+Desenhar é bom, mas vamos levantar um pouco pra alongar, exercitar e manter o corpo saudável.
