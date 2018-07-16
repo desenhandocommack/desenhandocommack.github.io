@@ -6,7 +6,7 @@ thumbnail: /images/uploads/variacao-de-linhas-no-desenho-flat-design.jpg
 ---
 Se tem uma coisa que incomoda muito nós aprendizes, é a questão do traço. Vamos falar então sobre como de fato melhorar seu traço e a importância dos exercícios.
 
-Quem não quer um traço preciso, atraente e profissional?
+Quem não quer um **traço preciso**, **atraente** e **profissional**?
 
 Todos nós que gostamos de desenhar, é claro!
 
@@ -15,6 +15,8 @@ Mas quantos de nós realmente fazemos ou estamos dispostos a fazer o que tem de 
 Pois é, quando olhamos para os traços de um desenhista profissional notamos logo a diferença entre um trabalho de alguém experiente e quem começou agora. E com certeza o resultado de um trabalho como esses vem da combinação de uma quantidade enorme de horas de estudo, prática e dedicação.  Bagagem essa que nós desenhistas iniciantes ainda não temos.
 
 A boa é que desenhar é uma habilidade, logo entende-se que pode ser desenvolvida. Então já podemos descartar aquela historinha de "DOM" e trabalhar com a realidade, que nada mais é do que treinar, treinar e treinar.
+
+Quando olhamos o trabalho de alguém com um traço maravilhoso acabamos pensando somente em resultado, que é o que a gente está vendo. Mas e se todos esses artistas que você admira pudessem te mostrar exatamente a quantidade de horas, esforço e dedicação que eles investiram para chegar ali. Será que você ainda pensaria da mesma forma.
 
 Mas que treinos são esses, por onde começar, por que eles são importantes, quanto tempo leva pra eu ter um traço bom e qual o segredo de um traço legal?
 
