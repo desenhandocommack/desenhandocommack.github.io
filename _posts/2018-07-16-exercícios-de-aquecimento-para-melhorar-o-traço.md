@@ -4,9 +4,9 @@ title: Exercícios de aquecimento para melhorar o traço
 category: Dicas
 thumbnail: /images/uploads/aprenda-com-outros-artistas-compartilhe-ideias_flat-design.jpg
 ---
-Se tem uma coisa que incomoda muito nós aprendizes, é a questão do traço. Vamos falar então sobre como de fato melhorar seu traço e a importância dos exercícios.
+Se tem uma coisa que incomoda muito nós aprendizes, é a questão do traço. Vamos falar então sobre como de fato melhorar o seu traço e a importância dos exercícios.
 
-Quem não quer um traço preciso, atraente e profissional?
+Quem não quer um **traço preciso**, **atraente** e **profissional**?
 
 Todos nós que gostamos de desenhar, é claro!
 
@@ -14,13 +14,13 @@ Mas quantos de nós realmente fazemos ou estamos dispostos a fazer o que tem de 
 
 Pois é, quando olhamos para os traços de um desenhista profissional notamos logo a diferença entre o trabalho dele e de quem começou agora. E com certeza o resultado do trabalho de alguém experiente vem da combinação de uma quantidade enorme de horas de estudo, prática e dedicação. Bagagem essa que nós desenhistas iniciantes ainda não temos.
 
-A boa é que desenhar é uma habilidade, logo entende-se que pode ser desenvolvida. Então já podemos descartar aquela historinha de "DOM" e trabalhar com a realidade, que nada mais é do que treinar, treinar e treinar. E se você não estiver disposto a isso e quiser caminho fácil, esqueça!
+A boa é que desenhar é uma habilidade, logo entende-se que pode ser desenvolvida. Então já podemos descartar aquela historinha de "DOM" e trabalhar com a realidade, que nada mais é do que **treinar**, **treinar** e **treinar**. E se você não estiver disposto a isso e quiser caminho fácil, esqueça!
 
 Mas por onde eu começo então? Quais exercícios devo fazer? Em quanto tempo o meu traço vai ficar legal? Tem algum segredo?
 
-Continue lendo, porque é tudo o que vamos ver ao longo desse artigo.
+**Continue lendo**, porque é tudo o que vamos ver ao longo desse artigo.
 
-Menos RESULTADO mais PROCESSO
+## Menos RESULTADO mais PROCESSO
 
 Quando olhamos o trabalho de alguém com um traço espetacular acabamos pensando somente em resultado, que é o que a gente está vendo. E é naquilo que a gente foca, na busca de um segredo que faça a gente pular do estágio que estamos para o que a gente quer alcançar.
 
@@ -30,23 +30,23 @@ Não há como você pular do início para o fim, existe um caminho a ser percorr
 
 O segredo?
 
-Treinar!
+**Treinar!**
 
 Se você ainda estiver por aqui disposto a encarar o quanto antes o inevitável, vamos lá ver alguns exercícios simples que você pode colocar em prática todos os dias para tornar o seu traço, mais firme, limpo e solto.
 
-Melhorando os traços com exercícios
+## Melhorando os traços com exercícios
 
 Seja no método tradicional ou no digital com mesa digitalizadora (esqueça o mouse para essa atividade) precisamos fazer exercícios para aprender a controlar e trazer mais flexibilidade para o nosso traço, e existem inúmeras opções para isso.
 
 Mas antes é importante que a gente tente:
 
-\    • Segurar o lápis longe da ponta (mais na parte de trás);
+• Segurar o lápis longe da ponta (mais na parte de trás);
 
-\    • Deixar ele menos em pé e mais inclinado;
+• Deixar ele menos em pé e mais inclinado;
 
-\    • Procurar mexer o braço todo e não somente o punho;
+• Procurar mexer o braço todo e não somente o punho;
 
-\    • Não apoiar o braço sobre a mesa;
+• Não apoiar o braço sobre a mesa;
 
 Tudo isso vai te ajudar a ficar mais relaxado e soltar o traço, uma vez que travar o braço na mesa, trabalhar somente com o punho e segurar na pontinha do lápis, naturalmente vai travar os seus movimentos.
 
@@ -58,7 +58,7 @@ Por isso outro fator importante no processo é o desapego, esteja pronto para er
 
 Importante saber que nada disso vai ser fácil no início, mas aos poucos você vai conseguindo.
 
-Exercício 1: Esboçando formas simples
+### Exercício 1: Esboçando formas simples
 
 O primeiro passo é preencher uma folha inteira ou mais com círculos e ovais de todos os tamanhos.
 
@@ -66,7 +66,7 @@ Esses exercícios você pode ficar no mesmo ponto fazendo círculos em cima de c
 
 Além dessas formas, cilindros, cubos, quadrados e triângulos também são bastante utilizados nos esboços, por isso é válido acrescentar aos seus treinos também.
 
-Exercício 2: Linhas e retas
+### Exercício 2: Linhas e retas
 
 Trace linhas em todas as direções: de cima para baixo, de baixo para cima, da esquerda para a direita, da direita para a esquerda e inclinadas.
 
@@ -74,7 +74,7 @@ Faça os traços de uma única vez e não se preocupe se as coisas não saírem 
 
 Um outro exercício com retas interessante é marcar dois pontos na folha e traça uma reta entre eles. A ideia é ligar um ponto ao outro.
 
-Exercício 3:
+### Exercício 3:
 
 INFO: Uma vez que você treinar no papel e ficar bom, não quer dizer que a transição do papel para uma mesa digitalizadora será fácil, não, não é. São superfícies diferentes, materiais diferentes, você vai precisar praticar nas duas mídias.
 
