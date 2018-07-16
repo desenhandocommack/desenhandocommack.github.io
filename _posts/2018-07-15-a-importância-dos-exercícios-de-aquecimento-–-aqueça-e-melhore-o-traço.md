@@ -32,7 +32,7 @@ O segredo?
 
 Treinar!
 
-
+Se você ainda estiver por aqui podemos entrar na importância desses exercícios, que vão além de somente melhorar o traço.
 
 ## A importância dos exercícios de aquecimento antes de desenhar
 
@@ -46,10 +46,9 @@ Como já citado no artigo 7 dicas para melhorar o resultado dos seus desenhos co
 * Entrar no ritmo da atividade ajudando a concentrar e focar;
 * Melhorar a coordenação motora e o aspecto dos traços;
 * Destravar e soltar o traço;
+* Prevenir lesões;
 
  E é tudo isso que queremos, não?
-
-
 
 ## Melhorando os traços com exercícios
 
