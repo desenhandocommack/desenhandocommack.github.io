@@ -1,0 +1,107 @@
+---
+layout: post
+title: Exercícios de aquecimento para melhorar o traço
+category: Dicas
+thumbnail: /images/uploads/aprenda-com-outros-artistas-compartilhe-ideias_flat-design.jpg
+---
+Se tem uma coisa que incomoda muito nós aprendizes, é a questão do traço. Vamos falar então sobre como de fato melhorar seu traço e a importância dos exercícios.
+
+Quem não quer um traço preciso, atraente e profissional?
+
+Todos nós que gostamos de desenhar, é claro!
+
+Mas quantos de nós realmente fazemos ou estamos dispostos a fazer o que tem de ser feito para que isso aconteça?
+
+Pois é, quando olhamos para os traços de um desenhista profissional notamos logo a diferença entre o trabalho dele e de quem começou agora. E com certeza o resultado do trabalho de alguém experiente vem da combinação de uma quantidade enorme de horas de estudo, prática e dedicação. Bagagem essa que nós desenhistas iniciantes ainda não temos.
+
+A boa é que desenhar é uma habilidade, logo entende-se que pode ser desenvolvida. Então já podemos descartar aquela historinha de "DOM" e trabalhar com a realidade, que nada mais é do que treinar, treinar e treinar. E se você não estiver disposto a isso e quiser caminho fácil, esqueça!
+
+Mas por onde eu começo então? Quais exercícios devo fazer? Em quanto tempo o meu traço vai ficar legal? Tem algum segredo?
+
+Continue lendo, porque é tudo o que vamos ver ao longo desse artigo.
+
+Menos RESULTADO mais PROCESSO
+
+Quando olhamos o trabalho de alguém com um traço espetacular acabamos pensando somente em resultado, que é o que a gente está vendo. E é naquilo que a gente foca, na busca de um segredo que faça a gente pular do estágio que estamos para o que a gente quer alcançar.
+
+Nisso algumas pessoas acham que é o software que faz a diferença, outros ficam em busca do brush que fulano usa, alguns outros em busca da mesa digitalizadora perfeita, e por aí vai. E uma vez que o traço é uma habilidade que só depende de VOCÊ, do SEU praticar diariamente e constantemente, tudo isso não vai te servir pra muita coisa.
+
+Não há como você pular do início para o fim, existe um caminho a ser percorrido e ele não pode ser ignorado, e esse trabalho está todo em suas mãos. Além do que, o fim está sempre a uma distância infinita para aqueles que realmente acreditam que sempre podem continuar melhorando.
+
+O segredo?
+
+Treinar!
+
+Se você ainda estiver por aqui disposto a encarar o quanto antes o inevitável, vamos lá ver alguns exercícios simples que você pode colocar em prática todos os dias para tornar o seu traço, mais firme, limpo e solto.
+
+Melhorando os traços com exercícios
+
+Seja no método tradicional ou no digital com mesa digitalizadora (esqueça o mouse para essa atividade) precisamos fazer exercícios para aprender a controlar e trazer mais flexibilidade para o nosso traço, e existem inúmeras opções para isso.
+
+Mas antes é importante que a gente tente:
+
+\    • Segurar o lápis longe da ponta (mais na parte de trás);
+
+\    • Deixar ele menos em pé e mais inclinado;
+
+\    • Procurar mexer o braço todo e não somente o punho;
+
+\    • Não apoiar o braço sobre a mesa;
+
+Tudo isso vai te ajudar a ficar mais relaxado e soltar o traço, uma vez que travar o braço na mesa, trabalhar somente com o punho e segurar na pontinha do lápis, naturalmente vai travar os seus movimentos.
+
+E esse é um dos principais motivos que faz um iniciante ter aquele traço duro e tremido.
+
+O outro motivo é a insegurança, nós quando estamos começando é natural ficar com medo de errar qualquer coisa que já temos "pronto", então ficamos ali se segurando literalmente no papel, pra não "estragar" o desenho.
+
+Por isso outro fator importante no processo é o desapego, esteja pronto para errar e recomeçar quantas vezes forem necessárias. A etapa do esboço serve para isso mesmo, experimentar e errar sem preocupação.
+
+Importante saber que nada disso vai ser fácil no início, mas aos poucos você vai conseguindo.
+
+Exercício 1: Esboçando formas simples
+
+O primeiro passo é preencher uma folha inteira ou mais com círculos e ovais de todos os tamanhos.
+
+Esses exercícios você pode ficar no mesmo ponto fazendo círculos em cima de círculos também. Aos poucos você vai notar que eles vão começar a ficar bem próximos do primeiro círculo feito.
+
+Além dessas formas, cilindros, cubos, quadrados e triângulos também são bastante utilizados nos esboços, por isso é válido acrescentar aos seus treinos também.
+
+Exercício 2: Linhas e retas
+
+Trace linhas em todas as direções: de cima para baixo, de baixo para cima, da esquerda para a direita, da direita para a esquerda e inclinadas.
+
+Faça os traços de uma única vez e não se preocupe se as coisas não saírem tão retas assim no início, é normal. O que não vale é ficar fazendo aquele tracinho rabiscado até completar um reta. Traços únicos.
+
+Um outro exercício com retas interessante é marcar dois pontos na folha e traça uma reta entre eles. A ideia é ligar um ponto ao outro.
+
+Exercício 3:
+
+INFO: Uma vez que você treinar no papel e ficar bom, não quer dizer que a transição do papel para uma mesa digitalizadora será fácil, não, não é. São superfícies diferentes, materiais diferentes, você vai precisar praticar nas duas mídias.
+
+A importância dos exercícios de aquecimento antes de desenhar
+
+Antes de iniciar qualquer atividade é interessante fazer exercícios de aquecimento afim de se preparar para a atividade que está por vir, e isso também é válido para desenhistas profissionais ou não, já que passamos horas sentados desenhando.
+
+Quando já entramos de cara no projeto que estamos fazendo sem haver um preparo, as coisas podem dar muito errado, e é bem comum a gente sentir o traço travado no início, por isso nós aquecemos antes.
+
+Como já citado no artigo 7 dicas para melhorar o resultado dos seus desenhos conseguimos com simples exercícios de aquecimento benefícios como:
+
+\    • Relaxamento do corpo;
+
+\    • Entrar no ritmo da atividade ajudando a concentrar e focar;
+
+\    • Melhorar a coordenação motora e o aspecto dos traços;
+
+\    • Destravar e soltar o traço;
+
+\    • Prevenir lesões;
+
+E é tudo isso que queremos, não?
+
+Então por mais que seja um pouco chato fazer esses exercícios faz um esforço até que ele se torne um hábito, ou pelo menos tente fazer sempre que puder. Como podemos fazer de 10 a 15 minutinhos antes de começar a desenhar, pode ficar mais fácil lembrar e colocar em prática.
+
+E é aquilo, uma vez que a gente deixa de praticar o desenho em si e esses exercícios por um longo período precisamos voltar algum estágio pra começar a sentir o traço fluir de novo, o desenhista também enferruja.
+
+Por isso, continue praticando sempre que possível, um pouco todos os dias é o ideal para ver os resultados aconteceram ao longo das semanas.
+
+Se você ainda estiver por aqui diposto a encarar o quanto antes o inevitável, podemos entrar na importância desses exercícios, que vão além de somente melhorar o traço.
