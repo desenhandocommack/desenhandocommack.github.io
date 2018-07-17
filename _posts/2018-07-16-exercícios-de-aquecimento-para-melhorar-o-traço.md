@@ -138,6 +138,8 @@ Por isso não se apegue a quanto tempo as coisas levam para acontecer, simplesme
 
 ### Fique atento aos intervalos e sua postura
 
+![](/images/uploads/postura-adequada-para-desenhar-ergonomia.jpg)
+
 É comum passarmos horas desenhando, e o cuidado com a nossa saúde é extremamente importante para evitar lesões e outras complicações.
 
 Como a nossa atividade se encaixa em um trabalho sedentário, levantar e alongar a cada 50 minutos pelo menos, pode trazer muitos benefícios como livrar o nosso corpo de dores.
