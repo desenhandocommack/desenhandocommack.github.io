@@ -153,6 +153,7 @@ Mas para boas condições de trabalho você precisa basicamente de:
 * Se estiver desenhando no computador sempre ajuste a altura do monitor buscando alinhar a sua visão ao centro dele. Nem muito para cima e nem muito para baixo.
 * Para desenho no método tradicional o ideal é utilizar um prancheta para alinhar a sua visão ao papel. Quando desenhamos na mesa ficamos um pouco distantes e a nossa visão não fica alinhada com o papel como deveria, forçando a gente a se curvar sobre a mesa que é péssimo.
 * Sempre apoie as costas na cadeira;
+* Os braços também devem estar apoiados na mesa, e a flexão do cotovelo deve estar a mais ou menos 90º;
 
 Anos atrás eu fiz tudo errado durante muito tempo, e grande parte das vezes as regiões mais afetadas eram lombar e punhos.
 
