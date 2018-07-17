@@ -66,6 +66,8 @@ Então, vamos aos exercícios!
 
 ### Exercício 1: Esboçando formas simples
 
+![](/images/uploads/exercicios-de-desenho-para-o-traco-circulos-e-ovais.jpg)
+
 O primeiro passo é preencher uma folha inteira ou mais com círculos e ovais de todos os tamanhos.
 
 Nesse exercício você pode ficar no mesmo ponto fazendo círculos em cima de círculos por uns segundos também. Aos poucos você vai notar que eles vão começar a ficar bem próximos do primeiro círculo feito.
@@ -74,11 +76,15 @@ Além dessas formas, cilindros, cubos, quadrados e triângulos são bastante uti
 
 ### Exercício 2: Linhas e retas
 
+![](/images/uploads/exercicios-de-desenho-para-o-traco-retas-e-linhas.jpg)
+
 Trace linhas em todas as direções: de cima para baixo, de baixo para cima, da esquerda para a direita, da direita para a esquerda e inclinadas.
 
 Faça os traços de uma única vez e não se preocupe se as coisas não saírem tão retas assim no início, é normal. O que não vale é ficar fazendo aquele tracinho rabiscado até completar uma reta. Traços únicos.
 
 Um outro exercício com retas interessante é marcar dois pontos na folha e traçar uma reta entre eles. A ideia é ligar um ponto ao outro.
+
+![](/images/uploads/exercicios-de-desenho-para-o-traco-retas.jpg)
 
 ### Exercício 3: Curvas
 
@@ -86,7 +92,11 @@ No desenho também utilizamos bastante curvas, e exercícios focados nisso tamb�
 
 Algumas vezes eu faço curvas livremente e em outras eu limito essa curvas dentro de quadrados, que também é uma forma interessante de se fazer.
 
+![](/images/uploads/exercicios-de-desenho-para-o-traco-curvas.jpg)
+
 Esses são apenas alguns exercícios, mas você pode fazer variações deles e ir dificultando o nível de cada um como nos exemplos abaixo.
+
+![](/images/uploads/exercicios-de-desenho-para-melhorar-o-traco.jpg)
 
 Todos são úteis e vão contribuir para que o seu traço melhore, mas é preciso ter paciência e persistir. A única maneira de obter resultados é através do exercício de praticar.
 
