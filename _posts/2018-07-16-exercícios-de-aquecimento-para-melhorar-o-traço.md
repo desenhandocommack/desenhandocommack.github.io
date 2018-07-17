@@ -160,8 +160,8 @@ Por isso fica a mensagem de cuidar do corpo de vocês desde o início. Dá muito
 
 Desenhar é bom, mas vamos levantar um pouco pra alongar, exercitar e manter o corpo saudável.
 
-Então o que achou? Você já faia estes exercícios? 
+Então o que achou? Você faz estes exercícios? 
 
-E como anda sua posturae se ambiente de trabalho?
+E como anda sua postura e seu ambiente de trabalho?
 
 Te vejo nos comentários ;)
