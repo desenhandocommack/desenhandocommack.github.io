@@ -38,7 +38,7 @@ Se você ainda estiver por aqui disposto a encarar o quanto antes o inevitável,
 
 ## Melhorando a flexibilidade e precisão dos traços com exercícios simples
 
-![](/images/uploads/como-ganhar-mais-confianca-no-traco-flexibilidade-e-precisao.jpg)
+![null](/images/uploads/como-ganhar-mais-confianca-no-traco-flexibilidade-e-precisao.jpg)
 
 Seja no método tradicional ou no digital com mesa digitalizadora (esqueça o mouse para essa atividade) precisamos fazer exercícios para aprender a controlar, trazer mais flexibilidade e ganhar confiança do nosso traço, e existem inúmeras opções para isso.
 
@@ -66,7 +66,7 @@ Então, vamos aos exercícios!
 
 ### Exercício 1: Esboçando formas simples
 
-![](/images/uploads/exercicios-de-desenho-para-o-traco-circulos-e-ovais.jpg)
+![null](/images/uploads/exercicios-de-desenho-para-o-traco-circulos-e-ovais.jpg)
 
 O primeiro passo é preencher uma folha inteira ou mais com círculos e ovais de todos os tamanhos.
 
@@ -76,7 +76,7 @@ Além dessas formas, cilindros, cubos, quadrados e triângulos são bastante uti
 
 ### Exercício 2: Retas
 
-![](/images/uploads/exercicios-de-desenho-para-o-traco-retas-e-linhas.jpg)
+![null](/images/uploads/exercicios-de-desenho-para-o-traco-retas-e-linhas.jpg)
 
 Trace linhas em todas as direções: de cima para baixo, de baixo para cima, da esquerda para a direita, da direita para a esquerda e inclinadas.
 
@@ -84,7 +84,7 @@ Faça os traços de uma única vez e não se preocupe se as coisas não saírem 
 
 Um outro exercício com retas interessante é marcar dois pontos na folha e traçar uma reta entre eles. A ideia é ligar um ponto ao outro de uma vez só.
 
-![](/images/uploads/exercicios-de-desenho-para-o-traco-retas.jpg)
+![null](/images/uploads/exercicios-de-desenho-para-o-traco-retas.jpg)
 
 ### Exercício 3: Curvas
 
@@ -92,15 +92,15 @@ No desenho também utilizamos bastante curvas, e exercícios focados nisso tamb�
 
 Algumas vezes eu faço curvas livremente e em outras eu limito essa curvas dentro de quadrados, que também é uma forma interessante de se fazer.
 
-![](/images/uploads/exercicios-de-desenho-para-o-traco-curvas.jpg)
+![null](/images/uploads/exercicios-de-desenho-para-o-traco-curvas.jpg)
 
 Esses são apenas alguns exercícios, mas você pode fazer variações deles e ir dificultando o nível de cada um como nos exemplos abaixo.
 
-![](/images/uploads/exercicios-de-desenho-para-melhorar-o-traco.jpg)
+![null](/images/uploads/exercicios-de-desenho-para-melhorar-o-traco.jpg)
 
 Todos são úteis e vão contribuir para que o seu traço melhore, mas é preciso ter paciência e persistir. A única maneira de obter resultados é através do exercício de praticar.
 
-*INFO: Uma vez que você treinar no papel e ficar bom, não quer dizer que a transição do papel para uma mesa digitalizadora será fácil. Não, não é. São coisas bem diferentes e você vai precisar praticar nas duas mídias de forma independente.*
+_INFO: Uma vez que você treinar no papel e ficar bom, não quer dizer que a transição do papel para uma mesa digitalizadora será fácil. Não, não é. São coisas bem diferentes e você vai precisar praticar nas duas mídias de forma independente._
 
 Além desses exercícios servirem para treinar a nossa mão em busca de um traço mais seguro, eles também contribuem em outros aspectos, por isso falaremos um pouco sobre:
 
@@ -134,28 +134,34 @@ E sobre o tempo que leva para conseguir um traço legal?
 
 Não tem resposta certa, demora bastante tempo e depende do que você considera um traço legal. Tudo vai depender do tempo que você investiu, do quanto você se dedica diariamente e a qualidade desses treinos.
 
-Por isso não se apegue a quanto tempo as coisas levam para acontecerem, simplesmente faça porque você gosta e está disposto a melhorar um pouco a cada dia.
+Por isso não se apegue a quanto tempo as coisas levam para acontecer, simplesmente faça porque você gosta e está disposto a melhorar um pouco a cada dia.
 
 ### Fique atento aos intervalos e sua postura
 
 É comum passarmos horas desenhando, e o cuidado com a nossa saúde é extremamente importante para evitar lesões e outras complicações.
 
-Como a nossa atividade se encaixa em um trabalho sedentário, levantar e alongar a cada 50 minutos pelo menos, pode trazer muitos benefícios como livrar o nosso corpo de dores. Encontrei estes artigos falando um pouco sobre os benefícios do alongamento.
+Como a nossa atividade se encaixa em um trabalho sedentário, levantar e alongar a cada 50 minutos pelo menos, pode trazer muitos benefícios como livrar o nosso corpo de dores.
 
 Além disso é preciso tomar cuidado com a nossa postura desde cedo para prevenir complicações futuramente, e um ambiente adequado é ideal. Para isso pesquise sobre Ergonomia que vai ser importante.
 
 Mas para boas condições de trabalho você precisa basicamente de:
 
-* Mesa e cadeira ajustada ao seu tamanho: os pés apoiados no chão e a flexão dos joelhos devem formar o ângulo de 90º;
+* Mesa e cadeira ajustada ao seu tamanho: os pés devem ficar apoiados no chão e a flexão dos joelhos devem formar o ângulo de 90º;
 * Boa iluminação para não ficar forçando a visão;
 * Se estiver desenhando no computador sempre ajuste a altura do monitor buscando alinhar a sua visão ao centro dele. Nem muito para cima e nem muito para baixo.
-* Para desenho no método tradicional o ideal é utilizar um prancheta para alinhar a sua visão ao papel. Quando desenhamos na mesa ficamos um pouco distantes e  a nossa visão não fica alinhada com o papel como deveria, forçando a gente a se curvar sobre a mesa que é péssimo.
+* Para desenho no método tradicional o ideal é utilizar um prancheta para alinhar a sua visão ao papel. Quando desenhamos na mesa ficamos um pouco distantes e a nossa visão não fica alinhada com o papel como deveria, forçando a gente a se curvar sobre a mesa que é péssimo.
 * Sempre apoie as costas na cadeira;
 
 Anos atrás eu fiz tudo errado durante muito tempo, e grande parte das vezes as regiões mais afetadas eram lombar e punhos.
 
 Hoje a lombar ainda me causa problemas, por isso eu pratico atividade física diariamente. Já os punhos me incomodaram muito há algum tempo me forçando a ficar algumas semanas sem desenhar, mas hoje felizmente, nunca mais tive esses problemas.
 
-Por isso fica a mensagem de, cuidem do corpo de vocês desde o início. Dá muito trabalho deixar isso pra depois. E ficar sentindo dores, definitivamente não é legal.
+Por isso fica a mensagem de cuidar do corpo de vocês desde o início. Dá muito trabalho deixar isso pra depois, e ficar sentindo dores, definitivamente não é legal.
 
 Desenhar é bom, mas vamos levantar um pouco pra alongar, exercitar e manter o corpo saudável.
+
+Então o que achou? Você já faia estes exercícios? 
+
+E como anda sua posturae se ambiente de trabalho?
+
+Te vejo nos comentários ;)
