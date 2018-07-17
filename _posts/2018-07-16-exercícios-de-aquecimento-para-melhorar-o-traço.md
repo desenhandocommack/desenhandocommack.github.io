@@ -74,7 +74,7 @@ Nesse exercício você pode ficar no mesmo ponto fazendo círculos em cima de c�
 
 Além dessas formas, cilindros, cubos, quadrados e triângulos são bastante utilizados nos esboços, por isso é válido acrescentar aos seus treinos também.
 
-### Exercício 2: Linhas e retas
+### Exercício 2: Retas
 
 ![](/images/uploads/exercicios-de-desenho-para-o-traco-retas-e-linhas.jpg)
 
@@ -82,7 +82,7 @@ Trace linhas em todas as direções: de cima para baixo, de baixo para cima, da 
 
 Faça os traços de uma única vez e não se preocupe se as coisas não saírem tão retas assim no início, é normal. O que não vale é ficar fazendo aquele tracinho rabiscado até completar uma reta. Traços únicos.
 
-Um outro exercício com retas interessante é marcar dois pontos na folha e traçar uma reta entre eles. A ideia é ligar um ponto ao outro.
+Um outro exercício com retas interessante é marcar dois pontos na folha e traçar uma reta entre eles. A ideia é ligar um ponto ao outro de uma vez só.
 
 ![](/images/uploads/exercicios-de-desenho-para-o-traco-retas.jpg)
 
@@ -100,7 +100,7 @@ Esses são apenas alguns exercícios, mas você pode fazer variações deles e i
 
 Todos são úteis e vão contribuir para que o seu traço melhore, mas é preciso ter paciência e persistir. A única maneira de obter resultados é através do exercício de praticar.
 
-INFO: Uma vez que você treinar no papel e ficar bom, não quer dizer que a transição do papel para uma mesa digitalizadora será fácil. Não, não é. São coisas bem diferentes e você vai precisar praticar nas duas mídias de forma independente.
+*INFO: Uma vez que você treinar no papel e ficar bom, não quer dizer que a transição do papel para uma mesa digitalizadora será fácil. Não, não é. São coisas bem diferentes e você vai precisar praticar nas duas mídias de forma independente.*
 
 Além desses exercícios servirem para treinar a nossa mão em busca de um traço mais seguro, eles também contribuem em outros aspectos, por isso falaremos um pouco sobre:
 
