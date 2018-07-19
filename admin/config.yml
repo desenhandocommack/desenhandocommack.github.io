@@ -4,7 +4,7 @@ backend:
   branch: dev
   site_domain: confident-varahamihira-795914.netlify.com
 publish_mode: editorial_workflow
-media_folder: "images/uploads"
+media_folder: "assets/uploads"
 collections:
   - name: "post" # Used in routes, e.g. /admin/collections/blog
     label: "Post" # Used in the UI
