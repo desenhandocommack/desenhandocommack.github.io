@@ -22,8 +22,8 @@ pagination:
   per_page: 5
   permalink: '/page-:num/'
 autopages:
-  enabled: true
   categories:
+    enabled: true
     slugfy:
       mode: nil
       case: true
