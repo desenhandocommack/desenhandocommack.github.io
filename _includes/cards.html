@@ -7,7 +7,7 @@
     {% if forloop.index == 5 %}<hr class="card-separator w50">{% endif %}
 
     <article class="card">
-        <p class="card-category">{{ post.category }}</p>
+        <a href="/blog/categoria/{{ post.category | slugfy }}/" class="card-category">{{ post.category }}</a>
         <!-- <div class="card-thumbnail-wrapper"><img class="card-thumbnail" src="{{ post.thumbnail }}" alt="Imagem de capa do post {{ post.title }}"></div> -->
         <div class="card-thumbnail-test" style="background-image: url({{ post.thumbnail }})"></div>
         <h1 class="card-title"><a href="{{ post.url }}">{{ post.title }}</a></h1>
