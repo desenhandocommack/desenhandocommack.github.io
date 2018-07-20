@@ -6,7 +6,7 @@ thumbnail: >-
   /assets/uploads/7-dicas-para-melhorar-e-turbinar-seus-desenhos_capa-700x250-blog.jpg
 ---
 
-![banner]({{ layout.thumbnail }})
+![](/assets/uploads/7-dicas-para-melhorar-e-turbinar-seus-desenhos_capa-700x250-blog.jpg)
 
 Todos nós queremos sempre desenhar melhor, e isso é um fato! Por isso separei alguns truques e dicas que vão te ajudar!
 
