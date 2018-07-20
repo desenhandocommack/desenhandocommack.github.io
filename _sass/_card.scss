@@ -1,6 +1,5 @@
 .card-container {
     @include clearfix;
-    // margin-top: 5rem;
 }
 
 .card {
@@ -96,7 +95,12 @@
     margin-bottom: 0;
     text-transform: uppercase;
 
-    a {
+    &:hover {
+      text-decoration: none;
+      color: #C61359;
+    }
+
+    &.span {
       color: #EE4C8B;
     }
 }
