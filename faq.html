@@ -8,13 +8,10 @@ page_description: Esta página contém as perguntas que mais recebo
 ---
 
 <ul class="faq-list">
-  <li class="faq-item"><h2 class="faq-question"><i class="fas fa-plus"></i> Qual programa você usa?</h2>
-    <p class="faq-answer">RESPOSTA LEGAL</p>
-  </li>
-  <li class="faq-item"><h2 class="faq-question"><i class="fas fa-plus"></i> Você desenha com o quê?</h2>
-    <p class="faq-answer">RESPOSTA LEGAL</p>
-  </li>
-  <li class="faq-item"><h2 class="faq-question"><i class="fas fa-plus"></i> Qual seu brush e configuração no krita?</h2>
-    <p class="faq-answer">RESPOSTA LEGAL</p>
-  </li>
+  {% for faq in site.data.faq %}
+    <li class="faq-item">
+      <h2 class="faq-question"><i class="fas fa-plus"></i> {{ faq.question }}</h2>
+      <p class="faq-answer">{{ faq.answer }}</p>
+    </li>
+  {% endfor %}
 </ul>
