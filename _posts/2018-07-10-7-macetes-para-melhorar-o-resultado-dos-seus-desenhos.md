@@ -5,8 +5,7 @@ category: Dicas
 thumbnail: >-
   /assets/uploads/7-dicas-para-melhorar-e-turbinar-seus-desenhos_capa-700x250-blog.jpg
 ---
-
-![](/assets/uploads/7-dicas-para-melhorar-e-turbinar-seus-desenhos_capa-700x250-blog.jpg)
+![null](/assets/uploads/7-dicas-para-melhorar-e-turbinar-seus-desenhos_capa-700x250-blog.jpg)
 
 Todos nós queremos sempre desenhar melhor, e isso é um fato! Por isso separei alguns truques e dicas que vão te ajudar!
 
@@ -32,13 +31,11 @@ Apesar de todos esses detalhes há sempre o que melhorar neste exato momento, po
 
 Pronto(a) para começar a dar um UP no seu desenho?
 
-**Continue lendo** esse artigo.
 
-# 7 dicas para desenhar melhor
 
 ## Dica #1: Exercícios de aquecimento
 
-![](/assets/uploads/exercicios-de-aquecimento-para-melhorar-o-traco_flat-design.jpg)
+![null](/assets/uploads/exercicios-de-aquecimento-para-melhorar-o-traco_flat-design.jpg)
 
 Seja você um desenhista iniciante ou experiente, fazer algum tipo de aquecimento antes de embarcar em um desenho importante, é primordial.
 
@@ -61,7 +58,7 @@ No artigo A importância dos exercícios de aquecimento – Para aquecer e melho
 
 ## Dica #2: Encontre os erros (Flip Horizontal)
 
-![](/assets/uploads/espelhar-a-imagem-para-encontrar-erros-no-desenho-flip-horizontal_flat-design.jpg)
+![null](/assets/uploads/espelhar-a-imagem-para-encontrar-erros-no-desenho-flip-horizontal_flat-design.jpg)
 
 Um dos melhores recursos para verificar o que está torto enquanto você está desenhando é o espelhamento horizontal.
 
@@ -77,7 +74,7 @@ Sabe quando a gente deixa o desenho por um dia ou mais guardado, e quando volta 
 
 ## Dica #3: Verifique se você tem uma boa silhueta
 
-![](/assets/uploads/verifique-se-voce-tem-uma-boa-silhueta_flat-design.jpg)
+![null](/assets/uploads/verifique-se-voce-tem-uma-boa-silhueta_flat-design.jpg)
 
 As silhuetas nos dizem muitas coisas, tanto que só de bater o olho nas imagens abaixo você já deve ter reconhecido quem são os personagens, não é verdade?
 
@@ -87,7 +84,7 @@ Para mais detalhes sobre o uso de silhuetas na criação de personagens, leia o 
 
 ## Dica #4: Formas básicas
 
-![](/assets/uploads/formas-basicas_flat-design.jpg)
+![null](/assets/uploads/formas-basicas_flat-design.jpg)
 
 Quando estamos começando a desenhar é bem comum fazer as coisas sem muito critério e pular etapas. Por isso é importante aprender desde cedo a estruturar primeiro para depois acrescentar detalhes.
 
@@ -99,7 +96,7 @@ Tem interesse em tornar os seus personagens mais interessantes? Leia o artigo Cr
 
 ## Dica #5: O uso de referências é indispensável
 
-![](/assets/uploads/o-uso-de-referencias-e-indispensavel_flat-design.jpg)
+![null](/assets/uploads/o-uso-de-referencias-e-indispensavel_flat-design.jpg)
 
 Há quem ache que usar referências é errado ou torna o valor de um trabalho menor. E não, isso não é verdade!
 
@@ -117,7 +114,7 @@ Se você como eu também acredita na eficácia desse recurso e quer agregar mais
 
 ## Dica #6: Linhas
 
-![](/assets/uploads/variacao-de-linhas-no-desenho-flat-design.jpg)
+![null](/assets/uploads/variacao-de-linhas-no-desenho-flat-design.jpg)
 
 A linha é parte fundamental em um desenho. Digo, em um desenho que utilize linhas. E trabalhar na variação de espessura (alguns pontos mais finos e outros mais grossos) conseguimos gerar mais interesse para a nossa criação.
 
@@ -129,7 +126,7 @@ Então se você segue esse estilo de desenho que usa linhas, tenta buscar um pou
 
 ## Dica #7: Aprenda com outros artistas
 
-![](/assets/uploads/aprenda-com-outros-artistas-compartilhe-ideias_flat-design.jpg)
+![null](/assets/uploads/aprenda-com-outros-artistas-compartilhe-ideias_flat-design.jpg)
 
 Durante muitos anos eu não tive contato como outras pessoas faziam para desenhar, simplesmente ia fazendo o que eu estava com vontade.
 
