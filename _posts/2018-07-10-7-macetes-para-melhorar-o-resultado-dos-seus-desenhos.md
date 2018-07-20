@@ -3,11 +3,11 @@ layout: post
 title: 7 dicas para melhorar o resultado dos seus desenhos
 category: Dicas
 thumbnail: >-
-  /images/uploads/7-dicas-para-melhorar-e-turbinar-seus-desenhos_capa-700x250-blog.jpg
+  /assets/uploads/7-dicas-para-melhorar-e-turbinar-seus-desenhos_capa-700x250-blog.jpg
 ---
 Todos nós queremos sempre desenhar melhor, e isso é um fato! Por isso separei alguns truques e dicas que vão te ajudar!
 
-<!--more-->
+<!-- more -->
 
 Seja qual for o seu nível de desenho atual, certamente você está sempre querendo que sua arte evolua.
 
@@ -35,7 +35,7 @@ Pronto(a) para começar a dar um UP no seu desenho?
 
 ## Dica #1: Exercícios de aquecimento
 
-![](/images/uploads/exercicios-de-aquecimento-para-melhorar-o-traco_flat-design.jpg)
+![](/assets/uploads/exercicios-de-aquecimento-para-melhorar-o-traco_flat-design.jpg)
 
 Seja você um desenhista iniciante ou experiente, fazer algum tipo de aquecimento antes de embarcar em um desenho importante, é primordial.
 
@@ -54,11 +54,11 @@ O melhor de tudo é que não é preciso de muito tempo ou recursos mirabolantes 
 
 _“Mas por onde eu começo? Que exercícios são esses e como fazer?”_
 
-No artigo A importância dos exercícios de aquecimento – Para aquecer e melhorar o traço eu falo com mais detalhes sobre tudo isso. 
+No artigo A importância dos exercícios de aquecimento – Para aquecer e melhorar o traço eu falo com mais detalhes sobre tudo isso.
 
 ## Dica #2: Encontre os erros (Flip Horizontal)
 
-![](/images/uploads/espelhar-a-imagem-para-encontrar-erros-no-desenho-flip-horizontal_flat-design.jpg)
+![](/assets/uploads/espelhar-a-imagem-para-encontrar-erros-no-desenho-flip-horizontal_flat-design.jpg)
 
 Um dos melhores recursos para verificar o que está torto enquanto você está desenhando é o espelhamento horizontal.
 
@@ -74,7 +74,7 @@ Sabe quando a gente deixa o desenho por um dia ou mais guardado, e quando volta 
 
 ## Dica #3: Verifique se você tem uma boa silhueta
 
-![](/images/uploads/verifique-se-voce-tem-uma-boa-silhueta_flat-design.jpg)
+![](/assets/uploads/verifique-se-voce-tem-uma-boa-silhueta_flat-design.jpg)
 
 As silhuetas nos dizem muitas coisas, tanto que só de bater o olho nas imagens abaixo você já deve ter reconhecido quem são os personagens, não é verdade?
 
@@ -84,7 +84,7 @@ Para mais detalhes sobre o uso de silhuetas na criação de personagens, leia o 
 
 ## Dica #4: Formas básicas
 
-![](/images/uploads/formas-basicas_flat-design.jpg)
+![](/assets/uploads/formas-basicas_flat-design.jpg)
 
 Quando estamos começando a desenhar é bem comum fazer as coisas sem muito critério e pular etapas. Por isso é importante aprender desde cedo a estruturar primeiro para depois acrescentar detalhes.
 
@@ -96,7 +96,7 @@ Tem interesse em tornar os seus personagens mais interessantes? Leia o artigo Cr
 
 ## Dica #5: O uso de referências é indispensável
 
-![](/images/uploads/o-uso-de-referencias-e-indispensavel_flat-design.jpg)
+![](/assets/uploads/o-uso-de-referencias-e-indispensavel_flat-design.jpg)
 
 Há quem ache que usar referências é errado ou torna o valor de um trabalho menor. E não, isso não é verdade!
 
@@ -114,7 +114,7 @@ Se você como eu também acredita na eficácia desse recurso e quer agregar mais
 
 ## Dica #6: Linhas
 
-![](/images/uploads/variacao-de-linhas-no-desenho-flat-design.jpg)
+![](/assets/uploads/variacao-de-linhas-no-desenho-flat-design.jpg)
 
 A linha é parte fundamental em um desenho. Digo, em um desenho que utilize linhas. E trabalhar na variação de espessura (alguns pontos mais finos e outros mais grossos) conseguimos gerar mais interesse para a nossa criação.
 
@@ -126,7 +126,7 @@ Então se você segue esse estilo de desenho que usa linhas, tenta buscar um pou
 
 ## Dica #7: Aprenda com outros artistas
 
-![](/images/uploads/aprenda-com-outros-artistas-compartilhe-ideias_flat-design.jpg)
+![](/assets/uploads/aprenda-com-outros-artistas-compartilhe-ideias_flat-design.jpg)
 
 Durante muitos anos eu não tive contato como outras pessoas faziam para desenhar, simplesmente ia fazendo o que eu estava com vontade.
 
@@ -134,7 +134,7 @@ Há mais ou menos 2 anos eu acabei consumindo com mais frequência conteúdo na 
 
 Antes eu não consumia esses conteúdos porque eu realmente nunca tive o costume de assistir vídeos, eu sempre gostei mais da ideia de ler artigos em blogs. Mas acabei descobrindo que eu gosto muito de ouvir esses conteúdos enquanto desenho ou faço outras atividades, e agora, não deixo um só passar.
 
-Ouvir e ver o que os mais experientes que já passaram por tudo isso tem a dizer, pode e vai acrescentar muito em como você pensa e resolve as coisas, além de ser uma fonte riquíssima de inspiração. 
+Ouvir e ver o que os mais experientes que já passaram por tudo isso tem a dizer, pode e vai acrescentar muito em como você pensa e resolve as coisas, além de ser uma fonte riquíssima de inspiração.
 
 Se você não tem o costume de ouvir Podcasts que falam sobre arte, posso te indicar o[ IconicCast](http://cast.iconic.network/) e o [SALA 1604 - REVONOW](http://revolutionnow.com.br/sala-1604/). São ótimos para ouvir em qualquer lugar. E o mais interessante é que tem artistas das mais variadas falando um pouco sobre a profissão de artista.
 
