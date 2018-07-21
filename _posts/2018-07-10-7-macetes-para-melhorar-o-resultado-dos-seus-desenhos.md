@@ -82,7 +82,7 @@ Para mais detalhes sobre o uso de silhuetas na criação de personagens, leia o 
 
 ## Dica #4: Formas básicas
 
-![null](/assets/uploads/formas-basicas_flat-design.jpg)
+![](/assets/uploads/formas-basicas.jpg)
 
 Quando estamos começando a desenhar é bem comum fazer as coisas sem muito critério e pular etapas. Por isso é importante aprender desde cedo a estruturar primeiro para depois acrescentar detalhes.
 
