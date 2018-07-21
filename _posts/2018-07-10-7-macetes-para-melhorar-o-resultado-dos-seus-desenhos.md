@@ -112,7 +112,7 @@ Se você como eu também acredita na eficácia desse recurso e quer agregar mais
 
 ## Dica #6: Linhas
 
-![null](/assets/uploads/variacao-de-linhas-no-desenho-flat-design.jpg)
+![null](/assets/uploads/qualidade-da-linha.jpg)
 
 A linha é parte fundamental em um desenho. Digo, em um desenho que utilize linhas. E trabalhar na variação de espessura (alguns pontos mais finos e outros mais grossos) conseguimos gerar mais interesse para a nossa criação.
 
