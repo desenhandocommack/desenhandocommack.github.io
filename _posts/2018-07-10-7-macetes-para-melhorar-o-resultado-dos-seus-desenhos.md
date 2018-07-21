@@ -31,11 +31,9 @@ Apesar de todos esses detalhes há sempre o que melhorar neste exato momento, po
 
 Pronto(a) para começar a dar um UP no seu desenho?
 
-
-
 ## Dica #1: Exercícios de aquecimento
 
-![null](/assets/uploads/exercicios-de-aquecimento-para-melhorar-o-traco_flat-design.jpg)
+![](/assets/uploads/exercicios-de-aquecimento-para-melhorar-o-traco.jpg)
 
 Seja você um desenhista iniciante ou experiente, fazer algum tipo de aquecimento antes de embarcar em um desenho importante, é primordial.
 
