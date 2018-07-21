@@ -124,7 +124,7 @@ Então se você segue esse estilo de desenho que usa linhas, tenta buscar um pou
 
 ## Dica #7: Aprenda com outros artistas
 
-![null](/assets/uploads/aprenda-com-outros-artistas-compartilhe-ideias_flat-design.jpg)
+![null](/assets/uploads/aprenda-com-outros-artistas.jpg)
 
 Durante muitos anos eu não tive contato como outras pessoas faziam para desenhar, simplesmente ia fazendo o que eu estava com vontade.
 
