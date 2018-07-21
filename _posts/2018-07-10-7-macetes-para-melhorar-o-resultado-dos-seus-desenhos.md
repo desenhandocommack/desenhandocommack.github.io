@@ -72,7 +72,7 @@ Sabe quando a gente deixa o desenho por um dia ou mais guardado, e quando volta 
 
 ## Dica #3: Verifique se você tem uma boa silhueta
 
-![null](/assets/uploads/verifique-se-voce-tem-uma-boa-silhueta_flat-design.jpg)
+![](/assets/uploads/uso-de-silhuetas.jpg)
 
 As silhuetas nos dizem muitas coisas, tanto que só de bater o olho nas imagens abaixo você já deve ter reconhecido quem são os personagens, não é verdade?
 
