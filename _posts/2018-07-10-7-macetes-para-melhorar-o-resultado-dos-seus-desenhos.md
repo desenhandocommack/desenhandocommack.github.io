@@ -94,7 +94,7 @@ Tem interesse em tornar os seus personagens mais interessantes? Leia o artigo Cr
 
 ## Dica #5: O uso de referências é indispensável
 
-![null](/assets/uploads/o-uso-de-referencias-e-indispensavel_flat-design.jpg)
+![](/assets/uploads/uso-de-referencias.jpg)
 
 Há quem ache que usar referências é errado ou torna o valor de um trabalho menor. E não, isso não é verdade!
 
