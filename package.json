@@ -1,0 +1,25 @@
+{
+  "name": "desenhandocommack.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/desenhandocommack/desenhandocommack.github.io.git"
+  },
+  "keywords": [],
+  "author": "Mack",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/desenhandocommack/desenhandocommack.github.io/issues"
+  },
+  "homepage": "https://github.com/desenhandocommack/desenhandocommack.github.io#readme",
+  "devDependencies": {
+    "browser-sync": "^2.24.7",
+    "del": "^3.0.0",
+    "gulp": "^4.0.0"
+  }
+}

@@ -1,6 +1,10 @@
 _site
 .sass-cache
 .jekyll-metadata
+.bundle
+vendor
+node_modules
+
 
 # VIM: Temperory files
 *~

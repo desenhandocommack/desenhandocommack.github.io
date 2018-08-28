@@ -10,6 +10,7 @@
     <meta property="og:description"   content="{{ page.excerpt | strip_html | default: page.description | default: site.description }}" />
     <meta property="og:image"         content="{{ page.thumbnail | absolute_url }}" />
 
+
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
@@ -26,7 +27,7 @@
       if (d.getElementById(id)) return;
       js = d.createElement(s); js.id = id;
       js.src = 'https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v3.0&appId=192466878110093&autoLogAppEvents=1';
-      fjs.parentNode.insertBefore(js, fjs);
+      fjs.parentode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
 
     <header class="header {{ page.bgcolor }}">

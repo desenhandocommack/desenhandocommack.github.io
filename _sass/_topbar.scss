@@ -15,6 +15,7 @@ $min-width: 500px;
 
 .topbar-logo {
     z-index: 9999;
+    margin: .8em 0;
 }
 
 .topbar-menu {
@@ -29,6 +30,7 @@ $min-width: 500px;
 }
 
 .topbar-toggle {
+    font-size: 1.3em;
     @media screen and (min-width: $min-width) {
         display: none;
     }
@@ -66,5 +68,5 @@ $min-width: 500px;
 
 .topbar-text {
     display: block;
-    padding: 1rem 1rem;
+    padding: 1.2rem 1rem;
 }

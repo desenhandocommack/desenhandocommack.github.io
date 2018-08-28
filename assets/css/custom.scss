@@ -91,12 +91,16 @@ img {
 
 .section {
   text-align: center;
-  padding: 5rem 0;
+  padding: 5rem 1rem;
 }
 
 .section h1 {
   font-family: "Roboto Condensed";
-  font-size: 36px;
+  font-size: 24px; // era 36px
+  
+  @media screen and (min-width: 900px) {
+    font-size: 36px;
+  }
   color: #fee;
   max-width: 50rem;
   text-align: center;
@@ -109,7 +113,13 @@ img {
 
 .section p {
   color: #fee;
-  font-size: 24px;
+  font-size: 16px; // era 24px
+
+ 
+  @media screen and (min-width: 900px) {
+    font-size: 24px;
+  }
+
   font-weight: lighter;
   font-family: "Roboto";
   margin: auto;
