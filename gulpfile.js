@@ -23,7 +23,7 @@ function serve(done) {
 }
 
 const watch = () => gulp.watch(
-  ['**/*.html', '**/*.scss', '!_site'], gulp.series(jekyll, reload));
+  ['**/*', '!_site'], gulp.series(jekyll, reload));
 const prod = gulp.series(clean, jekyll);
 const dev = gulp.series(clean, jekyll, serve, watch);
 

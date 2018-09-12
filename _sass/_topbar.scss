@@ -1,5 +1,17 @@
 $min-width: 500px;
 
+#navigation {
+    display: none;
+
+    &.show {
+        display: block;
+        position: absolute;
+        background: #ddd;
+        width: 100%;
+        left: 0;
+    }
+}
+
 .topbar {
     // background: #bbb;
     max-width: 70rem;
@@ -7,7 +19,7 @@ $min-width: 500px;
     a {
         color: #808080;
     }
-    position: relative;
+    // position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -32,17 +44,17 @@ $min-width: 500px;
 .topbar-toggle {
     font-size: 1.3em;
     @media screen and (min-width: $min-width) {
-        display: none;
+        // display: none;
     }
 }
 
 .topbar-list {
-    position: absolute;
-    right: 0;
+    // position: absolute;
+    // right: 0;
     width: 100%;
     margin: 0 -1rem 0 0;
     padding: 0;
-    display: none;
+    // display: none;
 
     &.expanded {
         @media screen and (max-width: $min-width) {
