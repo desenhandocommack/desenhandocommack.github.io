@@ -38,7 +38,7 @@ autopages:
 
 permalink: /blog/:title/
 
-topbar: ["Início", "Blog"]
+topbar: ["O Projeto", "Blog", "Serviços", "Apps", "Contato"]
 
 plugins:
   - jekyll-paginate-v2
@@ -53,7 +53,7 @@ defaults:
       type: "posts" # previously `post` in Jekyll 2.2.
     values:
       layout: post
-      has_header: true
+      has_header: false
       has_navbar: true
       bgcolor: gray
       page_title: BLOG

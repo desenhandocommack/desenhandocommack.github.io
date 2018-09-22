@@ -1,3 +1,5 @@
+document.body.className = "js";
+
 /**
  * forEach implementation for Objects/NodeLists/Arrays, automatic type loops and context options
  *
@@ -23,7 +25,6 @@ if (hamburgers.length > 0) {
   });
 }
 
-// document.body.className = "js";
 
 // var toggle = document.getElementById("toggle");
 // var menu = document.getElementById("menu");

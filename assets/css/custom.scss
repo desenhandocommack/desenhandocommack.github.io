@@ -20,6 +20,16 @@
 @import "post";
 @import "faq";
 
+@mixin bottom-bar($color) {
+  h1::after {
+    content: "";
+    display: block;
+    margin: 1rem auto 0;
+    width: 6.25rem;
+    border-bottom: solid 4px $color;
+  }
+}
+
 blockquote {
   background: #efefef;
   padding-left: 1.5rem;
@@ -31,7 +41,7 @@ html {
   background: #383C58;
 }
 
-.header, .footer {
+.footer {
     padding-left: 1rem;
     padding-right: 1rem;
 }
@@ -48,44 +58,89 @@ img {
 .section-wrapper-1 {
   background: url("/assets/img/arte.jpg") no-repeat center center;
   background-size: cover;
+  text-align: center;
+  @include bottom-bar(#fff);
+
+}
+
+.link-to-blog {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #25EAF6;
+  display: inline-block;
+  padding: 1rem 4rem;
+  border: solid 3px #25EAF6;
+  border-radius: 15% / 50%;
+
+  &:hover {
+    color: #25EAF6;
+    text-decoration: none;
+  }
 }
 
 .section-wrapper-2 {
-  background: #ECECEC;
+  background: linear-gradient(to right, #1B9FFF, #43CBFF);
+
+  @include bottom-bar(#fff);
 
   h2 {
     margin-top: 1rem;
-    font-family: "Roboto Condensed";
+    font-family: "Roboto";
   }
 
   h1, h2, p {
-    color: #808080 !important;
-    border-color: #808080 !important;
+    color: #fff !important;
   }
 }
 
-.section-wrapper-3 {
-  background: url("/assets/img/junte-se-a-trilha.jpg") no-repeat center center;
-  background-size: cover;
-}
-
-
-.section4 {
-  background: #ECECEC;
+.section3 {
   text-align: center;
 
+  @include bottom-bar(#FF587B);
+
+  p {
+    margin-bottom: 0 !important;
+  }
+
   h1, h2, p {
     color: #808080 !important;
     border-color: #808080 !important;
   }
+}
 
+.section4 {
   a {
     display: inline-block;
-    margin: 0 2rem 1rem;
-
-    &:hover img {
+    // margin: 0 2rem 1rem;
+    img {
       filter: brightness(180%);
     }
+    @media screen and (min-width: 500px) {
+      & img {
+        filter: brightness(120%);
+      }
+
+      &:hover img {
+        filter: brightness(180%);
+      }
+    }
+  }
+}
+
+.section-wrapper-4 {
+  background: url("/assets/img/junte-se-a-trilha.jpg") no-repeat center center;
+  background-size: cover;
+  
+  .section {
+    max-width: 50rem;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+  }
+
+
+  img {
+    display: block;
   }
 }
 
@@ -95,18 +150,18 @@ img {
 }
 
 .section h1 {
-  font-family: "Roboto Condensed";
+  font-family: "Roboto";
   font-size: 24px; // era 36px
   
   @media screen and (min-width: 900px) {
     font-size: 36px;
   }
+
   color: #fee;
   max-width: 50rem;
   text-align: center;
   margin: auto;
   display: inline-block;
-  border-bottom: solid 4px #fee;
   padding-bottom: 1rem;
   margin-bottom: 3rem;
 }

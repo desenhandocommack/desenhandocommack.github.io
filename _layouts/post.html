@@ -4,9 +4,11 @@ layout: page
 <div class="post">
     <h1 class="post-title">{{ page.title }}</h1>
     <div class="post-info">
-        <img class="post-author-avatar" src="{{ page.author.avatar | default: site.author.avatar }}" width="64" alt="Avatar do autor">
-        <div class="post-author-name">Escrito por {{ page.author.name | default: site.author.name }}</div>
-        <div class="post-date">Em {{ page.date | date: "%d/%m/%Y" }}</div>
+        <div class="post-meta">
+            <img class="post-author-avatar" src="{{ page.author.avatar | default: site.author.avatar }}" width="48" alt="Avatar do autor">
+            <div class="post-author-name">Escrito por {{ page.author.name | default: site.author.name }}</div>
+            <div class="post-date">Em {{ page.date | date: "%d/%m/%Y" }}</div>
+        </div>
 
         <div class="post-share">
           <div class="fb-share-button" data-href="{{ page.url | absolute_url }}" data-layout="button" data-size="large" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>

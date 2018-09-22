@@ -1,84 +1,77 @@
 $min-width: 500px;
 
-#navigation {
-    display: none;
-
-    &.show {
-        display: block;
-        position: absolute;
-        background: #ddd;
-        width: 100%;
-        left: 0;
-    }
-}
-
 .topbar {
-    // background: #bbb;
-    max-width: 70rem;
-    margin: 0 auto;
-    a {
-        color: #808080;
-    }
-    // position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 70em;
+    margin: auto;
 }
 
 .topbar-logo {
-    z-index: 9999;
-    margin: .8em 0;
+    margin: .5rem 1rem;
 }
 
-.topbar-menu {
-    text-align: right;
-    float: right;
-}
+button.hamburger {
+    .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+        background-color: #FF587B;
+    }
 
-.nojs .topbar-menu:hover {
-    .topbar-list {
-        display: block;
+    @media screen and (min-width: $min-width) {
+        display: none;
     }
 }
 
-.topbar-toggle {
-    font-size: 1.3em;
+#navigation {
+    display: none;
+    background-color: #FFF;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    text-align: center;
+
+    &.show {
+        display: block;
+    }
+
     @media screen and (min-width: $min-width) {
-        // display: none;
+        background-color: transparent;
+        display: block;
+        position: static;
     }
 }
 
 .topbar-list {
-    // position: absolute;
-    // right: 0;
-    width: 100%;
-    margin: 0 -1rem 0 0;
+    list-style: none;
+    margin: 0;
     padding: 0;
-    // display: none;
-
-    &.expanded {
-        @media screen and (max-width: $min-width) {
-            display: block;
-            background: #ddd;
-            margin: 0;
-
-            a:hover {
-                background-color: #bbb;
-            }
-        }
-    }
 
     @media screen and (min-width: $min-width) {
-        position: static;
         display: flex;
     }
 }
 
 .topbar-item {
-    list-style: none;
+    margin: 0 1rem;
+    border-bottom: 1px solid #BDBDBD;
+    
+    &:last-child {
+        border: none;
+    }
+    
+    @media screen and (min-width: $min-width) {
+        border: none;
+    }
 }
 
 .topbar-text {
+    color: #808080;
     display: block;
-    padding: 1.2rem 1rem;
+    padding: 1rem 1rem;
+    
+
+    &:hover {
+        text-decoration: none;
+        background-color: #ddd;
+    }
 }
