@@ -42,11 +42,17 @@ html {
 }
 
 .footer {
+    background-color: #dedede;
     padding-left: 1rem;
     padding-right: 1rem;
 }
+
+.footer-info {
+  max-width: 60rem;
+}
+
 .main {
-    max-width: 70rem;
+    max-width: 50rem;
     padding: 0 1rem;
     margin: 5rem auto;
 }
