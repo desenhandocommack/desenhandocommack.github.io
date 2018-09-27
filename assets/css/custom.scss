@@ -30,6 +30,10 @@
   }
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 blockquote {
   background: #efefef;
   padding-left: 1.5rem;
@@ -52,7 +56,7 @@ html {
 }
 
 .main {
-    max-width: 50rem;
+    max-width: 70rem;
     padding: 0 1rem;
     margin: 5rem auto;
 }
@@ -144,9 +148,65 @@ img {
     justify-content: space-around;
   }
 
+  a {
+    display: inline-block;
+    color: transparent;
+    width: 70px;
+    height: 70px;
+  }
 
-  img {
-    display: block;
+  .youtube {
+    background-image: url("/assets/img/social-icons.jpg");
+    background-position: 0 -70px; 
+    &:hover {
+      background-position: 0 0;
+    }
+  }
+
+  .facebook {
+    background-image: url("/assets/img/social-icons.jpg");
+    background-position: -70px -70px; 
+    &:hover {
+      background-position: -70px 0;
+    }
+  }
+
+  .instagram {
+    background-image: url("/assets/img/social-icons.jpg");
+    background-position: -140px -70px; 
+    &:hover {
+      background-position: -140px 0;
+    }
+  }
+  
+  .twitter {
+    background-image: url("/assets/img/social-icons.jpg");
+    background-position: -210px -70px; 
+    &:hover {
+      background-position: -210px 0;
+    }
+  }
+  
+  @media screen and (max-width: 500px) {
+    .youtube {
+      background-image: url("/assets/img/social-icons.jpg");
+      background-position: 0 0;
+    }
+  
+    .facebook {
+      background-image: url("/assets/img/social-icons.jpg");
+      background-position: -70px 0;
+    }
+  
+    .instagram {
+      background-image: url("/assets/img/social-icons.jpg");
+      background-position: -140px 0;
+    }
+    
+    .twitter {
+      background-image: url("/assets/img/social-icons.jpg");
+      background-position: -210px 0;
+    }
   }
 }
 

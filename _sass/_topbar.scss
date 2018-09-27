@@ -9,7 +9,7 @@ $min-width: 500px;
 }
 
 .topbar-logo {
-    margin: .5rem 1rem;
+    margin: 0rem 1rem;
 }
 
 button.hamburger {
@@ -71,7 +71,7 @@ button.hamburger {
     
 
     &:hover {
+        color: #007bff;
         text-decoration: none;
-        background-color: #ddd;
     }
 }
