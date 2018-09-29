@@ -56,7 +56,7 @@ O melhor de tudo é que não é preciso de muito tempo ou recursos mirabolantes 
 
 _“Mas por onde eu começo? Que exercícios são esses e como fazer?”_
 
-No artigo A importância dos exercícios de aquecimento – Para aquecer e melhorar o traço eu falo com mais detalhes sobre tudo isso.
+No artigo [A importância dos exercícios de aquecimento – Para aquecer e melhorar o traço](https://confident-varahamihira-795914.netlify.com/blog/exercicios-de-aquecimento-para-melhorar-o-traco/) eu falo com mais detalhes sobre tudo isso.
 
 ## Dica #2: Encontre os erros (Flip Horizontal)
 
@@ -96,6 +96,8 @@ O uso de formas básicas como círculos, quadrados ou triângulos, são ótimos 
 
 Além disso, as formas tem papel importante e podem influenciar diretamente na personalidade dos nossos personagens, e entender como aplicá-las pode trazer mais riqueza para o seu processo de criação.
 
+Tem interesse em tornar os seus personagens mais interessantes? Leia o artigo Criando personagens a partir das formas mais básicas.
+
 ## Dica #5: O uso de referências é indispensável
 
 ![null](/assets/uploads/o-uso-de-referencias-e-indispensavel_flat-design.jpg)
@@ -112,13 +114,13 @@ Faça o experimento, conte apenas com o que tem na sua cabeça sobre algo e tran
 
 Provavelmente o resultado será bem melhor, o que você acha?
 
-Só o que não vale mesmo é copiar, tenha muito cuidado com isso. Utilizar referências é uma coisa, copiar o trabalho dos outros, é outra.
+Se você como eu também acredita na eficácia desse recurso e quer agregar mais valor ao seu projeto, leia o artigo Agregando valor com o uso de referências - MoodBoard. Lá eu falo sobre o que é, como e porque utilizar referências.
 
 ## Dica #6: Linhas
 
 ![null](/assets/uploads/variacao-de-linhas-no-desenho-flat-design.jpg)
 
-A linha é parte fundamental em um desenho. Digo, em um desenho que utilize linhas. E trabalhando na variação de espessura (alguns pontos mais finos e outros mais grossos) conseguimos gerar mais interesse para a nossa criação.
+A linha é parte fundamental em um desenho. Digo, em um desenho que utilize linhas. E trabalhar na variação de espessura (alguns pontos mais finos e outros mais grossos) conseguimos gerar mais interesse para a nossa criação.
 
 Quando temos um desenho inteiramente com o mesmo peso de linha, ou seja, tudo na mesma espessura, temos a sensação de que o desenho está monótono e chato.  E talvez não seja o que você quer passar com o seu.
 
