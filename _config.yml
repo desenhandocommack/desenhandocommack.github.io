@@ -38,8 +38,6 @@ autopages:
 
 permalink: /blog/:title/
 
-topbar: ["O Projeto", "Blog", "Serviços", "Apps", "Contato"]
-
 plugins:
   - jekyll-paginate-v2
 

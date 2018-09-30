@@ -11,15 +11,6 @@
   }
 }
 
-@import "reboot";
-@import "card";
-@import "topbar";
-@import "navbar";
-@import "header";
-@import "footer";
-@import "post";
-@import "faq";
-
 @mixin bottom-bar($color) {
   h1::after {
     content: "";
@@ -29,6 +20,15 @@
     border-bottom: solid 4px $color;
   }
 }
+
+@import "reboot";
+@import "card";
+@import "topbar";
+@import "navbar";
+@import "header";
+@import "footer";
+@import "post";
+@import "faq";
 
 a:hover {
   text-decoration: none;

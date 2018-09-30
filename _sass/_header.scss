@@ -11,13 +11,23 @@
 }
 
 .page-title {
+    &::after {
+        content: "";
+        display: block;
+        margin: 1rem auto 0;
+        width: 6.25rem;
+        border-bottom: solid 4px #FF587B;
+    }
+  
+  
+
     display: inline-block;
     font-weight: bold;
     font-size: 2.25rem;
     text-align: center;
     margin: 4rem 0 3rem;
-    border-bottom: solid 5px #FF587B;
-    padding: 0 0 1rem;
+    // border-bottom: solid 5px #FF587B;
+    // padding: 0 0 1rem;
 }
 
 .page-description {

@@ -10,12 +10,10 @@
     <meta property="og:description"   content="{{ page.excerpt | strip_html | default: page.description | default: site.description }}" />
     <meta property="og:image"         content="{{ page.thumbnail | absolute_url }}" />
 
-
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="stylesheet" href="{{ '/assets/css/hamburgers.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
-
 
     <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
 
@@ -35,7 +33,6 @@
 
     <header class="header">
       {% include topbar.html %}
-
       {% if page.has_header %}{% include header.html %}{% endif %}
       {% if page.has_navbar %}{% include navbar.html %}{% endif %}
     </header>
@@ -43,7 +40,16 @@
     {{ content }}
 
     <footer class="footer">{% include footer.html %}</footer>
+
+    {% if page.url == "/" %}
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@14/dist/smooth-scroll.polyfills.min.js"></script>
+    <script>
+      var scroll = new SmoothScroll('a[href*="#"]');
+    </script>
+    {% endif %}
+  
     <script src="{{ '/assets/js/functions.js' | relative_url }}" charset="utf-8"></script>
+
     <script>
       var facebookButton = document.getElementById('facebook-share-button');
       if (facebookButton) {
