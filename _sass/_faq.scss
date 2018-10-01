@@ -8,6 +8,26 @@
   padding-bottom: 2rem;
   border-bottom: solid 1px #ccc;
 
+  .minus {
+    display: none;
+  }
+  .plus {
+    display: inline;
+  }
+
+  &.expanded {
+    .minus {
+      display: inline;
+    }
+    .plus {
+      display: none;
+    }
+
+    .faq-answer {
+      display: block;
+    }
+  }
+
   &:last-child {
     border: none;
   }
@@ -20,11 +40,11 @@
   margin-bottom: 0;
   display: inline-block;
 
-  .fa-plus, .fa-minus {
-    font-size: .8rem;
-    vertical-align: middle;
-    color: #EE4C8B;
-  }
+  // .fa-plus, .fa-minus {
+  //   font-size: .8rem;
+  //   vertical-align: middle;
+  //   color: #EE4C8B;
+  // }
 }
 
 .faq-answer {
@@ -34,8 +54,8 @@
   .js & {
     display: none;
 
-    &.expanded {
-      display: block;
-    }
+    // &.expanded {
+    //   display: block;
+    // }
   }
 }

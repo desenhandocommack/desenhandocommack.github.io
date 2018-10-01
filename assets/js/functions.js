@@ -46,29 +46,45 @@ if (hamburgers.length > 0) {
 // }
 
 var faq = document.getElementsByClassName("faq-item");
-var faqQuestions = document.getElementsByClassName("faq-question");
-var faqAnswers = document.getElementsByClassName("faq-answer");
-
 if (faq) {
   for (var i = 0; i < faq.length; i++) {
-    faqQuestions[i].onclick = function() {
-      answer = this.parentElement.lastElementChild;
-      plus = this.parentElement.firstElementChild.firstElementChild;
+    faq[i].onclick = function() {
+      if (this.classList.contains("expanded"))
+        this.classList.remove("expanded");
+      else
+        this.classList.add("expanded");
 
-      if (answer.classList.contains("expanded")) {
-        answer.classList.remove("expanded");
-        plus.classList.replace("fa-minus", "fa-plus");
-      } else {
-        plus.classList.replace("fa-plus", "fa-minus");
-        answer.classList.add("expanded");
-      }
-
-      var pluses = document.getElementsByClassName("fa-minus");
-      for (var j = 0; j < pluses.length; j++)
-        if (pluses[j] != plus) pluses[j].classList.replace("fa-minus", "fa-plus");
-
-      for (var j = 0; j < faqAnswers.length; j++)
-        if (faqAnswers[j] != answer) faqAnswers[j].classList.remove("expanded");
+      for (var j = 0; j < faq.length; j++)
+        if (faq[j] != this) faq[j].classList.remove("expanded");
     }
   }
 }
+
+
+// var faq = document.getElementsByClassName("faq-item");
+// var faqQuestions = document.getElementsByClassName("faq-question");
+// var faqAnswers = document.getElementsByClassName("faq-answer");
+
+// if (faq) {
+//   for (var i = 0; i < faq.length; i++) {
+//     faqQuestions[i].onclick = function() {
+//       answer = this.parentElement.lastElementChild;
+//       plus = this.parentElement.firstElementChild.firstElementChild;
+
+//       if (answer.classList.contains("expanded")) {
+//         answer.classList.remove("expanded");
+//         plus.classList.replace("fa-minus", "fa-plus");
+//       } else {
+//         plus.classList.replace("fa-plus", "fa-minus");
+//         answer.classList.add("expanded");
+//       }
+
+//       var pluses = document.getElementsByClassName("fa-minus");
+//       for (var j = 0; j < pluses.length; j++)
+//         if (pluses[j] != plus) pluses[j].classList.replace("fa-minus", "fa-plus");
+
+//       for (var j = 0; j < faqAnswers.length; j++)
+//         if (faqAnswers[j] != answer) faqAnswers[j].classList.remove("expanded");
+//     }
+//   }
+// }
