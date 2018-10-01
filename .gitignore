@@ -4,6 +4,7 @@ _site
 .bundle
 vendor
 node_modules
+resources
 
 
 # VIM: Temperory files
