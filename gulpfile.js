@@ -8,12 +8,6 @@ const htmlmin = require('gulp-htmlmin');
 const server = browserSync.create();
 const clean = () => del(['_site']);
 
-function minify(done) {
-  return gulp.src('_site/**/*.html')
-    .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(gulp.dest('dist'));
-}
-
 function jekyll(done) {
   return exec('bundle exec jekyll build');
 }
@@ -24,7 +18,7 @@ function reload(done) {
 }
 
 function serve(done) {
-  server.init({ server: { baseDir: 'dist' } });
+  server.init({ server: { baseDir: '_site' } });
   done();
 }
 
