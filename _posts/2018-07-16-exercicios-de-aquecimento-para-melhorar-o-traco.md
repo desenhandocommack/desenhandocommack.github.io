@@ -42,7 +42,7 @@ Se você ainda estiver por aqui disposto a encarar o quanto antes o inevitável,
 
 ![null](/assets/uploads/como-ganhar-mais-confianca-no-traco-flexibilidade-e-precisao.jpg)
 
-Seja no método tradicional ou no digital com mesa digitalizadora (esqueça o mouse para essa atividade) precisamos fazer exercícios para aprender a controlar, trazer mais flexibilidade e ganhar confiança no nosso traço, e existem inúmeras opções para isso.
+Seja no método tradicional ou no digital com mesa digitalizadora (esqueça o mouse para essa atividade) precisamos fazer exercícios para aprender a controlar, trazer mais flexibilidade e ganhar confiança do nosso traço, e existem inúmeras opções para isso.
 
 Mas antes é importante que a gente tente:
 
@@ -112,7 +112,7 @@ Antes de iniciar qualquer atividade física é importante fazer exercícios de a
 
 Quando já entramos de cara no projeto que estamos fazendo sem haver um preparo, as coisas podem dar muito errado, e é bem comum a gente sentir o traço travado no início, por isso nós aquecemos antes.
 
-Como já citado no artigo 7 dicas para melhorar o resultado dos seus desenhos conseguimos com simples exercícios de aquecimento benefícios como:
+Como já citado no artigo [7 dicas para melhorar o resultado dos seus desenhos](https://confident-varahamihira-795914.netlify.com/blog/7-macetes-para-melhorar-o-resultado-dos-seus-desenhos/) conseguimos com simples exercícios de aquecimento benefícios como:
 
 • Relaxamento do corpo;
 
@@ -126,7 +126,7 @@ Como já citado no artigo 7 dicas para melhorar o resultado dos seus desenhos co
 
 E é tudo isso que queremos, não?
 
-Então por mais que seja um pouco chato fazer esses exercícios, faz um esforço até que ele se torne um hábito, ou pelo menos tente fazer sempre que puder. Como podemos fazer de 10 a 15 minutinhos antes de começar a desenhar, pode ficar mais fácil lembrar e colocar em prática.
+Então por mais que seja um pouco chato fazer esses exercícios faz um esforço até que ele se torne um hábito, ou pelo menos tente fazer sempre que puder. Como podemos fazer de 10 a 15 minutinhos antes de começar a desenhar, pode ficar mais fácil lembrar e colocar em prática.
 
 E é aquilo, uma vez que a gente deixa de praticar o desenho em si e esses exercícios por um longo período, precisamos fazer uma reciclagem para começar a sentir o traço fluir de novo. O desenhista também enferruja.
 
