@@ -1,0 +1,77 @@
+$min-width: 500px;
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 70em;
+    margin: auto;
+}
+
+.topbar-logo {
+    margin: 0rem 1rem;
+}
+
+button.hamburger {
+    .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+        background-color: #FF587B;
+    }
+
+    @media screen and (min-width: $min-width) {
+        display: none;
+    }
+}
+
+#navigation {
+    display: none;
+    background-color: #FFF;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    text-align: center;
+
+    &.show {
+        display: block;
+    }
+
+    @media screen and (min-width: $min-width) {
+        background-color: transparent;
+        display: block;
+        position: static;
+    }
+}
+
+.topbar-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    @media screen and (min-width: $min-width) {
+        display: flex;
+    }
+}
+
+.topbar-item {
+    margin: 0 1rem;
+    border-bottom: 1px solid #BDBDBD;
+    
+    &:last-child {
+        border: none;
+    }
+    
+    @media screen and (min-width: $min-width) {
+        border: none;
+    }
+}
+
+.topbar-text {
+    color: #808080;
+    display: block;
+    padding: 1rem 1rem;
+    
+
+    &:hover {
+        color: #007bff;
+        text-decoration: none;
+    }
+}

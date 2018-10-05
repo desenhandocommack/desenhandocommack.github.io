@@ -1,0 +1,11 @@
+{
+    "files.exclude": {
+        "vendor": true,
+        ".bundle": true,
+        ".forestry": true,
+        ".jekyll-metadata": true,
+        ".sass-cache": true,
+        "_site": true,
+        "node_modules": false
+    }
+}

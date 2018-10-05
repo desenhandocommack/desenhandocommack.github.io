@@ -1,3 +1,13 @@
 _site
 .sass-cache
 .jekyll-metadata
+.bundle
+vendor
+node_modules
+
+
+# VIM: Temperory files
+*~
+# VIM: Swap-files
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]

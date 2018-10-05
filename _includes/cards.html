@@ -1,0 +1,46 @@
+<div class="card-container">
+    {% for post in paginator.posts %}
+
+    {% if forloop.index == 3 %}<hr class="card-separator w50">{% endif %}
+    {% if forloop.index == 4 %}<hr class="card-separator w33">{% endif %}
+    {% if forloop.index == 5 %}<hr class="card-separator w50">{% endif %}
+
+    <article class="card">
+        {% if page.autopages %}
+        <span class="card-category span">{{ post.category }}</span>
+        {% else %}
+        <a href="/blog/categoria/{{ post.category | slugfy }}/" class="card-category">{{ post.category }}</a>
+        {% endif %}
+        <!-- <div class="card-thumbnail-wrapper"><img class="card-thumbnail" src="{{ post.thumbnail }}" alt="Imagem de capa do post {{ post.title }}"></div> -->
+        <div class="card-thumbnail-test" style="background-image: url({{ post.thumbnail }})"></div>
+        <h1 class="card-title"><a href="{{ post.url }}">{{ post.title }}</a></h1>
+    </article>
+    {% endfor %}
+
+    <div class="card">
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-format="fluid"
+           data-ad-layout-key="-7e+es+1q-6o+5z"
+           data-ad-client="ca-pub-9490703409315867"
+           data-ad-slot="3055693350"></ins>
+      <script>
+           (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+
+    <div class="card-pagination">
+        {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path }}" class="card-previous"><i class="card-arrow fas fa-angle-left"></i> Mais Recentes</a>
+        {% else %}
+        <span class="card-previous disabled"><i class="disabled card-arrow fas fa-angle-left"></i> Mais Recentes</span>
+        {% endif %}
+
+        {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path }}" class="card-next">Mais Antigas <i class="card-arrow fas fa-angle-right"></i></a>
+        {% else %}
+        <span class="card-next disabled">Mais Antigas <i class="disabled card-arrow fas fa-angle-right"></i></span>
+        {% endif %}
+    </div>
+</div>
