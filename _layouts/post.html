@@ -16,4 +16,8 @@ layout: page
         </div>
     </div>
     <div class="post-body">{{ content }}</div>
+
+    {% if page.comments %}
+    <div class="post-comments">{% include disqus.html %}</div>
+    {% endif %}
 </div>

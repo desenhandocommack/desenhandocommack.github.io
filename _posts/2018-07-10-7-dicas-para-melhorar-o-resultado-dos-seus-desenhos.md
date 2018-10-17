@@ -56,7 +56,7 @@ O melhor de tudo é que não é preciso de muito tempo ou recursos mirabolantes 
 
 _“Mas por onde eu começo? Que exercícios são esses e como fazer?”_
 
-No artigo A importância dos exercícios de aquecimento – Para aquecer e melhorar o traço eu falo com mais detalhes sobre tudo isso.
+No artigo [A importância dos exercícios de aquecimento – Para aquecer e melhorar o traço](https://confident-varahamihira-795914.netlify.com/blog/exercicios-de-aquecimento-para-melhorar-o-traco/) eu falo com mais detalhes sobre tudo isso.
 
 ## Dica #2: Encontre os erros (Flip Horizontal)
 

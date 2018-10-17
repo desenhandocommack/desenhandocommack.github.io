@@ -45,6 +45,22 @@ if (hamburgers.length > 0) {
 //         menu2.classList.add("expanded");
 // }
 
+var faq = document.getElementsByClassName("faq-item");
+if (faq) {
+  for (var i = 0; i < faq.length; i++) {
+    faq[i].onclick = function() {
+      if (this.classList.contains("expanded"))
+        this.classList.remove("expanded");
+      else
+        this.classList.add("expanded");
+
+      for (var j = 0; j < faq.length; j++)
+        if (faq[j] != this) faq[j].classList.remove("expanded");
+    }
+  }
+}
+
+
 // var faq = document.getElementsByClassName("faq-item");
 // var faqQuestions = document.getElementsByClassName("faq-question");
 // var faqAnswers = document.getElementsByClassName("faq-answer");

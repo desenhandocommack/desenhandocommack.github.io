@@ -38,8 +38,6 @@ autopages:
 
 permalink: /blog/:title/
 
-topbar: ["O Projeto", "Blog", "Serviços", "Apps", "Contato"]
-
 plugins:
   - jekyll-paginate-v2
 
@@ -52,6 +50,7 @@ defaults:
       path: "" # an empty string here means all files in the project
       type: "posts" # previously `post` in Jekyll 2.2.
     values:
+      comments: true
       layout: post
       has_header: false
       has_navbar: true

@@ -6,22 +6,16 @@
 
         <nav id="navigation">
             <ul class="topbar-list" id="menu">
-                {% for i in site.topbar %}
-                    {% capture url %}{{ i | downcase | slugify | append: "/" | prepend: "/" | replace: "/início/", "/" }}{% endcapture %}
-                    {% capture page_url %}{{ page.url | replace: "index.html", "" }}{% endcapture %}
-        
+                {% for item in site.data.menu %}
                     <li class="topbar-item">
                         {% if page_url == url %}
-                            <span class="topbar-text current">{{ i }}</span>
+                            <a class="topbar-text" href="{{ item.url }}">{{ item.name }}</a>
                         {% else %}
-                            <a class="topbar-text" href="{{ url }}">{{ i }}</a>
+                            <span class="topbar-text current">{{ item.name }}</span>
                         {% endif %}
                     </li>
                 {% endfor %}
             </ul>
-        </nav>
-
-
-       
+        </nav>       
     </div>
 </div>

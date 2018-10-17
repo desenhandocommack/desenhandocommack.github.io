@@ -32,15 +32,15 @@
 
     <div class="card-pagination">
         {% if paginator.previous_page %}
-        <a href="{{ paginator.previous_page_path }}" class="card-previous"><i class="card-arrow fas fa-angle-left"></i> Mais Recentes</a>
+        <a href="{{ paginator.previous_page_path }}" class="card-previous"><img src="/assets/img/left-arrow.png"> Mais Recentes</a>
         {% else %}
-        <span class="card-previous disabled"><i class="disabled card-arrow fas fa-angle-left"></i> Mais Recentes</span>
+        <span class="card-previous disabled"><img src="/assets/img/left-arrow.png"> Mais Recentes</span>
         {% endif %}
 
         {% if paginator.next_page %}
-        <a href="{{ paginator.next_page_path }}" class="card-next">Mais Antigas <i class="card-arrow fas fa-angle-right"></i></a>
+        <a href="{{ paginator.next_page_path }}" class="card-next">Mais Antigas <img src="/assets/img/right-arrow.png"></a>
         {% else %}
-        <span class="card-next disabled">Mais Antigas <i class="disabled card-arrow fas fa-angle-right"></i></span>
+        <span class="card-next disabled">Mais Antigas <img src="/assets/img/right-arrow.png"></span>
         {% endif %}
     </div>
 </div>

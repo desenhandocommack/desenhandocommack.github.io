@@ -10,7 +10,7 @@ page_description: Esta página contém as perguntas que mais recebo
 <ul class="faq-list">
   {% for faq in site.data.faq %}
     <li class="faq-item">
-      <h2 class="faq-question"><i class="fas fa-plus"></i> {{ faq.question }}</h2>
+      <h1 class="faq-question"><img class="plus" src="/assets/img/plus.jpg"><img class="minus" src="/assets/img/minus.jpg"> {{ faq.question }}</h1>
       <p class="faq-answer">{{ faq.answer }}</p>
     </li>
   {% endfor %}

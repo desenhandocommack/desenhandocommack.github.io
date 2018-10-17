@@ -2,7 +2,7 @@ const del = require('del');
 const gulp = require('gulp');
 const browserSync = require('browser-sync');
 const exec = require('child_process').exec;
-
+const htmlmin = require('gulp-htmlmin');
 
 
 const server = browserSync.create();
@@ -22,8 +22,7 @@ function serve(done) {
   done();
 }
 
-const watch = () => gulp.watch(
-  ['**/*', '!_site'], gulp.series(jekyll, reload));
+const watch = () => gulp.watch(['**/*', '!_site'], gulp.series(jekyll, reload));
 const prod = gulp.series(clean, jekyll);
 const dev = gulp.series(clean, jekyll, serve, watch);
 
