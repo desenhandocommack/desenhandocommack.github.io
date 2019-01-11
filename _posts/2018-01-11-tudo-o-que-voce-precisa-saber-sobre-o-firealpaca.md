@@ -167,7 +167,7 @@ Claro que nem tudo vamos encontrar no FireAlpaca, mas estou aqui para te mostrar
 
 11. **Correção do traço – Como ativar o controle de traço no FireAlpaca:** tem um traço limpo e agradável não é fácil, mas utilizando uma auxílio vai dar tudo certo. Com o brush selecionado *(B)* observe na aba de configuração de ferramentas lá em cima a opção **Correction**, e alterne o nível para estabilizar o traço. Quanto maior o número mais controlado e lento será o traço.
 
-12. **Ferramenta de tranformação:** para redimensionar ou girar o conteúdo de uma camada utilize o atalho *Ctrl+T*, é uma ferramenta sempre muito útil. Fique atento a configurações da ferramenta na aba inferior que vai abrir para aproveitar melhor. Você encontra essa ferramenta em *Select* → *Transform*.
+12. **Ferramenta de tranformação:** para redimensionar ou girar o conteúdo de uma camada utilize o atalho *Ctrl+T*, é uma ferramenta sempre muito útil. Fique atento as configurações da ferramenta na aba inferior que vai abrir para aproveitar melhor. Você encontra essa ferramenta em *Select* → *Transform*.
 
 13. **Mesh Transform - Para esticar e distorcer:** se precisar fazer alguns ajustes em uma imagem tente a Mesh Transform, é bem semelhante a Warp Tool do Photoshop. Você encontra indo em: *Select* → *Mesh Transform*. Para utilizar basta mover os quadradinhos brancos.
 
@@ -175,18 +175,18 @@ Claro que nem tudo vamos encontrar no FireAlpaca, mas estou aqui para te mostrar
 
 15. **Atalhos gerais:** algumas outras ferramentas e atalhos úteis.
        
-+ Rotação da tela: utilize as setas do teclado
-+ Zoom: gire a rolagem do mouse (scroll) para Zoom in e Zoom Out
-+ Hand: utilize a tecla de espaço e arraste a tela de desenho com o clique esquerdo do mouse
-+ Move Tool: para mover o conteúdo de uma camada utilize o atalho V
-+ Conta-gotas: atalho “I” ou clique direito do mouse
-+ Swap Color e reset: com o atalho “X” você alterna a cor de Foreground e Background. Para resetar para o padrão (branco e preto) usamos “D”.
-+ Brush/Pincel: B
-+ Borracha: E
-+ Balde de tinta: G
-+ Aumentar e diminuir brush: Ctrl + Alt + Clicar e arrastar mouse para esquerda e direita
-+ Mesclar Layers: Ctrl+E
-+ Mesclar Pastas: Layer → Merge Folder
++ Rotação da tela: utilize as setas do teclado;
++ Zoom: gire a rolagem do mouse (scroll) para Zoom in e Zoom Out;
++ Hand: utilize a tecla de espaço e arraste a tela de desenho com o clique esquerdo do mouse;
++ Move Tool: para mover o conteúdo de uma camada utilize o atalho V;
++ Conta-gotas: atalho “I” ou clique direito do mouse;
++ Swap Color e reset: com o atalho “X” você alterna a cor de Foreground e Background. Para resetar para o padrão (branco e preto) usamos “D”;
++ Brush/Pincel: B;
++ Borracha: E;
++ Balde de tinta: G;
++ Aumentar e diminuir brush: Ctrl + Alt + Clicar e arrastar mouse para esquerda e direita;
++ Mesclar Layers: Ctrl+E;
++ Mesclar Pastas: Layer → Merge Folder;
       
        
 ## Conclusão
