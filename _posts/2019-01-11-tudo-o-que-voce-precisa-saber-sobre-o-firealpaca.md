@@ -187,6 +187,14 @@ Claro que nem tudo vamos encontrar no FireAlpaca, mas estou aqui para te mostrar
 + Aumentar e diminuir brush: Ctrl + Alt + Clicar e arrastar mouse para esquerda e direita;
 + Mesclar Layers: Ctrl+E;
 + Mesclar Pastas: Layer → Merge Folder;
+
+## #EXTRA - Meu brush de sketch no Firealpa + Como instalar Brush .mdb no Firealpaca
+
+Baixe [aqui](https://drive.google.com/open?id=165DfjxXNv53dpSRADMVkyi_iVmwfFNsT) meus brushes personalizados no FireAlpaca.
+
+Clique com o botão direito do mouse em cima onde ficam os brushes no Painel Brush → Read Brush File → e selecione o brush desejado. Está pronto pra usar e modificar como quiser.
+
+![print-como-instalar-brush-firealpaca](/assets/uploads/post3/como-instalar-brush-firealpaca.jpg)
       
        
 ## Conclusão
