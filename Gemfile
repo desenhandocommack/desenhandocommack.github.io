@@ -2,7 +2,7 @@ source "https://rubygems.org"
  
 group :jekyll_plugins do
   gem 'jekyll-livereload'
-  gem 'jekyll-paginate-v2'
+  gem 'jekyll-paginate-v2', '2.0.0'
 end
 
 gem 'eventmachine'
