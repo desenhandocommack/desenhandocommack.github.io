@@ -16,7 +16,7 @@ Para quem me acompanha no [YouTube](https://www.youtube.com/desenhandocommack) s
 
 *Uma Alpaca nós conhecemos, e o FireAlpaca, você conhece?*
 
-[FireAlpaca](http://firealpaca.com/) é um programa gratuito de desenho e pintura digital, e não é preciso ter medo dele se você está começando agora e não tem experiência com o meio digital, porque ele foi projetado para ser simples e fácil de usar.
+[Alpaca cartunizada branca com um fundo laranja com o simbolo do FireAlpaca repetido em padrão regular](http://firealpaca.com/) é um programa gratuito de desenho e pintura digital, e não é preciso ter medo dele se você está começando agora e não tem experiência com o meio digital, porque ele foi projetado para ser simples e fácil de usar.
 
 *Vem que eu te apresento a Alpaca :)*
 
@@ -36,7 +36,7 @@ Por isso, se você deseja aprender um pouco mais sobre o programa, pegue a sua A
 
 ## #1 - FireAlpaca é uma boa alternativa para mim?
 
-![capa-fazendo-amizade-com-uma-alpaca-de-fogo_arte-em-vetor](/assets/uploads/post3/fazendo-amizade-com-uma-alpaca-de-fogo_firealpaca-e-pra-voce.jpg "Fazendo amizade com uma Alpaca de fogo")
+![Alpaca cartunizada com cara impaciente encarando menino falante](/assets/uploads/post3/fazendo-amizade-com-uma-alpaca-de-fogo_firealpaca-e-pra-voce.jpg "Fazendo amizade com uma Alpaca de fogo")
 
 *Será que vocês vão se dar bem?*
 
@@ -80,7 +80,7 @@ Talvez possa fazer alguma diferença se você precisa de um melhor desempenho e 
 
 ## #2 - Os pontos fortes do FireAlpaca
 
-![capa-alpaca-forte-e-musculosa_arte-em-vetor](/assets/uploads/post3/alpacas-fortes-e-musculosas_pontos-fortes-do-firealpaca.jpg "Alpacas fortes e musculosas")
+![Alpaca musculosa](/assets/uploads/post3/alpacas-fortes-e-musculosas_pontos-fortes-do-firealpaca.jpg "Alpacas fortes e musculosas")
 
 Antes de seguir talvez você se interesse em saber quais os pontos fortes do FireAlpaca, e trouxe 7 deles:
 
@@ -103,7 +103,7 @@ Esses são os pontos que eu achei interessantes, o restante, você vai me dizer 
 
 ## #3 - Onde encontro o FireAlpaca para download? E como baixar?
 
-![capa-alpaca-pulando_arte-em-vetor](/assets/uploads/post3/baixando-alpacas_como-baixar-o-firealpaca-download.jpg "Baixando Alpacas em 3... 2... 1")
+![Alpaca cartunizada pulando graciosamente](/assets/uploads/post3/baixando-alpacas_como-baixar-o-firealpaca-download.jpg "Baixando Alpacas em 3... 2... 1")
 
 Não é interessante sair baixando softwares de qualquer lugar, e quando falamos dos gratuitos, sempre busque o site oficial.
 
@@ -115,14 +115,14 @@ O site oficial do FireAlpaca em português é (http://firealpaca.com/pt/), e em 
 
 Ao acessar o site nos links anteriores não tem erro. Atualmente temos um botão rosa e grande de download, para o **Mac OS X** e também **Windows**, basta um clique e ele já vai começar o download.
 
-![print-site-oficial-firealpaca-mostrando-que-e-um-programa-gratuito](/assets/uploads/post3/site-oficial-firealpaca-2019_free-paint-tool.jpg)
+![Print da tela de download do FireAlpaca](/assets/uploads/post3/site-oficial-firealpaca-2019_free-paint-tool.jpg)
 
 Um pouco mais abaixo dos botões você tem a opção de fazer o download das versões mais antigas (http://firealpaca.com/download/) ou do Windows versão 32bit.
 
 
 ## #4 - Como instalar o FireAlpaca no meu Windows 10? 
 
-![capa-alpaca-mochileira-e-placa-albergaria-de-alpacas_arte-em-vetor](/assets/uploads/post3/estalagem-albergaria-de-alpacas_como-instalar-o-firealpaca-no-windows10.jpg "Estalagem de Alpacas")
+![Alpaca cartunizada viajante com camisa cinza e mochila roxa nas costa, olhando para uma placa que diz "Albergaria de Alpacas"](/assets/uploads/post3/estalagem-albergaria-de-alpacas_como-instalar-o-firealpaca-no-windows10.jpg "Estalagem de Alpacas")
 
 Para instalar o FireAlpaca no Windows 10 vamos fazer o seguinte:
 
@@ -136,7 +136,7 @@ Essa é a maneira que posso mostrar para você porque é o que eu uso. Se for in
 
 ## #5 - Os segredos do FireAlpaca
 
-![capa-os-segredos-de-uma-alpaca_arte-em-vetor](/assets/uploads/post3/desvendando-uma-alpaca-de-fogo_os-segredos-do-firealpaca.jpg "Desvendando a pelagem de uma alpaca de fogo")
+![Alpaca com óculos escuros segurando uma lupa e encarando o leitor](/assets/uploads/post3/desvendando-uma-alpaca-de-fogo_os-segredos-do-firealpaca.jpg "Desvendando a pelagem de uma alpaca de fogo")
 
 *Segredos ocultos por trás de uma pelagem macia…*
 
@@ -195,7 +195,7 @@ Baixe [aqui](https://drive.google.com/open?id=165DfjxXNv53dpSRADMVkyi_iVmwfFNsT)
 
 Clique com o botão direito do mouse em cima onde ficam os brushes no Painel Brush → Read Brush File → e selecione o brush desejado. Está pronto pra usar e modificar como quiser.
 
-![print-como-instalar-brush-firealpaca](/assets/uploads/post3/como-instalar-brush-firealpaca.jpg)
+![Print mostrando o painel de pinceis do FireAlpaca](/assets/uploads/post3/como-instalar-brush-firealpaca.jpg)
       
        
 ## Conclusão

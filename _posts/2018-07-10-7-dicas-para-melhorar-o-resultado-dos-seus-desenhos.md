@@ -6,7 +6,7 @@ thumbnail: >-
   /assets/uploads/post1/7-dicas-para-melhorar-e-turbinar-seus-desenhos_capa-700x250-blog.jpg
 description: Conheça 7 dicas importantes que podem ajudar você a melhorar o resultado dos seus desenhos
 ---
-![null](/assets/uploads/post1/7-dicas-para-melhorar-e-turbinar-seus-desenhos_capa-700x250-blog.jpg)
+![Lápis cartunizado colorido e sorridente](/assets/uploads/post1/7-dicas-para-melhorar-e-turbinar-seus-desenhos_capa-700x250-blog.jpg)
 
 Todos nós queremos sempre desenhar melhor, e isso é um fato! Por isso separei alguns truques e dicas que vão te ajudar!
 
@@ -36,7 +36,7 @@ Pronto(a) para começar a dar um UP no seu desenho?
 
 ## Dica #1: Exercícios de aquecimento
 
-![null](/assets/uploads/post1/exercicios-de-aquecimento-para-melhorar-o-traco.jpg)
+![Menino com camiseta regata amarela com o número 1 estampado em vermelho, com faixa vermelha amarrada na cabeça e levantando um par de hateres](/assets/uploads/post1/exercicios-de-aquecimento-para-melhorar-o-traco.jpg)
 
 Seja você um desenhista iniciante ou experiente, fazer algum tipo de aquecimento antes de embarcar em um desenho importante, é primordial.
 
@@ -59,7 +59,7 @@ No artigo [Exercícios para melhorar o traço e a importância do aquecimento](/
 
 ## Dica #2: Encontre os erros (Flip Horizontal)
 
-![null](/assets/uploads/post1/espelhar-a-imagem-flip-horizontal.jpg)
+![Menino de camiseta azul encarando pensativo uma folha de papel](/assets/uploads/post1/espelhar-a-imagem-flip-horizontal.jpg)
 
 Um dos melhores recursos para verificar o que está torto enquanto você está desenhando é o espelhamento horizontal.
 
@@ -75,17 +75,17 @@ Sabe quando a gente deixa o desenho por um dia ou mais guardado e quando volta a
 
 ## Dica #3: Verifique se você tem uma boa silhueta
 
-![null](/assets/uploads/post1/uso-de-silhuetas.jpg)
+![Silhueta de um homem segurando um pincel, usando boina, óculos e cachecol](/assets/uploads/post1/uso-de-silhuetas.jpg)
 
 As silhuetas nos dizem muitas coisas, tanto que só de bater o olho nas imagens abaixo você já deve ter reconhecido quem são os personagens, não é verdade?
 
-![Silhuetas Personagens Famosos](/assets/uploads/post1/silhuetas-personagens-famosos.jpg)
+![Silhuetas Personagens Famosos: Senhor Sirigueijo do Bob Esponja, Bart Simpson e Mickey Mouse](/assets/uploads/post1/silhuetas-personagens-famosos.jpg)
 
 O básico do que uma boa silhueta precisa ter é legibilidade, é preciso poder ler um personagem através da sua silhueta. Se você só estiver enxergando um borrão sem sentido, provavelmente algo não está funcionando e pode ser melhorado.
 
 ## Dica #4: Formas básicas
 
-![null](/assets/uploads/post1/formas-basicas.jpg)
+![Personagem feminina construida com formas básicas](/assets/uploads/post1/formas-basicas.jpg)
 
 Quando estamos começando a desenhar é bem comum fazer as coisas sem muito critério e pular etapas, por isso é importante aprender desde cedo a estruturar primeiro para depois acrescentar detalhes.
 
@@ -95,7 +95,7 @@ Além disso, as formas tem papel importante e podem influenciar diretamente na p
 
 ## Dica #5: O uso de referências é indispensável
 
-![null](/assets/uploads/post1/uso-de-referencias.jpg)
+![Homem se apoiando em um livro gigantesco com capa verde e uma lupa roxa estampada na capa](/assets/uploads/post1/uso-de-referencias.jpg)
 
 Há quem ache que usar referências é errado ou torna o valor de um trabalho menor. E não, isso não é verdade!
 
@@ -111,7 +111,7 @@ Provavelmente o resultado será bem melhor, o que você acha?
 
 ## Dica #6: Linhas
 
-![null](/assets/uploads/post1/qualidade-da-linha.jpg)
+![Lápis rosa com duas curvas pintadas em rosa](/assets/uploads/post1/qualidade-da-linha.jpg)
 
 A linha é parte fundamental em um desenho. Digo, em um desenho que utilize linhas. E trabalhar na variação de espessura (alguns pontos mais finos e outros mais grossos) conseguimos gerar mais interesse para a nossa criação.
 
@@ -123,7 +123,7 @@ Então se você segue esse estilo de desenho que usa linhas tenta buscar um pouc
 
 ## Dica #7: Aprenda com outros artistas
 
-![null](/assets/uploads/post1/aprenda-com-outros-artistas.jpg)
+![Meninos conversando: O da esquerda é mais gordo, usa camiseta azul e chapéu de marinheiro; o da direita é mais magro, usa um colete rosa sobre uma blusa cinza e tem orelhas pontiagudas](/assets/uploads/post1/aprenda-com-outros-artistas.jpg)
 
 Durante muitos anos eu não tive contato como outras pessoas faziam para desenhar, simplesmente ia fazendo o que eu estava com vontade.
 
