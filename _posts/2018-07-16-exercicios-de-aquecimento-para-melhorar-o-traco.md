@@ -3,8 +3,10 @@ layout: post
 title: Exercícios para melhorar o traço e a importância do aquecimento
 category: Dicas
 thumbnail: /assets/uploads/post2/capa-importancia-dos-exercicios-de-aquecimento_700x250.jpg
+description: Veja os exercícios para melhorar os traços dos seus desenhos e saiba a importancia do aquecimento
 ---
-![null](/assets/uploads/post2/capa-importancia-dos-exercicios-de-aquecimento_700x250.jpg)
+![Lápis cartunizado levantando halteres](/assets/uploads/post2/capa-importancia-dos-exercicios-de-aquecimento_700x250.jpg)
+
 Se tem uma coisa que incomoda muito nós aprendizes, é a questão do traço. Vamos falar então sobre como de fato melhorar o seu traço e a importância dos exercícios.
 
 <!-- more -->
@@ -25,7 +27,7 @@ Mas por onde eu começo então? Quais exercícios devo fazer? Em quanto tempo o 
 
 ## Foque mais no PROCESSO
 
-![texto descritivo](/assets/uploads/post2/dicas-para-evoluir-no-desenho-foco-no-processo_flat-design.jpg)
+![Vários signos ligados por setas representando o processo de desenvolvimento de uma ideia](/assets/uploads/post2/dicas-para-evoluir-no-desenho-foco-no-processo_flat-design.jpg)
 
 Quando olhamos o trabalho de alguém com um traço espetacular acabamos pensando somente em resultado, que é o que a gente está vendo. E é naquilo que a gente foca, na busca de um segredo que faça a gente pular do estágio que estamos para o que a gente quer alcançar.
 
@@ -33,7 +35,7 @@ Nisso algumas pessoas acham que é o software que faz a diferença, outros ficam
 
 Não há como você pular do início para o fim, existe um caminho a ser percorrido e ele não pode ser ignorado, e esse trabalho está todo em suas mãos. Além do que, o fim está sempre a uma distância infinita para aqueles que realmente acreditam que sempre podem continuar melhorando.
 
-![null](/assets/uploads/post2/nao-tem-como-pular-etapas-no-desenho_flat-design.jpg)
+![Duas plataformas separadas por um espaço e um tracejado representando a trajetória de um pulo](/assets/uploads/post2/nao-tem-como-pular-etapas-no-desenho_flat-design.jpg)
 
 O segredo?
 
@@ -43,7 +45,7 @@ Se você ainda estiver por aqui disposto a encarar o quanto antes o inevitável,
 
 ## Melhorando a flexibilidade e precisão dos traços com exercícios simples
 
-![null](/assets/uploads/post2/como-ganhar-mais-confianca-no-traco-flexibilidade-e-precisao.jpg)
+![Mão segurando um lápis apontado para um alvo](/assets/uploads/post2/como-ganhar-mais-confianca-no-traco-flexibilidade-e-precisao.jpg)
 
 Seja no método tradicional ou no digital com mesa digitalizadora (esqueça o mouse para essa atividade) precisamos fazer exercícios para aprender a controlar, trazer mais flexibilidade e ganhar confiança do nosso traço, e existem inúmeras opções para isso.
 
@@ -71,7 +73,7 @@ Então, vamos aos exercícios!
 
 ### Exercício 1: Esboçando formas simples
 
-![null](/assets/uploads/post2/exercicios-de-desenho-para-o-traco-circulos-e-ovais.jpg)
+![Vários circulos feito a mão livre](/assets/uploads/post2/exercicios-de-desenho-para-o-traco-circulos-e-ovais.jpg)
 
 O primeiro passo é preencher uma folha inteira ou mais com círculos e ovais de todos os tamanhos.
 
@@ -81,7 +83,7 @@ Além dessas formas cilindros, cubos, quadrados e triângulos são bastante util
 
 ### Exercício 2: Retas
 
-![null](/assets/uploads/post2/exercicios-de-desenho-para-o-traco-retas-e-linhas.jpg)
+![Vários grupos de retas paralelas em direções diversas feitas a mão livre](/assets/uploads/post2/exercicios-de-desenho-para-o-traco-retas-e-linhas.jpg)
 
 Trace linhas em todas as direções: de cima para baixo, de baixo para cima, da esquerda para a direita, da direita para a esquerda e inclinadas.
 
@@ -89,7 +91,7 @@ Faça os traços de uma única vez e não se preocupe se as coisas não saírem 
 
 Um outro exercício com retas interessante é marcar dois pontos na folha e traçar uma reta entre eles. A ideia é ligar um ponto ao outro de uma vez só.
 
-![null](/assets/uploads/post2/exercicios-de-desenho-para-o-traco-retas.jpg)
+![Ponto A e ponto B ligados por uma reta](/assets/uploads/post2/exercicios-de-desenho-para-o-traco-retas.jpg)
 
 ### Exercício 3: Curvas
 
@@ -97,11 +99,11 @@ No desenho também utilizamos bastante curvas, e exercícios focados nisso tamb�
 
 Algumas vezes eu faço curvas livremente e em outras eu limito essa curvas dentro de quadrados, que também é uma forma interessante de se fazer.
 
-![null](/assets/uploads/post2/exercicios-de-desenho-para-o-traco-curvas.jpg)
+![Várias curvas feitas a mão livre](/assets/uploads/post2/exercicios-de-desenho-para-o-traco-curvas.jpg)
 
 Esses são apenas alguns exercícios, mas você pode fazer variações deles e ir dificultando o nível de cada um como nos exemplos abaixo.
 
-![null](/assets/uploads/post2/exercicios-de-desenho-para-melhorar-o-traco.jpg)
+![Círculos, ondas e retas feitas a mão livre](/assets/uploads/post2/exercicios-de-desenho-para-melhorar-o-traco.jpg)
 
 Todos são úteis e vão contribuir para que o seu traço melhore, mas é preciso ter paciência e persistir. A única maneira de obter resultados é através do exercício de praticar.
 
@@ -143,7 +145,7 @@ Por isso não se apegue a quanto tempo as coisas levam para acontecer, simplesme
 
 ### Fique atento aos intervalos e sua postura
 
-![null](/assets/uploads/post2/postura-adequada-para-desenhar-ergonomia.jpg)
+![Homem cartoon, de perfil, sentado com postura correta na frente de um computador](/assets/uploads/post2/postura-adequada-para-desenhar-ergonomia.jpg)
 
 É comum passarmos horas desenhando, e o cuidado com a nossa saúde é extremamente importante para evitar lesões e outras complicações.
 
