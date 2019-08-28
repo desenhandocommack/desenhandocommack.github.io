@@ -3,6 +3,7 @@ layout: post
 title: Tudo o que você precisa saber sobre o FireAlpaca sem precisar “cuspir no chão”
 category: Programas gratuitos
 thumbnail: /assets/uploads/post3/tudo-sobre-o-firealpaca_thumbnail-vector-art.jpg
+description: Conheça tudo sobre o FireAlpaca, um programa gratuito para artistas de desenhistas
 ---
 ![null](/assets/uploads/post3/tudo-sobre-o-firealpaca_thumbnail-vector-art.jpg "Diga XXXXXISSS :D")
 
