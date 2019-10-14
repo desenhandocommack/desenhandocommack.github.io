@@ -5,7 +5,7 @@ category: Programas gratuitos
 thumbnail: /assets/uploads/post3/tudo-sobre-o-firealpaca_thumbnail-vector-art.jpg
 description: Conheça tudo sobre o FireAlpaca, um programa gratuito para artistas de desenhistas
 ---
-![null](/assets/uploads/post3/tudo-sobre-o-firealpaca_thumbnail-vector-art.jpg "Diga XXXXXISSS :D")
+![Alpaca cartunizada branca com um fundo laranja com o simbolo do FireAlpaca repetido em padrão regular](/assets/uploads/post3/tudo-sobre-o-firealpaca_thumbnail-vector-art.jpg "Diga XXXXXISSS :D")
 
 
 Para quem me acompanha no [YouTube](https://www.youtube.com/desenhandocommack) sabe que estou sempre indicando alguns softwares gratuitos que eu experimento, e o FireAlpaca entra agora para a listinha dos recomendados também.
@@ -16,7 +16,7 @@ Para quem me acompanha no [YouTube](https://www.youtube.com/desenhandocommack) s
 
 *Uma Alpaca nós conhecemos, e o FireAlpaca, você conhece?*
 
-![Alpaca cartunizada branca com um fundo laranja com o simbolo do FireAlpaca repetido em padrão regular](http://firealpaca.com/) é um programa gratuito de desenho e pintura digital, e não é preciso ter medo dele se você está começando agora e não tem experiência com o meio digital, porque ele foi projetado para ser simples e fácil de usar.
+[FireAlpaca](http://firealpaca.com/) é um programa gratuito de desenho e pintura digital, e não é preciso ter medo dele se você está começando agora e não tem experiência com o meio digital, porque ele foi projetado para ser simples e fácil de usar.
 
 *Vem que eu te apresento a Alpaca :)*
 
