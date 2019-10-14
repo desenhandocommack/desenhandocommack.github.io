@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Quando devo comprar uma mesa digitalizadora?
+title: Materiais básicos de desenho para iniciantes
 category: Materiais
 thumbnail: >-
   /assets/uploads/post4/materiais-basicos-para-desenho_thumbnail.jpg
