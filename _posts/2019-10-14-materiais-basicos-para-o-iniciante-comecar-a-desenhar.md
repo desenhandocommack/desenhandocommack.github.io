@@ -6,7 +6,7 @@ thumbnail: >-
   /assets/uploads/post4/materiais-basicos-para-desenho_thumbnail.jpg
 description: Os três materiais mais importantes para começar a desenhar.
 ---
-![Menino com material de desenho nas costas](/assets/uploads/post1/materiais-basicos-para-desenho_thumbnail.jpg)
+![Menino com material de desenho nas costas](/assets/uploads/post4/materiais-basicos-para-desenho_thumbnail.jpg)
 
 Qual o material básico para um iniciante começar a desenhar? Precisa de muita coisa?
 
