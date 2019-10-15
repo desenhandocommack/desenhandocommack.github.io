@@ -37,7 +37,7 @@ O papel é o nosso primeiro item, e ele tem **tamanho** e **gramatura** diferent
 
 ## Tamanhos do papel
 
-![Imagem mostrando os tamanhos de papel mais comuns](/assets/uploads/post4/tamanhos-de-papel-medidas.jpg =720x489)
+![Imagem mostrando os tamanhos de papel mais comuns](/assets/uploads/post4/tamanhos-de-papel-medidas.jpg)
 
 Os [tamanhos de papel](https://pt.wikipedia.org/wiki/Tamanho_de_papel) são muitos e podem variar desde os tamanhos bem pequenos como é o caso do A10, até tamanhos bem maiores, como por exemplo o A0. E esses tamanhos acabam sendo utilizados para diferentes finalidades.
 
@@ -87,7 +87,7 @@ Para começar a desenhar escolha entre os tipos HB, B e 2B. É um ótimo conjunt
 
 Também existem muitos tipos de borrachas (latéx, lápis borracha, borracha elétrica, borracha de lápis, borracha da lapiseira) e três delas são bem interessantes ter entre os seus materiais: as **plásticas**, as **canetas-borracha** e **limpa-tipos**.
 
-![Foto mostrando borrachas de tipos diferentes: BORRACHA PLÁSTICA Pentel HI-POLYMER SOFT, CANETA BORRACHA Maped e BORRACHA LIMPA-TIPOS Faber-Castell.](/assets/uploads/post4/tipos-de-borrachas-que-uso.jpg =720x619)
+![Foto mostrando borrachas de tipos diferentes: BORRACHA PLÁSTICA Pentel HI-POLYMER SOFT, CANETA BORRACHA Maped e BORRACHA LIMPA-TIPOS Faber-Castell.](/assets/uploads/post4/tipos-de-borrachas-que-uso.jpg)
 
 As **borrachas plásticas** são as que eu mais uso, elas são macias e não danificam tanto o papel como as borrachas escolares que literalmente raspam o papel.
 
