@@ -26,9 +26,9 @@ Também sinta-se livre para interagir nos comentários sobre o assunto.
 
 **ÍNDICE**
 
-1. [Papel](1---Papel)
-2. [Lápis](2---Lápis)
-3. [Borracha](3---Borracha)
+1. [Papel](#1---Papel)
+2. [Lápis](#2---Lápis)
+3. [Borracha](#3---Borracha)
 
 
 ## #1 - Papel
