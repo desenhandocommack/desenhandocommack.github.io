@@ -8,7 +8,7 @@ description: Os três materiais mais importantes para começar a desenhar.
 ---
 ![Menino com material de desenho nas costas](/assets/uploads/post4/materiais-basicos-para-desenho_thumbnail.jpg)
 
-Qual o material básico para um iniciante começar a desenhar? Precisa de muita coisa?
+Qual o material básico necessário para um iniciante começar a desenhar? Precisa de muita coisa?
 
 <!-- more -->
 
@@ -26,9 +26,9 @@ Também sinta-se livre para interagir nos comentários sobre o assunto.
 
 **ÍNDICE**
 
-1. [Papel](#1---Papel)
-2. [Lápis](#2---Lápis)
-3. [Borracha](#3---Borracha)
+1. [Papel](1---Papel)
+2. [Lápis](2---Lápis)
+3. [Borracha](3---Borracha)
 
 
 ## #1 - Papel
@@ -93,11 +93,14 @@ As **borrachas plásticas** são as que eu mais uso, elas são macias e não dan
 
 Já as **canetas-borracha** são interessantes para apagar pequenos detalhes, evitando apagar com borrachas maiores mais do que você gostaria. No lugar delas é possível utilizar as borrachas de lápis ou as próprias borrachas que vem na lapiseira.
 
-E a **borracha limpa-tipos** é aquela maleável tipo como uma massinha de modelar. Geralmente é cinzenta e é muito útil para tirar o excesso de grafite sobre o papel antes de apagar com um outra borracha.
+E a **borracha limpa-tipos** é aquela maleável tipo como uma massinha de modelar. Geralmente é cinzenta e é muito útil para retirar o excesso de grafite sobre o papel antes de apagar com um outra borracha.
 
 Para o iniciante uma boa opção de borracha mais barata e que vai funcionar é a borracha da capinha vermelha da Faber-Castell. É bem fácil de encontrar e é uma boa borracha também.
 
 Agora se você quiser testar outras opções e conseguir encontrar, eu gosto das borrachas plásticas HI-POLYMER da Pentel e da STAEDTLER Mars plastic. São a que eu já consegui usar e desde então opto sempre por elas. Compro através de lojas online.
+
+Indico o vídeo [Dica - Qual a melhor borracha para desenho?](https://www.youtube.com/watch?v=Y1aoEFnrVAs) que mostrar várias opções de borrachas apagando o grafite do papel. Algumas são mais eficientes e outras menos, e isso pode interferir na sua escolha.
+
 
 ## Conclusão
 
@@ -113,11 +116,11 @@ Então jamais se limite ao achar que ter uma mesa digitalizadora é um problema.
 
 E como inspiração, alguns artistas que trabalham principalmente com o modelo tradicional desenhando no papel. As artes são incríveis!
 
-+ https://www.instagram.com/eduardovieirart/?hl=pt-br
-+ https://www.instagram.com/venturaartbook/?hl=pt-br
-+ https://www.instagram.com/marcioabreuarte/?hl=pt-br
-+ https://www.instagram.com/artofidan/?hl=pt-br
-+ https://www.instagram.com/paolo_pantalena/
++ [Eduardo Vieira Art](https://www.instagram.com/eduardovieirart/?hl=pt-br)
++ [Ventura Art Book](https://www.instagram.com/venturaartbook/?hl=pt-br)
++ [Marcio Abre Arte](https://www.instagram.com/marcioabreuarte/?hl=pt-br)
++ [Art Of Idan](https://www.instagram.com/artofidan/?hl=pt-br)
++ [Paolo Pantalena](https://www.instagram.com/paolo_pantalena/)
 
 Se ficou alguma dúvida ou você tem algo para acrescentar, sinta-se convidado(a) a participar nos comentários desse post. Assim dividimos experiências todos em conjunto.
 
