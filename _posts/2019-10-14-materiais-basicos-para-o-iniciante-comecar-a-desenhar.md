@@ -37,7 +37,7 @@ O papel é o nosso primeiro item, e ele tem **tamanho** e **gramatura** diferent
 
 ## Tamanhos do papel
 
-![Imagem mostrando os tamanhos de papel mais comuns](/assets/uploads/post4/tamanhos-de-papel-medidas.jpg)
+![Imagem mostrando os tamanhos de papel mais comuns](/assets/uploads/post4/tamanhos-de-papel-medidas.jpg =720x489)
 
 Os [tamanhos de papel](https://pt.wikipedia.org/wiki/Tamanho_de_papel) são muitos e podem variar desde os tamanhos bem pequenos como é o caso do A10, até tamanhos bem maiores, como por exemplo o A0. E esses tamanhos acabam sendo utilizados para diferentes finalidades.
 
@@ -63,10 +63,7 @@ Em resumo, dependendo do tipo de material e finalidade do trabalho que você pre
 
 ## #2 - Lápis
 
-![Imagem mostrando graduações do lápis Faber-Castell](/assets/uploads/post4/graduacoes-lapis-faber-castell.jpg)
-
-<a href="https://pt.wikipedia.org/wiki/Ficheiro:Lapis_9000.jpg" title="Graduações de lápis" alt="graduacoes-lapis-faber-castell-9000"><img src="(/assets/uploads/post4/graduacoes-lapis-faber-castell.jpg)"></a>
-
+<a href="https://pt.wikipedia.org/wiki/Ficheiro:Lapis_9000.jpg" title="Graduações de lápis" alt="imagem mostrando graduacoes do lápis Faber-Castell-9000"><img src="/assets/uploads/post4/graduacoes-lapis-faber-castell.jpg"></a>
 
 Os lápis tem suas **graduações** (6H, 5H, 4H, 3H, 2H, H, F, HB, B, 2B, 3B, 4B, 5B, 6B, 7B, 8B, 9B), e essas graduações são as diferentes tonalidades do grafite, sendo:
 
@@ -90,7 +87,7 @@ Para começar a desenhar escolha entre os tipos HB, B e 2B. É um ótimo conjunt
 
 Também existem muitos tipos de borrachas (latéx, lápis borracha, borracha elétrica, borracha de lápis, borracha da lapiseira) e três delas são bem interessantes ter entre os seus materiais: as **plásticas**, as **canetas-borracha** e **limpa-tipos**.
 
-![Foto mostrando borrachas de tipos diferentes: BORRACHA PLÁSTICA Pentel HI-POLYMER SOFT, CANETA BORRACHA Maped e BORRACHA LIMPA-TIPOS Faber-Castell.](/assets/uploads/post4/tipos-de-borrachas-que-uso.jpg)
+![Foto mostrando borrachas de tipos diferentes: BORRACHA PLÁSTICA Pentel HI-POLYMER SOFT, CANETA BORRACHA Maped e BORRACHA LIMPA-TIPOS Faber-Castell.](/assets/uploads/post4/tipos-de-borrachas-que-uso.jpg =720x619)
 
 As **borrachas plásticas** são as que eu mais uso, elas são macias e não danificam tanto o papel como as borrachas escolares que literalmente raspam o papel.
 
