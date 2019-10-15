@@ -82,6 +82,20 @@ Já lápis muito macios e escuros como **6B**, **7B**, **8B** e **9B** e alguns 
 
 Para começar a desenhar escolha entre os tipos HB, B e 2B. É um ótimo conjunto para esboçar e também para definir melhor o desenho.
 
+## Dica para apontar o lápis
+
+Fazer a ponta de alguns lápis pode ser um verdadeiro desafio, em especial aqueles mais baratinhos que não são construídos com um material tão interessante. Para esses casos o melhor é utilizar um **estilete**.
+
+Na verdade o material ideal para fazer pontas de lápis é o estilete, com ele você consegue pontas mais longas e resistentes para trabalhar nos seus desenhos. Mas nem todo mundo tem em casa, não é indicado para crianças por ser perigoso e no início é complicado fazer boas pontas com ele; é preciso praticar.
+
+Se você não puder usar os estiletes fique tranquilo que os apontadores vão funcionar, basta garantir que ele esteja com sua lâmina novinha. Se tiver muito velho ou enferrujado, vale mais a pena comprar outro. Também utilize aquela dica de comprar lápis de marcas confiáveis, assim você vai conseguir utilizar mais tranquilamente o apontador para fazer as pontas do seu lápis.
+
+## Lapiseiras
+
+As lapiseiras são o meu material favorito, e podem ser uma alternativa para os que tem problemas em fazer pontas de lápis. Eu por exemplo consigo fazer pontas, mas prefiro a praticidade das lapiseiras.
+
+Os grafites, ou seja, as pontas que você insere nas lapiseiras também tem graduações assim como os lápis. Então você consegue encontrar as graduações para esboços e escrita facilmente.
+
 
 ## #3 - Borracha
 
