@@ -9,7 +9,7 @@ const server = browserSync.create();
 const clean = () => del(['_site']);
 
 function jekyll(done) {
-  return exec('bundle exec jekyll build');
+  return exec('bundle exec jekyll build --drafts');
 }
 
 function reload(done) {
