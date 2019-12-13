@@ -1,22 +1,22 @@
 title: Desenhando com Mack
 email: desenhandocommack@gmail.com
 description: Este é o site oficial do canal Desenhando com Mack
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://desenhandocommack.com.br"
+baseurl: '' # the subpath of your site, e.g. /blog
+url: 'https://desenhandocommack.com.br'
 
 incremental: true
 
-
 contact:
-    email: desenhandocommack@gmail.com
-    twitter: twitter.com/mackdesenhos
-    facebook: facebook.com/desenhandocommack
-    youtube: youtube.com/desenhandocommack
-    instagram: instagram.com/desenhandocommack
+  email: desenhandocommack@gmail.com
+  twitter: twitter.com/mackdesenhos
+  facebook: facebook.com/desenhandocommack
+  youtube: youtube.com/desenhandocommack
+  instagram: instagram.com/desenhandocommack
+  twitch: twitch.tv/desenhandocommack
 
 author:
-    name: Mack
-    avatar: /assets/img/avatar.jpg
+  name: Mack
+  avatar: /assets/img/avatar.jpg
 
 pagination:
   enabled: true
@@ -43,13 +43,12 @@ plugins:
   - jekyll-paginate-v2
 
 sass:
-    style: compressed
+  style: compressed
 
 defaults:
-  -
-    scope:
-      path: "" # an empty string here means all files in the project
-      type: "posts" # previously `post` in Jekyll 2.2.
+  - scope:
+      path: '' # an empty string here means all files in the project
+      type: 'posts' # previously `post` in Jekyll 2.2.
     values:
       comments: true
       layout: post
