@@ -126,8 +126,7 @@ Por isso esteja pronto para encarar horas e horas para colorir um único desenho
 
 Lancei um desafio no canal Desenhando com Mack de colorir este desenho que eu fiz. Você pode baixar ele [clicando aqui](https://drive.google.com/file/d/1IiE8axkkXVEPV1_66_R3gKu_UkyNesng/view?usp=sharing) e depois me enviar postando como publicação sua no seu **Instagram** e marcando na descrição a **#desenhandocommack**.
 
-Também tem ele sem óculos [aqui](https://drive.google.com/file/d/1Y7xvQrEDyMeCCi-l_OqmZoRgwisfVF2o/view?usp=sharing)
-
+Também tem ele sem óculos [aqui](https://drive.google.com/file/d/1Y7xvQrEDyMeCCi-l_OqmZoRgwisfVF2o/view?usp=sharing).
 
 
 Vambora?
