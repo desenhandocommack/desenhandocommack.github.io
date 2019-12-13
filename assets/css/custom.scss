@@ -1,19 +1,20 @@
 ---
 ---
+
 // @import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700|Roboto:300,300i,900');
 // Mixin itself
 @mixin clearfix() {
   &::after {
     display: block;
-    content: "";
+    content: '';
     clear: both;
   }
 }
 
 @mixin bottom-bar($color) {
   h1::after {
-    content: "";
+    content: '';
     display: block;
     margin: 1rem auto 0;
     width: 6.25rem;
@@ -21,17 +22,18 @@
   }
 }
 
-@import "reboot";
-@import "card";
-@import "topbar";
-@import "navbar";
-@import "header";
-@import "footer";
-@import "post";
-@import "faq";
-@import "hamburgers";
+@import 'reboot';
+@import 'card';
+@import 'topbar';
+@import 'navbar';
+@import 'header';
+@import 'footer';
+@import 'post';
+@import 'faq';
+@import 'hamburgers';
 
-b, strong {
+b,
+strong {
   font-weight: 700;
 }
 
@@ -47,13 +49,13 @@ blockquote {
 
 html {
   height: 100%;
-  background: #383C58;
+  background: #383c58;
 }
 
 .footer {
-    background-color: #dedede;
-    padding-left: 1rem;
-    padding-right: 1rem;
+  background-color: #dedede;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .footer-info {
@@ -61,9 +63,9 @@ html {
 }
 
 .main {
-    max-width: 70rem;
-    padding: 0 1rem;
-    margin: 5rem auto;
+  max-width: 70rem;
+  padding: 0 1rem;
+  margin: 5rem auto;
 }
 
 img {
@@ -71,39 +73,40 @@ img {
 }
 
 .section-wrapper-1 {
-  background: url("/assets/img/arte.jpg") no-repeat center center;
+  background: url('/assets/img/arte.jpg') no-repeat center center;
   background-size: cover;
   text-align: center;
   @include bottom-bar(#fff);
-
 }
 
 .link-to-blog {
   font-weight: bold;
   font-size: 1.5rem;
-  color: #25EAF6;
+  color: #25eaf6;
   display: inline-block;
   padding: 1rem 4rem;
-  border: solid 3px #25EAF6;
+  border: solid 3px #25eaf6;
   border-radius: 15% / 50%;
 
   &:hover {
-    color: #25EAF6;
+    color: #25eaf6;
     text-decoration: none;
   }
 }
 
 .section-wrapper-2 {
-  background: linear-gradient(to right, #1B9FFF, #43CBFF);
+  background: linear-gradient(to right, #1b9fff, #43cbff);
 
   @include bottom-bar(#fff);
 
   h2 {
     margin-top: 1rem;
-    font-family: "Roboto";
+    font-family: 'Roboto';
   }
 
-  h1, h2, p {
+  h1,
+  h2,
+  p {
     color: #fff !important;
   }
 }
@@ -111,13 +114,15 @@ img {
 .section3 {
   text-align: center;
 
-  @include bottom-bar(#FF587B);
+  @include bottom-bar(#ff587b);
 
   p {
     margin-bottom: 0 !important;
   }
 
-  h1, h2, p {
+  h1,
+  h2,
+  p {
     color: #808080 !important;
     border-color: #808080 !important;
   }
@@ -143,9 +148,9 @@ img {
 }
 
 .section-wrapper-4 {
-  background: url("/assets/img/junte-se-a-trilha.jpg") no-repeat center center;
+  background: url('/assets/img/junte-se-a-trilha.jpg') no-repeat center center;
   background-size: cover;
-  
+
   .section {
     max-width: 50rem;
     margin: auto;
@@ -161,55 +166,55 @@ img {
   }
 
   .youtube {
-    background-image: url("/assets/img/social-icons.jpg");
-    background-position: 0 -70px; 
+    background-image: url('/assets/img/social-icons.jpg');
+    background-position: 0 -70px;
     &:hover {
       background-position: 0 0;
     }
   }
 
   .facebook {
-    background-image: url("/assets/img/social-icons.jpg");
-    background-position: -70px -70px; 
+    background-image: url('/assets/img/social-icons.jpg');
+    background-position: -70px -70px;
     &:hover {
       background-position: -70px 0;
     }
   }
 
   .instagram {
-    background-image: url("/assets/img/social-icons.jpg");
-    background-position: -140px -70px; 
+    background-image: url('/assets/img/social-icons.jpg');
+    background-position: -140px -70px;
     &:hover {
       background-position: -140px 0;
     }
   }
-  
-  .twitter {
-    background-image: url("/assets/img/social-icons.jpg");
-    background-position: -210px -70px; 
+
+  .twitch {
+    background-image: url('/assets/img/social-icons.jpg');
+    background-position: -210px -70px;
     &:hover {
       background-position: -210px 0;
     }
   }
-  
+
   @media screen and (max-width: 500px) {
     .youtube {
-      background-image: url("/assets/img/social-icons.jpg");
+      background-image: url('/assets/img/social-icons.jpg');
       background-position: 0 0;
     }
-  
+
     .facebook {
-      background-image: url("/assets/img/social-icons.jpg");
+      background-image: url('/assets/img/social-icons.jpg');
       background-position: -70px 0;
     }
-  
+
     .instagram {
-      background-image: url("/assets/img/social-icons.jpg");
+      background-image: url('/assets/img/social-icons.jpg');
       background-position: -140px 0;
     }
-    
-    .twitter {
-      background-image: url("/assets/img/social-icons.jpg");
+
+    .twitch {
+      background-image: url('/assets/img/social-icons.jpg');
       background-position: -210px 0;
     }
   }
@@ -221,9 +226,9 @@ img {
 }
 
 .section h1 {
-  font-family: "Roboto";
+  font-family: 'Roboto';
   font-size: 24px; // era 36px
-  
+
   @media screen and (min-width: 900px) {
     font-size: 36px;
   }
@@ -241,13 +246,12 @@ img {
   color: #fee;
   font-size: 16px; // era 24px
 
- 
   @media screen and (min-width: 900px) {
     font-size: 24px;
   }
 
   font-weight: lighter;
-  font-family: "Roboto";
+  font-family: 'Roboto';
   margin: auto;
   max-width: 50rem;
   text-align: center;
@@ -257,7 +261,7 @@ img {
 .category-page-heading {
   padding-left: 1.5rem;
   margin-bottom: 2.5rem;
-  font-family: "Roboto Condensed";
+  font-family: 'Roboto Condensed';
   text-transform: uppercase;
 }
 
