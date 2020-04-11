@@ -1,8 +1,8 @@
 title: Desenhando com Mack
 email: desenhandocommack@gmail.com
 description: Este é o site oficial do canal Desenhando com Mack
-baseurl: '' # the subpath of your site, e.g. /blog
-url: 'https://desenhandocommack.com.br'
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://desenhandocommack.com.br"
 
 incremental: true
 
@@ -21,7 +21,9 @@ author:
 pagination:
   enabled: true
   per_page: 5
-  permalink: '/page-:num/'
+  permalink: "/page-:num/"
+  sort_field: "date"
+  sort_reverse: true
 autopages:
   enabled: true
   categories:
@@ -29,9 +31,9 @@ autopages:
       mode: nil
       case: true
     layouts:
-      - 'category.html'
-    title: 'Artigos da categoria :cat'
-    permalink: '/blog/categoria/:cat/'
+      - "category.html"
+    title: "Artigos da categoria :cat"
+    permalink: "/blog/categoria/:cat/"
   collections:
     enabled: false
   tags:
@@ -47,8 +49,8 @@ sass:
 
 defaults:
   - scope:
-      path: '' # an empty string here means all files in the project
-      type: 'posts' # previously `post` in Jekyll 2.2.
+      path: "" # an empty string here means all files in the project
+      type: "posts" # previously `post` in Jekyll 2.2.
     values:
       comments: true
       layout: post
