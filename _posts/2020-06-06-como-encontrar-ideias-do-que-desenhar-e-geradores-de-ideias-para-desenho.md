@@ -3,7 +3,7 @@ layout: post
 title: Como encontrar ideias do que desenhar e geradores de ideias para desenho
 category: Dicas
 thumbnail: >-
-  /assets/uploads/post5/dicas-de-como-colorir-melhor-com-lapis-de-cor_thumbnail.jpg
+  /assets/uploads/post7/capa-post-geradores-de-ideias-do-que-desenhar_desenhando-com-mack.jpg
 description: Dicas de como encontrar ideias para desenhar
 ---
 ![Desenho de menino cartoon na mesa pensando no que vai desenhar](/assets/uploads/post7/capa-post-geradores-de-ideias-do-que-desenhar_desenhando-com-mack.jpg)
