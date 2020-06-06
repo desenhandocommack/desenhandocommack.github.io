@@ -1,12 +1,12 @@
 ---
 layout: post
 title: Como colorir melhor com lápis de cor (iniciantes)
-category: Materiais
+category: Dicas
 thumbnail: >-
   /assets/uploads/post5/dicas-de-como-colorir-melhor-com-lapis-de-cor_thumbnail.jpg
 description: Dicas de como colorir melhor com lápis de cor barato
 ---
-![Desenho de menino cartoon com tamagotchi na mão sorrindo](/assets/uploads/post5/dicas-de-como-colorir-melhor-com-lapis-de-cor_thumbnail.jpg)
+![Desenho no papel colorido lápis de cor de menino estilo cartoon com tamagotchi na mão sorrindo](/assets/uploads/post5/dicas-de-como-colorir-melhor-com-lapis-de-cor_thumbnail.jpg)
 
 O que fazer para melhorar a qualidade das nossas pinturas com lápis de cor e materiais baratos?
 
