@@ -156,7 +156,7 @@ tr:nth-child(even) {
   <tr><td>KIT 10 buchas de parafuso</td><td>8 golds</td></tr>
   <tr><td>KIT 5 porcas e 5 arruelas</td><td>10 golds</td></tr>
   <tr><td>KIT com 7 chaves de fenda</td><td>30 golds</td></tr>
-  <tr><td>Broca de Vídea ou aó</td><td>15 golds</td></tr>
+  <tr><td>Broca de Vídea ou aço</td><td>15 golds</td></tr>
   <tr><td>Broca</td><td>30 golds</td></tr>
   <tr><td>Capacete para mineiro com lanterna</td><td>37 golds</td></tr>
   <tr><td>Fruta</td><td>1 gold</td></tr>
