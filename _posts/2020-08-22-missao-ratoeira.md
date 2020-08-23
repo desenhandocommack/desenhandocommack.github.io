@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Missão Ratoeira
-category: Dicas
+category: Missões
 thumbnail: >-
   /assets/uploads/post8/capa-post-missao-ratoeira.png
 description: Missão ratoeira do servidor Aprendizes no Discord - Criação e desenvolvimento de personagem
