@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "gulp",
-    "build": "bundle exec jekyll build"
+    "build": "jekyll build"
   },
   "repository": {
     "type": "git",
