@@ -170,6 +170,8 @@ tr:nth-child(even) {
   <tr><td>Shotgun (novo)</td><td>80 golds</td></tr>  
 </table>
 
+<br>
+
 ## Seu personagem
 
 ![Imagem mostrando uma página envelhecida tipo de livros de RPG com instruções básicas para criação de um personagem](/assets/uploads/post8/missao-ratoeira-personagem.png)
