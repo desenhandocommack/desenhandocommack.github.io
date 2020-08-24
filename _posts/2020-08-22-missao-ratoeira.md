@@ -121,7 +121,7 @@ tr:nth-child(even) {
   <tr><td>Travesseiro rasgado com espuma</td><td>3 golds</td></tr>
   <tr><td>Corda</td><td>15 golds</td></tr>
   <tr><td>Rolha de cortiça</td><td>10 golds</td></tr>
-  <tr><td>Ripa de madeira</td><td>3 golds</td></tr>
+  <tr><td>Tábua de madeira</td><td>3 golds</td></tr>
   <tr><td>Moldura de madeira</td><td>7 golds</td></tr>
   <tr><td>Caixote de madeira</td><td>22 golds</td></tr>
   <tr><td>Vassoura</td><td>11 golds</td></tr>
