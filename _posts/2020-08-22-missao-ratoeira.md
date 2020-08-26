@@ -47,7 +47,7 @@ E é aqui onde vocês se encontram.
 
 ![Imagem mostrando uma página envelhecida tipo de livros antigos explicando um pouco sobre o ambiente da cidade de Rotten Realms e o beco podrão](/assets/uploads/post8/missao-ratoeira-personagem.png)
 
-As finanças do clã Ratos de Alpergatas não anda muito bem e em Ratten Realms também não encontramos com facilidade item bons e conservados; nesse caso a alternativa é ser bastante criativo e lutar com as armas que tem.
+As finanças do clã Ratos de Alpergatas não anda muito bem e em Rotten Realms também não encontramos com facilidade item bons e conservados; nesse caso a alternativa é ser bastante criativo e lutar com as armas que tem.
 
 Ouvi dizer que logo ali mais a frente nas redondezas do beco Podrão tem uma comerciante, Nivile, que vende algumas bugigangas recicladas. De repente você encontra o que precisa por lá.
 
