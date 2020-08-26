@@ -43,9 +43,12 @@ No Podrão acontece a maior feira da cidade durante o dia e ao entardecer (devid
 
 E é aqui onde vocês se encontram.
 
+> Está noite, um frio de arder a alma e bater os dentes, tem muito lixo no caminho e a previsão de monstros da ferrugem é certa. Enquanto vocês vão em frente há cheiro de esgoto, as fendas liberam gases coloridos todo o tempo, a neblina tomou conta; como se não bastasse tufos de pelo de gato vindo em sua direção a cada vento gelado que bate.
+
+
 ## Compra de itens
 
-![Imagem mostrando uma página envelhecida tipo de livros antigos explicando um pouco sobre o ambiente da cidade de Rotten Realms e o beco podrão](/assets/uploads/post8/missao-ratoeira-personagem.png)
+![Imagem mostrando uma página envelhecida tipo de livros antigos explicando um pouco sobre o ambiente da cidade de Rotten Realms e o beco podrão](/assets/uploads/post8/bugigangas-da-nivile.png)
 
 As finanças do clã Ratos de Alpergatas não anda muito bem e em Rotten Realms também não encontramos com facilidade item bons e conservados; nesse caso a alternativa é ser bastante criativo e lutar com as armas que tem.
 
@@ -176,7 +179,7 @@ tr:nth-child(even) {
 
 ![Imagem mostrando uma página envelhecida tipo de livros de RPG com instruções básicas para criação de um personagem](/assets/uploads/post8/missao-ratoeira-personagem.png)
 
-É muito importante saber quem ele é o nosso personagem e o que ele faz. Dessa forma você consegue distribuir melhor seus pontos de habilidade, escolher os itens certo e criar um visual de acordo com essa coleta de informações. Depois é ser criativo com as ferramentas que tem em mãos pra criá-lo.
+É muito importante saber quem é o nosso personagem e o que ele faz. Dessa forma você consegue distribuir melhor seus pontos de habilidade, escolher os itens certo e criar um visual de acordo com essa coleta de informações. Depois é ser criativo com as ferramentas que tem em mãos pra criá-lo.
 
 ## Observação
 
