@@ -83,4 +83,4 @@ _Link de referência sobre máscara de corte no Firealpaca:_
 
 [O que é clipping mask](http://firealpaca.com/en/topics/What+is+Clipping%3F)
 
-Essa postagem foi para complementar [esse vídeo]() onde eu mostro como tirar as linhas de um desenho. Se você não veio por esse vídeo talvez te interesse esse conteúdo.
+Essa postagem foi para complementar [esse vídeo](https://youtu.be/eN96Xdem2Lc) onde eu mostro como tirar as linhas de um desenho. Se você não veio por esse vídeo talvez te interesse esse conteúdo.

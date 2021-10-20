@@ -33,7 +33,7 @@ O brush que você vai usar é escolha pessoal, depende do que é que você está
 
 Como pra Lizy eu fiz um processo usando apenas o brush e a borracha, escolhi um brush com bordas duras padrão que você encontra em qualquer programa; mas, você pode também usar um brush com textura pra ficar "falhadinho" nas bordas.
 
-Se você usar o Photoshop, [baixe aqui](https://drive.google.com/file/d/1iT0S8-1eXQ-0VlZ3cuRUhA-i4keNlDY4/view?usp=sharing) os dois brushes que eu mostrei no vídeo que está no final dessa postagem. Tem um brush padrão do próprio Photoshop, o que eu usei para a Lizy. E também tem um brush com textura do artista Gabriel Soares caso você queira tentar um visual diferente.
+Se você usar o Photoshop, [baixe aqui](https://drive.google.com/file/d/1f1J3VV-ydTXEOiUTBNI_K-admmCX4MFf/view?usp=sharing) os dois brushes que eu mostrei no vídeo que está no final dessa postagem. Tem um brush padrão do próprio Photoshop, o que eu usei para a Lizy. E também tem um brush com textura do artista Gabriel Soares caso você queira tentar um visual diferente.
 
 Inclusive, esses e outros pincéis você também encontra no meu pack de brushes que está logo [aqui](https://desenhandocommack.com.br/blog/meu-pacote-de-brushes-para-photoshop/). Nesse mesmo link você encontra como instalar um pacote de brushes no Photoshop.
 
@@ -98,3 +98,5 @@ Criei uma camada só para as linhas internas e foquei em marcar → detalhes de 
 Nessa fase o que você vai fazer é comparar com a sua base quais as regiões que não estão passando claridade daquilo que está acontecendo e que precisam de alguma divisão. E então você vai usar sombras e linhas estratégicas para fazer isso.
 
 Dessa forma não precisamos encher de linhas um desenho que é pra ser sem linhas, mas conseguimos usar linhas estratégicas para passar a ideia que a gente quer mantendo um visual agradável no final.
+
+Assista esse tutorial em vídeo clicando [aqui](https://youtu.be/eN96Xdem2Lc).
