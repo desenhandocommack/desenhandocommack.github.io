@@ -6,6 +6,7 @@ thumbnail: >-
   /assets/uploads/post5/dicas-de-como-colorir-melhor-com-lapis-de-cor_thumbnail.jpg
 description: Dicas de como colorir melhor com lápis de cor barato
 ---
+
 ![Desenho no papel colorido lápis de cor de menino estilo cartoon com tamagotchi na mão sorrindo](/assets/uploads/post5/dicas-de-como-colorir-melhor-com-lapis-de-cor_thumbnail.jpg)
 
 O que fazer para melhorar a qualidade das nossas pinturas com lápis de cor e materiais baratos?
@@ -17,7 +18,6 @@ Bom, há vários motivos que fazem com que o resultado dos nossos desenhos color
 ## #1 - Superfície plana e lisa
 
 ![Imagem mostrando desenho com lápis de cor feito em cima de superfície cheia de riscos](/assets/uploads/post5/desenho-feito-com-lapis-de-cor-em-cima-de-superficie-estragada.jpg)
-
 
 É comum a gente utilizar um caderno ou mesa qualquer para colorir, mas algumas superfícies possuem textura ou ranhuras que vão comprometer o seu trabalho.
 
@@ -33,7 +33,7 @@ Outra dica é utilizar pelo menos duas folhas de papel embaixo da sua folha prin
 
 ![Imagem mostrando lápis de cor azul com ponta longa e fina e ponta curta e grossa ](/assets/uploads/post5/ponta-longa-afiada-e-ponta-curta-e-grossa-do-lapis-de-cor.jpg)
 
-Não sei se para economizar o lápis, por não conseguir fazer a ponta ou por preguiça mesmo, mas evitar apontar o lápis de cor não é uma boa opção. Ter pontas afiadas e longas para trabalhar é que vai te proporcionar um resultado melhor e economia de material. 
+Não sei se para economizar o lápis, por não conseguir fazer a ponta ou por preguiça mesmo, mas evitar apontar o lápis de cor não é uma boa opção. Ter pontas afiadas e longas para trabalhar é que vai te proporcionar um resultado melhor e economia de material.
 
 Quando temos **pontas finas** o lápis consegue preencher melhor os sulcos que tem no papel, ou seja, ele vai penetrar melhor no papel e proporcionar um pintura mais uniforme. Com isso conseguimos um acabamento muito melhor no nosso trabalho.
 
@@ -81,7 +81,7 @@ O ideal é trabalhar através de camadas de cor, ou seja, fazendo uma sobreposi�
 
 Em conjunto com a dica anterior você pode pensar também no movimento e direção que os traços vão ter, e de uma maneira geral é importante não ficar mudando muito a direção para todos os lados.
 
-Escolha um sentido e preencha com uma camada, depois mude a direção e preencha com outra camada. Dessa forma você também consegue preencher o máximo de branco do papel possível sem deixar marcas no desenho. 
+Escolha um sentido e preencha com uma camada, depois mude a direção e preencha com outra camada. Dessa forma você também consegue preencher o máximo de branco do papel possível sem deixar marcas no desenho.
 
 Também considere o sentido do objetos, fios ou textura que você está fazendo, isso pode ajudar a tornar as coisas mais convincentes.
 
@@ -124,19 +124,12 @@ Por isso esteja pronto para encarar horas e horas para colorir um único desenho
 
 ## Desafio você a colorir este desenho!
 
-Lancei um desafio no canal Desenhando com Mack de colorir este desenho que eu fiz. Você pode baixar ele [clicando aqui](https://drive.google.com/file/d/1IiE8axkkXVEPV1_66_R3gKu_UkyNesng/view?usp=sharing) e depois me enviar postando como publicação sua no seu **Instagram** e marcando na descrição a **#desenhandocommack**.
+Lancei um desafio no canal Desenhando com Mack de colorir este desenho que eu fiz. Você pode baixar ele [clicando aqui](https://drive.google.com/file/d/1cXRntkTCafQWLdM8MVdyAEJ6vdhgzfMN/view?usp=sharing) e depois me enviar postando como publicação sua no seu **Instagram** e marcando na descrição a **#desenhandocommack**.
 
-Também tem ele sem óculos [aqui](https://drive.google.com/file/d/1Y7xvQrEDyMeCCi-l_OqmZoRgwisfVF2o/view?usp=sharing).
-
+Também tem ele sem óculos [aqui](https://drive.google.com/file/d/1fVEmnWtseufnusABbt_tG7Waa2W5IsBS/view?usp=sharing).
 
 Vambora?
 
 É uma ótima oportunidade para colocar em prática estas dicas. Te aguardo :)
 
 Que tal também compartilhar com a gente outras dicas que você tem aqui embaixo nos comentários? Dessa forma conseguimos trocar mais informações e reunir ainda mais conhecimento.
-
-
-
-
-
-
