@@ -1,0 +1,566 @@
+/* RESET SIMPLES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+  --color-bg: #182a46;
+  --color-menu: #173657;
+  --color-text: #ffffff;
+  --color-accent: #ea498b;
+}
+
+/*TEMA CLARO E ESCURO*/
+/* Tema claro - padrão */
+:root {
+  --color-bg: #f6f4f1;
+  --color-menu: #f6f4f1;
+  --color-text: #173657;
+  --color-accent: #ea498b;
+}
+
+/* MENU PRINCIPAL */
+.main-nav {
+  background-color: var(--color-menu); /* usa variável para tema claro/escuro */
+  padding: 0.5rem 2rem; /* espaço interno da nav, primeiro vertical e depois o horizontal */
+}
+
+/* ITEM DO MENU PRINCIPAL */
+.main-nav .container-nav {
+  max-width: 1400px; /* define largura máxima */
+  display: flex; /* Flex container aqui */
+  justify-content: space-between; /* Distribui itens horizontalmente */
+  align-items: center; /* Alinha verticalmente */
+  margin: 0 auto; /* centraliza horizontalmente */
+  padding: 0 1rem; /* garante espaço nas laterais em telas pequenas */
+  background-color: var(--color-menu); /* garante consistência do menu */
+}
+
+/* MENU LINKS PRINCIPAIS */
+.main-nav .menu {
+  list-style: none; /* remove bolinhas da lista <ul> */
+  display: flex; /* coloca os <li> em linha horizontal */
+  gap: 2.5rem; /* cria espaçamento entre os links */
+}
+
+.main-nav .menu a {
+  text-decoration: none;
+  color: var(--color-text); /* usa variável para tema */
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500; /* Medium */
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.main-nav .menu a:hover {
+  color: var(--color-accent); /* destaque permanece rosa */
+}
+
+.main-nav .nav-right {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem; /* espaço entre menu, busca e ícones */
+}
+
+/* ÍCONES DO MENU */
+
+.main-nav .material-symbols-rounded {
+  cursor: pointer;
+  color: var(--color-accent);
+}
+
+.nav-icons {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.nav-icons button {
+  background: none; /* remove fundo do botão */
+  color: var(--color-accent); /* mantém destaque rosa */
+  border: none; /* remove borda */
+}
+
+.nav-icons button .material-symbols-rounded {
+  font-size: 25px; /* tamanho do ícone */
+  transition: color 0.3s;
+}
+
+.nav-icons button:hover .material-symbols-rounded {
+  color: var(
+    --color-accent
+  ); /* usa variável para tema *       /* cor ao passar o mouse */
+  transform: scale(1.1); /* aumenta levemente o ícone ao passar o mouse */
+}
+
+.nav-icons .botao-doar {
+  transition: transform 0.3s ease;
+}
+
+.nav-icons .botao-doar :hover {
+  color: var(
+    --color-accent
+  ); /* usa variável para tema *  /* cor ao passar o mouse do botão doar */
+  transform: scale(1.1); /* aumenta levemente o ícone ao passar o mouse */
+}
+
+/* CAIXA DE BUSCA */
+
+/* Estilo básico da caixa de busca */
+/* 🔎 Caixa de busca que expande ao clicar */
+.search {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-menu);
+  border: 1px solid var(--color-accent);
+  border-radius: 2rem;
+  overflow: hidden;
+  width: 40px; /* começa só do tamanho do botão */
+  transition: width 0.3s ease;
+}
+
+.search input {
+  border: none;
+  background: transparent;
+  outline: none;
+  color: var(--color-text);
+  font-size: 1rem;
+  padding: 0.3rem;
+  width: 0; /* começa fechado */
+  opacity: 0; /* invisível */
+  transition: width 0.3s ease, opacity 0.3s ease;
+}
+
+.search.expanded {
+  width: 200px; /* quando expandida */
+  padding: 0.3rem 0.8rem; /* padding só quando expandida */
+}
+
+.search.expanded input {
+  width: 100%; /* ocupa o espaço liberado */
+  opacity: 1; /* aparece */
+}
+
+.search button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-accent);
+  flex-shrink: 0; /* não deixa o botão sumir */
+}
+
+/* MAIN DA PÁGINA INICIAL */
+
+.slides-container {
+  min-height: 100vh; /* ocupa toda a tela vh = viewport height (altura da janela de visualização) */
+  background: linear-gradient(to bottom, #349eff, #34d0ff);
+  display: flex; /* flex para alinhar o conteúdo interno */
+  align-items: center; /* centraliza verticalmente */
+}
+
+/* CONTAINER INTERNO PARA CENTRALIZAR E LIMITAR LARGURA */
+.slide-content {
+  width: 100%;
+}
+
+.slide-content .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* TEXTO DO SLIDE*/
+
+.slide-text p {
+  font-size: 19px;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.nome-do-curso-krita {
+  color: #fff751;
+  font-size: 7rem;
+  font-weight: 900;
+}
+
+.nome-do-curso-krita2 {
+  color: #ffffff;
+  font-size: 3rem;
+  display: block; /* cada span ocupa uma linha */
+  padding-bottom: 1rem;
+  margin-top: -1.5rem; /* puxa o texto para cima */
+}
+
+/*BOTÃO DO SLIDE */
+
+.slides-btn {
+  /* estilo dos botões dos slides */
+  background-color: #fff751;
+  display: inline-flex; /*o container se comporta como inline (ocupa só o espaço necessário*/
+  gap: 1rem; /* espaço entre ícone e texto */
+  margin-top: 1.5rem;
+  padding: 1rem 2.5rem;
+  color: #173657;
+  text-decoration: none;
+  align-items: center;
+  font-weight: 700;
+  transition: transform 0.3s ease; /* 👈 tempo + suavidade do efeito */
+}
+
+.slides-btn:hover {
+  transform: scale(1.05); /* 👈 aumenta 5% no hover */
+}
+
+.btn-wrapper {
+  display: inline-flex; /* mantém o botão alinhado à esquerda */
+  flex-direction: column; /* empilha botão e info verticalmente */
+  align-items: flex-start; /* botão à esquerda */
+}
+
+.slide-text .info-btn {
+  font-size: 1rem;
+  color: #ffffff;
+  margin: 0.5rem;
+  align-self: center; /* centraliza horizontalmente em relação ao botão */
+  font-style: italic;
+  font-weight: 400;
+}
+
+/*EFEITO IMAGEM DO SLIDE*/
+
+.slide-image {
+  transition: transform 0.3s ease;
+}
+
+.slide-image img {
+  max-width: 100%; /* imagem nunca maior que o container */
+  height: auto; /* mantém proporção */
+  display: block; /* evita espaços brancos indesejados */
+}
+
+.slide-image:hover {
+  transform: scale(1.04); /* aumenta levemente o ícone ao passar o mouse */
+}
+
+/* SEÇÃO PLAYLISTS YOUTUBE*/
+
+.playlists-yt {
+  min-height: 100vh; /* altura mínima ocupa a tela inteira */
+  background-color: #f6f4f1;
+  text-align: center;
+  background-color: var(--color-bg); /* usar a variável correta */
+  color: var(--color-text);
+  padding-bottom: 4rem;
+}
+
+.playlists-yt .container {
+  padding-left: 8rem; /* espaço da borda esquerda */
+  padding-right: 8rem; /* espaço da borda direita */
+  padding-top: 12vh; /* afasta do topo */
+}
+
+/* TÍTULO E DESCRIÇÃO DA SEÇÃO PLAYLISTS YOUTUBE*/
+
+.playlists-yt h1 {
+  color: var(--color-accent); /* mantém o destaque rosa se desejar */
+  font-size: 2.5rem;
+  padding: 2rem 0 0.3rem; /* espaço acima e abaixo */
+  font-weight: 700; /* peso da fonte (negrito) */
+}
+
+.playlists-yt p {
+  color: var(--color-text);
+  font-size: 19px;
+  font-weight: 500; /* fonte seminegrito */
+}
+
+/* GRID DOS CARDS */
+
+.playlist-grid {
+  display: grid; /* transforma o container em grid */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 426px));
+  gap: 3rem; /*gap: 2rem → espaço horizontal e vertical entre os cards.*/
+  justify-content: center;
+  margin-top: 7rem; /* 👈 afasta os cards do título/descrição */
+}
+
+/*repeat(...) → cria várias colunas de acordo com o espaço disponível.*/
+/*auto-fit → o navegador decide quantas colunas cabem sem estourar o layout.*/
+/*minmax(280px, 1fr) → cada card vai ter no mínimo 280px de largura, mas pode crescer até ocupar uma fração (1fr) do espaço disponível.*/
+
+.playlist-card img {
+  transition: transform 0.3s ease; /* 👈 tempo + suavidade do efeito */
+}
+
+.playlist-card:hover img {
+  transform: scale(1.05); /* 👈 aumenta 5% no hover */
+}
+
+.playlist-card h2 {
+  color: var(--color-text);
+  margin-top: 1rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.playlist-card p {
+  color: var(--color-text);
+  font-size: 16px;
+  margin-bottom: 2rem;
+}
+
+/* RODAPÉ GERAL */
+
+.main-footer {
+  background-color: #ea498b;
+  color: #ffffff;
+}
+
+/* CONTAINER PRINCIPAL DO RODAPÉ */
+
+.container-footer {
+  display: flex;
+  align-items: center; /* centraliza verticalmente */
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: 0 auto; /* centraliza horizontalmente */
+  padding: 1.5rem 1.5rem; /* garante espaço nas laterais em telas pequenas */
+  box-sizing: border-box; /* inclui padding dentro da largura total do container */
+}
+
+/* TEXTO DO COPYRIGHT */
+
+.footer-text {
+  margin: 0; /* remove margens padrão do <p> */
+  /*text-align: center;*/ /* centraliza o texto horizontalmente */
+  /*flex: 1;*/ /* ocupa o espaço restante do container, ajudando a centralizar */
+}
+
+/* CONTAINER DOS ÍCONES DAS REDES SOCIAIS DO RODAPÉ */
+
+.footer-icons {
+  display: flex; /* alinha os ícones horizontalmente */
+  gap: 1.5rem; /* espaçamento de 1rem entre cada ícone */
+}
+
+/* ESTILO DAS IMAGENS DOS ÍCONES */
+
+.footer-icons a img {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.3s ease;
+}
+
+/* EFEITO AO PASSAR O MOUSE EM CIMA DOS ÍCONES */
+
+.footer-icons a:hover img {
+  transform: scale(1.5); /* aumenta levemente o ícone ao passar o mouse */
+}
+
+/* Botão hambúrguer só aparece no mobile */
+.menu-toggle {
+  display: none; /* escondido por padrão */
+  background: none;
+  border: none;
+  font-size: 32px;
+  cursor: pointer;
+  color: var(--color-accent);
+}
+
+/*========= MOBILE =========*/
+
+/* Botão hamburguer sempre visível */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 32px;
+    cursor: pointer;
+    color: var(--color-accent);
+    z-index: 1001;
+  }
+
+  /* MENU FULLSCREEN AO CLICAR - MOBILE */
+  .main-nav .menu {
+    position: fixed; /* fica fixo na tela inteira */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100dvh; /* ocupa só o espaço disponível real */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-menu);
+    gap: 2rem;
+    opacity: 0; /* invisível por padrão */
+    pointer-events: none; /* não clicável por padrão */
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+  }
+
+  .main-nav.fixed {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+  }
+
+  /* Caixa de busca dentro do menu */
+  .main-nav .menu .search-box {
+    width: 80%;
+    max-width: 300px;
+    margin: 1rem auto; /* centraliza */
+  }
+
+  /* Menu ativo */
+  .main-nav .menu.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* Links maiores para o menu fullscreen */
+  .main-nav .menu li a {
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    text-align: center;
+    border-bottom: none;
+    width: auto;
+  }
+
+  /*LOGO MENOR*/
+  .logo img {
+    max-width: 36px;
+  }
+
+  /* SLIDES */
+  .slide-text {
+    text-align: center;
+  }
+
+  .slide-text .btn-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+  }
+
+  .slide-content .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .slide-image {
+    order: 2;
+    margin-top: 2rem;
+    width: 40%;
+    max-width: 317px;
+  }
+
+  .slide-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* PLAYLISTS */
+  .playlists-yt .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+  }
+
+  .playlists-yt h1,
+  .playlists-yt p {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .playlist-card {
+    width: 100%;
+  }
+
+  .playlist-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .playlist-card p {
+    font-size: 0.875rem;
+  }
+
+  .playlist-grid {
+    margin-top: 4rem;
+    gap: 1.5rem;
+  }
+
+  /* FOOTER */
+  .container-footer {
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* MOBILE PEQUENO (até 576px) */
+@media (max-width: 576px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .main-nav {
+    padding: 0.8rem 0.6rem; /* espaço interno da nav, primeiro vertical e depois o horizontal */
+  }
+
+  .slides-container {
+    min-height: auto; /* deixa altura se adaptar */
+    padding: 6rem 1rem; /* controla o espaço total do slide */
+  }
+
+  .slide-text {
+    margin: 0 0 1.5rem 0; /* apenas espaço abaixo do texto */
+  }
+
+  .nome-do-curso-krita {
+    font-size: 5rem;
+  }
+
+  .nome-do-curso-krita2 {
+    font-size: 2rem;
+    margin-top: -1rem; /* puxa o texto para cima */
+  }
+
+  .footer-text {
+    text-align: center;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+}
+
+/* MOBILE PEQUENO (até 375px) */
+@media (max-width: 375px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .footer-text {
+    text-align: center;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+}

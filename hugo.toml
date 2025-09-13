@@ -1,0 +1,4 @@
+baseURL = 'https://layerdecaju.github.io/'
+languageCode = 'pt-br'
+title = 'Layer de Caju'
+theme = 'custom'
