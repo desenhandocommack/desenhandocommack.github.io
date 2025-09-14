@@ -1,16 +1,45 @@
-<nav class="navbar">
-  <div class="logo">
-    <a href="/">
-      <img src="/images/logo.png" alt="Logo do site" />
+<nav class="main-nav">
+  <div class="container-nav">
+    <!-- LOGO -->
+    <a href="/" class="logo">
+      <img src="/images/logo.png" alt="Logo do site Desenhando com Mack" />
     </a>
-  </div>
 
-  <div class="links">
-    <a href="/posts">Posts</a>
-    <a href="/cursos">Cursos</a>
-    <div class="searchButton">
-      <span class="material-symbols-outlined">search</span>
-      <span>Buscar</span>
+    <div class="nav-right">
+      <!-- LINKS PRINCIPAIS-->
+      <ul class="menu">
+        <li><a href="/">Início</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li>
+          <a href="https://hotmart.com/pt-br/club/desenhandocommack" target="_blank"> Cursos </a>
+        </li>
+
+        <li>
+          <!-- CAIXA DE BUSCA-->
+          <form class="search" action="/buscar" method="get">
+            <input type="text" name="q" placeholder="Buscar..." />
+            <button type="submit">
+              <span class="material-symbols-rounded">search</span>
+            </button>
+          </form>
+        </li>
+      </ul>
+
+      <!-- ÍCONES DO MENU-->
+      <div class="nav-icons">
+        <a href="https://livepix.gg/desenhandocommack" rel="noopener noreferrer" class="botao-doar" aria-label="Doar">
+          <span class="material-symbols-rounded">savings</span>
+        </a>
+
+        <button class="botao-tema" aria-label="Alterar Tema">
+          <span class="material-symbols-rounded">dark_mode</span>
+        </button>
+      </div>
+
+      <!-- BOTÃO HAMBÚRGUER (visível só no mobile) -->
+      <button class="menu-toggle" aria-label="Abrir menu">
+        <span class="material-symbols-rounded">menu</span>
+      </button>
     </div>
   </div>
 </nav>

@@ -1,59 +1,4 @@
 {{ define "main" }}
-<header>
-  <nav class="main-nav">
-    <div class="container-nav">
-      <!-- LOGO -->
-      <a href="index.html" class="logo">
-        <img src="/images/logo.png" alt="Logo do site Desenhando com Mack" />
-      </a>
-
-      <div class="nav-right">
-        <!-- LINKS PRINCIPAIS-->
-        <ul class="menu">
-          <li><a href="index.html">Início</a></li>
-          <li>
-            <a
-              href="https://hotmart.com/pt-br/club/desenhandocommack"
-              target="_blank"
-              >Cursos</a
-            >
-          </li>
-          <li>
-            <!-- CAIXA DE BUSCA-->
-            <form class="search" action="/buscar" method="get">
-              <input type="text" name="q" placeholder="Buscar..." />
-              <button type="submit">
-                <span class="material-symbols-rounded">search</span>
-              </button>
-            </form>
-          </li>
-        </ul>
-
-        <!-- ÍCONES DO MENU-->
-        <div class="nav-icons">
-          <a
-            href="https://livepix.gg/desenhandocommack"
-            rel="noopener noreferrer"
-            class="botao-doar"
-            aria-label="Doar"
-          >
-            <span class="material-symbols-rounded">savings</span>
-          </a>
-
-          <button class="botao-tema" aria-label="Alterar Tema">
-            <span class="material-symbols-rounded">dark_mode</span>
-          </button>
-        </div>
-
-        <!-- BOTÃO HAMBÚRGUER (visível só no mobile) -->
-        <button class="menu-toggle" aria-label="Abrir menu">
-          <span class="material-symbols-rounded">menu</span>
-        </button>
-      </div>
-    </div>
-  </nav>
-</header>
-
 <main>
   <!-- SEÇÃO DE DESTAQUES COM SLIDES -->
   <section class="slides-container">
@@ -70,20 +15,16 @@
           </h1>
 
           <p>
-            Um guia acessível para quem quer começar a usar o Krita: interface,
-            ferramentas essenciais e atalhos prontos.
+            Um guia acessível para quem quer começar a usar o Krita: interface, ferramentas essenciais e atalhos
+            prontos.
           </p>
 
           <!-- Container do botão + info -->
           <div class="btn-wrapper">
-            <a
-              href="https://go.hotmart.com/I98301009X"
-              target="_blank"
-              class="slides-btn"
-            >
+            <a href="https://go.hotmart.com/I98301009X" target="_blank" class="slides-btn">
               <span class="material-symbols-rounded">shopping_cart</span>
-              COMPRAR 39,90</a
-            >
+              COMPRAR 39,90
+            </a>
 
             <p class="info-btn">2 anos de acesso</p>
           </div>
@@ -93,10 +34,7 @@
           <a href="https://go.hotmart.com/I98301009X" target="_blank">
             <picture>
               <!-- imagem mobile -->
-              <source
-                media="(max-width: 768px)"
-                srcset="/images/curso-krita_slide1_vertical.png"
-              />
+              <source media="(max-width: 768px)" srcset="/images/curso-krita_slide1_vertical.png" />
               <!-- imagem padrão (desktop) -->
               <img
                 src="/images/curso-krita-slide1_horizontal.png"
@@ -122,14 +60,8 @@
         <!-- Card 1 -->
 
         <div class="playlist-card">
-          <a
-            href="https://www.youtube.com/playlist?list=PL1K-UhVJGhmFoVF2rsvdXd7wBcm6FTZWT"
-            target="_blank"
-          >
-            <img
-              src="images/playlist1.png"
-              alt="Capa da Playlist Série Quartoons"
-            />
+          <a href="https://www.youtube.com/playlist?list=PL1K-UhVJGhmFoVF2rsvdXd7wBcm6FTZWT" target="_blank">
+            <img src="images/playlist1.png" alt="Capa da Playlist Série Quartoons" />
           </a>
           <h2>Nossa Quartoons</h2>
           <p>Uma série para você aprender como eu desenho no estilo cartoon.</p>
@@ -137,38 +69,20 @@
 
         <!-- Card 2 -->
         <div class="playlist-card">
-          <a
-            href="https://www.youtube.com/playlist?list=PL1K-UhVJGhmGw4KoLNdvqe2b70h8UEUU5"
-            target="_blank"
-          >
-            <img
-              src="images/playlist2.png"
-              alt="Capa da Playlist Série Krita"
-            />
+          <a href="https://www.youtube.com/playlist?list=PL1K-UhVJGhmGw4KoLNdvqe2b70h8UEUU5" target="_blank">
+            <img src="images/playlist2.png" alt="Capa da Playlist Série Krita" />
           </a>
           <h2>Tudo sobre o Krita</h2>
-          <p>
-            Tutoriais e dicas sobre o software de desenho gratuito mais incrível
-            que existe.
-          </p>
+          <p>Tutoriais e dicas sobre o software de desenho gratuito mais incrível que existe.</p>
         </div>
 
         <!-- Card 3 -->
         <div class="playlist-card">
-          <a
-            href="https://www.youtube.com/playlist?list=PL1K-UhVJGhmFWv60ElVomPekRJaF79ZuP"
-            target="_blank"
-          >
-            <img
-              src="images/playlist3.png"
-              alt="Capa da Playlist Série Chibis"
-            />
+          <a href="https://www.youtube.com/playlist?list=PL1K-UhVJGhmFWv60ElVomPekRJaF79ZuP" target="_blank">
+            <img src="images/playlist3.png" alt="Capa da Playlist Série Chibis" />
           </a>
           <h2>Desenhando Chibis</h2>
-          <p>
-            Para pessoas quem tem interesse em fazer desenhos fofos e
-            divertidos.
-          </p>
+          <p>Para pessoas quem tem interesse em fazer desenhos fofos e divertidos.</p>
         </div>
       </div>
     </div>
@@ -181,34 +95,20 @@
   <div class="container-footer">
     <!-- nome do site e direitos autoriais -->
 
-    <p class="footer-text">
-      &copy; {{ now.Year }} Desenhando com Mack. Todos os direitos reservados.
-    </p>
+    <p class="footer-text">&copy; {{ now.Year }} Desenhando com Mack. Todos os direitos reservados.</p>
 
     <!-- ícones de redes sociais -->
     <!-- aria-label é um atributo de acessibilidade que descreve o elemento para leitores de tela ou tecnologias assistivas, sem alterar a aparência visual. -->
     <div class="footer-icons">
-      <a
-        href="https://www.youtube.com/c/DesenhandocomMack"
-        target="_blank"
-        aria-label="YouTube"
-      >
+      <a href="https://www.youtube.com/c/DesenhandocomMack" target="_blank" aria-label="YouTube">
         <img src="/images/youtube-icon.png" alt="Ícone Rosa YouTube" />
       </a>
 
-      <a
-        href="https://www.behance.net/mackilustra"
-        target="_blank"
-        aria-label="Behance"
-      >
+      <a href="https://www.behance.net/mackilustra" target="_blank" aria-label="Behance">
         <img src="/images/behance-icon.png" alt="Ícone Rosa Behance" />
       </a>
 
-      <a
-        href="https://www.linkedin.com/in/mackilustra/"
-        target="_blank"
-        aria-label="Linkedin"
-      >
+      <a href="https://www.linkedin.com/in/mackilustra/" target="_blank" aria-label="Linkedin">
         <img src="/images/linkedin-icon.png" alt="Ícone Rosa Linkedin" />
       </a>
     </div>
@@ -217,11 +117,7 @@
 
 <script>
   // MUDAR TEMA
-  document
-    .querySelector(".botao-tema")
-    .addEventListener("click", () =>
-      document.body.classList.toggle("dark-mode")
-    );
+  document.querySelector(".botao-tema").addEventListener("click", () => document.body.classList.toggle("dark-mode"));
 
   // SCRIPT PARA CAIXA DE BUSCA
   const searchForm = document.querySelector(".search");
