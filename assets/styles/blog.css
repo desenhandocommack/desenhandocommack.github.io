@@ -1,0 +1,459 @@
+/* ===== RESET SIMPLES ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* garante que padding e border não aumentem o tamanho total */
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--color-bg); /* cor de fundo principal */
+}
+
+/* ===== TEMA CLARO - PADRÃO ===== */
+:root {
+  --color-bg: #f6f4f1;      /* fundo geral do site */
+  --color-menu: #f6f4f1;    /* cor de menu se houver */
+  --color-text: #173657;    /* cor do texto padrão */
+  --color-accent: #ea498b;  /* cor de destaque */
+}
+
+/* ===== Container geral do blog ===== */
+.blog-container {
+  display: flex;               /* colunas lado a lado (posts + sidebar) */
+  max-width: 1410px;           /* largura máxima para não cortar imagens */
+  margin: 0 auto;              /* centraliza horizontalmente */
+  gap: 20px;                   /* espaçamento entre colunas */
+  padding: 20px;               /* espaçamento interno */
+}
+
+.blog-title {
+  display: none; /* esconder título blog h1 */
+}
+
+/* ===== Coluna de posts ===== */
+.blog-posts {
+  flex: 1;                     /* ocupa o espaço restante do container */
+  display: grid;               
+  grid-template-columns: repeat(2, 1fr); /* 2 posts por linha */
+  gap: 20px 25px; /* 20px vertical, 25px horizontal entre os cards */                  
+}
+
+/* ===== Card de cada post ===== */
+.blog-card {            
+  display: flex;               /* organiza conteúdo verticalmente */
+  flex-direction: column;
+  margin-bottom: 20px;         /* espaço entre cards */
+  transition: transform 0.9s ease, box-shadow 0.2s ease; /* animação suave ao hover */
+  position: relative;          /* necessário para overlay absoluto */
+}
+
+.blog-card:hover {
+  transform: scale(1.02);      /* aumento leve no hover */
+}
+
+/* ===== Wrapper da imagem para overlay ===== */
+.blog-card-image-wrapper {
+  position: relative;          /* necessário para o overlay absoluto */
+  display: block;
+}
+
+/* ===== Imagem do card ===== */
+.blog-card-image {
+  width: 100%;                 /* ocupa toda a largura do card */
+  height: 276px;               /* altura fixa */
+  object-fit: cover;           /* mantém proporção sem distorcer */
+  border-radius: 10px;         /* cantos arredondados */
+  display: block;              /* remove possíveis espaços em linha */
+}
+
+/* ===== Overlay sobre a imagem ===== */
+.blog-card-overlay {
+  position: absolute;          /* sobrepõe a imagem */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,119,204,0.7); /* cor preta semitransparente */
+  opacity: 0;                   /* invisível inicialmente */
+  transition: opacity 0.3s ease; /* suaviza a aparição */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;      /* centraliza verticalmente */
+  align-items: center;          /* centraliza horizontalmente */
+  text-align: center;           /* centraliza o texto */
+  border-radius: 10px;          /* mantém cantos arredondados da imagem */
+  color: #fff;                  /* cor do texto dentro do overlay */
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.blog-card-image-wrapper:hover .blog-card-overlay {
+  opacity: 1;                   /* torna visível ao passar o mouse sobre a imagem */
+}
+
+/* ===== Texto dentro do overlay ===== */
+.blog-card-overlay p {
+  margin: 5px 0;
+  font-size: 1.1rem;
+}
+
+/* ===== Texto abaixo da imagem ===== */
+.blog-card-text {
+  padding: 15px 0;             /* espaço entre imagem e texto */
+}
+
+.blog-card-text h2 {
+  font-size: 1.2rem;
+  margin: 0 0 5px 0;
+  color: #333;
+}
+
+.blog-card-text p {
+  font-size: 0.95rem;
+  margin: 0;
+  color: var(--color-text);
+}
+
+/* ===== Blocos de anúncios dentro da coluna de posts ===== */
+.blog-ad {
+  grid-column: 1 / -1;         /* ocupa toda a largura do grid */
+  margin: 20px 0 60px 0;       /* topo 20px, inferior 60px */
+  display: flex;
+  justify-content: center;      /* centraliza horizontalmente */
+  background-color: #0077cc;
+}
+
+.blog-ad ins {
+  max-width: 970px;             /* largura máxima do anúncio */
+  width: 100%;
+  display: block;
+}
+
+/* ===== Sidebar ===== */
+.blog-sidebar {
+  width: 340px;                 /* largura fixa para caber anúncios de 300px */
+  flex: none;                   
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px;
+}
+
+.blog-widget {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.blog-widget h3 {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-size: 1.2rem;
+  color: #333;
+  text-align: center;
+}
+
+.blog-widget ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.blog-widget ul li {
+  display: block;  /* empilha imagem e texto verticalmente */
+  margin-bottom: 55px; /* espaço entre os produtos */
+  text-align: center;  /* centraliza o texto */
+}
+
+.blog-widget ul li .highlight-img {
+  width: 100%;     /* ocupa quase toda a largura da sidebar */
+  height: auto;    /* mantém proporção */
+  border-radius: 10px;
+  display: block;
+  margin-bottom: 8px; /* espaço entre imagem e texto */
+}
+
+
+.blog-widget ul li a {
+  text-decoration: none;
+  color: #0077cc;
+  transition: color 0.2s;
+}
+
+.blog-widget ul li a:hover {
+  color: #005fa3;
+}
+
+.blog-widget img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+/* ===== Paginação ===== */
+.blog-pagination {
+  margin: 30px 0;
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+}
+
+.blog-pagination a {
+  text-decoration: none;
+  padding: 8px 12px;
+  background-color: #e4e1d6;
+  color: #8c8a7f;
+  border-radius: 5px;
+  transition: background-color 0.2s;
+}
+
+.blog-pagination a:hover {
+  background-color: #ea498b;
+  color: #fff;
+}
+
+/* ===== Responsividade blog ===== */
+@media screen and (max-width: 1024px) {
+  .blog-posts {
+    grid-template-columns: 1fr; /* 1 coluna em telas pequenas */
+  }
+
+  .blog-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .blog-sidebar {
+    width: 100%;
+  }
+}
+
+/* ===============================
+       ESTILIZAÇÃO DO POST
+================================*/
+
+/* ===== Container principal do post ===== */
+.post-container {
+  display: flex;               /* Post + sidebar lado a lado */
+  max-width: 1410px;           /* mesma largura usada no blog */
+  margin: 0 auto;
+  gap: 20px;                   /* espaço entre post e sidebar */
+  padding: 20px;
+}
+
+/* ===== Área principal do post ===== */
+.post-main {
+  flex: 1;                     /* ocupa o espaço das 2 colunas de posts */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;                   /* espaçamento entre blocos internos */
+}
+
+/* ===== Título do post ===== */
+.post-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #173657;              /* cor do tema */
+  margin-bottom: 15px;
+}
+
+/* ===== Cabeçalho do post (imagem + metadados) ===== */
+.post-header {
+  display: flex;
+  gap: 25px;                   /* espaço entre imagem e infos */
+  align-items: flex-start;
+  margin-bottom: 50px; /* espaçamento abaixo do cabeçalho */
+}
+
+.post-image {
+  width: 491px;                /* mesmo tamanho dos cards */
+  height: 276px;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;              /* impede a imagem de encolher */
+}
+
+/* ===== Bloco de informações do post ===== */
+.post-meta {
+  display: flex;
+  flex-direction: column;      /* empilha categoria, data e atualização */
+  align-items: flex-start;     /* alinha texto à esquerda */
+  gap: 5px;                    /* espaço entre itens */
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 10px;         /* mantém espaçamento original */
+}
+
+/* Remove prefixo "Data de publicação:" se necessário */
+.post-meta p:nth-of-type(2)::before {
+  content: "";                 /* remove só o prefixo */
+}
+
+.post-meta p {
+  margin: 0;                   /* remove margens verticais extras */
+  display: block;              
+}
+
+.post-meta .post-category {
+  font-weight: bold;           /* garante negrito na categoria */
+}
+
+/* Categorias coloridas por tipo */
+.post-category.desenho { color: #0077cc; }
+.post-category.Reviews { color: #ea498b; }
+.post-category.Ferramentas { color: #ff9900; }
+.post-category.Softwares { color: #28a745; }
+
+/* ===== Descrição do post ===== */
+.post-meta .post-description {
+  font-size: 1rem;
+  color: #555;
+  margin: 15px 0; /* força 15px acima e abaixo */
+}
+
+
+/* ===== Bloco de ações: download, compartilhar, doar ===== */
+.post-actions {
+  display: flex;
+  flex-direction: column; /*alinhar verticalmente*/
+  /*flex-direction: row; alinha horizontalmente */
+  gap: 10px;           /* espaço entre os botões */
+  margin-top: 15px;    /* espaço acima do bloco */
+  margin-bottom: 15px; /* espaço abaixo do bloco */
+  flex-wrap: wrap;      /* quebra linha se a tela for pequena */
+}
+
+
+
+.post-download,
+.post-share button,
+.post-donate {
+  display: inline-block;
+  width: max-content;
+  padding: 8px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.post-download { background-color: #0077cc; color: #fff; }
+.post-download:hover { background-color: #005fa3; }
+
+.post-share button { background-color: #ea498b; color: #fff; border: none; }
+.post-share button:hover { background-color: #c53d75; }
+
+.post-donate { background-color: #ff9900; color: #fff; text-decoration: none; }
+.post-donate:hover { background-color: #e68a00; }
+
+/* ===== Conteúdo do post ===== */
+.post-content {
+  margin-top: 20px;
+  line-height: 1.6;
+  color: #222;
+}
+
+/* Diminui a largura do conteúdo do post individual */
+.post-content-area{
+  max-width: 900px;
+  margin: 0 auto;    /* centraliza horizontalmente */
+}
+
+.post-content h1, .post-content h2, .post-content h3,
+.post-content h4, .post-content h5, .post-content h6 {
+  margin: 20px 0 10px 0;
+  line-height: 1.3;
+}
+
+.post-content h1 { font-size: 2.2rem; margin: 1.2em 0 0.6em; }
+.post-content h2 { font-size: 1.9rem; margin: 1.1em 0 0.55em; }
+.post-content h3 { font-size: 1.6rem; margin: 1em 0 0.5em; }
+.post-content h4 { font-size: 1.3rem; margin: 0.9em 0 0.45em; }
+.post-content h5 { font-size: 1.1rem; margin: 0.8em 0 0.4em; }
+.post-content h6 { font-size: 1rem; margin: 0.7em 0 0.35em; }
+
+.post-content p { margin: 10px 0; line-height: 1.6; }
+.post-content ul, .post-content ol { margin: 35px 0 40px 40px; }
+.post-content li { margin-bottom: 6px; }
+.post-content img { margin: 55px auto; max-width: 100%; height: auto; border-radius: 10px; display: block; }
+
+
+/* ===== Anúncios ===== */
+.post-ad {
+  margin: 30px 0;
+  display: flex;
+  justify-content: center;
+  background-color: #0077cc;
+}
+
+.post-ad ins {
+  max-width: 970px;
+  width: 100%;
+  display: block;
+}
+
+/* ===== Rodapé do post ===== */
+.post-footer {
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* ===== Sidebar ===== */
+.post-sidebar {
+  width: 340px;
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ===== Responsividade do post ===== */
+@media screen and (max-width: 1024px) {
+  .post-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .post-header {
+    flex-direction: column; /* imagem e infos empilhados */
+  }
+
+  .blog-sidebar {
+    width: 100%;
+    order: 2; /* aparece abaixo do post */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .post-header img {
+    width: 100%; /* imagem ocupa toda largura */
+    height: auto; /* altura proporcional */
+  }
+
+  .post-meta {
+    gap: 3px;
+  }
+
+  .post-actions {
+    gap: 8px;
+  }
+
+  .post-actions a,
+  .post-actions button {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+  }
+
+  .post-title {
+    font-size: 1.7rem;
+  }
+
+.post-content h2 { font-size: 1.6rem; margin: 1.1em 0 0.55em; }
+.post-content h3 { font-size: 1.5rem; margin: 1em 0 0.5em; }
+.post-content h4 { font-size: 1.4rem; margin: 0.9em 0 0.45em; }
+.post-content h5 { font-size: 1.1rem; margin: 0.8em 0 0.4em; }
+.post-content h6 { font-size: 1rem; margin: 0.7em 0 0.35em; }
+}
