@@ -10,19 +10,11 @@ body {
   background-color: var(--color-bg); /* cor de fundo principal */
 }
 
-/* ===== TEMA CLARO - PADRÃO ===== */
-:root {
-  --color-bg: #fff; /* fundo geral do blog */
-  /*--color-menu: #3cebce;*/ /* cor de menu do blog */
-  --color-text: #173657; /* cor do texto padrão */
-  --color-accent: #ea498b; /* cor de destaque */
-}
-
 /* ===== Container geral do blog ===== */
 .blog-container {
   display: flex; /* colunas lado a lado (posts + sidebar) */
   max-width: 1410px; /* largura máxima para não cortar imagens */
-  margin: 55px auto 0 auto; /* 40px espaço de topo do container do blog e sidebar */
+  margin: 10px auto 0 auto; /* 40px espaço de topo do container do blog e sidebar */
   gap: 20px; /* espaçamento entre colunas */
   padding: 20px; /* espaçamento interno */
 }
@@ -231,22 +223,74 @@ body {
   color: #fff;
 }
 
-/* ===== Responsividade blog ===== */
-@media screen and (max-width: 1024px) {
-  .blog-posts {
-    grid-template-columns: 1fr; /* 1 coluna em telas pequenas */
-  }
-
-  .blog-container {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .blog-sidebar {
-    width: 100%;
-  }
+/* ===============================
+       MENU DROPDOWN
+================================= */
+/* ===== Container do dropdown ===== */
+.filter-container {
+  max-width: 1410px; /* mesma largura do blog */
+  margin: 60px auto 10px auto; /* topo/fundo do dropdown */
+  padding: 0 20px; /* mesmo padding horizontal do .blog-container */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* alinhado à esquerda no desktop */
 }
 
+/* Label escondida */
+.filter-container label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Wrapper do select + ícone */
+.dropdown-wrapper {
+  position: relative;
+  display: inline-block;
+  min-width: 100px;
+}
+
+/* Select estilizado */
+#categoryDropdown {
+  width: 100%;
+  padding: 8px 12px;
+  padding-right: 35px; /* espaço para a seta */
+  border-radius: 10px;
+  background-color: var(--color-menu);
+  border: 1px solid transparent; /* só aparece no hover/focus */
+  font-size: 1.2rem;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  box-sizing: border-box;
+  transition: border 0.2s, box-shadow 0.2s;
+  color: var(--color-text);
+}
+
+#categoryDropdown:hover,
+#categoryDropdown:focus {
+  border-color: #0077cc;
+  box-shadow: 0 0 0 2px rgba(0, 119, 204, 0.2);
+  outline: none;
+}
+
+/* Ícone da seta */
+.dropdown-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-family: "Material Symbols Rounded";
+  font-size: 20px;
+  color: #ea498b;
+}
 /* ===============================
        ESTILIZAÇÃO DO POST
 ================================*/
@@ -412,6 +456,11 @@ body {
   line-height: 1.3;
 }
 
+.post-content > * {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
 .post-content h1 {
   font-size: 2.2rem;
   margin: 1.2em 0 0.6em;
@@ -503,6 +552,22 @@ body {
   }
 }
 
+/* ===== Responsividade blog ===== */
+@media screen and (max-width: 1024px) {
+  .blog-posts {
+    grid-template-columns: 1fr; /* 1 coluna em telas pequenas */
+  }
+
+  .blog-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .blog-sidebar {
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .post-header img {
     width: 100%; /* imagem ocupa toda largura */
@@ -521,6 +586,19 @@ body {
   .post-actions button {
     font-size: 0.9rem;
     padding: 6px 10px;
+  }
+
+  .filter-container {
+    justify-content: center; /* centraliza apenas em telas pequenas */
+    flex-direction: column; /* empilha label e dropdown se houver label */
+    text-align: center;
+    gap: 10px;
+    margin: 30px auto 10px auto; /* ajusta margem topo e fundo */
+  }
+
+  #categoryDropdown {
+    width: 100%; /* ocupa quase toda a largura do container */
+    min-width: 0; /* remove o mínimo fixo */
   }
 
   .post-title {

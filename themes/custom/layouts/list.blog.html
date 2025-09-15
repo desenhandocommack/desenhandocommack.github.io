@@ -8,13 +8,31 @@
 
 <h1 class="blog-title">Blog</h1>
 
+<!-- Dropdown listagem de categorias -->
+<div class="filter-container">
+  <label for="categoryDropdown">Filtrar por categoria:</label>
+
+  <!-- Wrapper para permitir a seta -->
+  <div class="dropdown-wrapper">
+    <select id="categoryDropdown">
+      <option value="all">Categorias</option>
+      {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
+      <option value="{{ $name | urlize }}">{{ $name }}</option>
+      {{ end }}
+    </select>
+
+    <!-- Ícone da seta -->
+    <span class="dropdown-icon">arrow_drop_down</span>
+  </div>
+</div>
+
 <div class="blog-container">
   <!-- Coluna de posts -->
   <div class="blog-posts">
     {{ $i := 0 }}
     <!-- contador para anúncios -->
     {{ range .Pages }}
-    <article class="blog-card">
+    <article class="blog-card" data-category="{{ index .Params.categories 0 | urlize }}">
       <!-- Imagem com overlay -->
       <div class="blog-card-image-wrapper">
         <a href="{{ .RelPermalink }}">
@@ -72,5 +90,28 @@
 
 <!-- Paginação -->
 <div class="blog-pagination">{{ template "_internal/pagination.html" . }}</div>
+
+<!-- Script do menu dropdown da listagem de categorias -->
+
+<script>
+  // Seleciona o dropdown e os posts
+  const dropdown = document.getElementById("categoryDropdown");
+  const posts = document.querySelectorAll(".blog-card");
+
+  // Quando o usuário muda a categoria
+  dropdown.addEventListener("change", () => {
+    const selectedCategory = dropdown.value;
+
+    posts.forEach((post) => {
+      const postCategory = post.dataset.category;
+
+      if (selectedCategory === "all" || postCategory === selectedCategory) {
+        post.style.display = "block"; // mostra o post
+      } else {
+        post.style.display = "none"; // esconde o post
+      }
+    });
+  });
+</script>
 
 {{ end }}

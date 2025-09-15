@@ -13,8 +13,8 @@ body {
 }
 
 body.dark-mode {
-  --color-bg: #182a46;
-  --color-menu: #173657;
+  --color-bg: #173657;
+  --color-menu: #1f4774;
   --color-text: #ffffff;
   --color-accent: #ea498b;
 }
@@ -22,7 +22,7 @@ body.dark-mode {
 /*TEMA CLARO E ESCURO*/
 /* Tema claro - padrão */
 :root {
-  --color-bg: #f6f4f1;
+  --color-bg: #ffffff;
   --color-menu: #f6f4f1;
   --color-text: #173657;
   --color-accent: #ea498b;
@@ -97,9 +97,7 @@ body.dark-mode {
 }
 
 .nav-icons button:hover .material-symbols-rounded {
-  color: var(
-    --color-accent
-  ); /* usa variável para tema *       /* cor ao passar o mouse */
+  color: var(--color-accent); /* usa variável para tema *       /* cor ao passar o mouse */
   transform: scale(1.1); /* aumenta levemente o ícone ao passar o mouse */
 }
 
@@ -108,9 +106,7 @@ body.dark-mode {
 }
 
 .nav-icons .botao-doar :hover {
-  color: var(
-    --color-accent
-  ); /* usa variável para tema *  /* cor ao passar o mouse do botão doar */
+  color: var(--color-accent); /* usa variável para tema *  /* cor ao passar o mouse do botão doar */
   transform: scale(1.1); /* aumenta levemente o ícone ao passar o mouse */
 }
 
