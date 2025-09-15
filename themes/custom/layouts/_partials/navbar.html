@@ -42,4 +42,41 @@
       </button>
     </div>
   </div>
+
+  <script>
+    // MUDAR TEMA
+    document.querySelector(".botao-tema").addEventListener("click", () => document.body.classList.toggle("dark-mode"));
+
+    // SCRIPT PARA CAIXA DE BUSCA
+    const searchForm = document.querySelector(".search");
+    const searchButton = searchForm.querySelector("button");
+    const searchInput = searchForm.querySelector("input");
+
+    // Expande ao clicar no botão
+    searchButton.addEventListener("click", (e) => {
+      if (!searchForm.classList.contains("expanded")) {
+        e.preventDefault(); // não envia o form ainda
+        searchForm.classList.add("expanded");
+        searchInput.focus();
+      }
+    });
+
+    // Fecha ao clicar fora
+    document.addEventListener("click", (e) => {
+      if (!searchForm.contains(e.target)) {
+        // se o clique não estiver na busca
+        searchForm.classList.remove("expanded");
+      }
+    });
+
+    // SCRIPT DO MENU HAMBURGUER
+    const menuToggle = document.querySelector(".menu-toggle");
+    const menu = document.querySelector(".main-nav .menu");
+    const mainNav = document.querySelector(".main-nav");
+
+    menuToggle.addEventListener("click", () => {
+      menu.classList.toggle("active");
+      mainNav.classList.toggle("fixed");
+    });
+  </script>
 </nav>
