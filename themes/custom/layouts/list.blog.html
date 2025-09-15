@@ -16,8 +16,14 @@
   <div class="dropdown-wrapper">
     <select id="categoryDropdown">
       <option value="all">Categorias</option>
-      {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
-      <option value="{{ $name | urlize }}">{{ $name }}</option>
+      {{ range .Site.Taxonomies.categories }}
+      <!--  -->
+      {{ if eq .Page $.Page }}
+      <option value="{{ .Page.RelPermalink }}" selected>{{ .Page.Title }}</option>
+      {{ else }}
+      <option value="{{ .Page.RelPermalink }}">{{ .Page.Title }}</option>
+      {{ end }}
+      <!--  -->
       {{ end }}
     </select>
 
@@ -94,23 +100,9 @@
 <!-- Script do menu dropdown da listagem de categorias -->
 
 <script>
-  // Seleciona o dropdown e os posts
-  const dropdown = document.getElementById("categoryDropdown");
-  const posts = document.querySelectorAll(".blog-card");
-
   // Quando o usuário muda a categoria
-  dropdown.addEventListener("change", () => {
-    const selectedCategory = dropdown.value;
-
-    posts.forEach((post) => {
-      const postCategory = post.dataset.category;
-
-      if (selectedCategory === "all" || postCategory === selectedCategory) {
-        post.style.display = "block"; // mostra o post
-      } else {
-        post.style.display = "none"; // esconde o post
-      }
-    });
+  document.getElementById("categoryDropdown").addEventListener("change", (e) => {
+    location.href = e.target.value;
   });
 </script>
 
