@@ -15,7 +15,7 @@
   <!-- Wrapper para permitir a seta -->
   <div class="dropdown-wrapper">
     <select id="categoryDropdown">
-      <option value="all">Categorias</option>
+      <option value="/blog/">Categorias</option>
       {{ range .Site.Taxonomies.categories }}
       <!--  -->
       {{ if eq .Page $.Page }}
@@ -35,9 +35,8 @@
 <div class="blog-container">
   <!-- Coluna de posts -->
   <div class="blog-posts">
-    {{ $i := 0 }}
     <!-- contador para anúncios -->
-    {{ range .Pages }}
+    {{ range $index, $_ := .Pages }}
     <article class="blog-card" data-category="{{ index .Params.categories 0 | urlize }}">
       <!-- Imagem com overlay -->
       <div class="blog-card-image-wrapper">
@@ -63,10 +62,8 @@
       </div>
     </article>
 
-    {{ $i = add $i 1 }}
-
     <!-- Inserir anúncio a cada 4 posts -->
-    {{ if eq (mod $i 4) 0 }}
+    {{ if eq (mod $index 4) 0 }}
     <div class="blog-ad">
       <!-- Bloco entre posts -->
       <ins
