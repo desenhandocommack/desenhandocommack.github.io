@@ -33,7 +33,6 @@ body {
 
 /* ===== Card de cada post ===== */
 .blog-card {
-  margin-bottom: 2px; /* espaço entre cards */
   transition: transform 0.9s ease, box-shadow 0.2s ease; /* animação suave ao hover */
   position: relative; /* necessário para overlay absoluto */
 }
@@ -108,6 +107,7 @@ body {
 /* ===== Blocos de anúncios dentro da coluna de posts ===== */
 .blog-ad {
   overflow: hidden;
+  grid-column: 1 / -1;
 }
 
 .blog-ad ins {
