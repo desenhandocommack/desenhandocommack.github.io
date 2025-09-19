@@ -1,7 +1,7 @@
 +++
 title = "Como desenhar no FireAlpaca"
 date = '2025-09-17T14:22:07-03:00'
-draft = false
+draft = true
 description = "Veja como começar do zero a usar o FireAlpaca, um programa gratuito e perfeito para começar a desenhar no digital."
 categories = ["softwares"]
 featuredImage = "content/blog/2025-09-19-como-desenhar-no-firealpaca/cover.png"
