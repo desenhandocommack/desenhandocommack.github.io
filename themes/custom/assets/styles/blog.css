@@ -292,11 +292,17 @@ body {
 /*Dicas*/
 .box-dicas {
   /*background-color: lightgreen;*/
-  border: 3px solid lightgreen;
+  border: 3px solid aquamarine;
   padding: 1.7rem;
   font-size: 1.05rem;
   font-weight: 500;
   margin: 0;
+}
+
+/*Mark / Marcador / Destacar*/
+
+.marcatexto {
+  background-color: aquamarine;
 }
 
 /* ===== Container principal do post ===== */
@@ -451,6 +457,14 @@ body {
   padding-bottom: 1.05rem;
 }
 
+/*Links do post*/
+
+.post-content a {
+  color: #ea498b;
+  text-decoration: none;
+  font-weight: 500;
+}
+
 /* Diminui a largura do conteúdo do post individual */
 .post-content-area {
   max-width: 900px;
@@ -531,7 +545,7 @@ img[src*="krita-icons"] {
   color: inherit;
   text-decoration: none;
   cursor: text;
-  border-bottom: 1px dashed #0077cc;
+  border-bottom: 1px dotted #0077cc;
   transition: border-color 0.2s;
 }
 

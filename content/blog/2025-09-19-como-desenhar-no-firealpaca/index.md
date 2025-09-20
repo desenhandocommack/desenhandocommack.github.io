@@ -4,14 +4,14 @@ date = '2025-09-17T14:22:07-03:00'
 draft = true
 description = "Veja como começar do zero a usar o FireAlpaca, um programa gratuito e perfeito para começar a desenhar no digital."
 categories = ["softwares"]
-featuredImage = "content/blog/2025-09-19-como-desenhar-no-firealpaca/cover.png"
+featuredImage = "cover.png"
 download = "/downloads/material.zip"   # link para baixar material
 donation = "https://livepix.gg/desenhandocommack"  # link de doação
 +++
 
 ## Introdução
 
-O FireAlpaca é um dos programas mais interessantes para quem quer começar a desenhar no digital. É um programa <span style="background-color: lightgreen;">leve, gratuito e simples de aprender</span>, e isso é perfeito pra você que está começando agora a desenhar no computador.
+O FireAlpaca é um dos programas mais interessantes para quem quer começar a desenhar no digital. É um programa <span class="marcatexto"><strong>leve, gratuito e simples de aprender</strong></span>, e isso é perfeito pra você que está começando agora a desenhar no computador.
 
 Nesse tutorial eu não vou te ensinar a desenhar — você pode acessar a minha [playlist de tutorial de desenho](https://www.youtube.com/playlist?list=PL1K-UhVJGhmFoVF2rsvdXd7wBcm6FTZWT) para aprender a fazer isso, o que eu vou te mostrar é como usar o Firealpaca de forma que facilite você a colocar no mundo as ideias que você tem para criar.
 
@@ -103,7 +103,7 @@ Primeiro vamos criar um novo arquivo vindo no menu **Arquivo** → **Novo**.
 
 Em **Largura** e **Altura** escolhemos o tamanho desse arquivo — recomendo trabalhar com no mínimo _2000 pixels_ pro arquivo não ficar pequeno demais, mas isso varia dependendo da sua necessidade.
 
-Se você está pensando em <span style="background-color: lightgreen;">desenhos feitos apenas para postar nas redes sociais e na web</span> de maneira geral, _96 de resolução_ é o suficiente.
+Se você está pensando em <span class="marcatexto">desenhos feitos apenas para postar nas redes sociais e na web</span> de maneira geral, _96 de resolução_ é o suficiente.
 
 ### Passo 2: Organizando as camadas
 
