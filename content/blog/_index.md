@@ -1,6 +1,6 @@
 +++
 title = "Tutorial de como fazer desenhos no Firealpaca"
-date = '2025-05-12T14:22:07-03:00'
+date = '2025-09-20T14:22:07-03:00'
 draft = false
 description = "Quais as principais ferramentas de desenho digital para iniciantes"
 categories = ["desenho"]

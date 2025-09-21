@@ -299,10 +299,29 @@ body {
   margin: 0;
 }
 
+.box-info {
+  border: 3px solid #0f9afd;
+  padding: 1.7rem;
+  font-size: 1.05rem;
+  font-weight: 500;
+  margin: 0;
+}
+
 /*Mark / Marcador / Destacar*/
 
 .marcatexto {
   background-color: aquamarine;
+}
+
+/*videos dentro do post*/
+
+.video-grid-for-post {
+  display: flex;
+}
+
+.video-grid-for-posts iframe {
+  width: 300px; /* define largura menor */
+  height: 170px; /* mantém proporção */
 }
 
 /* ===== Container principal do post ===== */
@@ -375,14 +394,14 @@ body {
 .post-category.desenho {
   color: #0077cc;
 }
-.post-category.Reviews {
+.post-category.reviews {
   color: #ea498b;
 }
-.post-category.Ferramentas {
+.post-category.ferramentas {
   color: #ff9900;
 }
-.post-category.Softwares {
-  color: #28a745;
+.post-category.softwares {
+  color: #01c4aa;
 }
 
 /* ===== Descrição do post ===== */
@@ -517,7 +536,7 @@ body {
 }
 .post-content ul,
 .post-content ol {
-  margin: 35px 0 40px 40px;
+  margin: 18px 0 40px 40px;
 }
 .post-content li {
   margin-bottom: 6px;
