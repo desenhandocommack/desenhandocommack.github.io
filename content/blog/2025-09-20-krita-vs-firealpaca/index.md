@@ -17,8 +17,13 @@ Uma porque o Krita é o meu software de desenho favorito — naturalmente eu vou
 Então eu fiz um comparativo entre os dois, trazendo alguns pontos importantes que possam te ajudar a escolher um deles pra começar na sua jornada de desenho digital.
 
 - [Introdução](#introdução)
+- [Visão Geral](#visão-geral)
+- [Interface](#1-interface)
+- [Facilidade de uso](#2-facilidade-de-uso)
+- [Conjunto de recursos](#3-conjunto-de-recursos)
+- [Desempenho e Suporte](#4-desempenho-e-suporte)
 
-## Visão geral
+## Visão Geral
 
 Pra começar eu vou te trazer uma visão geral de cada um dos programas, a começar pelo Krita que é um **programa profissional de desenho digital gratuito** voltado para diferentes tipos de artistas.
 
@@ -86,4 +91,18 @@ De maneira geral, se o seu computador é mais básico, escolha o FireAlpaca.
 
 Falando de suporte, o Krita vai melhor. É um programa que está sempre trazendo <a href="https://krita.org/en/posts/" target="_blank">novas atualizações</a> e melhorias importantes.
 
-Na versão padrão do FireAlpaca — que é a gratuita, também temos algumas pequenas <a href="https://firealpaca.net/news/" target="_blank">atualizações</a>, principalmente corrigindo bugs.
+Na versão padrão do FireAlpaca — que é a gratuita, tivemos pequenas <a href="https://firealpaca.net/news/" target="_blank">atualizações</a>, mas a maioria é sobre correção de bugs.
+
+## 5. Recursos de Aprendizado
+
+E por último, e essencial pra você que tá começando agora, os recursos de aprendizado — que são as formas onde você pode buscar ajuda pra aprender sobre o programa que você escolheu usar.
+
+Pro Krita, a quantidade de informação sobre o programa é bastante ampla e variável. Você vai encontrar tutoriais em vídeo sobre o Krita, tem fórum de ajuda pra dúvidas mais específicas, cursos e eles também tem sua própria documentação oficial.
+
+Já pro Firealpaca, além do próprio site e um tutorial ou outro sobre ele, não encontrei tanta coisa assim. Mas acaba sendo o suficiente porque ele não tem tantos recursos assim.
+
+## Conclusão
+
+No geral, o Krita mesmo com alguns pontos fracos quando estamos pensando em completos iniciantes no desenho digital, é uma melhor escolha do que o Firealpaca. Porque esses obstáculos iniciais de aprendizado podem ser facilmente resolvidos com tutoriais, cursos e fórum de ajuda.
+
+Por outro lado, pra quem tem o problema de ter um PC mais simples e que não rode o Krita com tranquilidade, o FireAlpaca vai ser o programa perfeito.

@@ -123,7 +123,7 @@ Uma boa prática é sempre bloquear as camadas que você não quer correr o risc
 
 Precisamos também de uma nova camada para fazer o nosso desenho, basta clicar no botão de **Adicionar Camada** desse mesmo painel. O que ele vai fazer é criar uma camada transparente do jeito que a gente precisa, você vai perceber isso pela miniatura da camada exibindo o padrão quadriculado como eu te falei.
 
-![ícone de criar camadas no Firealpaca](botoes-do-painel-camadas-firealpaca.png)
+![ícone de criar camadas no Firealpaca](botoes-do-painel-camadas.png)
 
 Então você pode trocar o nome da camada pra organizar desde o início o que é cada camada que você está criando — isso facilita encontrar mais rápido aquilo que você está procurando.
 
