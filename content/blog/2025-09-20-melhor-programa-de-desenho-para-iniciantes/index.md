@@ -6,7 +6,6 @@ description = "Qual programa de desenho é melhor para iniciantes no desenho dig
 categories = ["softwares"]
 featuredImage = "cover.png"
 download = "/downloads/material.zip"   # link para baixar material
-donation = "https://livepix.gg/desenhandocommack"  # link de doação
 +++
 
 ## Introdução

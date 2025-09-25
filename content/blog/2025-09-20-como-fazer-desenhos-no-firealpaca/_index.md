@@ -6,5 +6,4 @@ description = "Quais as principais ferramentas de desenho digital para iniciante
 categories = ["desenho"]
 featuredImage = "/images/posts/imagem-do-post5.png"
 download = "/downloads/material.zip"   # link para baixar material
-donation = "https://livepix.gg/desenhandocommack"  # link de doação
 +++

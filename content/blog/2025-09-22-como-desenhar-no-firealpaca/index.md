@@ -6,7 +6,6 @@ description = "Veja como começar do zero a usar o FireAlpaca, um programa gratu
 categories = ["softwares"]
 featuredImage = "cover.png"
 download = "/downloads/material.zip"   # link para baixar material
-donation = "https://livepix.gg/desenhandocommack"  # link de doação
 +++
 
 ## Introdução

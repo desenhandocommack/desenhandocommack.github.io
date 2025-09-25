@@ -6,7 +6,6 @@ description = "Veja como salvar e guardar as suas notas do Kindle no seu computa
 categories = ["equipamentos"]
 featuredImage = "/images/posts/capas/capa-tutorial-como-desenhar-clarencio.png"
 download = "/downloads/material.zip"   # link para baixar material
-donation = "https://livepix.gg/desenhandocommack"  # link de doação
 +++
 
 ### Passo 1
