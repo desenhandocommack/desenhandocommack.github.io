@@ -6,6 +6,9 @@ theme = 'custom'
 [params]
   donationLink = 'https://livepix.gg/desenhandocommack'
 
+[frontmatter]
+  date = [':filename', ':default']
+
 [permalinks]
   blog = ':slug'
 

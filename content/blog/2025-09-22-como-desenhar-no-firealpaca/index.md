@@ -1,8 +1,6 @@
 +++
 title = "Como desenhar no FireAlpaca"
-date = '2025-09-20T14:22:07-03:00'
 draft = true
-slug = "como-desenhar-no-firealpaca"
 description = "Veja como começar do zero a usar o FireAlpaca, um programa gratuito e perfeito para iniciantes no desenho digital."
 categories = ["softwares"]
 download = "/downloads/material.zip"   # link para baixar material
