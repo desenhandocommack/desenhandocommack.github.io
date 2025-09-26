@@ -1,6 +1,7 @@
 +++
 title = "Krita ou FireAlpaca? Quem é melhor para iniciantes?"
 date = '2025-09-20T14:22:07-03:00'
+slug = "krita-ou-firealpaca-quem-e-melhor-para-iniciantes"
 description = "Entre o Krita e o FireAlpaca, qual deles é a melhor opção para quem está começando a desenhar no digital?"
 categories = ["softwares"]
 +++

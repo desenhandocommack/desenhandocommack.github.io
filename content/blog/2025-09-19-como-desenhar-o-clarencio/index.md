@@ -2,6 +2,7 @@
 title = "Como desenhar o Clarêncio"
 date = '2025-09-18T14:22:07-03:00'
 draft = true
+slug = "como-desenhar-o-clarencio"
 description = "Tutorial passo a passo de como desenhar o personagem Clarêncio da série de desenhos animados."
 categories = ["desenho"]
 featuredImage = "/images/posts/capas/capa-tutorial-como-desenhar-clarencio.png"
