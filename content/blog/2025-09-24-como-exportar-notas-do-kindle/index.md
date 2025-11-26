@@ -1,12 +1,10 @@
 +++
 title = "Como exportar notas do seu Kindle"
-date = '2025-09-17T14:22:07-03:00'
 draft = true
 description = "Veja como salvar e guardar as suas notas do Kindle no seu computador."
 categories = ["equipamentos"]
 featuredImage = "/images/posts/capas/capa-tutorial-como-desenhar-clarencio.png"
 download = "/downloads/material.zip"   # link para baixar material
-donation = "https://livepix.gg/desenhandocommack"  # link de doação
 +++
 
 ### Passo 1

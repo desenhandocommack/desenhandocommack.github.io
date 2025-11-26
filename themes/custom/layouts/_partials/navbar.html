@@ -27,9 +27,11 @@
 
       <!-- ÍCONES DO MENU-->
       <div class="nav-icons">
-        <a href="https://livepix.gg/desenhandocommack" rel="noopener noreferrer" class="botao-doar" aria-label="Doar">
+        {{ with .Site.Params.donationLink }}
+        <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="botao-doar" aria-label="Doar">
           <span class="material-symbols-rounded">savings</span>
         </a>
+        {{ end }}
 
         <button class="botao-tema" aria-label="Alterar Tema">
           <span class="material-symbols-rounded">dark_mode</span>

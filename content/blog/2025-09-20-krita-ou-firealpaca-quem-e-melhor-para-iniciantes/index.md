@@ -1,10 +1,7 @@
 +++
 title = "Krita ou FireAlpaca? Quem é melhor para iniciantes?"
-date = '2025-09-20T14:22:07-03:00'
 description = "Entre o Krita e o FireAlpaca, qual deles é a melhor opção para quem está começando a desenhar no digital?"
 categories = ["softwares"]
-featuredImage = "cover.png"
-donation = "https://livepix.gg/desenhandocommack"  # link de doação
 +++
 
 ## Introdução

@@ -41,8 +41,8 @@
             <button onclick="sharePost()">🔗 Compartilhar</button>
           </div>
 
-          {{ with .Params.donation }}
-          <a href="{{ . }}" class="post-donate">❤️ Doar</a>
+          {{ with .Site.Params.donationLink }}
+          <a href="{{ . }}" target="_blank" class="post-donate">❤️ Doar</a>
           {{ end }}
         </div>
       </div>
