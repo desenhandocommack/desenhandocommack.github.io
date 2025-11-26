@@ -199,9 +199,19 @@ Pra da **Zoom (Aproximar e Afastar)** use as teclas <kbd>+</kbd> <kbd>-</kbd> do
 
 ## Vídeos complementares
 
-Aprenda tudo para começar a desenhar no Krita
+### Playlist para Iniciantes no Krita
+
+<div class="responsive-video">
+  <iframe
+    src="https://www.youtube.com/embed?list=PL1K-UhVJGhmECgnI1aCQ3qwDi4bOEZ2tz"
+    allowfullscreen>
+  </iframe>
+</div>
+
+### Aprenda tudo para começar a desenhar no Krita
+
 {{< youtube _ebI7B0QrM4 >}}
 
-{{< youtube py6SiZ1yr74 >}}
+### Aprenda Krita em 5 minutos (Vídeo completo desse post )
 
-https://www.youtube.com/playlist?list=PL1K-UhVJGhmECgnI1aCQ3qwDi4bOEZ2tz
+{{< youtube py6SiZ1yr74 >}}
