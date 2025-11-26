@@ -1,6 +1,5 @@
 +++
 title = "Como exportar notas do seu Kindle"
-draft = true
 description = "Veja como salvar e guardar as suas notas do Kindle no seu computador."
 categories = ["equipamentos"]
 featuredImage = "/images/posts/capas/capa-tutorial-como-desenhar-clarencio.png"
