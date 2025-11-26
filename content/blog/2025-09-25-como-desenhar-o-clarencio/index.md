@@ -3,7 +3,7 @@ title = "Como desenhar o Clarêncio"
 description = "Tutorial passo a passo de como desenhar o personagem Clarêncio da série de desenhos animados."
 categories = ["desenho"]
 featuredImage = "/images/posts/capas/capa-tutorial-como-desenhar-clarencio.png"
-download = "/downloads/material-como-desenhar-o-clarencio.zip"   # link para baixar material
+download = "material-como-desenhar-o-clarencio.zip"
 +++
 
 Pra você que é fã série e quer aprender a desenhar o **Clarêncio**, separei um passo a passo de como desenhar esse personagem usando apenas 4 letras: **U**, **C**, **O** e **I**. É um ótima atividade pra você tentar fazer com o seu filho pra ajudar no desenvolvimento artístico e cognitivo dele.
