@@ -4,7 +4,6 @@ draft = true
 description = "Veja como salvar e guardar as suas notas do Kindle no seu computador."
 categories = ["equipamentos"]
 featuredImage = "/images/posts/capas/capa-tutorial-como-desenhar-clarencio.png"
-download = "/downloads/material.zip"   # link para baixar material
 +++
 
 ### Passo 1
@@ -24,3 +23,7 @@ Dentro desse documento de texto você vai encontrar todas as notas que você sal
 Vai aparecer uma estrutura como essa abaixo:
 
 ![Move Tool](/images/posts/imagens/como-exportar-notas-do-kindle_img2.png)
+
+### Passo 3
+
+Agora é só copiar e colar as notas do Kindle e salvar onde você quiser.
