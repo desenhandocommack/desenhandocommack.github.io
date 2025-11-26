@@ -204,7 +204,7 @@ Para essa etapa de colorir pode ser útil usar a **Ferramenta Pincel** para áre
 
 E pra quando você precisar fazer efeitos apenas dentro de áreas que você já coloriu, ative a opção **Proteger Alfa**. Quando essa opção está ativada em uma camada você só vai conseguir desenhar ou colorir dentro das regiões que não são transparentes dessa camada.
 
-![Colorindo dentro de regiões já preenchidas - Proteger Alfa](opcao-proteger-alfa-firealpaca.gif)
+![Colorindo dentro de regiões já preenchidas - Proteger Alfa](opcao-proteger-alfa-firealpaca.GIF)
 
 ## Tutoriais sobre o FireAlpaca em vídeo
 
