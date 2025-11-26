@@ -1,6 +1,6 @@
 +++
 title = "Atalhos do Krita"
-date = '2025-11-26T14:22:07-03:00'
+date = '2025-11-25T14:22:07-03:00'
 description = "Dominar atalhos de teclado é o segredo pra sair do modo iniciante e começar a desenhar e pintar no Krita com muito mais confiança acelerando o seu workflow. Esse post foi criado pra você que está dando os primeiros passos nesse software e que quer conhecer a lista dos atalhos padrão mais importantes pra começar a usar o Krita."
 categories = ["softwares"]
 featuredImage = "cover.png"
