@@ -14,8 +14,10 @@
 
     <!-- Cabeçalho com imagem e infos -->
     <div class="post-header">
-      {{ with .Params.featuredImage }}
-      <img class="post-image" src="{{ . }}" alt="{{ $.Title }}" />
+      {{ $p := . }} {{ with .Resources.GetMatch "cover.*" }}
+      <img class="post-image" src="{{ .RelPermalink }}" alt="{{ $p.Title }}" />
+      {{ else with .Params.featuredImage }}
+      <img class="post-image" src="{{ . }}" alt="{{ $p.Title }}" />
       {{ end }}
 
       <div class="post-meta">
