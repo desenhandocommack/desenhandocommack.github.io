@@ -1,11 +1,13 @@
 +++
 title = "Atalhos do Krita"
 date = '2025-11-25T14:22:07-03:00'
-description = "Dominar atalhos de teclado é o segredo pra sair do modo iniciante e começar a desenhar e pintar no Krita com muito mais confiança acelerando o seu workflow. Esse post foi criado pra você que está dando os primeiros passos no Krita e que quer conhecer a lista dos atalhos padrão mais importantes pra começar a usar o Krita."
+description = " Esse post foi criado pra você que está dando os primeiros passos no Krita e que quer conhecer a lista dos atalhos padrão mais importantes pra começar a usar o Krita."
 categories = ["softwares"]
 featuredImage = "cover.png"
 donation = "https://livepix.gg/desenhandocommack"  # link de doação
 +++
+
+Dominar atalhos de teclado é o segredo pra sair do modo iniciante e começar a desenhar e pintar no Krita com muito mais confiança acelerando o seu workflow. Nesse post eu trouxe os principais atalhos que você precisa pra começar no Krita.
 
 ## Atalhos do Krita: Guia Essencial para Iniciantes
 
