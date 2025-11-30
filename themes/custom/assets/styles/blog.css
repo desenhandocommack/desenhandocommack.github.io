@@ -633,6 +633,7 @@ img[src*="krita-icons"] {
 }
 
 /* ===== Responsividade blog ===== */
+
 @media screen and (max-width: 1024px) {
   .blog-posts {
     grid-template-columns: 1fr; /* 1 coluna em telas pequenas */
@@ -641,6 +642,11 @@ img[src*="krita-icons"] {
   .blog-container {
     flex-direction: column;
     gap: 20px;
+  }
+
+  .blog-container * {
+    max-width: 100%; /*força o layout a “respeitar” a tela* adicionei em 30/11 pra tentar corrigir espaçamento no mobile, verificar se vai quebrar algo/
+    box-sizing: border-box; /*força o layout a “respeitar” a tela*/
   }
 
   .blog-sidebar {
