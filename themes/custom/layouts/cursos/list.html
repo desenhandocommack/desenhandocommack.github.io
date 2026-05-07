@@ -1,0 +1,65 @@
+{{ define "styles" }}
+
+{{ with resources.Get "styles/cursos.css" | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}">
+{{ end }}
+
+{{ end }}
+
+
+{{ define "main" }}
+
+<section class="cursos-container">
+  <h1 class="cursos-title">Cursos</h1>
+
+  <div class="cursos-grid">
+    {{ range (where .Site.RegularPages "Section" "cursos") }}
+
+      <div class="curso-card">
+
+        <div class="curso-image">
+          <img src="{{ .Params.image }}" alt="{{ .Title }}">
+        </div>
+
+        <div class="curso-content">
+          <h2>{{ .Title }}</h2>
+
+          <p class="curso-description">
+            {{ .Params.description }}
+          </p>
+
+          <p class="curso-meta">
+            {{ .Params.hours }} • {{ .Params.access }}
+          </p>
+
+          <ul class="curso-features">
+  {{ range .Params.features }}
+    <li>
+      <span class="icon">✓</span>
+      {{ . }}
+    </li>
+  {{ end }}
+</ul>
+        </div>
+
+        <div class="curso-footer">
+  <span class="curso-price">{{ .Params.price }}</span>
+
+  <div class="curso-actions">
+    <a href="{{ .RelPermalink }}" class="curso-btn secondary btn-main">
+      Saiba mais
+    </a>
+
+    <a href="{{ .Params.buy }}" class="curso-btn primary btn-main">
+      Comprar
+    </a>
+  </div>
+</div>
+
+      </div>
+
+    {{ end }}
+  </div>
+</section>
+
+{{ end }}

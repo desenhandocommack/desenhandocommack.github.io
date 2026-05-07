@@ -11,7 +11,7 @@
         <li><a href="/">Início</a></li>
         <li><a href="/blog/">Blog</a></li>
         <li>
-          <a href="https://hotmart.com/pt-br/club/desenhandocommack" target="_blank"> Cursos </a>
+          <a href="/cursos/"> Cursos </a>
         </li>
 
         <li>
@@ -33,11 +33,7 @@
         </a>
         {{ end }}
 
-        <button class="botao-tema" aria-label="Alterar Tema">
-          <span class="material-symbols-rounded">dark_mode</span>
-        </button>
-      </div>
-
+    
       <!-- BOTÃO HAMBÚRGUER (visível só no mobile) -->
       <button class="menu-toggle" aria-label="Abrir menu">
         <span class="material-symbols-rounded">menu</span>
@@ -46,8 +42,6 @@
   </div>
 
   <script>
-    // MUDAR TEMA
-    document.querySelector(".botao-tema").addEventListener("click", () => document.body.classList.toggle("dark-mode"));
 
     // SCRIPT PARA CAIXA DE BUSCA
     const searchForm = document.querySelector(".search");

@@ -12,14 +12,6 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-body.dark-mode {
-  --color-bg: #173657;
-  --color-menu: #1f4774;
-  --color-text: #ffffff;
-  --color-accent: #ea498b;
-}
-
-/*TEMA CLARO E ESCURO*/
 /* Tema claro - padrão */
 :root {
   --color-bg: #ffffff;
@@ -218,6 +210,25 @@ body.dark-mode {
 
 .slides-btn:hover {
   transform: scale(1.05); /* 👈 aumenta 5% no hover */
+}
+
+/* BOTÃO GLOBAL */
+
+.btn-main {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem 2.5rem;
+  text-decoration: none;
+  font-weight: 700;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.btn-main:hover {
+  transform: scale(1.05);
 }
 
 .btn-wrapper {

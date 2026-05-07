@@ -1,0 +1,49 @@
+{{ define "styles" }}
+
+{{ with resources.Get "styles/cursos.css" | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}">
+{{ end }}
+
+{{ end }}
+
+
+{{ define "main" }}
+
+<!-- 🔴 VÍDEO LOOP FULL WIDTH (FORA DO CONTAINER) -->
+<section class="hero-video">
+  <video autoplay muted loop playsinline>
+    <source src="/videos/video-preview-curso-krita-para-iniciantes.mp4" type="video/mp4">
+  </video>
+
+    <!-- INDICADOR DE SCROLL -->
+  <div class="scroll-indicator">
+    <span>Ver mais</span>
+    <div class="arrow"></div>
+  </div>
+
+</section>
+
+<!-- 🔹 CONTEÚDO NORMAL -->
+<section class="curso">
+
+  <!-- CONTEÚDO -->
+  <div class="curso-content">
+    {{ .Content }}
+  </div>
+
+  
+  <!-- 🔹 VÍDEO EXPLICATIVO (AGORA MENOR, DENTRO DO CONTEÚDO) -->
+  <section class="curso-video">
+    <div class="video-wrapper">
+      <iframe 
+        src="{{ .Params.video }}"
+        title="Vídeo do curso"
+        frameborder="0"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </section>
+
+</section>
+
+{{ end }}

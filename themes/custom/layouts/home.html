@@ -21,7 +21,7 @@
 
           <!-- Container do botão + info -->
           <div class="btn-wrapper">
-            <a href="https://go.hotmart.com/I98301009X?dp=1" target="_blank" class="slides-btn">
+            <a href="https://go.hotmart.com/I98301009X?dp=1" target="_blank" class="slides-btn btn-main">
               <span class="material-symbols-rounded">shopping_cart</span>
               COMPRAR 39,90
             </a>
@@ -30,8 +30,8 @@
           </div>
         </div>
 
-        <div class="slide-image">
-          <a href="https://go.hotmart.com/I98301009X" target="_blank">
+       <div class="slide-image">
+      <a href="{{ (site.GetPage "/cursos/curso-1").RelPermalink }}">
             <picture>
               <!-- imagem mobile -->
               <source media="(max-width: 768px)" srcset="/images/curso-krita_slide1_vertical.png" />
@@ -90,8 +90,6 @@
 </main>
 
 <script>
-  // MUDAR TEMA
-  document.querySelector(".botao-tema").addEventListener("click", () => document.body.classList.toggle("dark-mode"));
 
   // SCRIPT PARA CAIXA DE BUSCA
   const searchForm = document.querySelector(".search");

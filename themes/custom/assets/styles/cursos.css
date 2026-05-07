@@ -1,0 +1,421 @@
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #f6f4f1;
+}
+
+.cursos-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.cursos-title {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+}
+
+
+  .cursos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+@media (max-width: 900px) {
+  .cursos-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.curso-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.curso-card {
+  border: 1px solid #69a5af;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  transition: 0.3s;
+}
+
+.curso-card:hover {
+  transform: translateY(-5px);
+}
+
+.curso-image img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.curso-content {
+  padding: 16px;
+}
+
+.curso-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.curso-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.curso-btn {
+  color: #ffffff;
+  padding: 8px 14px;
+  text-decoration: none;
+}
+
+.curso-btn.primary {
+  background: #173657;
+  color: #fff;
+}
+
+.curso-btn.primary:hover {
+  background: #2da9f2;
+  color: #fff;
+}
+
+.curso-btn.secondary {
+  border: 1px solid #173657;
+  color: #173657;
+  background: transparent;
+}
+
+.curso-btn.secondary:hover {
+  background-color: #173657;
+  color: #fff;
+}
+
+
+.curso-description {
+  margin-top: 10px;
+}
+
+.curso-meta {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 8px;
+}
+
+.curso-features {
+  list-style: none;
+  padding: 0;
+  margin-top: 12px;
+}
+
+.curso-features li {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+}
+
+.curso-features .icon {
+  margin-right: 8px;
+  font-weight: bold;
+}
+
+/* PAGINA DE VENDA INDIVIDUAL DOS CURSOS */
+
+/* CONTAINER GERAL */
+.curso {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+
+/* BOTÃO */
+.btn-primary {
+  display: inline-block;
+  background: #173657;
+  color: #fff;
+  padding: 14px 24px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn-primary:hover {
+  background: #2da9f2;
+}
+
+
+
+/* IMAGEM */
+.hero-image img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* CONTEÚDO */
+.curso-content {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* SEÇÕES */
+.curso-content h2 {
+  margin-top: 40px;
+  margin-bottom: 15px;
+}
+
+.curso-content p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.curso-content ul {
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+
+/* KRITA VIDEO PREVIEW */
+
+.hero-video {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+}
+
+.hero-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* INDICADOR */
+.scroll-indicator {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #fff;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.scroll-indicator span {
+  display: block;
+  margin-bottom: 6px;
+}
+
+/* SETA */
+.arrow {
+  width: 20px;
+  height: 20px;
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transform: rotate(-45deg);
+  margin: 0 auto;
+  animation: bounce 1.5s infinite;
+}
+
+.scroll-indicator {
+  text-shadow: 0 0 10px rgba(0,0,0,0.6);
+}
+
+.hero-video::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.15);
+}
+
+/* ANIMAÇÃO */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0) rotate(-45deg);
+  }
+  50% {
+    transform: translateY(8px) rotate(-45deg);
+  }
+}
+
+/* VIDEO DOS CURSOS */
+
+.curso-video {
+  width: 100%;
+  margin: 60px 0;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 */
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+/* ESTILO DA PAGINA INDIVIDUAL DO CURSO*/
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+.item {
+  background: #2da9f2;
+  padding: 20px;
+  border-radius: 10px;
+  color: #173657;
+}
+
+.item, .card-info {
+  background: #2da9f2;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.box-list div {
+  margin-bottom: 10px;
+}
+
+.modulos li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.cta-final {
+  text-align: center;
+  margin-top: 60px;
+}
+
+
+/* Temas pra cada curso*/
+
+.item.media {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #2da9f2;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.item.media video {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.item.media video {
+  transition: transform 0.3s ease;
+}
+
+.item.media:hover video {
+  transform: scale(1.05);
+}
+
+.item.media img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+
+  .item.media {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .item.media video {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+  }
+
+}
+
+
+/* LISTA COM ÍCONE */
+.list-item {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  background: #2da9f2;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.list-item .icon {
+  color: #ea498b;
+}
+
+/* CARDS */
+.card-info {
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.08);
+  padding: 25px 20px;
+  border-radius: 10px;
+  text-align: center;
+  color: #173657;
+}
+
+.card-info .icon {
+  font-size: 22px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* MÓDULOS */
+.modulos-box div {
+  display: flex;
+  gap: 10px;
+  padding: 12px;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.modulos-box strong {
+  color: var(--primary);
+}
+
+/* FAQ */
+.faq-item {
+  margin-bottom: 20px;
+}
+
+.faq-item strong {
+  display: block;
+  margin-bottom: 5px;
+}
+
+
