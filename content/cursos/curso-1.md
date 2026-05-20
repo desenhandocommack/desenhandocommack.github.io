@@ -1,5 +1,6 @@
 ---
 title: "Krita para Iniciantes"
+slug: "krita-para-iniciantes"
 price: "R$ 39,90"
 description: "Nesse curso eu te mostro como usar as ferramentas principais do Krita. Você vai entender exatamente o que precisa para começar no Krita e ganhar confiança para usar o software no seu dia a dia."
 hours: "Quase 4 horas de conteúdo"
@@ -11,9 +12,11 @@ features:
   - "7 módulos no total"
   - "Baixe meus atalhos personalizados"
   - "Atalhos aparecem durante as aulas"
+  - "Servidor exclusivo no Discord"
 buy: "https://hotmart.com/pt-br/marketplace/produtos/krita-para-iniciantes/I98301009X"
 video: "https://www.youtube.com/embed/108QoNjCOiI"
 theme: "krita"
+
 ---
 
 
@@ -111,7 +114,13 @@ theme: "krita"
 
   <div class="card-info">
     <span class="icon">💬</span>
-    <strong>Grupo exclusivo no Discord</strong>
+    <div class="discord-title">
+  <strong>Grupo exclusivo no Discord</strong>
+
+  <button class="info-btn-discord">
+    ?
+  </button>
+</div>
     <p>Receba atualizações e novidades do curso no nosso servidor</p>
   </div>
 

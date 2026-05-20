@@ -396,6 +396,65 @@ body {
   display: block;
 }
 
+
+/*BOTÃO GRUPO EXCLUSIVO DISCORD*/
+.discord-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.info-btn-discord {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: none;
+
+  background: #173657;
+  color: #fff;
+
+  font-size: 11px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  position: relative;
+}
+
+/* TEXTO FLUTUANTE */
+.info-btn-discord::after {
+  content: "O acesso ao servidor é liberado 8 dias após a compra. O link fica disponível no primeiro módulo do curso.";
+
+  position: absolute;
+
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 240px;
+
+  background: #173657;
+  color: #fff;
+
+  padding: 10px;
+  border-radius: 8px;
+
+  font-size: 12px;
+  line-height: 1.4;
+  font-weight: 400;
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition: opacity 0.2s ease;
+}
+
+/* APARECE NO HOVER */
+.info-btn-discord:hover::after {
+  opacity: 1;
+}
+
 /* MÓDULOS */
 .modulos-box div {
   display: flex;
