@@ -1,0 +1,981 @@
+{{ define "main" }}
+
+<style>
+  /* ============ Variáveis / Cores da marca ============ */
+  :root {
+    --brand-blue: #2bb8fc;
+    --brand-blue-light: #f0f9ff;
+    --brand-blue-dark: #049ae0;
+
+    --brand-pink: #fe55bd;
+    --brand-pink-light: #fff0fa;
+    --brand-pink-dark: #e0289b;
+
+    --brand-yellow: #f6e65f;
+    --brand-yellow-light: #fefde8;
+    --brand-yellow-dark: #bda700;
+
+    --slate-50: #f8fafc;
+    --slate-100: #f1f5f9;
+    --slate-200: #e2e8f0;
+    --slate-250: #dde3ec;
+    --slate-400: #94a3b8;
+    --slate-500: #64748b;
+    --slate-700: #334155;
+    --slate-800: #1e293b;
+    --slate-950: #020617;
+
+    --amber-500: #f59e0b;
+    --emerald-500: #10b981;
+  }
+
+  html {
+    height: 100%;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .cronograma-container {
+    flex-grow: 1;
+    max-width: 1410px;
+    margin: 10px auto 0 auto;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  /* Custom scrollbar para um visual mais limpo */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: rgba(241, 245, 249, 0.8);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(43, 184, 252, 0.4);
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(43, 184, 252, 0.6);
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  img {
+    display: block;
+  }
+
+  /* ============ Layout geral ============ */
+  .container {
+    width: 100%;
+    max-width: 28rem; /* max-w-md */
+    margin: 0 auto;
+  }
+  .container > * + * {
+    margin-top: 16px; /* space-y-4 */
+  }
+
+  /* ============ Header ============ */
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--slate-200);
+    padding-bottom: 12px;
+  }
+
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .ping-dot-wrapper {
+    position: relative;
+    display: flex;
+    height: 12px;
+    width: 12px;
+  }
+  .ping-dot-ping {
+    animation: ping 1.4s cubic-bezier(0, 0, 0.2, 1) infinite;
+    position: absolute;
+    display: inline-flex;
+    height: 100%;
+    width: 100%;
+    border-radius: 9999px;
+    background-color: var(--brand-pink);
+    opacity: 0.75;
+  }
+  .ping-dot-solid {
+    position: relative;
+    display: inline-flex;
+    border-radius: 9999px;
+    height: 12px;
+    width: 12px;
+    background-color: var(--brand-pink);
+  }
+  @keyframes ping {
+    75%,
+    100% {
+      transform: scale(2);
+      opacity: 0;
+    }
+  }
+
+  .title-main {
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    margin: 0;
+    background: linear-gradient(to right, var(--brand-blue-dark), var(--brand-pink), var(--brand-pink));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  .updated-label {
+    font-size: 9px;
+    color: var(--slate-400);
+    font-weight: 600;
+    line-height: 1;
+    margin-top: 4px;
+  }
+
+  .timezone-badge {
+    font-size: 10px;
+    color: var(--slate-500);
+    font-weight: 700;
+    background-color: #ffffff;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    padding: 4px 8px;
+    border-radius: 6px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  }
+
+  /* ============ Tabs ============ */
+  .tabs-nav {
+    display: flex;
+    background-color: rgba(226, 232, 240, 0.6);
+    padding: 4px;
+    border-radius: 12px;
+    border: 1px solid rgba(226, 232, 240, 0.4);
+    box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+  }
+
+  .tab-btn {
+    flex: 1 1 0%;
+    text-align: center;
+    padding: 8px 0;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 8px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: var(--slate-500);
+    transition: all 0.15s ease;
+    font-family: inherit;
+  }
+  .tab-btn:hover {
+    color: #334155;
+  }
+  .tab-btn.active {
+    background: linear-gradient(to right, var(--brand-blue), var(--brand-pink), var(--brand-pink));
+    color: #ffffff;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  }
+  .tab-btn.active:hover {
+    color: #ffffff;
+  }
+
+  /* ============ Loading ============ */
+  .loading {
+    padding: 48px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+  }
+  .spinner {
+    width: 32px;
+    height: 32px;
+    border: 4px solid var(--brand-blue);
+    border-top-color: transparent;
+    border-radius: 9999px;
+    animation: spin 0.7s linear infinite;
+  }
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  .loading-text {
+    font-size: 12px;
+    color: var(--slate-500);
+    margin: 0;
+  }
+  .error-text {
+    font-size: 12px;
+    color: #f43f5e;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  /* ============ Conteúdo das abas ============ */
+  .tab-content {
+    margin-top: 16px;
+  }
+  .tab-content.hidden {
+    display: none;
+  }
+  .tab-content > * + * {
+    margin-top: 16px;
+  }
+
+  .section-title {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--slate-400);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding-left: 4px;
+    margin: 0 0 8px 0;
+  }
+
+  .list-stack > * + * {
+    margin-top: 8px;
+  }
+
+  .empty-text {
+    font-size: 12px;
+    color: var(--slate-400);
+    padding-left: 4px;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  /* ============ Badges de categoria ============ */
+  .badge-category {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 9999px;
+    font-size: 10px;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+  .badge-category.overlay {
+    font-size: 9px;
+    font-weight: 800;
+  }
+  .badge-cat-desenho {
+    background-color: rgba(254, 85, 189, 0.1);
+    color: var(--brand-pink-dark);
+    border: 1px solid rgba(254, 85, 189, 0.2);
+  }
+  .badge-cat-desenho.overlay {
+    background-color: var(--brand-pink);
+    color: #ffffff;
+    border: 1px solid rgba(254, 85, 189, 0.2);
+  }
+  .badge-cat-jogo {
+    background-color: rgba(43, 184, 252, 0.1);
+    color: var(--brand-blue-dark);
+    border: 1px solid rgba(43, 184, 252, 0.2);
+  }
+  .badge-cat-jogo.overlay {
+    background-color: var(--brand-blue);
+    color: #ffffff;
+    border: 1px solid rgba(43, 184, 252, 0.2);
+  }
+  .badge-cat-papo {
+    background-color: rgba(246, 230, 95, 0.15);
+    color: var(--brand-yellow-dark);
+    border: 1px solid rgba(246, 230, 95, 0.3);
+  }
+  .badge-cat-papo.overlay {
+    background-color: var(--brand-yellow);
+    color: #0f172a;
+    border: 1px solid rgba(246, 230, 95, 0.25);
+  }
+  .badge-cat-default {
+    background-color: var(--slate-100);
+    color: #475569;
+    border: 1px solid var(--slate-200);
+  }
+
+  /* ============ Card: Live Hoje / Destaque ============ */
+  .live-hoje-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    border: 1px solid rgba(254, 85, 189, 0.35);
+    background-color: var(--slate-950);
+    aspect-ratio: 16 / 9;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s;
+  }
+  .live-hoje-card:hover {
+    border-color: rgba(254, 85, 189, 0.65);
+  }
+  .live-hoje-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    inset: 0;
+    opacity: 0.85;
+    transition: transform 0.5s;
+  }
+  .live-hoje-card:hover img {
+    transform: scale(1.05);
+  }
+  .live-hoje-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, var(--slate-950), rgba(2, 6, 23, 0.65), transparent);
+  }
+  .live-hoje-content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .live-hoje-badges-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+  .badge-ao-vivo {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 2px 10px;
+    border-radius: 9999px;
+    font-size: 9px;
+    font-weight: 800;
+    background-color: var(--brand-pink);
+    color: #ffffff;
+    border: 1px solid rgba(254, 85, 189, 0.2);
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  @keyframes pulse {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+  .badge-ao-vivo-dot {
+    height: 6px;
+    width: 6px;
+    border-radius: 9999px;
+    background-color: #ffffff;
+  }
+  .live-hoje-title {
+    font-size: 16px;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.25;
+    margin: 0;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    transition: color 0.2s;
+  }
+  .live-hoje-card:hover .live-hoje-title {
+    color: var(--brand-pink);
+  }
+  .live-hoje-bottom-row {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  .live-hoje-date {
+    font-size: 10px;
+    color: #e2e8f0;
+    font-weight: 600;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+    margin: 0;
+  }
+  .live-hoje-utc {
+    font-size: 9px;
+    color: #cbd5e1;
+    font-weight: 700;
+  }
+  .btn-assistir {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 6px 12px;
+    font-size: 10px;
+    font-weight: 800;
+    color: #ffffff;
+    background-color: var(--brand-pink);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(254, 85, 189, 0.2);
+    transition:
+      background-color 0.2s,
+      transform 0.15s;
+    flex-shrink: 0;
+  }
+  .btn-assistir:hover {
+    background-color: var(--brand-pink-dark);
+  }
+  .btn-assistir:active {
+    transform: scale(0.95);
+  }
+  .icon-sm {
+    width: 12px;
+    height: 12px;
+  }
+
+  /* ============ Card: Próximas Lives ============ */
+  .proxima-card {
+    display: flex;
+    gap: 14px;
+    background-color: #ffffff;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    border-radius: 12px;
+    padding: 10px;
+    transition:
+      border-color 0.2s,
+      box-shadow 0.2s;
+  }
+  .proxima-card:hover {
+    border-color: rgba(43, 184, 252, 0.5);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  }
+  .proxima-thumb {
+    position: relative;
+    width: 112px;
+    aspect-ratio: 16 / 9;
+    border-radius: 8px;
+    overflow: hidden;
+    flex-shrink: 0;
+    box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+    background-color: var(--slate-100);
+    border: 1px solid var(--slate-200);
+  }
+  .proxima-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+  }
+  .proxima-card:hover .proxima-thumb img {
+    transform: scale(1.05);
+  }
+  .proxima-platform-logo {
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 4px;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--slate-100);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .proxima-content {
+    min-width: 0;
+    flex: 1 1 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2px 0;
+  }
+  .proxima-day-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  .proxima-day {
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    color: var(--brand-blue-dark);
+    text-transform: uppercase;
+  }
+  .proxima-time {
+    font-size: 9px;
+    font-weight: 600;
+    color: var(--slate-400);
+  }
+  .proxima-title {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--slate-800);
+    line-height: 1.375;
+    margin: 2px 0 0 0;
+    transition: color 0.2s;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .proxima-card:hover .proxima-title {
+    color: var(--brand-blue-dark);
+  }
+  .proxima-bottom-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin-top: 4px;
+  }
+  .link-ver {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+    font-size: 9px;
+    font-weight: 700;
+    color: var(--brand-blue);
+    transition: color 0.2s;
+  }
+  .link-ver:hover {
+    color: var(--brand-blue-dark);
+  }
+  .icon-xs {
+    width: 10px;
+    height: 10px;
+  }
+
+  /* ============ Histórico ============ */
+  .historico-group {
+    margin-top: 16px;
+  }
+  .historico-group > * + * {
+    margin-top: 8px;
+  }
+  .historico-group-title {
+    font-size: 12px;
+    font-weight: 800;
+    color: var(--slate-400);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding-left: 4px;
+    margin-left: 4px;
+    border-left: 2px solid var(--brand-blue);
+    margin-bottom: 8px;
+  }
+  .historico-card {
+    display: flex;
+    gap: 12px;
+    background-color: #ffffff;
+    border: 1px solid var(--slate-200);
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    margin-top: 8px;
+  }
+  .historico-thumb {
+    position: relative;
+    width: 80px;
+    aspect-ratio: 16 / 9;
+    border-radius: 8px;
+    overflow: hidden;
+    flex-shrink: 0;
+    background-color: var(--slate-50);
+    border: 1px solid var(--slate-200);
+  }
+  .historico-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .historico-content {
+    min-width: 0;
+    flex: 1 1 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2px 0;
+  }
+  .historico-status-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+  .historico-meta {
+    font-size: 9px;
+    font-weight: 700;
+    color: var(--slate-400);
+  }
+  .badge-status {
+    padding: 1px 6px;
+    border-radius: 9999px;
+    font-size: 9px;
+    font-weight: 700;
+  }
+  .badge-status.adiada {
+    background-color: rgba(245, 158, 11, 0.1);
+    color: var(--amber-500);
+    border: 1px solid rgba(245, 158, 11, 0.2);
+  }
+  .badge-status.realizada {
+    background-color: rgba(16, 185, 129, 0.1);
+    color: var(--emerald-500);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+  }
+  .historico-title {
+    font-size: 12px;
+    line-height: 1.375;
+    margin: 2px 0 0 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .historico-title.realizada {
+    color: var(--slate-700);
+    font-weight: 700;
+  }
+  .historico-title.adiada {
+    color: var(--slate-400);
+    text-decoration: line-through;
+  }
+  .historico-bottom-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 4px;
+  }
+  .historico-cat-tag {
+    font-size: 9px;
+    color: var(--slate-400);
+    font-weight: 700;
+    padding: 2px 6px;
+    background-color: var(--slate-50);
+    border-radius: 4px;
+    border: 1px solid var(--slate-250);
+  }
+
+  /* ============ Footer ============ */
+  .footer {
+    text-align: center;
+    padding-top: 8px;
+  }
+  .footer p {
+    font-size: 10px;
+    color: var(--slate-400);
+    font-weight: 500;
+    margin: 0;
+  }
+</style>
+
+<!--  -->
+
+<section class="cronograma-container">
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <div class="header-left">
+        <span class="ping-dot-wrapper">
+          <span class="ping-dot-ping"></span>
+          <span class="ping-dot-solid"></span>
+        </span>
+        <div>
+          <h1 class="title-main">Agenda de Lives</h1>
+          <p id="atualizado-em" class="updated-label"></p>
+        </div>
+      </div>
+      <span id="fuso-info" class="timezone-badge"> Fuso: Brasília (UTC-3) </span>
+    </div>
+
+    <!-- TABS NAVIGATION -->
+    <div class="tabs-nav">
+      <button id="tab-agenda-btn" onclick="switchTab('agenda')" class="tab-btn active">Agenda</button>
+      <button id="tab-historico-btn" onclick="switchTab('historico')" class="tab-btn">Histórico</button>
+    </div>
+
+    <!-- MAIN CONTAINER -->
+    <div id="widget-content">
+      <!-- Loading State -->
+      <div id="loading" class="loading">
+        <div class="spinner"></div>
+        <p class="loading-text">Carregando agenda...</p>
+      </div>
+
+      <!-- TAB 1: AGENDA -->
+      <div id="tab-agenda" class="tab-content hidden">
+        <!-- LIVE HOJE (Inserido via JS) -->
+        <div id="live-hoje-container"></div>
+
+        <!-- PRÓXIMAS LIVES -->
+        <div>
+          <h3 class="section-title">Próximas Transmissões</h3>
+          <div id="proximas-lives-list" class="list-stack"></div>
+        </div>
+      </div>
+
+      <!-- TAB 2: HISTÓRICO -->
+      <div id="tab-historico" class="tab-content hidden">
+        <div id="historico-list"></div>
+      </div>
+    </div>
+
+    <!-- Footer inside widget -->
+    <div class="footer">
+      <p>Inscrições e novidades no canal principal.</p>
+    </div>
+  </div>
+
+  <script>
+    // SVG Logos
+    const logos = {
+      youtube: `<svg style="width:20px;height:20px;color:#ef4444;flex-shrink:0" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.517 3.545 12 3.545 12 3.545s-7.517 0-9.388.508a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.871.508 9.388.508 9.388.508s7.517 0 9.388-.508a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>`,
+      twitch: `<svg style="width:20px;height:20px;color:#a855f7;flex-shrink:0" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>`,
+    };
+
+    // Category style generator
+    function getCategoryBadge(category, isDarkOverlay = false) {
+      const cat = category.toLowerCase();
+      const overlayClass = isDarkOverlay ? " overlay" : "";
+      if (cat.includes("desenho")) {
+        return `<span class="badge-category badge-cat-desenho${overlayClass}">${category}</span>`;
+      } else if (cat.includes("jogo")) {
+        return `<span class="badge-category badge-cat-jogo${overlayClass}">${category}</span>`;
+      } else if (cat.includes("papo") || cat.includes("conversa")) {
+        return `<span class="badge-category badge-cat-papo${overlayClass}">${category}</span>`;
+      }
+      // Fallback for new/other categories
+      return `<span class="badge-category badge-cat-default">${category}</span>`;
+    }
+
+    // Active tab state
+    let activeTab = "agenda";
+
+    function switchTab(tab) {
+      activeTab = tab;
+      const agendaTab = document.getElementById("tab-agenda");
+      const historicoTab = document.getElementById("tab-historico");
+      const agendaBtn = document.getElementById("tab-agenda-btn");
+      const historicoBtn = document.getElementById("tab-historico-btn");
+
+      if (tab === "agenda") {
+        agendaTab.classList.remove("hidden");
+        historicoTab.classList.add("hidden");
+        agendaBtn.classList.add("active");
+        historicoBtn.classList.remove("active");
+      } else {
+        agendaTab.classList.add("hidden");
+        historicoTab.classList.remove("hidden");
+        historicoBtn.classList.add("active");
+        agendaBtn.classList.remove("active");
+      }
+    }
+
+    // Load data from agenda.json
+    async function loadAgenda() {
+      try {
+        const response = await fetch("agenda.json");
+        if (!response.ok) throw new Error("Não foi possível carregar os dados.");
+        const data = await response.json();
+
+        // Render Atualizado em
+        if (data.atualizado) {
+          const dateParts = data.atualizado.split("/");
+          let dateStr = data.atualizado;
+          if (dateParts.length === 3) {
+            const dateObj = new Date(dateParts[2], dateParts[1] - 1, dateParts[0]);
+            const weekdays = [
+              "Domingo",
+              "Segunda-feira",
+              "Terça-feira",
+              "Quarta-feira",
+              "Quinta-feira",
+              "Sexta-feira",
+              "Sábado",
+            ];
+            const weekday = weekdays[dateObj.getDay()];
+            dateStr = `${weekday}, ${dateParts[0]}/${dateParts[1]}`;
+          }
+          document.getElementById("atualizado-em").innerText = `Atualizada: ${dateStr}`;
+        }
+
+        // 1. Render Live Hoje / Destaque
+        const liveHojeContainer = document.getElementById("live-hoje-container");
+        if (data.aoVivo && data.aoVivo.ativo) {
+          const live = data.aoVivo;
+          const liveCapa = live.capa || "images/image1.png";
+          liveHojeContainer.innerHTML = `
+            <div class="live-hoje-card">
+              <img src="${liveCapa}" alt="Live Cover">
+              <div class="live-hoje-overlay"></div>
+              <div class="live-hoje-content">
+                <div class="live-hoje-badges-row">
+                  <span class="badge-ao-vivo">
+                    <span class="badge-ao-vivo-dot"></span>
+                    AO VIVO
+                  </span>
+                  ${getCategoryBadge(live.categoria, true)}
+                </div>
+                <h2 class="live-hoje-title">
+                  ${live.titulo}
+                </h2>
+                <div class="live-hoje-bottom-row">
+                  <p class="live-hoje-date">
+                    ${live.dia} (${live.data}) • ${live.horario} <span class="live-hoje-utc">(UTC-3)</span>
+                  </p>
+                  <a href="${live.link}" target="_blank" rel="noopener noreferrer" class="btn-assistir">
+                    Assistir
+                    <svg class="icon-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          `;
+        } else {
+          liveHojeContainer.innerHTML = "";
+        }
+
+        // 2. Render Próximas Lives
+        const proximasList = document.getElementById("proximas-lives-list");
+        proximasList.innerHTML = "";
+        if (data.proximas && data.proximas.length > 0) {
+          data.proximas.forEach((live) => {
+            const platformLogo = logos[live.plataforma.toLowerCase()] || "";
+            const dateStr = live.data || "";
+            const liveCapa = live.capa || "images/image2.png";
+            const card = document.createElement("div");
+            card.className = "proxima-card";
+            card.innerHTML = `
+              <!-- Cover Image Left -->
+              <div class="proxima-thumb">
+                <img src="${liveCapa}" alt="Cover">
+                <div class="proxima-platform-logo">
+                  ${platformLogo}
+                </div>
+              </div>
+
+              <!-- Content Right -->
+              <div class="proxima-content">
+                <div>
+                  <div class="proxima-day-row">
+                    <span class="proxima-day">${live.dia} (${dateStr})</span>
+                    <span class="proxima-time">• ${live.horario}</span>
+                  </div>
+                  <h4 class="proxima-title">
+                    ${live.titulo}
+                  </h4>
+                </div>
+                <div class="proxima-bottom-row">
+                  ${getCategoryBadge(live.categoria)}
+                  <a href="${live.link}" target="_blank" rel="noopener noreferrer" class="link-ver">
+                    Ver link
+                    <svg class="icon-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            `;
+            proximasList.appendChild(card);
+          });
+        } else {
+          proximasList.innerHTML = '<p class="empty-text">Nenhuma live agendada para esta semana.</p>';
+        }
+
+        // 3. Render Histórico
+        const historicoList = document.getElementById("historico-list");
+        historicoList.innerHTML = "";
+        if (data.historico && data.historico.length > 0) {
+          data.historico.forEach((group) => {
+            const groupSection = document.createElement("div");
+            groupSection.className = "historico-group";
+
+            let groupHTML = `
+              <h3 class="historico-group-title">
+                ${group.mesAno}
+              </h3>
+            `;
+
+            group.lives.forEach((live) => {
+              const isAdiada = live.status.toLowerCase() === "adiada";
+              const statusClass = isAdiada ? "adiada" : "realizada";
+              const titleClass = isAdiada ? "adiada" : "realizada";
+              const liveCapa = live.capa || "images/image3.png";
+
+              groupHTML += `
+                <div class="historico-card">
+                  <!-- Cover Image Left -->
+                  <div class="historico-thumb">
+                    <img src="${liveCapa}" alt="Cover">
+                  </div>
+
+                  <!-- Content Right -->
+                  <div class="historico-content">
+                    <div>
+                      <div class="historico-status-row">
+                        <span class="historico-meta">${live.data} • ${live.plataforma}</span>
+                        <span class="badge-status ${statusClass}">
+                          ${live.status}
+                        </span>
+                      </div>
+                      <h4 class="historico-title ${titleClass}">
+                        ${live.titulo}
+                      </h4>
+                    </div>
+                    <div class="historico-bottom-row">
+                      <span class="historico-cat-tag">
+                        ${live.categoria}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              `;
+            });
+
+            groupSection.innerHTML = groupHTML;
+            historicoList.appendChild(groupSection);
+          });
+        } else {
+          historicoList.innerHTML = '<p class="empty-text">Histórico vazio.</p>';
+        }
+
+        // Hide loader and show active tab
+        document.getElementById("loading").classList.add("hidden");
+        switchTab(activeTab);
+      } catch (error) {
+        console.error(error);
+        document.getElementById("loading").innerHTML = `
+          <p class="error-text">Erro ao carregar a agenda.</p>
+        `;
+      }
+    }
+
+    // Initialize
+    window.addEventListener("DOMContentLoaded", loadAgenda);
+  </script>
+</section>
+
+<!--  -->
+
+{{ end }}

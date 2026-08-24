@@ -1,0 +1,83 @@
+{
+  "atualizado": "24/08/2026",
+  "aoVivo": {
+    "ativo": false,
+    "titulo": "Desenhando e Conversando com Chat!",
+    "dia": "Segunda-feira",
+    "data": "24/08",
+    "capa": "images/image1.png",
+    "horario": "19:30 - 22:00",
+    "categoria": "Desenho",
+    "plataforma": "youtube",
+    "canal": "@desenhandocommack",
+    "link": "https://www.youtube.com/@desenhandocommack/streams"
+  },
+  "proximas": [
+    {
+      "dia": "Quarta-feira",
+      "data": "26/08",
+      "capa": "images/image2.png",
+      "horario": "20:00",
+      "categoria": "Jogos",
+      "titulo": "Treinamento de Perspectiva e Anatomia",
+      "plataforma": "twitch",
+      "link": "https://www.twitch.tv/desenhandocommack/about"
+    },
+    {
+      "dia": "Sexta-feira",
+      "data": "28/08",
+      "capa": "images/image3.png",
+      "horario": "19:00",
+      "categoria": "Bate-Papo",
+      "titulo": "Speed Art + Q&A com Apoiadores",
+      "plataforma": "youtube",
+      "link": "https://www.youtube.com/@desenhandocommack/streams"
+    },
+    {
+      "dia": "Sábado",
+      "data": "29/08",
+      "capa": "images/image1.png",
+      "horario": "15:00",
+      "categoria": "Tutorial",
+      "titulo": "Maratona de Pintura Digital",
+      "plataforma": "youtube",
+      "link": "https://www.youtube.com/@desenhandocommack/streams"
+    }
+  ],
+  "historico": [
+    {
+      "mesAno": "Agosto 2026",
+      "lives": [
+        {
+          "data": "22/08",
+          "capa": "images/image2.png",
+          "plataforma": "YouTube",
+          "status": "Concluída",
+          "titulo": "Desenhando Cenários do Zero",
+          "categoria": "Desenho"
+        },
+        {
+          "data": "18/08",
+          "capa": "images/image3.png",
+          "plataforma": "Twitch",
+          "status": "Adiada",
+          "titulo": "Jogando Hollow Knight com Viewers",
+          "categoria": "Jogos"
+        }
+      ]
+    },
+    {
+      "mesAno": "Julho 2026",
+      "lives": [
+        {
+          "data": "29/07",
+          "capa": "images/image1.png",
+          "plataforma": "YouTube",
+          "status": "Concluída",
+          "titulo": "Bate-papo: Respondendo Dúvidas do Portfólio",
+          "categoria": "Bate-Papo"
+        }
+      ]
+    }
+  ]
+}
