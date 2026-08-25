@@ -1,16 +1,16 @@
 {
   "atualizado": "24/08/2026",
   "aoVivo": {
-    "ativo": true,
-    "titulo": "Dia de testar a live",
-    "dia": "Terça-feira",
-    "data": "25/08",
+    "ativo": false,
+    "titulo": "",
+    "dia": "",
+    "data": "",
     "capa": "images/image1.png",
-    "horario": "19:00",
-    "categoria": "Bate-Papo",
+    "horario": "",
+    "categoria": "",
     "plataforma": "youtube",
     "canal": "@desenhandocommack",
-    "link": "https://www.youtube.com/watch?v=YJlSdDW92a4"
+    "link": "https://www.youtube.com/@desenhandocommack/streams"
   },
   "proximas": [
     {
@@ -24,5 +24,19 @@
       "link": "https://www.twitch.tv/desenhandocommack/about"
     }
   ],
-  "historico": []
+  "historico": [
+    {
+      "mesAno": "Agosto 2026",
+      "lives": [
+        {
+          "data": "25/08",
+          "capa": "images/image1.png",
+          "plataforma": "YouTube",
+          "status": "Concluída",
+          "titulo": "Dia de testar a live",
+          "categoria": "Bate-Papo"
+        }
+      ]
+    }
+  ]
 }
