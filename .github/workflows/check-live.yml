@@ -14,12 +14,12 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
-          node-version: "20"
+          node-version: "24"
 
       - name: Check channels and update JSON
         run: |
@@ -133,7 +133,7 @@ jobs:
                   categoria: data.aoVivo.categoria || 'Geral'
                 };
 
-                // Obter Mês/Ano correspondente (ex: "Agosto 2026")
+                // Obter Mês/Ano correspondente (ex: Agosto 2026)
                 const monthYearOptions = { timeZone: 'America/Sao_Paulo', month: 'long', year: 'numeric' };
                 let mesAno = new Intl.DateTimeFormat('pt-BR', monthYearOptions).format(new Date());
                 mesAno = mesAno.charAt(0).toUpperCase() + mesAno.slice(1);
@@ -184,7 +184,7 @@ jobs:
 
       - name: Commit and push changes
         run: |
-          git config --global user.name "GitHub Actions Bot"
-          git config --global user.email "actions@github.com"
+          git config --global user.name 'GitHub Actions Bot'
+          git config --global user.email actions@github.com
           git add content/cronograma/agenda.json
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto: Update live status" && git push)
+          git diff --quiet && git diff --staged --quiet || (git commit -m 'Auto: Update live status' && git push)
