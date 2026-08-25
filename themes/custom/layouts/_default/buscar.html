@@ -1,0 +1,163 @@
+{{ define "main" }}
+<div class="buscar-container" style="max-width: 800px; margin: 40px auto; padding: 0 20px; min-height: 50vh;">
+  <h1
+    style="color: #173657; font-weight: 800; margin-bottom: 8px; font-size: 2.2rem; font-family: 'Montserrat', sans-serif;">
+    Resultados da busca</h1>
+  <p id="search-query-display"
+    style="color: #64748b; font-size: 1rem; margin-bottom: 32px; font-weight: 500; font-family: 'Montserrat', sans-serif;">
+  </p>
+
+  <div id="loading-search" style="color: #64748b; font-family: 'Montserrat', sans-serif;">Pesquisando no site...</div>
+  <div id="search-results" class="search-results-list" style="display: flex; flex-direction: column; gap: 20px;"></div>
+  <div id="no-results" style="display: none; color: #64748b; font-size: 1.1rem; font-family: 'Montserrat', sans-serif;">
+    Nenhum resultado encontrado.</div>
+</div>
+
+<!-- BASE DE DADOS DO HUGO EM FORMATO JSON -->
+<script id="search-data" type="application/json">
+[
+  {{ range $index, $page := .Site.RegularPages }}
+  {{ if $index }},{{ end }}
+  {
+    "title": {{ $page.Title | jsonify }},
+    "permalink": {{ $page.RelPermalink | jsonify }},
+    "description": {{ $page.Description | jsonify }},
+    "content": {{ $page.Plain | jsonify }},
+    "section": {{ $page.Section | jsonify }}
+  }
+  {{ end }}
+]
+</script>
+
+<script>
+  // Carrega e decodifica a base de dados JSON gerada pelo Hugo com tratamento de erro
+  let searchDatabase = [];
+  try {
+    const rawData = document.getElementById("search-data").textContent;
+    searchDatabase = JSON.parse(rawData);
+    console.log("Banco de dados de busca carregado com sucesso. Páginas indexadas:", searchDatabase.length);
+  } catch (error) {
+    console.error("Erro ao analisar banco de dados de busca (JSON inválido):", error);
+  }
+
+  // Função para remover acentos e normalizar o texto para a busca
+  function normalizeText(str) {
+    if (!str) return '';
+    return str
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase();
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const query = urlParams.get('q') ? urlParams.get('q').trim() : '';
+    const queryNormalized = normalizeText(query);
+
+    const resultsContainer = document.getElementById("search-results");
+    const noResults = document.getElementById("no-results");
+    const loading = document.getElementById("loading-search");
+    const queryDisplay = document.getElementById("search-query-display");
+
+    loading.style.display = "none";
+
+    if (!query) {
+      queryDisplay.textContent = "Nenhum termo pesquisado.";
+      noResults.textContent = "Digite algo na barra de busca para pesquisar no site.";
+      noResults.style.display = "block";
+      return;
+    }
+
+    queryDisplay.innerHTML = `Mostrando resultados para: <strong>"${escapeHtml(query)}"</strong>`;
+
+    // Filtrar base de dados de forma simples e rápida
+    const matches = searchDatabase.filter(page => {
+      const titleNormalized = normalizeText(page.title);
+      const descriptionNormalized = normalizeText(page.description);
+      const contentNormalized = normalizeText(page.content);
+
+      return titleNormalized.includes(queryNormalized) ||
+        descriptionNormalized.includes(queryNormalized) ||
+        contentNormalized.includes(queryNormalized);
+    });
+
+    if (matches.length === 0) {
+      noResults.style.display = "block";
+      noResults.innerHTML = `Nenhum resultado encontrado para "<strong>${escapeHtml(query)}</strong>". Tente outras palavras-chave.`;
+      return;
+    }
+
+    // Exibir resultados em formato de cards elegantes
+    matches.forEach(page => {
+      // Limpa qualquer aspa literal (como %22) que possa vir no permalink
+      const cleanPermalink = page.permalink.replace(/^["']|["']$/g, "");
+      console.log(`Resultado encontrado: "${page.title}" -> link: "${cleanPermalink}"`);
+
+      // Criar o card como um link HTML nativo <a> para navegação robusta
+      const card = document.createElement("a");
+      card.href = cleanPermalink;
+      card.className = "search-result-card";
+      card.style.cssText = `
+        display: block;
+        text-decoration: none;
+        background: #ffffff;
+        border: 1px solid rgba(23, 54, 87, 0.06);
+        border-radius: 16px;
+        padding: 24px;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+        font-family: 'Montserrat', sans-serif;
+        cursor: pointer;
+      `;
+
+      // Efeito hover moderno
+      card.addEventListener("mouseenter", () => {
+        card.style.transform = "translateY(-3px)";
+        card.style.boxShadow = "0 8px 20px rgba(23, 54, 87, 0.06)";
+        card.style.borderColor = "rgba(43, 184, 252, 0.15)";
+      });
+      card.addEventListener("mouseleave", () => {
+        card.style.transform = "translateY(0)";
+        card.style.boxShadow = "0 4px 6px -1px rgba(0, 0, 0, 0.02)";
+        card.style.borderColor = "rgba(23, 54, 87, 0.06)";
+      });
+
+      let sectionName = "Página";
+      if (page.section === "blog") {
+        sectionName = "Post do Blog";
+      } else if (page.section === "cursos") {
+        sectionName = "Curso";
+      } else if (page.section === "cronograma") {
+        sectionName = "Agenda / Cronograma";
+      }
+
+      const sectionLabel = `<span style="font-size: 0.8rem; font-weight: 700; color: #2bb8fc; text-transform: uppercase; display: block; margin-bottom: 6px; letter-spacing: 0.02em;">${sectionName}</span>`;
+
+      card.innerHTML = `
+        ${sectionLabel}
+        <h2 style="margin: 0 0 8px 0; font-size: 1.3rem; font-weight: 700; line-height: 1.35; color: #173657; transition: color 0.25s ease;">
+          ${page.title}
+        </h2>
+        <p style="margin: 0; font-size: 0.95rem; color: #475569; line-height: 1.45;">${page.description || page.content.substring(0, 150) + '...'}</p>
+      `;
+
+      // Cor de hover do título interna
+      const titleEl = card.querySelector("h2");
+      card.addEventListener("mouseenter", () => titleEl.style.color = "#fe55bd");
+      card.addEventListener("mouseleave", () => titleEl.style.color = "#173657");
+
+      resultsContainer.appendChild(card);
+    });
+  });
+
+  // Função para higienizar strings contra XSS
+  function escapeHtml(text) {
+    return text
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#039;");
+  }
+</script>
+{{ end }}

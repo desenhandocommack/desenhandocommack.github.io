@@ -22,138 +22,260 @@ body {
 
 /* MENU PRINCIPAL */
 .main-nav {
-  background-color: var(--color-menu); /* usa variável para tema claro/escuro */
-  padding: 0.5rem 2rem; /* espaço interno da nav, primeiro vertical e depois o horizontal */
+  position: sticky;
+  top: 0;
+  background: linear-gradient(to right, rgba(240, 249, 255, 0.85), rgba(255, 240, 250, 0.85));
+  /* Degradê translúcido alinhado com o rodapé */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(23, 54, 87, 0.08);
+  padding: 0.75rem 2rem;
+  /* espaço interno da nav */
+  z-index: 1000;
+  transition: all 0.3s ease;
 }
 
 /* ITEM DO MENU PRINCIPAL */
 .main-nav .container-nav {
-  max-width: 1400px; /* define largura máxima */
-  display: flex; /* Flex container aqui */
-  justify-content: space-between; /* Distribui itens horizontalmente */
-  align-items: center; /* Alinha verticalmente */
-  margin: 0 auto; /* centraliza horizontalmente */
-  padding: 0 1rem; /* garante espaço nas laterais em telas pequenas */
-  background-color: var(--color-menu); /* garante consistência do menu */
+  max-width: 1400px;
+  /* define largura máxima */
+  display: flex;
+  /* Flex container aqui */
+  justify-content: space-between;
+  /* Distribui itens horizontalmente */
+  align-items: center;
+  /* Alinha verticalmente */
+  margin: 0 auto;
+  /* centraliza horizontalmente */
+  padding: 0 1rem;
+  /* garante espaço nas laterais em telas pequenas */
+  background: transparent;
+  /* Consistente com nav translúcida */
 }
 
 /* MENU LINKS PRINCIPAIS */
 .main-nav .menu {
-  list-style: none; /* remove bolinhas da lista <ul> */
-  display: flex; /* coloca os <li> em linha horizontal */
-  gap: 2.5rem; /* cria espaçamento entre os links */
+  list-style: none;
+  /* remove bolinhas */
+  display: flex;
+  /* horizontal */
+  align-items: center;
+  gap: 1.5rem;
+  /* espaçamento moderno entre os links */
 }
 
 .main-nav .menu a {
   text-decoration: none;
-  color: var(--color-text); /* usa variável para tema */
+  color: var(--color-text);
   font-family: "Montserrat", sans-serif;
-  font-weight: 500; /* Medium */
+  font-weight: 600;
+  /* ligeiramente mais espesso */
+  font-size: 0.95rem;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  /* pastilha */
   display: flex;
   height: 100%;
   align-items: center;
+  transition: all 0.25s ease;
 }
 
 .main-nav .menu a:hover {
-  color: var(--color-accent); /* destaque permanece rosa */
+  color: var(--color-accent);
+  background-color: rgba(234, 73, 139, 0.06);
+  /* pill sutil rosa */
+}
+
+.main-nav .menu a.active {
+  color: #ffffff !important;
+  background: linear-gradient(135deg, #2bb8fc, #fe55bd);
+  /* gradiente do design */
+  box-shadow: 0 4px 10px rgba(43, 184, 252, 0.2);
 }
 
 .main-nav .nav-right {
   display: flex;
   align-items: center;
-  gap: 2.5rem; /* espaço entre menu, busca e ícones */
+  gap: 2rem;
+  /* espaço entre menu, busca e ícones */
 }
 
 /* ÍCONES DO MENU */
-
 .main-nav .material-symbols-rounded {
   cursor: pointer;
   color: var(--color-accent);
 }
 
-.nav-icons {
+.nav-actions {
   display: flex;
-  gap: 1.5rem;
+  gap: 1.25rem;
   align-items: center;
 }
 
-.nav-icons button {
-  background: none; /* remove fundo do botão */
-  color: var(--color-accent); /* mantém destaque rosa */
-  border: none; /* remove borda */
-}
-
-.nav-icons button .material-symbols-rounded {
-  font-size: 25px; /* tamanho do ícone */
-  transition: color 0.3s;
-}
-
-.nav-icons button:hover .material-symbols-rounded {
-  color: var(--color-accent); /* usa variável para tema *       /* cor ao passar o mouse */
-  transform: scale(1.1); /* aumenta levemente o ícone ao passar o mouse */
-}
-
-.nav-icons .botao-doar {
-  transition: transform 0.3s ease;
-}
-
-.nav-icons .botao-doar :hover {
-  color: var(--color-accent); /* usa variável para tema *  /* cor ao passar o mouse do botão doar */
-  transform: scale(1.1); /* aumenta levemente o ícone ao passar o mouse */
-}
-
-/* CAIXA DE BUSCA */
-
-/* Estilo básico da caixa de busca */
-/* 🔎 Caixa de busca que expande ao clicar */
-.search {
-  display: flex;
+/* Botão Doar CTA Moderno */
+.nav-actions .botao-doar {
+  display: inline-flex;
   align-items: center;
-  background-color: var(--color-menu);
-  border: 1px solid var(--color-accent);
-  border-radius: 2rem;
-  overflow: hidden;
-  width: 40px; /* começa só do tamanho do botão */
-  transition: width 0.3s ease;
+  gap: 8px;
+  text-decoration: none;
+  color: #ffffff !important;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  background: linear-gradient(135deg, #fe55bd, #2bb8fc);
+  /* gradiente invertido para destaque */
+  padding: 0.5rem 1.2rem;
+  border-radius: 9999px;
+  box-shadow: 0 4px 12px rgba(254, 85, 189, 0.25);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.search input {
-  border: none;
-  background: transparent;
-  outline: none;
-  color: var(--color-text);
-  font-size: 1rem;
-  padding: 0.3rem;
-  width: 0; /* começa fechado */
-  opacity: 0; /* invisível */
-  transition: width 0.3s ease, opacity 0.3s ease;
+.nav-actions .botao-doar .material-symbols-rounded {
+  color: #ffffff;
+  font-size: 18px;
 }
 
-.search.expanded {
-  width: 200px; /* quando expandida */
-  padding: 0.3rem 0.8rem; /* padding só quando expandida */
+.nav-actions .botao-doar:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(254, 85, 189, 0.35);
 }
 
-.search.expanded input {
-  width: 100%; /* ocupa o espaço liberado */
-  opacity: 1; /* aparece */
+.nav-actions .botao-doar:active {
+  transform: translateY(1px);
 }
 
-.search button {
+/* Botão Hamburguer Animado */
+.menu-toggle {
+  display: none;
+  /* oculto por padrão (desktop) */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
   background: none;
   border: none;
   cursor: pointer;
-  color: var(--color-accent);
-  flex-shrink: 0; /* não deixa o botão sumir */
+  padding: 0;
+  z-index: 1001;
+}
+
+.hamburger-bar {
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-text);
+  /* Mudar de rosa para o azul escuro da marca para dar contraste */
+  border-radius: 4px;
+  transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
+}
+
+/* Animação do hamburguer para X */
+.menu-toggle.open .hamburger-bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle.open .hamburger-bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.open .hamburger-bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* CAIXA DE BUSCA */
+.search {
+  display: flex;
+  align-items: center;
+  background-color: rgba(23, 54, 87, 0.05);
+  border: 1px solid rgba(23, 54, 87, 0.08);
+  border-radius: 9999px;
+  /* pastilha */
+  overflow: hidden;
+  width: 44px;
+  /* tamanho do botão de busca fechado */
+  height: 44px;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.search:hover {
+  border-color: rgba(254, 85, 189, 0.2);
+  background-color: rgba(254, 85, 189, 0.04);
+}
+
+.search.expanded {
+  width: 220px;
+  /* mais larga e moderna */
+  background-color: #ffffff;
+  border: 1px solid transparent;
+  background-image: linear-gradient(#ffffff, #ffffff), linear-gradient(135deg, #fe55bd, #2bb8fc);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  box-shadow: 0 4px 14px rgba(254, 85, 189, 0.15);
+  justify-content: space-between;
+  padding: 0 6px 0 14px;
+}
+
+.search input {
+  width: 0;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  /* invisível */
+  transition: width 0.3s ease, opacity 0.2s ease;
+}
+
+.search.expanded input {
+  width: 140px;
+  padding-left: 8px;
+}
+
+.search button {
+  background: linear-gradient(135deg, #fe55bd, #2bb8fc);
+  /* botão gradiente */
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(254, 85, 189, 0.2);
+  transition: transform 0.2s;
+  flex-shrink: 0;
+}
+
+.search button:hover {
+  transform: scale(1.05);
+}
+
+.search button span {
+  font-size: 18px;
+  color: #ffffff !important;
+  /* ícone branco no botão gradiente */
+  transition: transform 0.3s ease;
+}
+
+.search.expanded button span {
+  transform: rotate(90deg);
+  /* rotação moderna ao abrir */
 }
 
 /* MAIN DA PÁGINA INICIAL */
 
 .slides-container {
-  min-height: 100vh; /* ocupa toda a tela vh = viewport height (altura da janela de visualização) */
+  min-height: 100vh;
+  /* ocupa toda a tela vh = viewport height (altura da janela de visualização) */
   background: linear-gradient(to bottom, #349eff, #34d0ff);
-  display: flex; /* flex para alinhar o conteúdo interno */
-  align-items: center; /* centraliza verticalmente */
+  display: flex;
+  /* flex para alinhar o conteúdo interno */
+  align-items: center;
+  /* centraliza verticalmente */
 }
 
 /* CONTAINER INTERNO PARA CENTRALIZAR E LIMITAR LARGURA */
@@ -187,9 +309,11 @@ body {
 .nome-do-curso-krita2 {
   color: #ffffff;
   font-size: 3rem;
-  display: block; /* cada span ocupa uma linha */
+  display: block;
+  /* cada span ocupa uma linha */
   padding-bottom: 1rem;
-  margin-top: -1.5rem; /* puxa o texto para cima */
+  margin-top: -1.5rem;
+  /* puxa o texto para cima */
 }
 
 /*BOTÃO DO SLIDE */
@@ -197,19 +321,23 @@ body {
 .slides-btn {
   /* estilo dos botões dos slides */
   background-color: #fff751;
-  display: inline-flex; /*o container se comporta como inline (ocupa só o espaço necessário*/
-  gap: 1rem; /* espaço entre ícone e texto */
+  display: inline-flex;
+  /*o container se comporta como inline (ocupa só o espaço necessário*/
+  gap: 1rem;
+  /* espaço entre ícone e texto */
   margin-top: 1.5rem;
   padding: 1rem 2.5rem;
   color: #173657;
   text-decoration: none;
   align-items: center;
   font-weight: 700;
-  transition: transform 0.3s ease; /* 👈 tempo + suavidade do efeito */
+  transition: transform 0.3s ease;
+  /* 👈 tempo + suavidade do efeito */
 }
 
 .slides-btn:hover {
-  transform: scale(1.05); /* 👈 aumenta 5% no hover */
+  transform: scale(1.05);
+  /* 👈 aumenta 5% no hover */
 }
 
 /* BOTÃO GLOBAL */
@@ -232,16 +360,20 @@ body {
 }
 
 .btn-wrapper {
-  display: inline-flex; /* mantém o botão alinhado à esquerda */
-  flex-direction: column; /* empilha botão e info verticalmente */
-  align-items: flex-start; /* botão à esquerda */
+  display: inline-flex;
+  /* mantém o botão alinhado à esquerda */
+  flex-direction: column;
+  /* empilha botão e info verticalmente */
+  align-items: flex-start;
+  /* botão à esquerda */
 }
 
 .slide-text .info-btn {
   font-size: 1rem;
   color: #ffffff;
   margin: 0.5rem;
-  align-self: center; /* centraliza horizontalmente em relação ao botão */
+  align-self: center;
+  /* centraliza horizontalmente em relação ao botão */
   font-style: italic;
   font-weight: 400;
 }
@@ -253,55 +385,71 @@ body {
 }
 
 .slide-image img {
-  max-width: 100%; /* imagem nunca maior que o container */
-  height: auto; /* mantém proporção */
-  display: block; /* evita espaços brancos indesejados */
+  max-width: 100%;
+  /* imagem nunca maior que o container */
+  height: auto;
+  /* mantém proporção */
+  display: block;
+  /* evita espaços brancos indesejados */
 }
 
 .slide-image:hover {
-  transform: scale(1.04); /* aumenta levemente o ícone ao passar o mouse */
+  transform: scale(1.04);
+  /* aumenta levemente o ícone ao passar o mouse */
 }
 
 /* SEÇÃO PLAYLISTS YOUTUBE*/
 
 .playlists-yt {
-  min-height: 100vh; /* altura mínima ocupa a tela inteira */
+  min-height: 100vh;
+  /* altura mínima ocupa a tela inteira */
   background-color: #f6f4f1;
   text-align: center;
-  background-color: var(--color-bg); /* usar a variável correta */
+  background-color: var(--color-bg);
+  /* usar a variável correta */
   color: var(--color-text);
   padding-bottom: 4rem;
 }
 
 .playlists-yt .container {
-  padding-left: 8rem; /* espaço da borda esquerda */
-  padding-right: 8rem; /* espaço da borda direita */
-  padding-top: 12vh; /* afasta do topo */
+  padding-left: 8rem;
+  /* espaço da borda esquerda */
+  padding-right: 8rem;
+  /* espaço da borda direita */
+  padding-top: 12vh;
+  /* afasta do topo */
 }
 
 /* TÍTULO E DESCRIÇÃO DA SEÇÃO PLAYLISTS YOUTUBE*/
 
 .playlists-yt h1 {
-  color: var(--color-accent); /* mantém o destaque rosa se desejar */
+  color: var(--color-accent);
+  /* mantém o destaque rosa se desejar */
   font-size: 2.5rem;
-  padding: 2rem 0 0.3rem; /* espaço acima e abaixo */
-  font-weight: 700; /* peso da fonte (negrito) */
+  padding: 2rem 0 0.3rem;
+  /* espaço acima e abaixo */
+  font-weight: 700;
+  /* peso da fonte (negrito) */
 }
 
 .playlists-yt p {
   color: var(--color-text);
   font-size: 19px;
-  font-weight: 500; /* fonte seminegrito */
+  font-weight: 500;
+  /* fonte seminegrito */
 }
 
 /* GRID DOS CARDS */
 
 .playlist-grid {
-  display: grid; /* transforma o container em grid */
+  display: grid;
+  /* transforma o container em grid */
   grid-template-columns: repeat(auto-fit, minmax(280px, 426px));
-  gap: 3rem; /*gap: 2rem → espaço horizontal e vertical entre os cards.*/
+  gap: 3rem;
+  /*gap: 2rem → espaço horizontal e vertical entre os cards.*/
   justify-content: center;
-  margin-top: 7rem; /* 👈 afasta os cards do título/descrição */
+  margin-top: 7rem;
+  /* 👈 afasta os cards do título/descrição */
 }
 
 /*repeat(...) → cria várias colunas de acordo com o espaço disponível.*/
@@ -309,11 +457,13 @@ body {
 /*minmax(280px, 1fr) → cada card vai ter no mínimo 280px de largura, mas pode crescer até ocupar uma fração (1fr) do espaço disponível.*/
 
 .playlist-card img {
-  transition: transform 0.3s ease; /* 👈 tempo + suavidade do efeito */
+  transition: transform 0.3s ease;
+  /* 👈 tempo + suavidade do efeito */
 }
 
 .playlist-card:hover img {
-  transform: scale(1.05); /* 👈 aumenta 5% no hover */
+  transform: scale(1.05);
+  /* 👈 aumenta 5% no hover */
 }
 
 .playlist-card h2 {
@@ -330,37 +480,50 @@ body {
 }
 
 /* RODAPÉ GERAL */
-
 .main-footer {
-  background-color: #ea498b;
-  color: #ffffff;
+  background: linear-gradient(135deg, #f0f9ff, #fff0fa);
+  /* Degradê azul suave para rosa suave */
+  color: #173657;
+  /* Azul escuro da marca */
+  border-top: 3px solid;
+  border-image: linear-gradient(to right, #2bb8fc, #fe55bd) 1;
+  /* Borda gradiente com as cores da agenda */
 }
 
 /* CONTAINER PRINCIPAL DO RODAPÉ */
-
 .container-footer {
   display: flex;
-  align-items: center; /* centraliza verticalmente */
+  align-items: center;
+  /* centraliza verticalmente */
   justify-content: space-between;
   max-width: 1400px;
-  margin: 0 auto; /* centraliza horizontalmente */
-  padding: 1.5rem 1.5rem; /* garante espaço nas laterais em telas pequenas */
-  box-sizing: border-box; /* inclui padding dentro da largura total do container */
+  margin: 0 auto;
+  /* centraliza horizontalmente */
+  padding: 1.8rem 1.5rem;
+  /* garante espaço nas laterais em telas pequenas */
+  box-sizing: border-box;
+  /* inclui padding dentro da largura total do container */
 }
 
 /* TEXTO DO COPYRIGHT */
-
 .footer-text {
-  margin: 0; /* remove margens padrão do <p> */
-  /*text-align: center;*/ /* centraliza o texto horizontalmente */
-  /*flex: 1;*/ /* ocupa o espaço restante do container, ajudando a centralizar */
+  margin: 0;
+  /* remove margens padrão do <p> */
+  font-size: 0.85rem;
+  font-weight: 600;
+  /* ligeiramente mais nítido */
+  color: var(--color-text);
+  opacity: 0.75;
+  letter-spacing: 0.02em;
 }
 
 /* CONTAINER DOS ÍCONES DAS REDES SOCIAIS DO RODAPÉ */
-
 .footer-icons {
-  display: flex; /* alinha os ícones horizontalmente */
-  gap: 1.5rem; /* espaçamento de 1rem entre cada ícone */
+  display: flex;
+  /* alinha os ícones horizontalmente */
+  gap: 1rem;
+  /* espaçamento de 1rem entre cada ícone */
+  align-items: center;
 }
 
 /*ESTILO DOS BOTÕES DE ATALHOS DE TECLADO*/
@@ -373,60 +536,107 @@ kbd {
   color: #000;
 }
 
-/* ESTILO DAS IMAGENS DOS ÍCONES */
-
-.footer-icons a img {
-  width: 28px;
-  height: 28px;
-  transition: transform 0.3s ease;
+/* BOTOES DAS REDES SOCIAIS */
+.footer-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 1px solid rgba(23, 54, 87, 0.1);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* EFEITO AO PASSAR O MOUSE EM CIMA DOS ÍCONES */
+/* ESTILO DAS IMAGENS DOS ÍCONES */
+.footer-icons a img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  transition: transform 0.25s ease;
+}
+
+/* EFEITO AO PASSAR O MOUSE EM CIMA DOS ÍCONES (ESPECÍFICO DE ACORDO COM A REDE SOCIAL) */
+.footer-icons a[aria-label="Instagram"]:hover {
+  border-color: #fe55bd;
+  /* Rosa da agenda */
+  box-shadow: 0 6px 16px rgba(254, 85, 189, 0.15);
+  transform: translateY(-3px);
+}
+
+.footer-icons a[aria-label="YouTube"]:hover {
+  border-color: #ef4444;
+  /* Vermelho do YouTube */
+  box-shadow: 0 6px 16px rgba(239, 68, 68, 0.15);
+  transform: translateY(-3px);
+}
+
+.footer-icons a[aria-label="Twitch"]:hover {
+  border-color: #a855f7;
+  /* Roxo da Twitch */
+  box-shadow: 0 6px 16px rgba(168, 85, 247, 0.15);
+  transform: translateY(-3px);
+}
+
+.footer-icons a[aria-label="TikTok"]:hover {
+  border-color: #000000;
+  /* Preto do TikTok */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  transform: translateY(-3px);
+}
 
 .footer-icons a:hover img {
-  transform: scale(1.5); /* aumenta levemente o ícone ao passar o mouse */
+  transform: scale(1.12);
 }
 
-/* Botão hambúrguer só aparece no mobile */
-.menu-toggle {
-  display: none; /* escondido por padrão */
-  background: none;
-  border: none;
-  font-size: 32px;
-  cursor: pointer;
-  color: var(--color-accent);
-}
+
 
 /*========= MOBILE =========*/
 
-/* Botão hamburguer sempre visível */
+/* Botão hamburguer sempre visível no mobile */
 @media (max-width: 768px) {
   .menu-toggle {
-    display: block;
-    background: none;
-    border: none;
-    font-size: 32px;
-    cursor: pointer;
-    color: var(--color-accent);
-    z-index: 1001;
+    display: flex;
+  }
+
+  .botao-doar-text {
+    display: none;
+    /* no mobile esconde o texto 'Apoiar' e fica só o ícone para economizar espaço */
+  }
+
+  .nav-actions .botao-doar {
+    padding: 0.5rem;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    justify-content: center;
   }
 
   /* MENU FULLSCREEN AO CLICAR - MOBILE */
   .main-nav .menu {
-    position: fixed; /* fica fixo na tela inteira */
+    position: fixed;
+    /* fica fixo na tela inteira */
     top: 0;
     left: 0;
     width: 100%;
-    height: 100dvh; /* ocupa só o espaço disponível real */
+    height: 100dvh;
+    /* ocupa só o espaço disponível real */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--color-menu);
+    background-color: rgba(246, 244, 241, 0.98);
+    /* fundo translúcido no mobile */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     gap: 2rem;
-    opacity: 0; /* invisível por padrão */
-    pointer-events: none; /* não clicável por padrão */
-    transition: opacity 0.3s ease;
+    opacity: 0;
+    /* invisível por padrão */
+    pointer-events: none;
+    /* não clicável por padrão */
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+    transform: translateY(-20px);
     z-index: 1000;
   }
 
@@ -436,17 +646,31 @@ kbd {
     width: 100%;
   }
 
-  /* Caixa de busca dentro do menu */
-  .main-nav .menu .search-box {
-    width: 80%;
-    max-width: 300px;
-    margin: 1rem auto; /* centraliza */
+  /* Ajuste da caixa de busca para mobile */
+  .main-nav .menu .search {
+    width: 240px !important;
+    /* Sempre aberta no mobile */
+    height: 42px;
+    background-color: #ffffff;
+    border-color: rgba(23, 54, 87, 0.15);
+    padding: 0 14px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+    justify-content: space-between;
+    margin: 1rem auto 0 auto;
+    /* centraliza */
+  }
+
+  .main-nav .menu .search input {
+    width: 180px !important;
+    padding-left: 8px;
+    font-size: 0.95rem;
   }
 
   /* Menu ativo */
   .main-nav .menu.active {
     opacity: 1;
     pointer-events: auto;
+    transform: translateY(0);
   }
 
   /* Links maiores para o menu fullscreen */
@@ -537,20 +761,24 @@ kbd {
 /* MOBILE PEQUENO (até 576px) */
 @media (max-width: 576px) {
   .menu-toggle {
-    display: block;
+    display: flex;
   }
 
   .main-nav {
-    padding: 0.8rem 0.6rem; /* espaço interno da nav, primeiro vertical e depois o horizontal */
+    padding: 0.8rem 0.6rem;
+    /* espaço interno da nav, primeiro vertical e depois o horizontal */
   }
 
   .slides-container {
-    min-height: auto; /* deixa altura se adaptar */
-    padding: 6rem 1rem; /* controla o espaço total do slide */
+    min-height: auto;
+    /* deixa altura se adaptar */
+    padding: 6rem 1rem;
+    /* controla o espaço total do slide */
   }
 
   .slide-text {
-    margin: 0 0 1.5rem 0; /* apenas espaço abaixo do texto */
+    margin: 0 0 1.5rem 0;
+    /* apenas espaço abaixo do texto */
   }
 
   .nome-do-curso-krita {
@@ -559,7 +787,8 @@ kbd {
 
   .nome-do-curso-krita2 {
     font-size: 2rem;
-    margin-top: -1rem; /* puxa o texto para cima */
+    margin-top: -1rem;
+    /* puxa o texto para cima */
   }
 
   .footer-text {
@@ -572,7 +801,7 @@ kbd {
 /* MOBILE PEQUENO (até 375px) */
 @media (max-width: 375px) {
   .menu-toggle {
-    display: block;
+    display: flex;
   }
 
   .footer-text {

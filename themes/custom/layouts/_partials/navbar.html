@@ -8,44 +8,42 @@
     <div class="nav-right">
       <!-- LINKS PRINCIPAIS-->
       <ul class="menu">
-        <li><a href="/">Início</a></li>
-        <li><a href="/blog/">Blog</a></li>
-        <li>
-          <a href="/cursos/"> Cursos </a>
-        </li> 
-        <li>
-          <a href="/cronograma/"> Cronograma </a>
-        </li>
+        <li><a href="/" class="nav-link">Início</a></li>
+        <li><a href="/blog/" class="nav-link">Blog</a></li>
+        <li><a href="/cursos/" class="nav-link">Cursos</a></li>
+        <li><a href="/cronograma/" class="nav-link">Cronograma</a></li>
 
         <li>
           <!-- CAIXA DE BUSCA-->
           <form class="search" action="/buscar" method="get">
-            <input type="text" name="q" placeholder="Buscar..." />
-            <button type="submit">
+            <input type="text" name="q" placeholder="Buscar..." aria-label="Buscar" />
+            <button type="submit" aria-label="Pesquisar">
               <span class="material-symbols-rounded">search</span>
             </button>
           </form>
         </li>
       </ul>
 
-      <!-- ÍCONES DO MENU-->
-      <div class="nav-icons">
+      <!-- ÍCONES E AÇÕES DO MENU-->
+      <div class="nav-actions">
         {{ with .Site.Params.donationLink }}
-        <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="botao-doar" aria-label="Doar">
-          <span class="material-symbols-rounded">savings</span>
+        <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="botao-doar" aria-label="Apoiar">
+          <span class="material-symbols-rounded">volunteer_activism</span>
+          <span class="botao-doar-text">Apoiar</span>
         </a>
         {{ end }}
 
-    
-      <!-- BOTÃO HAMBÚRGUER (visível só no mobile) -->
-      <button class="menu-toggle" aria-label="Abrir menu">
-        <span class="material-symbols-rounded">menu</span>
-      </button>
+        <!-- BOTÃO HAMBÚRGUER (visível só no mobile) -->
+        <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
     </div>
   </div>
 
   <script>
-
     // SCRIPT PARA CAIXA DE BUSCA
     const searchForm = document.querySelector(".search");
     const searchButton = searchForm.querySelector("button");
@@ -63,19 +61,34 @@
     // Fecha ao clicar fora
     document.addEventListener("click", (e) => {
       if (!searchForm.contains(e.target)) {
-        // se o clique não estiver na busca
         searchForm.classList.remove("expanded");
       }
     });
 
-    // SCRIPT DO MENU HAMBURGUER
+    // SCRIPT DO MENU HAMBURGUER ANIMADO
     const menuToggle = document.querySelector(".menu-toggle");
     const menu = document.querySelector(".main-nav .menu");
     const mainNav = document.querySelector(".main-nav");
 
     menuToggle.addEventListener("click", () => {
+      const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
+      menuToggle.setAttribute("aria-expanded", !isExpanded);
+      menuToggle.classList.toggle("open");
       menu.classList.toggle("active");
       mainNav.classList.toggle("fixed");
+    });
+
+    // MARCAR LINK ATIVO
+    document.addEventListener("DOMContentLoaded", () => {
+      const currentPath = window.location.pathname;
+      const navLinks = document.querySelectorAll(".nav-link");
+
+      navLinks.forEach(link => {
+        const linkPath = link.getAttribute("href");
+        if (currentPath === linkPath || (linkPath !== "/" && currentPath.startsWith(linkPath))) {
+          link.classList.add("active");
+        }
+      });
     });
   </script>
 </nav>

@@ -51,13 +51,16 @@
   ::-webkit-scrollbar {
     width: 6px;
   }
+
   ::-webkit-scrollbar-track {
     background: rgba(241, 245, 249, 0.8);
   }
+
   ::-webkit-scrollbar-thumb {
     background: rgba(43, 184, 252, 0.4);
     border-radius: 3px;
   }
+
   ::-webkit-scrollbar-thumb:hover {
     background: rgba(43, 184, 252, 0.6);
   }
@@ -73,11 +76,56 @@
   /* ============ Layout geral ============ */
   .container {
     width: 100%;
-    max-width: 28rem; /* max-w-md */
+    max-width: 1200px;
+    /* Expandido de 38rem (~600px) para 1200px para excelente aproveitamento no desktop */
     margin: 0 auto;
   }
-  .container > * + * {
-    margin-top: 16px; /* space-y-4 */
+
+  /* Ajustes para cards largos ocupando toda a largura no Desktop */
+  @media (min-width: 768px) {
+    .container {
+      width: 100% !important;
+      max-width: 900px !important;
+    }
+
+    .live-hoje-card {
+      aspect-ratio: 21 / 9 !important;
+      /* Visual cinematográfico ultra-largo */
+      max-height: 380px;
+    }
+
+    .proxima-thumb,
+    .historico-thumb {
+      width: 260px !important;
+      /* Thumbnail maior para equilibrar o card esticado */
+    }
+
+    .proxima-title,
+    .historico-title {
+      font-size: 18px !important;
+      /* Títulos maiores e mais legíveis */
+    }
+
+    .proxima-card,
+    .historico-card {
+      width: 100% !important;
+      /* Garante que ambos fiquem exatamente com a mesma largura */
+      padding: 20px !important;
+      /* Mais espaçamento interno */
+      gap: 24px !important;
+    }
+  }
+
+  @media (min-width: 900px) {
+    .container {
+      width: 900px !important;
+      /* Força a largura exata de 900px em telas grandes para evitar oscilação de abas */
+    }
+  }
+
+  .container>*+* {
+    margin-top: 16px;
+    /* space-y-4 */
   }
 
   /* ============ Header ============ */
@@ -101,6 +149,7 @@
     height: 12px;
     width: 12px;
   }
+
   .ping-dot-ping {
     animation: ping 1.4s cubic-bezier(0, 0, 0.2, 1) infinite;
     position: absolute;
@@ -111,6 +160,7 @@
     background-color: var(--brand-pink);
     opacity: 0.75;
   }
+
   .ping-dot-solid {
     position: relative;
     display: inline-flex;
@@ -119,7 +169,9 @@
     width: 12px;
     background-color: var(--brand-pink);
   }
+
   @keyframes ping {
+
     75%,
     100% {
       transform: scale(2);
@@ -182,14 +234,17 @@
     transition: all 0.15s ease;
     font-family: inherit;
   }
+
   .tab-btn:hover {
     color: #334155;
   }
+
   .tab-btn.active {
     background: linear-gradient(to right, var(--brand-blue), var(--brand-pink), var(--brand-pink));
     color: #ffffff;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   }
+
   .tab-btn.active:hover {
     color: #ffffff;
   }
@@ -203,6 +258,7 @@
     justify-content: center;
     gap: 12px;
   }
+
   .spinner {
     width: 32px;
     height: 32px;
@@ -211,16 +267,19 @@
     border-radius: 9999px;
     animation: spin 0.7s linear infinite;
   }
+
   @keyframes spin {
     to {
       transform: rotate(360deg);
     }
   }
+
   .loading-text {
     font-size: 12px;
     color: var(--slate-500);
     margin: 0;
   }
+
   .error-text {
     font-size: 12px;
     color: #f43f5e;
@@ -236,10 +295,12 @@
   .tab-content {
     margin-top: 16px;
   }
+
   .tab-content.hidden {
     display: none;
   }
-  .tab-content > * + * {
+
+  .tab-content>*+* {
     margin-top: 16px;
   }
 
@@ -253,7 +314,7 @@
     margin: 0 0 8px 0;
   }
 
-  .list-stack > * + * {
+  .list-stack>*+* {
     margin-top: 8px;
   }
 
@@ -274,40 +335,48 @@
     font-weight: 700;
     white-space: nowrap;
   }
+
   .badge-category.overlay {
     font-size: 9px;
     font-weight: 800;
   }
+
   .badge-cat-desenho {
     background-color: rgba(254, 85, 189, 0.1);
     color: var(--brand-pink-dark);
     border: 1px solid rgba(254, 85, 189, 0.2);
   }
+
   .badge-cat-desenho.overlay {
     background-color: var(--brand-pink);
     color: #ffffff;
     border: 1px solid rgba(254, 85, 189, 0.2);
   }
+
   .badge-cat-jogo {
     background-color: rgba(43, 184, 252, 0.1);
     color: var(--brand-blue-dark);
     border: 1px solid rgba(43, 184, 252, 0.2);
   }
+
   .badge-cat-jogo.overlay {
     background-color: var(--brand-blue);
     color: #ffffff;
     border: 1px solid rgba(43, 184, 252, 0.2);
   }
+
   .badge-cat-papo {
     background-color: rgba(246, 230, 95, 0.15);
     color: var(--brand-yellow-dark);
     border: 1px solid rgba(246, 230, 95, 0.3);
   }
+
   .badge-cat-papo.overlay {
     background-color: var(--brand-yellow);
     color: #0f172a;
     border: 1px solid rgba(246, 230, 95, 0.25);
   }
+
   .badge-cat-default {
     background-color: var(--slate-100);
     color: #475569;
@@ -325,9 +394,11 @@
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     transition: border-color 0.3s;
   }
+
   .live-hoje-card:hover {
     border-color: rgba(254, 85, 189, 0.65);
   }
+
   .live-hoje-card img {
     width: 100%;
     height: 100%;
@@ -337,14 +408,17 @@
     opacity: 0.85;
     transition: transform 0.5s;
   }
+
   .live-hoje-card:hover img {
     transform: scale(1.05);
   }
+
   .live-hoje-overlay {
     position: absolute;
     inset: 0;
     background: linear-gradient(to top, var(--slate-950), rgba(2, 6, 23, 0.65), transparent);
   }
+
   .live-hoje-content {
     position: absolute;
     left: 0;
@@ -355,6 +429,7 @@
     flex-direction: column;
     justify-content: flex-end;
   }
+
   .live-hoje-badges-row {
     display: flex;
     flex-wrap: wrap;
@@ -362,6 +437,7 @@
     gap: 8px;
     margin-bottom: 6px;
   }
+
   .badge-ao-vivo {
     display: inline-flex;
     align-items: center;
@@ -375,21 +451,26 @@
     border: 1px solid rgba(254, 85, 189, 0.2);
     animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
+
   @keyframes pulse {
+
     0%,
     100% {
       opacity: 1;
     }
+
     50% {
       opacity: 0.5;
     }
   }
+
   .badge-ao-vivo-dot {
     height: 6px;
     width: 6px;
     border-radius: 9999px;
     background-color: #ffffff;
   }
+
   .live-hoje-title {
     font-size: 16px;
     font-weight: 800;
@@ -402,9 +483,11 @@
     white-space: nowrap;
     transition: color 0.2s;
   }
+
   .live-hoje-card:hover .live-hoje-title {
     color: var(--brand-pink);
   }
+
   .live-hoje-bottom-row {
     margin-top: 8px;
     display: flex;
@@ -412,6 +495,7 @@
     justify-content: space-between;
     gap: 16px;
   }
+
   .live-hoje-date {
     font-size: 10px;
     color: #e2e8f0;
@@ -419,11 +503,13 @@
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
     margin: 0;
   }
+
   .live-hoje-utc {
     font-size: 9px;
     color: #cbd5e1;
     font-weight: 700;
   }
+
   .btn-assistir {
     display: inline-flex;
     align-items: center;
@@ -441,12 +527,15 @@
       transform 0.15s;
     flex-shrink: 0;
   }
+
   .btn-assistir:hover {
     background-color: var(--brand-pink-dark);
   }
+
   .btn-assistir:active {
     transform: scale(0.95);
   }
+
   .icon-sm {
     width: 12px;
     height: 12px;
@@ -455,22 +544,24 @@
   /* ============ Card: Próximas Lives ============ */
   .proxima-card {
     display: flex;
-    gap: 14px;
+    gap: 18px;
     background-color: #ffffff;
     border: 1px solid rgba(226, 232, 240, 0.8);
     border-radius: 12px;
-    padding: 10px;
+    padding: 14px;
     transition:
       border-color 0.2s,
       box-shadow 0.2s;
   }
+
   .proxima-card:hover {
     border-color: rgba(43, 184, 252, 0.5);
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   }
+
   .proxima-thumb {
     position: relative;
-    width: 112px;
+    width: 160px;
     aspect-ratio: 16 / 9;
     border-radius: 8px;
     overflow: hidden;
@@ -479,15 +570,18 @@
     background-color: var(--slate-100);
     border: 1px solid var(--slate-200);
   }
+
   .proxima-thumb img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s;
   }
+
   .proxima-card:hover .proxima-thumb img {
     transform: scale(1.05);
   }
+
   .proxima-platform-logo {
     position: absolute;
     bottom: 4px;
@@ -501,6 +595,7 @@
     align-items: center;
     justify-content: center;
   }
+
   .proxima-content {
     min-width: 0;
     flex: 1 1 0%;
@@ -509,38 +604,44 @@
     justify-content: space-between;
     padding: 2px 0;
   }
+
   .proxima-day-row {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     gap: 4px;
   }
+
   .proxima-day {
-    font-size: 9px;
+    font-size: 11px;
     font-weight: 800;
     letter-spacing: 0.05em;
     color: var(--brand-blue-dark);
     text-transform: uppercase;
   }
+
   .proxima-time {
-    font-size: 9px;
+    font-size: 11px;
     font-weight: 600;
     color: var(--slate-400);
   }
+
   .proxima-title {
-    font-size: 12px;
+    font-size: 15px;
     font-weight: 700;
     color: var(--slate-800);
-    line-height: 1.375;
-    margin: 2px 0 0 0;
+    line-height: 1.4;
+    margin: 4px 0 0 0;
     transition: color 0.2s;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
+
   .proxima-card:hover .proxima-title {
     color: var(--brand-blue-dark);
   }
+
   .proxima-bottom-row {
     display: flex;
     align-items: center;
@@ -548,6 +649,7 @@
     gap: 8px;
     margin-top: 4px;
   }
+
   .link-ver {
     display: inline-flex;
     align-items: center;
@@ -557,9 +659,11 @@
     color: var(--brand-blue);
     transition: color 0.2s;
   }
+
   .link-ver:hover {
     color: var(--brand-blue-dark);
   }
+
   .icon-xs {
     width: 10px;
     height: 10px;
@@ -569,9 +673,11 @@
   .historico-group {
     margin-top: 16px;
   }
-  .historico-group > * + * {
+
+  .historico-group>*+* {
     margin-top: 8px;
   }
+
   .historico-group-title {
     font-size: 12px;
     font-weight: 800;
@@ -583,19 +689,21 @@
     border-left: 2px solid var(--brand-blue);
     margin-bottom: 8px;
   }
+
   .historico-card {
     display: flex;
-    gap: 12px;
+    gap: 16px;
     background-color: #ffffff;
     border: 1px solid var(--slate-200);
     border-radius: 12px;
-    padding: 10px;
+    padding: 12px;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     margin-top: 8px;
   }
+
   .historico-thumb {
     position: relative;
-    width: 80px;
+    width: 120px;
     aspect-ratio: 16 / 9;
     border-radius: 8px;
     overflow: hidden;
@@ -603,11 +711,13 @@
     background-color: var(--slate-50);
     border: 1px solid var(--slate-200);
   }
+
   .historico-thumb img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
+
   .historico-content {
     min-width: 0;
     flex: 1 1 0%;
@@ -616,55 +726,65 @@
     justify-content: space-between;
     padding: 2px 0;
   }
+
   .historico-status-row {
     display: flex;
     align-items: center;
     gap: 6px;
     flex-wrap: wrap;
   }
+
   .historico-meta {
-    font-size: 9px;
+    font-size: 10px;
     font-weight: 700;
     color: var(--slate-400);
   }
+
   .badge-status {
-    padding: 1px 6px;
+    padding: 2px 8px;
     border-radius: 9999px;
-    font-size: 9px;
+    font-size: 10px;
     font-weight: 700;
   }
+
   .badge-status.adiada {
     background-color: rgba(245, 158, 11, 0.1);
     color: var(--amber-500);
     border: 1px solid rgba(245, 158, 11, 0.2);
   }
+
   .badge-status.realizada {
     background-color: rgba(16, 185, 129, 0.1);
     color: var(--emerald-500);
     border: 1px solid rgba(16, 185, 129, 0.2);
   }
+
   .historico-title {
-    font-size: 12px;
-    line-height: 1.375;
-    margin: 2px 0 0 0;
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 4px 0 0 0;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
   }
+
   .historico-title.realizada {
     color: var(--slate-700);
     font-weight: 700;
   }
+
   .historico-title.adiada {
     color: var(--slate-400);
     text-decoration: line-through;
   }
+
   .historico-bottom-row {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-top: 4px;
   }
+
   .historico-cat-tag {
     font-size: 9px;
     color: var(--slate-400);
@@ -678,13 +798,82 @@
   /* ============ Footer ============ */
   .footer {
     text-align: center;
-    padding-top: 8px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(226, 232, 240, 0.6);
+    margin-top: 24px !important;
   }
+
   .footer p {
-    font-size: 10px;
+    font-size: 11px;
     color: var(--slate-400);
     font-weight: 500;
-    margin: 0;
+    margin: 0 0 10px 0;
+  }
+
+  .footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+  }
+
+  .footer-social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    border: 1px solid var(--slate-200);
+    transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+  }
+
+  .footer-social-link:hover {
+    transform: translateY(-2px);
+    border-color: rgba(43, 184, 252, 0.6);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  }
+
+  .footer-social-link img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+  }
+
+  /* ============ Mobile Query ============ */
+  @media (max-width: 576px) {
+
+    .proxima-card,
+    .historico-card {
+      flex-direction: column !important;
+      /* empilha imagem em cima e texto abaixo no celular */
+      gap: 14px !important;
+      padding: 12px !important;
+    }
+
+    .proxima-thumb,
+    .historico-thumb {
+      width: 100% !important;
+      /* largura total */
+      max-width: 100% !important;
+      aspect-ratio: 16 / 9 !important;
+    }
+
+    .proxima-title,
+    .historico-title {
+      font-size: 14px !important;
+      white-space: normal !important;
+      /* permite quebra de linha em títulos longos */
+    }
+
+    .timezone-badge {
+      font-size: 9px !important;
+      padding: 3px 6px !important;
+    }
+
+    .title-main {
+      font-size: 20px !important;
+    }
   }
 </style>
 
@@ -793,7 +982,7 @@
     // Load data from agenda.json
     async function loadAgenda() {
       try {
-        const response = await fetch("agenda.json");
+        const response = await fetch("agenda.json?t=" + new Date().getTime());
         if (!response.ok) throw new Error("Não foi possível carregar os dados.");
         const data = await response.json();
 
@@ -820,7 +1009,9 @@
 
         // 1. Render Live Hoje / Destaque
         const liveHojeContainer = document.getElementById("live-hoje-container");
+        const tabAgenda = document.getElementById("tab-agenda");
         if (data.aoVivo && data.aoVivo.ativo) {
+          tabAgenda.classList.add("has-live");
           const live = data.aoVivo;
           const liveCapa = live.capa || "images/image1.png";
           liveHojeContainer.innerHTML = `
@@ -853,6 +1044,7 @@
             </div>
           `;
         } else {
+          tabAgenda.classList.remove("has-live");
           liveHojeContainer.innerHTML = "";
         }
 
@@ -928,6 +1120,9 @@
                   <!-- Cover Image Left -->
                   <div class="historico-thumb">
                     <img src="${liveCapa}" alt="Cover">
+                    <div class="proxima-platform-logo">
+                      ${logos[live.plataforma.toLowerCase()] || ""}
+                    </div>
                   </div>
 
                   <!-- Content Right -->
