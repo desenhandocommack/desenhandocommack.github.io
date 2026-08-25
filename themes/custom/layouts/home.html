@@ -47,42 +47,141 @@
     </div>
   </section>
 
-  <!-- SEÇÃO DAS PLAYLISTS DO YOUTUBE -->
-  <section class="playlists-yt">
-    <!-- agrupa todas as playlists-->
+  <!-- SEÇÃO CONTEÚDOS (Por Intenção) -->
+  <section class="conteudos-secao">
     <div class="container">
-      <h1>YouTube</h1>
-      <p>Conheça nossas playlists de vídeos no Youtube.</p>
+      <h1 class="secao-titulo">Conteúdos</h1>
+      <p class="secao-subtitulo">O que você quer fazer hoje?</p>
 
-      <div class="playlist-grid">
-        <!-- cards das playlists-->
+      <div class="conteudos-nav-wrapper">
+        <div class="conteudos-scroll-wrapper" id="conteudosScroll">
+          <div class="conteudos-scroll-container">
+            <!-- CARD: DESENHAR -->
+            <div class="conteudo-card active-hover" style="--card-glow: rgba(43, 184, 252, 0.4);">
+              <div class="card-icon">
+                <span class="material-symbols-rounded">brush</span>
+              </div>
+              <h2>Desenhar</h2>
+              <p class="card-desc">Desenhos e estilos para acompanhar e desenhar junto.</p>
+              <div class="card-links">
+                <a href="https://www.youtube.com/playlist?list=PL1K-UhVJGhmFoVF2rsvdXd7wBcm6FTZWT" target="_blank" class="card-link-item visual">
+                  <div class="card-link-image-wrapper">
+                    <img src="/images/playlist-quartoons.png" alt="Série Quartoons">
+                  </div>
+                  <div class="card-link-text-wrapper">
+                    <span class="badge video">Vídeo</span>
+                    <span class="card-link-title">Série Quartoons</span>
+                  </div>
+                </a>
+                <a href="https://www.youtube.com/playlist?list=PL1K-UhVJGhmFWv60ElVomPekRJaF79ZuP" target="_blank" class="card-link-item visual">
+                  <div class="card-link-image-wrapper">
+                    <img src="/images/playlist-chibi.png" alt="Desenhando Chibis">
+                  </div>
+                  <div class="card-link-text-wrapper">
+                    <span class="badge video">Vídeo</span>
+                    <span class="card-link-title">Desenhando Chibis</span>
+                  </div>
+                </a>
+              </div>
+            </div>
 
-        <!-- Card 1 -->
+            <!-- CARD: CRIAR -->
+            <div class="conteudo-card active-hover" style="--card-glow: rgba(254, 85, 189, 0.4);">
+              <div class="card-icon">
+                <span class="material-symbols-rounded">palette</span>
+              </div>
+              <h2>Criar</h2>
+              <p class="card-desc">Projetos, processos e coisas que estou criando.</p>
+              <div class="card-links">
+                <div class="card-link-item" style="opacity: 0.75; cursor: default;">
+                  <span class="badge projeto">Projeto</span>
+                  Em breve
+                </div>
+              </div>
+            </div>
 
-        <div class="playlist-card">
-          <a href="https://www.youtube.com/playlist?list=PL1K-UhVJGhmFoVF2rsvdXd7wBcm6FTZWT" target="_blank">
-            <img src="images/playlist1.png" alt="Capa da Playlist Série Quartoons" />
-          </a>
-          <h2>Nossa Quartoons</h2>
-          <p>Uma série para você aprender como eu desenho no estilo cartoon.</p>
+            <!-- CARD: APRENDER -->
+            <div class="conteudo-card active-hover" style="--card-glow: rgba(253, 126, 20, 0.4);">
+              <div class="card-icon">
+                <span class="material-symbols-rounded">school</span>
+              </div>
+              <h2>Aprender</h2>
+              <p class="card-desc">Tutoriais, cursos e conteúdos sobre como faço e as ferramentas que uso.</p>
+              <div class="card-links">
+                <a href="https://desenhandocommack.com.br/cursos/" target="_blank" class="card-link-item visual">
+                  <div class="card-link-image-wrapper">
+                    <img src="/images/curso-krita-para-iniciantes_aprender.png" alt="Krita para Iniciantes">
+                  </div>
+                  <div class="card-link-text-wrapper">
+                    <span class="badge post">Curso</span>
+                    <span class="card-link-title">Krita para Iniciantes</span>
+                  </div>
+                </a>
+                <a href="https://www.youtube.com/playlist?list=PL1K-UhVJGhmGw4KoLNdvqe2b70h8UEUU5" target="_blank" class="card-link-item visual">
+                  <div class="card-link-image-wrapper">
+                    <img src="/images/playlist-krita.png" alt="Tudo sobre o Krita">
+                  </div>
+                  <div class="card-link-text-wrapper">
+                    <span class="badge video">Playlist</span>
+                    <span class="card-link-title">Tudo sobre o Krita</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <!-- CARD: CONVERSAR -->
+            <div class="conteudo-card active-hover" style="--card-glow: rgba(168, 85, 247, 0.4);">
+              <div class="card-icon">
+                <span class="material-symbols-rounded">forum</span>
+              </div>
+              <h2>Conversar</h2>
+              <p class="card-desc">Lives e conteúdos descontraídos para acompanhar o que estou pensando e fazendo.</p>
+              <div class="card-links">
+                <a href="/cronograma/" class="card-link-item">
+                  <span class="badge live">Live</span>
+                  Agenda de Lives
+                </a>
+              </div>
+            </div>
+
+            <!-- CARD: DESCOBRIR -->
+            <div class="conteudo-card active-hover" style="--card-glow: rgba(32, 201, 151, 0.4);">
+              <div class="card-icon">
+                <span class="material-symbols-rounded">explore</span>
+              </div>
+              <h2>Descobrir</h2>
+              <p class="card-desc">Outros projetos, ideias e coisas que exploro pelo caminho.</p>
+              <div class="card-links">
+                <a href="https://www.youtube.com/playlist?list=PLIEuiPcrquC4" target="_blank" class="card-link-item visual">
+                  <div class="card-link-image-wrapper">
+                    <img src="/images/jogo-do-baruc.png" alt="Jogo do Baruc">
+                  </div>
+                  <div class="card-link-text-wrapper">
+                    <span class="badge video">Playlist</span>
+                    <span class="card-link-title">Jogo do Baruc</span>
+                  </div>
+                </a>
+                <a href="/estudio/" class="card-link-item visual">
+                  <div class="card-link-image-wrapper">
+                    <img src="/images/foto-meu-setup.png" alt="Foto do meu setup">
+                  </div>
+                  <div class="card-link-text-wrapper">
+                    <span class="badge projeto">Setup</span>
+                    <span class="card-link-title">Conheça Meu Estúdio</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <!-- Card 2 -->
-        <div class="playlist-card">
-          <a href="https://www.youtube.com/playlist?list=PL1K-UhVJGhmGw4KoLNdvqe2b70h8UEUU5" target="_blank">
-            <img src="images/playlist2.png" alt="Capa da Playlist Série Krita" />
-          </a>
-          <h2>Tudo sobre o Krita</h2>
-          <p>Tutoriais e dicas sobre o software de desenho gratuito mais incrível que existe.</p>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="playlist-card">
-          <a href="https://www.youtube.com/playlist?list=PL1K-UhVJGhmFWv60ElVomPekRJaF79ZuP" target="_blank">
-            <img src="images/playlist3.png" alt="Capa da Playlist Série Chibis" />
-          </a>
-          <h2>Desenhando Chibis</h2>
-          <p>Para pessoas quem tem interesse em fazer desenhos fofos e divertidos.</p>
+        <div class="conteudos-controls">
+          <button class="scroll-btn prev" aria-label="Anterior">
+            <span class="material-symbols-rounded">chevron_left</span>
+          </button>
+          <button class="scroll-btn next" aria-label="Próximo">
+            <span class="material-symbols-rounded">chevron_right</span>
+          </button>
         </div>
       </div>
     </div>
@@ -91,36 +190,25 @@
 
 <script>
 
-  // SCRIPT PARA CAIXA DE BUSCA
-  const searchForm = document.querySelector(".search");
-  const searchButton = searchForm.querySelector("button");
-  const searchInput = searchForm.querySelector("input");
+  // SCRIPT DE SCROLL COM AS SETAS (SEÇÃO CONTEÚDOS)
+  (function() {
+    const scrollWrapper = document.getElementById("conteudosScroll");
+    const prevBtn = document.querySelector(".scroll-btn.prev");
+    const nextBtn = document.querySelector(".scroll-btn.next");
 
-  // Expande ao clicar no botão
-  searchButton.addEventListener("click", (e) => {
-    if (!searchForm.classList.contains("expanded")) {
-      e.preventDefault(); // não envia o form ainda
-      searchForm.classList.add("expanded");
-      searchInput.focus();
+    if (scrollWrapper && prevBtn && nextBtn) {
+      const scrollAmount = 350;
+
+      nextBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        scrollWrapper.scrollLeft += scrollAmount;
+      });
+
+      prevBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        scrollWrapper.scrollLeft -= scrollAmount;
+      });
     }
-  });
-
-  // Fecha ao clicar fora
-  document.addEventListener("click", (e) => {
-    if (!searchForm.contains(e.target)) {
-      // se o clique não estiver na busca
-      searchForm.classList.remove("expanded");
-    }
-  });
-
-  // SCRIPT DO MENU HAMBURGUER
-  const menuToggle = document.querySelector(".menu-toggle");
-  const menu = document.querySelector(".main-nav .menu");
-  const mainNav = document.querySelector(".main-nav");
-
-  menuToggle.addEventListener("click", () => {
-    menu.classList.toggle("active");
-    mainNav.classList.toggle("fixed");
-  });
+  })();
 </script>
 {{ end }}

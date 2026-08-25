@@ -398,85 +398,290 @@ body {
   /* aumenta levemente o ícone ao passar o mouse */
 }
 
-/* SEÇÃO PLAYLISTS YOUTUBE*/
-
-.playlists-yt {
+/* SEÇÃO CONTEÚDOS (Por Intenção) */
+.conteudos-secao {
   min-height: 100vh;
-  /* altura mínima ocupa a tela inteira */
-  background-color: #f6f4f1;
-  text-align: center;
   background-color: var(--color-bg);
-  /* usar a variável correta */
   color: var(--color-text);
-  padding-bottom: 4rem;
+  padding: 8rem 0 6rem;
+  overflow: hidden;
 }
 
-.playlists-yt .container {
-  padding-left: 8rem;
-  /* espaço da borda esquerda */
-  padding-right: 8rem;
-  /* espaço da borda direita */
-  padding-top: 12vh;
-  /* afasta do topo */
+.conteudos-secao .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
 }
 
-/* TÍTULO E DESCRIÇÃO DA SEÇÃO PLAYLISTS YOUTUBE*/
-
-.playlists-yt h1 {
+.secao-titulo {
   color: var(--color-accent);
-  /* mantém o destaque rosa se desejar */
-  font-size: 2.5rem;
-  padding: 2rem 0 0.3rem;
-  /* espaço acima e abaixo */
-  font-weight: 700;
-  /* peso da fonte (negrito) */
+  font-size: 2.75rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
 }
 
-.playlists-yt p {
+.secao-subtitulo {
   color: var(--color-text);
-  font-size: 19px;
+  font-size: 1.25rem;
   font-weight: 500;
-  /* fonte seminegrito */
+  text-align: center;
+  opacity: 0.8;
+  margin-bottom: 4rem;
 }
 
-/* GRID DOS CARDS */
+/* Rolagem Horizontal Configs com Botões */
+.conteudos-nav-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
 
-.playlist-grid {
-  display: grid;
-  /* transforma o container em grid */
-  grid-template-columns: repeat(auto-fit, minmax(280px, 426px));
-  gap: 3rem;
-  /*gap: 2rem → espaço horizontal e vertical entre os cards.*/
+.conteudos-scroll-wrapper {
+  width: 100%;
+  padding: 1rem 0 2rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  /* Esconde a barra de rolagem por padrão em navegadores modernos */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+/* Esconde a barra de rolagem no Chrome, Safari e Opera */
+.conteudos-scroll-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+/* Container de Controles (Setas no rodapé) */
+.conteudos-controls {
+  display: flex;
   justify-content: center;
-  margin-top: 7rem;
-  /* 👈 afasta os cards do título/descrição */
+  gap: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
-/*repeat(...) → cria várias colunas de acordo com o espaço disponível.*/
-/*auto-fit → o navegador decide quantas colunas cabem sem estourar o layout.*/
-/*minmax(280px, 1fr) → cada card vai ter no mínimo 280px de largura, mas pode crescer até ocupar uma fração (1fr) do espaço disponível.*/
-
-.playlist-card img {
-  transition: transform 0.3s ease;
-  /* 👈 tempo + suavidade do efeito */
-}
-
-.playlist-card:hover img {
-  transform: scale(1.05);
-  /* 👈 aumenta 5% no hover */
-}
-
-.playlist-card h2 {
+/* Botões de navegação menores e posicionados abaixo do subtítulo */
+.scroll-btn {
+  width: 46px;
+  height: 46px;
+  background-color: #ffffff;
+  border: 1px solid rgba(23, 54, 87, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(23, 54, 87, 0.05);
+  transition: all 0.25s ease;
   color: var(--color-text);
-  margin-top: 1rem;
+}
+
+.scroll-btn:hover {
+  background-color: var(--color-accent);
+  color: #ffffff;
+  border-color: var(--color-accent);
+  box-shadow: 0 6px 16px rgba(234, 73, 139, 0.15);
+}
+
+/* Desabilita sumiço de setas no mobile, apenas ajustando as margens do wrapper */
+@media (max-width: 768px) {
+  .conteudos-scroll-wrapper {
+    margin: 0 -1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+.conteudos-scroll-container {
+  display: flex;
+  gap: 2rem;
+  width: max-content;
+  padding: 0 1rem;
+}
+
+/* CARDS VERTICAIS */
+.conteudo-card {
+  width: 320px;
+  background: #ffffff;
+  border: 1px solid rgba(23, 54, 87, 0.08);
+  border-radius: 24px;
+  padding: 2.25rem 2rem;
+  box-shadow: 0 10px 30px rgba(23, 54, 87, 0.02);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s;
+}
+
+.conteudo-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(43, 184, 252, 0.2);
+  box-shadow: 0 20px 40px var(--card-glow, rgba(23, 54, 87, 0.06));
+}
+
+.card-icon {
+  width: 56px;
+  height: 56px;
+  background-color: rgba(234, 73, 139, 0.06);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.conteudo-card:hover .card-icon {
+  transform: scale(1.08) rotate(-3deg);
+  background-color: var(--color-accent);
+}
+
+.card-icon .material-symbols-rounded {
+  font-size: 1.75rem;
+  color: var(--color-accent);
+  transition: color 0.3s;
+}
+
+.conteudo-card:hover .card-icon .material-symbols-rounded {
+  color: #ffffff;
+}
+
+.conteudo-card h2 {
+  font-size: 1.5rem;
+  font-weight: 750;
+  color: var(--color-text);
+  margin-bottom: 0.75rem;
+}
+
+.card-desc {
+  font-size: 0.925rem;
+  color: rgba(23, 54, 87, 0.75);
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+  flex-grow: 0;
+}
+
+/* LINKS DO CARD */
+.card-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.card-link-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-text);
+  padding: 0.65rem 1rem;
+  background-color: rgba(23, 54, 87, 0.03);
+  border-radius: 12px;
+  border: 1px solid rgba(23, 54, 87, 0.04);
+  transition: all 0.25s ease;
+}
+
+.card-link-item:hover {
+  background-color: rgba(234, 73, 139, 0.06);
+  border-color: rgba(234, 73, 139, 0.2);
+  color: var(--color-accent);
+  transform: translateX(4px);
+}
+
+/* CARDS COM IMAGEM (VISUAL LINKS HORIZONTAIS) */
+.card-link-item.visual {
+  flex-direction: row;
+  align-items: center;
   padding: 0.5rem;
-  font-size: 1rem;
+  gap: 1rem;
+  overflow: hidden;
+  background-color: #ffffff;
+  border: 1px solid rgba(23, 54, 87, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(23, 54, 87, 0.02);
 }
 
-.playlist-card p {
+.card-link-item.visual:hover {
+  transform: translateX(4px);
+  border-color: rgba(234, 73, 139, 0.2);
+  box-shadow: 0 6px 16px rgba(234, 73, 139, 0.06);
+  background-color: #ffffff;
+}
+
+.card-link-image-wrapper {
+  width: 70px;
+  height: 50px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #000000;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.card-link-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.card-link-item.visual:hover .card-link-image-wrapper img {
+  transform: scale(1.08);
+}
+
+.card-link-text-wrapper {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  align-items: flex-start;
+  flex-grow: 1;
+}
+
+.card-link-title {
+  font-size: 0.9rem;
+  font-weight: 700;
   color: var(--color-text);
-  font-size: 16px;
-  margin-bottom: 2rem;
+  line-height: 1.3;
+}
+
+.card-link-item.visual:hover .card-link-title {
+  color: var(--color-accent);
+}
+
+/* BADGES DE CATEGORIA */
+.badge {
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+  letter-spacing: 0.05em;
+}
+
+.badge.video {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+}
+
+.badge.live {
+  background-color: rgba(168, 85, 247, 0.1);
+  color: #a855f7;
+}
+
+.badge.projeto {
+  background-color: rgba(43, 184, 252, 0.1);
+  color: #2bb8fc;
+}
+
+.badge.post {
+  background-color: rgba(254, 85, 189, 0.1);
+  color: #fe55bd;
 }
 
 /* RODAPÉ GERAL */
@@ -743,37 +948,37 @@ kbd {
     height: auto;
   }
 
-  /* PLAYLISTS */
-  .playlists-yt .container {
+  /* CONTEÚDOS */
+  .conteudos-secao {
+    padding: 4rem 0 3rem;
+  }
+
+  .conteudos-secao .container {
     padding-left: 1rem;
     padding-right: 1rem;
-    padding-top: 2rem;
-    padding-bottom: 1rem;
   }
 
-  .playlists-yt h1,
-  .playlists-yt p {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+  .secao-titulo {
+    font-size: 2.25rem;
   }
 
-  .playlist-card {
-    width: 100%;
+  .secao-subtitulo {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
   }
 
-  .playlist-card img {
-    width: 100%;
-    height: auto;
+  .conteudos-scroll-wrapper {
+    margin: 0 -1rem;
+    padding: 0.5rem 1rem 1.5rem;
   }
 
-  .playlist-card p {
-    font-size: 0.875rem;
+  .conteudos-scroll-container {
+    gap: 1.25rem;
   }
 
-  .playlist-grid {
-    margin-top: 4rem;
-    gap: 1.5rem;
+  .conteudo-card {
+    width: 290px;
+    padding: 1.75rem 1.5rem;
   }
 
   /* FOOTER */
