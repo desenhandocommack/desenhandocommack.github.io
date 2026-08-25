@@ -1,28 +1,18 @@
 {
   "atualizado": "24/08/2026",
   "aoVivo": {
-    "ativo": false,
-    "titulo": "Desenhando e Conversando com Chat!",
-    "dia": "Segunda-feira",
-    "data": "24/08",
+    "ativo": true,
+    "titulo": "Dia de testar a live",
+    "dia": "Terça-feira",
+    "data": "25/08",
     "capa": "images/image1.png",
-    "horario": "19:30 - 22:00",
-    "categoria": "Desenho",
+    "horario": "19:00",
+    "categoria": "Bate-Papo",
     "plataforma": "youtube",
     "canal": "@desenhandocommack",
-    "link": "https://www.youtube.com/@desenhandocommack/streams"
+    "link": "https://www.youtube.com/watch?v=YJlSdDW92a4"
   },
   "proximas": [
-    {
-      "dia": "Terça-feira",
-      "data": "25/08",
-      "capa": "images/image1.png",
-      "horario": "19:00",
-      "categoria": "Bate-Papo",
-      "titulo": "Dia de testar a live",
-      "plataforma": "youtube",
-      "link": "https://www.youtube.com/@desenhandocommack/streams"
-    },
     {
       "dia": "Quinta-feira",
       "data": "27/08",
