@@ -517,6 +517,32 @@ body {
   letter-spacing: 0.02em;
 }
 
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.footer-link {
+  font-size: 0.75rem;
+  color: var(--color-accent);
+  text-decoration: none;
+  opacity: 0.9;
+  font-weight: 700;
+  transition: opacity 0.25s ease, color 0.25s ease;
+}
+
+.footer-link:hover {
+  opacity: 1;
+  color: #fe55bd;
+}
+
 /* CONTAINER DOS ÍCONES DAS REDES SOCIAIS DO RODAPÉ */
 .footer-icons {
   display: flex;
@@ -755,6 +781,15 @@ kbd {
     gap: 1rem;
     flex-direction: column;
     align-items: center;
+  }
+
+  .footer-info {
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-links {
+    justify-content: center;
   }
 }
 
