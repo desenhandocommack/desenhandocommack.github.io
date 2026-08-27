@@ -200,7 +200,7 @@
     <div class="destaques-mosaico-wrapper">
       <div class="destaques-mosaico-scroll" id="destaquesMosaicoScroll">
         {{ $files := readDir "static/images/portfolio" }}
-        {{ $allowedNumbers := slice "06" "43" "03" "21" "30" "27" "09" }}
+        {{ $allowedNumbers := slice "06" "24" "03" "21" "30" "27" "09" }}
         {{ range $num := $allowedNumbers }}
         {{ range $files }}
         {{ if not .IsDir }}
