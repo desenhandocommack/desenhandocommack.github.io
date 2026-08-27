@@ -49,7 +49,7 @@ jobs:
               const ytRes = await fetch('https://www.youtube.com/@desenhandocommack/live');
               const ytText = await ytRes.text();
               const canonicalMatch = ytText.match(/<link rel=\"canonical\" href=\"([^\"]+)\"/);
-              if (canonicalMatch && canonicalMatch[1].includes('/watch?v=')) {
+              if (canonicalMatch && canonicalMatch[1].includes('/watch?v=') && /\"isLive\"\s*:\s*true/.test(ytText)) {
                 isYtLive = true;
                 ytLiveUrl = canonicalMatch[1];
               }

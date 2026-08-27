@@ -17,17 +17,13 @@
       "dia": "Quinta-feira",
       "data": "27/08",
       "capa": "images/image2.png",
-      "horario": "19:00",
+      "horario": "18:00",
       "categoria": "Desenho",
       "titulo": "Testando meus pincéis no Krita",
       "plataforma": "Twitch",
       "link": "https://www.twitch.tv/desenhandocommack/about"
     }
   ],
-<<<<<<< HEAD
-  "historico": []
-}
-=======
   "historico": [
     {
       "mesAno": "Agosto 2026",
@@ -44,4 +40,3 @@
     }
   ]
 }
->>>>>>> 38c2b4be173990a6b9dbe76dc06d9c82cc319563
