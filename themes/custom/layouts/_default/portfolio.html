@@ -1,0 +1,238 @@
+{{ define "styles" }}
+{{ with resources.Get "styles/portfolio.css" | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" />
+{{ end }}
+{{ end }}
+
+{{ define "main" }}
+<div class="portfolio-container portfolio-min-height">
+  <section class="portfolio-hero" style="padding: 2rem 2rem; margin-bottom: 2rem;">
+    <h1 style="margin-bottom: 0;">Meu Portfólio</h1>
+  </section>
+
+  <!-- Filtro por Categorias (Gerado dinamicamente das imagens) -->
+  {{ $categories := slice }}
+  {{ $files := readDir "static/images/portfolio" }}
+  {{ range $files }}
+  {{ if not .IsDir }}
+  {{ $filename := .Name }}
+  {{ if not (hasPrefix $filename ".") }}
+  {{ $nameWithoutExt := replaceRE "\\.[a-zA-Z0-9]+$" "" $filename }}
+  {{ $cleanName := replace $nameWithoutExt "-vertical" "" }}
+  {{ $parts := split $cleanName "_" }}
+  {{ if eq (len $parts) 3 }}
+  {{ $categories = $categories | append (index $parts 1) }}
+  {{ end }}
+  {{ end }}
+  {{ end }}
+  {{ end }}
+  {{ $uniqueCategories := uniq $categories }}
+  {{ $catNames := dict "personagens" "Personagens" "ilustracoes" "Ilustrações" "estudos" "Estudos" }}
+
+  <div class="portfolio-filters">
+    <button class="filter-btn active" data-filter="all">Todos</button>
+    {{ range $uniqueCategories }}
+    {{ $displayName := index $catNames . | default (. | title) }}
+    <button class="filter-btn" data-filter="{{ . }}">{{ $displayName }}</button>
+    {{ end }}
+  </div>
+
+  <!-- Grid de Desenhos Dinâmico (Lê a pasta static/images/portfolio) -->
+  <div class="portfolio-grid">
+    {{ $files := readDir "static/images/portfolio" }}
+    {{ range $files }}
+    {{ if not .IsDir }}
+    {{ $filename := .Name }}
+    {{ if not (hasPrefix $filename ".") }}
+    {{ $isVertical := in $filename "-vertical" }}
+    {{ $nameWithoutExt := replaceRE "\\.[a-zA-Z0-9]+$" "" $filename }}
+    {{ $cleanName := replace $nameWithoutExt "-vertical" "" }}
+    {{ $parts := split $cleanName "_" }}
+
+    {{ if eq (len $parts) 3 }}
+    {{ $category := index $parts 1 }}
+    {{ $titleSlug := index $parts 2 }}
+    {{ $title := replace $titleSlug "-" " " | title }}
+    {{ $imgSrc := printf "/images/portfolio/%s" $filename }}
+
+    {{ $link := "" }}
+    {{ if isset $.Params "links" }}
+    {{ $link = index $.Params.links $filename }}
+    {{ end }}
+
+    <div class="portfolio-item {{ if $isVertical }}portfolio-item-vertical{{ end }}" data-category="{{ $category }}"
+      data-link="{{ $link }}">
+      <div class="portfolio-img-box">
+        <img src="{{ $imgSrc }}" alt="{{ $title }}">
+      </div>
+      {{ if $link }}
+      <div class="portfolio-item-link-badge" title="Possui vídeo do processo">
+        <span class="material-symbols-rounded">play_circle</span>
+      </div>
+      {{ end }}
+      <div class="portfolio-info">
+        <h3>{{ $title }}</h3>
+        <span class="portfolio-tag">{{ $category }}</span>
+      </div>
+    </div>
+    {{ end }}
+    {{ end }}
+    {{ end }}
+    {{ end }}
+  </div>
+</div>
+
+<!-- Lightbox Modal -->
+<div id="portfolioLightbox" class="portfolio-lightbox" role="dialog" aria-modal="true">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Fechar">&times;</button>
+  <button class="lightbox-nav prev" id="lightboxPrev" aria-label="Anterior">&#10094;</button>
+  <button class="lightbox-nav next" id="lightboxNext" aria-label="Próximo">&#10095;</button>
+
+  <div class="lightbox-content-wrapper">
+    <img src="" alt="" id="lightboxImg" class="lightbox-img">
+    <div class="lightbox-caption" id="lightboxCaption">
+      <h3></h3>
+      <span class="lightbox-tag"></span>
+      <div style="margin-top: 1rem;">
+        <a href="" id="lightboxLink" target="_blank" class="lightbox-link-btn" style="display: none;">
+          <span class="material-symbols-rounded">play_circle</span>
+          Assistir Processo
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const buttons = document.querySelectorAll(".filter-btn");
+    const items = document.querySelectorAll(".portfolio-item");
+
+    // Filtros de Categoria
+    buttons.forEach(button => {
+      button.addEventListener("click", () => {
+        // Remove classe ativo de todos
+        buttons.forEach(btn => btn.classList.remove("active"));
+        button.classList.add("active");
+
+        const filter = button.getAttribute("data-filter");
+
+        items.forEach(item => {
+          if (filter === "all" || item.getAttribute("data-category") === filter) {
+            item.style.display = "block";
+            setTimeout(() => {
+              item.style.opacity = "1";
+              item.style.transform = "scale(1)";
+            }, 50);
+          } else {
+            item.style.opacity = "0";
+            item.style.transform = "scale(0.95)";
+            setTimeout(() => {
+              item.style.display = "none";
+            }, 300);
+          }
+        });
+      });
+    });
+
+    // Funcionalidade da Lightbox
+    const lightbox = document.getElementById("portfolioLightbox");
+    const lightboxImg = document.getElementById("lightboxImg");
+    const lightboxTitle = document.querySelector("#lightboxCaption h3");
+    const lightboxTag = document.querySelector("#lightboxCaption .lightbox-tag");
+    const closeBtn = document.getElementById("lightboxClose");
+    const prevBtn = document.getElementById("lightboxPrev");
+    const nextBtn = document.getElementById("lightboxNext");
+
+    let currentVisibleItems = [];
+    let currentIndex = 0;
+
+    function updateVisibleItems() {
+      currentVisibleItems = Array.from(items).filter(item => item.style.display !== "none");
+    }
+
+    function openLightbox(index) {
+      updateVisibleItems();
+      currentIndex = index;
+      const currentItem = currentVisibleItems[currentIndex];
+      if (!currentItem) return;
+
+      const img = currentItem.querySelector(".portfolio-img-box img");
+      const title = currentItem.querySelector(".portfolio-info h3").textContent;
+      const tag = currentItem.querySelector(".portfolio-info .portfolio-tag").textContent;
+      const link = currentItem.getAttribute("data-link");
+
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+      lightboxTitle.textContent = title;
+      lightboxTag.textContent = tag;
+
+      const lightboxLink = document.getElementById("lightboxLink");
+      if (link && link.trim() !== "") {
+        lightboxLink.href = link;
+        lightboxLink.style.display = "inline-flex";
+        if (link.includes("youtube.com") || link.includes("youtu.be")) {
+          lightboxLink.innerHTML = `<span class="material-symbols-rounded">play_circle</span> Assistir Processo`;
+        } else {
+          lightboxLink.innerHTML = `<span class="material-symbols-rounded">open_in_new</span> Ver Mais`;
+        }
+      } else {
+        lightboxLink.style.display = "none";
+        lightboxLink.href = "";
+      }
+
+      lightbox.classList.add("active");
+      document.body.style.overflow = "hidden"; // Desativa scroll da página
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove("active");
+      document.body.style.overflow = ""; // Ativa scroll da página
+    }
+
+    function showPrev() {
+      if (currentVisibleItems.length === 0) return;
+      let newIndex = currentIndex - 1;
+      if (newIndex < 0) newIndex = currentVisibleItems.length - 1;
+      openLightbox(newIndex);
+    }
+
+    function showNext() {
+      if (currentVisibleItems.length === 0) return;
+      let newIndex = currentIndex + 1;
+      if (newIndex >= currentVisibleItems.length) newIndex = 0;
+      openLightbox(newIndex);
+    }
+
+    // Eventos de clique nas imagens
+    items.forEach((item) => {
+      item.addEventListener("click", () => {
+        updateVisibleItems();
+        const index = currentVisibleItems.indexOf(item);
+        if (index !== -1) {
+          openLightbox(index);
+        }
+      });
+    });
+
+    closeBtn.addEventListener("click", closeLightbox);
+    prevBtn.addEventListener("click", (e) => { e.stopPropagation(); showPrev(); });
+    nextBtn.addEventListener("click", (e) => { e.stopPropagation(); showNext(); });
+
+    // Fecha ao clicar fora do wrapper
+    lightbox.addEventListener("click", (e) => {
+      if (e.target === lightbox) {
+        closeLightbox();
+      }
+    });
+
+    // Atalhos do teclado
+    document.addEventListener("keydown", (e) => {
+      if (!lightbox.classList.contains("active")) return;
+      if (e.key === "Escape") closeLightbox();
+      if (e.key === "ArrowLeft") showPrev();
+      if (e.key === "ArrowRight") showNext();
+    });
+  });
+</script>
+{{ end }}

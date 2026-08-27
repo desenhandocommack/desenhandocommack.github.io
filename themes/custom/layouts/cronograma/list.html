@@ -1,4 +1,16 @@
+{{ define "styles" }}
+{{ with resources.Get "styles/portfolio.css" | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}">
+{{ end }}
+{{ end }}
+
 {{ define "main" }}
+
+<div class="portfolio-container" style="max-width: 1410px; margin: 0 auto; padding-top: 1.5rem; padding-bottom: 0;">
+  <section class="portfolio-hero" style="padding: 2rem 2rem; margin-bottom: 1rem;">
+    <h1 style="margin-bottom: 0;">Cronograma</h1>
+  </section>
+</div>
 
 <style>
   /* ============ Variáveis / Cores da marca ============ */

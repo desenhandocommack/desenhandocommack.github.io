@@ -30,16 +30,14 @@
           </div>
         </div>
 
-       <div class="slide-image">
-      <a href="{{ (site.GetPage "/cursos/curso-1").RelPermalink }}">
+        <div class="slide-image">
+          <a href="{{ (site.GetPage " /cursos/curso-1").RelPermalink }}">
             <picture>
               <!-- imagem mobile -->
               <source media="(max-width: 768px)" srcset="/images/curso-krita_slide1_vertical.png" />
               <!-- imagem padrão (desktop) -->
-              <img
-                src="/images/curso-krita-slide1_horizontal.png"
-                alt="Imagem do mascote para o curso Krita para Iniciantes - Slide 1"
-              />
+              <img src="/images/curso-krita-slide1_horizontal.png"
+                alt="Imagem do mascote para o curso Krita para Iniciantes - Slide 1" />
             </picture>
           </a>
         </div>
@@ -64,7 +62,8 @@
               <h2>Desenhar</h2>
               <p class="card-desc">Desenhos e estilos para acompanhar e desenhar junto.</p>
               <div class="card-links">
-                <a href="https://www.youtube.com/playlist?list=PL1K-UhVJGhmFoVF2rsvdXd7wBcm6FTZWT" target="_blank" class="card-link-item visual">
+                <a href="https://www.youtube.com/playlist?list=PL1K-UhVJGhmFoVF2rsvdXd7wBcm6FTZWT" target="_blank"
+                  class="card-link-item visual">
                   <div class="card-link-image-wrapper">
                     <img src="/images/playlist-quartoons.png" alt="Série Quartoons">
                   </div>
@@ -73,7 +72,8 @@
                     <span class="card-link-title">Série Quartoons</span>
                   </div>
                 </a>
-                <a href="https://www.youtube.com/playlist?list=PL1K-UhVJGhmFWv60ElVomPekRJaF79ZuP" target="_blank" class="card-link-item visual">
+                <a href="https://www.youtube.com/playlist?list=PL1K-UhVJGhmFWv60ElVomPekRJaF79ZuP" target="_blank"
+                  class="card-link-item visual">
                   <div class="card-link-image-wrapper">
                     <img src="/images/playlist-chibi.png" alt="Desenhando Chibis">
                   </div>
@@ -102,7 +102,8 @@
                     <span class="card-link-title">Krita para Iniciantes</span>
                   </div>
                 </a>
-                <a href="https://www.youtube.com/playlist?list=PL1K-UhVJGhmGw4KoLNdvqe2b70h8UEUU5" target="_blank" class="card-link-item visual">
+                <a href="https://www.youtube.com/playlist?list=PL1K-UhVJGhmGw4KoLNdvqe2b70h8UEUU5" target="_blank"
+                  class="card-link-item visual">
                   <div class="card-link-image-wrapper">
                     <img src="/images/playlist-krita.png" alt="Tudo sobre o Krita">
                   </div>
@@ -137,7 +138,8 @@
               <h2>Descobrir</h2>
               <p class="card-desc">Outros projetos, ideias e coisas que exploro pelo caminho.</p>
               <div class="card-links">
-                <a href="https://www.youtube.com/playlist?list=PLIEuiPcrquC4" target="_blank" class="card-link-item visual">
+                <a href="https://www.youtube.com/playlist?list=PLIEuiPcrquC4" target="_blank"
+                  class="card-link-item visual">
                   <div class="card-link-image-wrapper">
                     <img src="/images/jogo-do-baruc.png" alt="Jogo do Baruc">
                   </div>
@@ -186,12 +188,60 @@
       </div>
     </div>
   </section>
+
+  <!-- SEÇÃO DESTAQUES PORTFÓLIO -->
+  <section class="portfolio-destaques">
+    <div class="container">
+      <h1 class="secao-titulo">Portfólio</h1>
+      <p class="secao-subtitulo">Alguns dos meus melhores desenhos e ilustrações</p>
+    </div>
+
+    <!-- Mosaico Horizontal Edge-to-Edge -->
+    <div class="destaques-mosaico-wrapper">
+      <div class="destaques-mosaico-scroll" id="destaquesMosaicoScroll">
+        {{ $files := readDir "static/images/portfolio" }}
+        {{ $allowedNumbers := slice "06" "43" "03" "21" "30" "27" "09" }}
+        {{ range $num := $allowedNumbers }}
+        {{ range $files }}
+        {{ if not .IsDir }}
+        {{ $filename := .Name }}
+        {{ if not (hasPrefix $filename ".") }}
+        {{ $nameWithoutExt := replaceRE "\\.[a-zA-Z0-9]+$" "" $filename }}
+        {{ $cleanName := replace $nameWithoutExt "-vertical" "" }}
+        {{ $parts := split $cleanName "_" }}
+
+        {{ if and (eq (len $parts) 3) (eq (index $parts 0) $num) }}
+        {{ $category := index $parts 1 }}
+        {{ $titleSlug := index $parts 2 }}
+        {{ $title := replace $titleSlug "-" " " | title }}
+        {{ $imgSrc := printf "/images/portfolio/%s" $filename }}
+
+        <div class="destaques-mosaico-item">
+          <img src="{{ $imgSrc }}" alt="{{ $title }}">
+        </div>
+        {{ end }}
+        {{ end }}
+        {{ end }}
+        {{ end }}
+        {{ end }}
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="portfolio-cta-container">
+        <a href="/portfolio/" class="btn-portfolio-ver-todos">
+          <span class="material-symbols-rounded">collections</span>
+          Ver Portfólio Completo
+        </a>
+      </div>
+    </div>
+  </section>
 </main>
 
 <script>
 
   // SCRIPT DE SCROLL COM AS SETAS (SEÇÃO CONTEÚDOS)
-  (function() {
+  (function () {
     const scrollWrapper = document.getElementById("conteudosScroll");
     const prevBtn = document.querySelector(".scroll-btn.prev");
     const nextBtn = document.querySelector(".scroll-btn.next");

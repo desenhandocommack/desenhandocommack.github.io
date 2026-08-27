@@ -1,78 +1,59 @@
 {{ define "styles" }}
 <!--  -->
+{{ with resources.Get "styles/portfolio.css" | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" />
+{{ end }}
 {{ with resources.Get "styles/blog.css" | resources.Fingerprint }}
 <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" />
 {{ end }}
 <!--  -->
 {{ end }}{{ define "main" }}
 
-<h1 class="blog-title">Blog</h1>
+<div class="portfolio-container" style="max-width: 1400px;">
+  <section class="portfolio-hero" style="padding: 2rem 2rem; margin-bottom: 2rem;">
+    <h1 style="margin-bottom: 0;">Blog</h1>
+  </section>
 
-<!-- Dropdown listagem de categorias -->
-<div class="filter-container">
-  <label for="categoryDropdown">Filtrar por categoria:</label>
-
-  <!-- Wrapper para permitir a seta -->
-  <div class="dropdown-wrapper">
-    <select id="categoryDropdown">
-      <option value="/blog/">Categorias</option>
-      {{ range .Site.Taxonomies.categories }}
-      <!--  -->
-      {{ if eq .Page $.Page }}
-      <option value="{{ .Page.RelPermalink }}" selected>{{ .Page.Title }}</option>
-      {{ else }}
-      <option value="{{ .Page.RelPermalink }}">{{ .Page.Title }}</option>
-      {{ end }}
-      <!--  -->
-      {{ end }}
-    </select>
-
-    <!-- Ícone da seta -->
-    <span class="dropdown-icon">arrow_drop_down</span>
+  <!-- Filtro por Categorias (Pills) -->
+  <div class="portfolio-filters">
+    <a href="/blog/" class="filter-btn {{ if eq .Page.RelPermalink "/blog/" }}active{{ end }}" style="text-decoration: none;">Todos</a>
+    {{ range .Site.Taxonomies.categories }}
+    <a href="{{ .Page.RelPermalink }}" class="filter-btn {{ if eq .Page $.Page }}active{{ end }}" style="text-decoration: none;">{{ .Page.Title }}</a>
+    {{ end }}
   </div>
-</div>
 
-<div class="blog-container">
-  <!-- Coluna de posts -->
-  <div class="blog-posts">
-    <!-- contador para anúncios -->
+  <!-- Grid de Posts (Visual Destaques) -->
+  <div class="portfolio-preview-grid blog-grid-override" style="margin-top: 2rem;">
     {{ range $index, $_ := .Pages }}
-    <article class="blog-card" data-category="{{ index .Params.categories 0 | urlize }}">
-      <!-- Imagem com overlay -->
-      <div class="blog-card-image-wrapper">
+    <article class="destaque-card">
+      <div class="destaque-img-box">
         <a href="{{ .RelPermalink }}">
           {{ $p := . }}
-          <!--  -->
           {{ with .Resources.GetMatch "cover.*" }}
-          <img class="blog-card-image" src="{{ .RelPermalink }}" alt="{{ $p.Title }}" />
+          <img src="{{ .RelPermalink }}" alt="{{ $p.Title }}" />
           {{ else with .Params.featuredImage }}
-          <img class="blog-card-image" src="{{ . }}" alt="{{ $p.Title }}" />
+          <img src="{{ . }}" alt="{{ $p.Title }}" />
           {{ end }}
-
-          <div class="blog-card-overlay">
-            <p>Categoria: {{ index .Params.categories 0 }}</p>
-            <p>Data de publicação: {{ .Date.Format "02/01/2006" }}</p>
-            {{ with .Lastmod }}
-            <p>Última atualização: {{ .Format "02/01/2006" }}</p>
-            {{ end }}
-          </div>
         </a>
+        {{ with .Params.categories }}
+        <span class="destaque-tag">{{ index . 0 }}</span>
+        {{ end }}
       </div>
-
-      <!-- Título e descrição fora da imagem -->
-      <div class="blog-card-text">
-        <h2>{{ .Title }}</h2>
-        <p>{{ .Description }}</p>
+      <div class="destaque-info" style="text-align: left;">
+        <h3>
+          <a href="{{ .RelPermalink }}" style="text-decoration: none; color: inherit; transition: color 0.2s ease;">{{ .Title }}</a>
+        </h3>
+        <p class="blog-date">{{ .Date.Format "02/01/2006" }}</p>
+        <p class="blog-desc">{{ .Description }}</p>
       </div>
     </article>
 
     <!-- Inserir anúncio a cada 4 posts -->
     {{ if eq (mod $index 4) 3 }}
-    <div class="blog-ad">
-      <!-- Bloco entre posts -->
+    <div class="blog-ad" style="grid-column: 1 / -1; display: flex; justify-content: center; width: 100%; margin: 1rem 0;">
       <ins
         class="adsbygoogle"
-        style="display: block"
+        style="display: block; width: 100%; max-width: 970px;"
         data-ad-client="ca-pub-9490703409315867"
         data-ad-slot="2881010591"
         data-ad-format="auto"
@@ -80,31 +61,17 @@
       ></ins>
     </div>
     {{ end }}
-
-    <!--  -->
-
-    {{ end }}
-
-    <!-- Mensagem caso não haja posts -->
-    {{ if not (len .Pages) }}
-    <p>Nenhum post encontrado.</p>
     {{ end }}
   </div>
 
-  <!-- Sidebar -->
-  {{ partial "sidebar.html" . }}
+  <!-- Mensagem caso não haja posts -->
+  {{ if not (len .Pages) }}
+  <p style="text-align: center; margin-top: 3rem; font-weight: 500; opacity: 0.7;">Nenhum post encontrado.</p>
+  {{ end }}
+
+  <!-- Paginação -->
+  <div class="blog-pagination" style="display: flex; justify-content: center; margin-top: 4rem;">
+    {{ template "_internal/pagination.html" . }}
+  </div>
 </div>
-
-<!-- Paginação -->
-<div class="blog-pagination">{{ template "_internal/pagination.html" . }}</div>
-
-<!-- Script do menu dropdown da listagem de categorias -->
-
-<script>
-  // Quando o usuário muda a categoria
-  document.getElementById("categoryDropdown").addEventListener("change", (e) => {
-    location.href = e.target.value;
-  });
-</script>
-
 {{ end }}

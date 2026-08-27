@@ -1,5 +1,8 @@
 {{ define "styles" }}
 
+{{ with resources.Get "styles/portfolio.css" | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}">
+{{ end }}
 {{ with resources.Get "styles/cursos.css" | resources.Fingerprint }}
 <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}">
 {{ end }}
@@ -9,8 +12,10 @@
 
 {{ define "main" }}
 
-<section class="cursos-container">
-  <h1 class="cursos-title">Cursos</h1>
+<div class="cursos-container" style="padding-top: 1.5rem;">
+  <section class="portfolio-hero" style="padding: 2rem 2rem; margin-bottom: 2rem;">
+    <h1 style="margin-bottom: 0;">Cursos</h1>
+  </section>
 
   <div class="cursos-grid">
     {{ range (where .Site.RegularPages "Section" "cursos") }}
@@ -60,6 +65,6 @@
 
     {{ end }}
   </div>
-</section>
+</div>
 
 {{ end }}
