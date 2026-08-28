@@ -1,0 +1,188 @@
+{{ define "styles" }}
+{{ with resources.Get "styles/sobre.css" | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" />
+{{ end }}
+{{ end }}
+
+{{ define "main" }}
+<div class="sobre-container">
+  <div class="sobre-hero">
+    <h1>Sobre</h1>
+  </div>
+
+  <div class="sobre-layout-grid">
+    <!-- COLUNA ESQUERDA: CARD DE PERFIL -->
+    <aside class="sobre-profile-card">
+      <div class="profile-avatar-wrapper">
+        <img src="/images/logo-mascote.png" alt="Mascote Desenhando com Mack" class="profile-avatar">
+      </div>
+      <h2 class="profile-name">Mack</h2>
+      <p class="profile-tagline">Ilustradora & Criadora de Conteúdo</p>
+
+      <div class="profile-badges">
+        <div class="profile-badge">
+          <span class="material-symbols-rounded badge-icon">workspace_premium</span>
+          <div class="badge-info">
+            <span class="badge-label">Conquista</span>
+            <span class="badge-value">Placa de 100k no YouTube</span>
+          </div>
+        </div>
+        <div class="profile-badge">
+          <span class="material-symbols-rounded badge-icon">palette</span>
+          <div class="badge-info">
+            <span class="badge-label">Estilos Principais</span>
+            <span class="badge-value">Chibi & Cartoon</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="profile-socials">
+        <a href="https://www.youtube.com/@desenhandocommack" target="_blank" rel="noopener noreferrer" class="social-link" title="YouTube">
+          <img src="/images/youtube-icon.png" alt="YouTube">
+        </a>
+        <a href="https://www.instagram.com/desenhandocommack" target="_blank" rel="noopener noreferrer" class="social-link" title="Instagram">
+          <img src="/images/instagram-icon.png" alt="Instagram">
+        </a>
+      </div>
+    </aside>
+
+    <!-- COLUNA DIREITA: NARRATIVA/CONTEÚDO -->
+    <section class="sobre-content">
+      <!-- CARD 1: A JORNADA -->
+      <div class="sobre-section-card">
+        <div class="card-header-row">
+          <span class="material-symbols-rounded card-icon">timeline</span>
+          <h2>Como Tudo Começou</h2>
+        </div>
+        <div class="card-body-text">
+          <p>
+            Minha jornada com o <strong>Desenhando com Mack</strong> começou em <strong>setembro de 2016</strong> quando criei um canal no YouTube e publiquei minha primeira <a href="https://www.youtube.com/playlist?list=PL1K-UhVJGhmFWv60ElVomPekRJaF79ZuP" target="_blank" rel="noopener noreferrer">playlist ensinando como desenhar no estilo Chibi</a>. 
+          </p>
+          <p>
+            Depois disso, fui criando novas playlists e tutoriais. Agora, alguns anos depois, estou retomando esse projeto para finalmente conseguir criar os projetos que me inspiraram a começar o canal naquela época.
+          </p>
+        </div>
+      </div>
+
+      <!-- CARD 2: CONQUISTAS E RABISCOS -->
+      <div class="sobre-section-card">
+        <div class="card-header-row">
+          <span class="material-symbols-rounded card-icon">history_edu</span>
+          <h2>Anos de Aprendizado e Conexão</h2>
+        </div>
+        <div class="card-body-text">
+          <p>
+            Nesses últimos anos eu publiquei muitos vídeos sobre desenhos e softwares, conheci pessoas bem legais que me ajudaram durante a minha jornada, fiz alguns trabalhos maneiros que me desafiaram bastante e continuo gostando de descobrir novos personagens enquanto eu rabisco — acho que essa é a única coisa que continua exatamente igual depois desse tempo todo. Daqui pra frente vamos ver o que mais podemos construir..
+          </p>
+          <div class="milestone-highlight">
+            <span class="material-symbols-rounded medal-icon">military_tech</span>
+            <div class="milestone-text-col">
+              <p>
+                Tudo isso me rendeu até uma <strong>placa de 100 mil inscritos</strong> (que chegou no dia 5 de março de 2021) que eu nunca nem imaginei conseguir alcançar. Obrigada a todos que fizeram parte disso junto comigo ❤️
+              </p>
+              <button id="open-placa-btn" class="btn-ver-placa">
+                <span class="material-symbols-rounded">visibility</span>
+                Ver foto da placa
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 3: OS ESTILOS DE DESENHO -->
+      <div class="sobre-section-card">
+        <div class="card-header-row">
+          <span class="material-symbols-rounded card-icon">brush</span>
+          <h2>O que eu desenho</h2>
+        </div>
+        <div class="card-body-text">
+          <p>
+            Falando do que eu desenho: hoje os estilos que faço com mais frequência são o <strong>cartoon</strong> e o <strong>chibi</strong>, mas também gosto muito de passear por outros traços. Trocar de estilo me motiva a continuar desenhando e me dá a possibilidade de adaptar a arte para diferentes tipos de projeto.
+          </p>
+          <p>
+            Costumo aplicar esses estilos principalmente na criação de personagens — embora, de vez em quando, eu crie pequenas cenas completas. Além disso, adoro explorar formatos diferentes pela simples vontade de experimentar — já me aventurei no desenho realista e até no 3D —, além de testar tudo o que ajude a construir meus próprios projetos.
+          </p>
+          <div class="desenhos-exemplos-grid">
+            <div class="exemplo-item">
+              <img src="/images/exemplo-1.png" alt="Exemplo 1">
+            </div>
+            <div class="exemplo-item">
+              <img src="/images/exemplo-2.png" alt="Exemplo 2">
+            </div>
+            <div class="exemplo-item">
+              <img src="/images/exemplo-3.png" alt="Exemplo 3">
+            </div>
+            <div class="exemplo-item">
+              <img src="/images/exemplo-4.png" alt="Exemplo 4">
+            </div>
+            <div class="exemplo-item">
+              <img src="/images/exemplo-5.png" alt="Exemplo 5">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 4: O FUTURO E CONVITE -->
+      <div class="sobre-section-card">
+        <div class="card-header-row">
+          <span class="material-symbols-rounded card-icon">explore</span>
+          <h2>O Novo Direcionamento</h2>
+        </div>
+        <div class="card-body-text">
+          <p>
+            Nesta nova etapa do universo do <strong>Desenhando com Mack</strong>, quero, claro, continuar trazendo vídeos sobre desenhos e softwares, mas o foco principal será mostrar o que estou criando no momento. Então, você pode esperar acompanhar meus projetos ganhando vida nos mais variados formatos que eu conseguir compartilhar!
+          </p>
+          <p>
+            Para me acompanhar, visite este site sempre que tiver curiosidade sobre as novidades. Aqui você vai encontrar tudo sobre o Desenhando com Mack e até outros projetos onde eu inventar de me meter, haha!
+          </p>
+        </div>
+      </div>
+
+      <!-- APRESENTAÇÃO FINAL -->
+      <div class="sobre-footer-note">
+        <span class="waving-hand">👋</span>
+        <p>Ah, eu sou a <strong>Mack</strong>! E você?</p>
+      </div>
+    </section>
+  </div>
+</div>
+
+<!-- MODAL PARA EXIBIR A PLACA -->
+<div id="placa-modal" class="placa-modal-overlay" aria-hidden="true">
+  <div class="placa-modal-content">
+    <button id="close-placa-btn" class="placa-modal-close" aria-label="Fechar">
+      <span class="material-symbols-rounded">close</span>
+    </button>
+    <img src="/images/placa-youtube-100k_desenhando-com-mack.png" alt="Placa de 100k inscritos do Desenhando com Mack" class="placa-modal-img">
+    <p class="placa-modal-caption">A placa de 100 mil inscritos do canal! Chegou no dia 5 de março de 2021 🌟</p>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const openBtn = document.getElementById("open-placa-btn");
+    const closeBtn = document.getElementById("close-placa-btn");
+    const modal = document.getElementById("placa-modal");
+
+    if (openBtn && closeBtn && modal) {
+      openBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        modal.classList.add("active");
+        document.body.style.overflow = "hidden";
+      });
+
+      const closeModal = () => {
+        modal.classList.remove("active");
+        document.body.style.overflow = "";
+      };
+
+      closeBtn.addEventListener("click", closeModal);
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+          closeModal();
+        }
+      });
+    }
+  });
+</script>
+{{ end }}
