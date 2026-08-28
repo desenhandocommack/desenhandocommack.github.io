@@ -12,12 +12,12 @@
     "canal": "@desenhandocommack",
     "link": "https://www.youtube.com/@desenhandocommack/streams"
   },
-  "proximas": [
+  "proximas_desativadas": [
     {
-      "dia": "Quinta-feira",
-      "data": "27/08",
+      "dia": "Terça-feira",
+      "data": "01/09",
       "capa": "images/image2.png",
-      "horario": "19:00",
+      "horario": "18:00",
       "categoria": "Desenho",
       "titulo": "Testando meus pincéis no Krita",
       "plataforma": "YouTube",
