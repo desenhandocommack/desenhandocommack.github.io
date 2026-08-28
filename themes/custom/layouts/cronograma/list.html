@@ -1111,7 +1111,9 @@
         const historicoList = document.getElementById("historico-list");
         historicoList.innerHTML = "";
         if (data.historico && data.historico.length > 0) {
-          data.historico.forEach((group) => {
+          // Inverte a ordem para mostrar os meses mais recentes primeiro
+          const historicoInvertido = [...data.historico].reverse();
+          historicoInvertido.forEach((group) => {
             const groupSection = document.createElement("div");
             groupSection.className = "historico-group";
 
@@ -1121,7 +1123,9 @@
               </h3>
             `;
 
-            group.lives.forEach((live) => {
+            // Inverte a ordem para mostrar as lives mais recentes daquele mês primeiro
+            const livesInvertidas = [...group.lives].reverse();
+            livesInvertidas.forEach((live) => {
               const isAdiada = live.status.toLowerCase() === "adiada";
               const statusClass = isAdiada ? "adiada" : "realizada";
               const titleClass = isAdiada ? "adiada" : "realizada";
