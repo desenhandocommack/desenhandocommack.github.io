@@ -140,7 +140,11 @@ A pressão para de funcionar, a caneta fica estranha, o programa não reconhece 
 
 Quando isso acontece, vale testar uma versão anterior do driver até encontrar a ideal. Em alguns casos, inclusive, uma versão mais antiga acaba funcionando melhor do que a versão mais recente.
 
+![Site de drivers da Wacom](site-driver-wacom.png)
+
 Busque no Google pela marca da mesa e coloca Driver em seguida, já deve aparecer um link pro site oficial. Digitamos o modelo exato da nossa mesa digitalizadora e vamos ver se existem outras versões do driver disponíveis.
+
+![Versões antigas do driver para Windows](versoes-antigas-driver-windows.png)
 
 Se você acabou de atualizar o driver e o problema começou depois disso, eu começaria justamente testando a versão anterior.
 
