@@ -581,60 +581,72 @@ body {
 /* ===== Bloco de ações: download, compartilhar, doar ===== */
 .post-actions {
   display: flex;
-  flex-direction: column;
-  /*alinhar verticalmente*/
-  /*flex-direction: row; alinha horizontalmente */
-  gap: 10px;
-  /* espaço entre os botões */
-  margin-top: 15px;
-  /* espaço acima do bloco */
-  margin-bottom: 15px;
-  /* espaço abaixo do bloco */
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   flex-wrap: wrap;
-  /* quebra linha se a tela for pequena */
 }
 
 .post-download,
 .post-share button,
 .post-donate {
-  display: inline-block;
-  width: max-content;
-  padding: 8px 12px;
-  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 22px;
+  border-radius: 50px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
   text-decoration: none;
   text-align: center;
-  font-size: 0.95rem;
   cursor: pointer;
-  transition: background-color 0.2s;
+  border: none;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, filter 0.25s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  color: #ffffff !important;
+  line-height: 1;
 }
 
 .post-download {
-  background-color: #0077cc;
-  color: #fff;
+  background: linear-gradient(135deg, #2bb8fc, #0077cc);
+  box-shadow: 0 4px 12px rgba(43, 184, 252, 0.2);
 }
 
 .post-download:hover {
-  background-color: #005fa3;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(43, 184, 252, 0.3);
+  filter: brightness(1.05);
+}
+
+.post-share {
+  display: inline-flex;
 }
 
 .post-share button {
-  background-color: #ea498b;
-  color: #fff;
-  border: none;
+  background: linear-gradient(135deg, #fe55bd, #ea498b);
+  box-shadow: 0 4px 12px rgba(254, 85, 189, 0.2);
+  width: auto;
 }
 
 .post-share button:hover {
-  background-color: #c53d75;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(254, 85, 189, 0.3);
+  filter: brightness(1.05);
 }
 
 .post-donate {
-  background-color: #ff9900;
-  color: #fff;
-  text-decoration: none;
+  background: linear-gradient(135deg, #ffb300, #ff6600);
+  box-shadow: 0 4px 12px rgba(255, 102, 0, 0.2);
 }
 
 .post-donate:hover {
-  background-color: #e68a00;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 102, 0, 0.3);
+  filter: brightness(1.05);
 }
 
 /* ===== Conteúdo do post ===== */

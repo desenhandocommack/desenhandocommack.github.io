@@ -21,7 +21,7 @@
       rel="stylesheet"
     />
 
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
 
     <link rel="icon" type="image/x-icon" href="/images/favicon-16x16.ico" />
     <link rel="icon" type="image/x-icon" sizes="16x16" href="/images/favicon-16x16.ico" />
@@ -48,6 +48,18 @@
 
     <script>
       (adsbygoogle = window.adsbygoogle || []).push({});
+
+      // Bloqueia clique com botão direito (context menu) e arrastar em imagens e vídeos
+      document.addEventListener('contextmenu', function(e) {
+        if (e.target.tagName === 'IMG' || e.target.tagName === 'VIDEO' || e.target.closest('img') || e.target.closest('video')) {
+          e.preventDefault();
+        }
+      });
+      document.addEventListener('dragstart', function(e) {
+        if (e.target.tagName === 'IMG' || e.target.tagName === 'VIDEO' || e.target.closest('img') || e.target.closest('video')) {
+          e.preventDefault();
+        }
+      });
     </script>
   </body>
 </html>

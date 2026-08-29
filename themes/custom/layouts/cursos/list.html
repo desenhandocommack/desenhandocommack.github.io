@@ -23,7 +23,11 @@
       <div class="curso-card">
 
         <div class="curso-image">
-          <img src="{{ .Params.image }}" alt="{{ .Title }}">
+          {{ with .Resources.GetMatch .Params.image }}
+            <img src="{{ .RelPermalink }}" alt="{{ $.Title }}">
+          {{ else }}
+            <img src="{{ .Params.image }}" alt="{{ .Title }}">
+          {{ end }}
         </div>
 
         <div class="curso-content">

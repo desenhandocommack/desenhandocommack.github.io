@@ -88,6 +88,8 @@ Se alguma outra função parou de funcionar, ative novamente.
 
 Se não quiser desativar o Windows Ink pra tudo, pelo menos aqui na Wacom você consegue fazer configurações diferentes pra cada aplicativo.
 
+![Configurações por aplicativo na Wacom](configuracoes-por-aplicativo.png)
+
 ## 5. Teste a mesa em outro programa
 
 Se a sua mesa não está funcionando em um programa mas estiver funcionando em outro, o problema provavelmente não está na mesa. O que já é um bom sinal.
@@ -120,7 +122,7 @@ Uma das primeiras coisas que eu faço quando a mesa começa a apresentar algum p
 
 Pra fazer isso vamos usar a tecla <kbd>⊞ Windows</kbd> e buscar por **Services**, ou **Serviços**, se o Windows tiver em português. Também podemos usar o atalho <kbd>⊞ Windows</kbd> + <kbd>R</kbd> e digitar <code class="clickable-code" onclick="navigator.clipboard.writeText('services.msc'); const el = this; el.innerText = 'Copiado!'; setTimeout(() => { el.innerText = 'services.msc'; }, 1500);" title="Clique para copiar" style="cursor: pointer; background: rgba(128, 128, 128, 0.15); border: 1px solid rgba(128, 128, 128, 0.25); padding: 2px 5px; border-radius: 3px; font-family: monospace;">services.msc</code> pra abrir essa mesma janela de serviços.
 
-Nessa janela você vai encontrar uma lista enorme de serviços. Vamos procurar o serviço relacionado ao driver da sua mesa.
+Nessa janela você vai encontrar uma lista enorme de serviços. Vamos procurar o serviço relacionado ao driver da nossa mesa de desenho.
 
 O nome muda de acordo com o fabricante e com o driver instalado, então não adianta procurar necessariamente pelo mesmo nome que aparece aqui no meu computador se você usa uma marca de mesa digitalizadora diferente da minha.
 
@@ -148,7 +150,7 @@ Busque no Google pela marca da mesa e coloca Driver em seguida, já deve aparece
 
 Se você acabou de atualizar o driver e o problema começou depois disso, eu começaria justamente testando a versão anterior.
 
-Antes de instalar remova o driver atual. Depois instale a outra versão, reinicie o computador e faça o teste de novo. É uma solução simples, mas pode resolver aqueles problemas que parecem não ter explicação.
+**Antes de instalar remova o driver atual**. Depois instale a outra versão, reinicie o computador e faça o teste de novo. É uma solução simples, mas pode resolver aqueles problemas que parecem não ter explicação.
 
 ## 8. O cursor fica em um lugar e o desenho sai em outro
 
@@ -170,9 +172,7 @@ Se a mesa estiver configurada para um monitor diferente daquele em que você est
 
 ### Confira a área da mesa
 
-Outra coisa que vale verificar é a área ativa da mesa.
-
-Alguns drivers permitem definir exatamente em qual parte da mesa corresponde à tela.
+Outra coisa que vale verificar é a área ativa da mesa. Alguns drivers permitem definir exatamente em qual parte da mesa corresponde à tela.
 
 Se essa área estiver configurada de maneira diferente do padrão, o movimento da caneta pode não corresponder ao movimento do cursor como você espera.
 
@@ -200,9 +200,7 @@ Se a sua mesa possui uma tela própria como a minha Cintiq 16, existe outra poss
 
 Nesse caso, você pode tocar em um ponto da tela e o cursor aparecer alguns milímetros ou centímetros distante.
 
-Procure no software da mesa por uma opção de **Calibração** ou **Calibration**.
-
-Normalmente o programa mostra alguns pontos na tela e pede para você tocar neles com a caneta.
+Procure no software da mesa por uma opção de **Calibrate** ou **Calibrar**.Normalmente o programa mostra alguns pontos na tela e pede para você tocar neles com a caneta.
 
 Faça a calibração seguindo os pontos indicados.
 

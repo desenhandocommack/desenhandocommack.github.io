@@ -11,39 +11,85 @@
 
 <!-- 🔴 VÍDEO LOOP FULL WIDTH (FORA DO CONTAINER) -->
 <section class="hero-video">
-  <video autoplay muted loop playsinline>
-    <source src="/videos/krita-para-iniciantes-preview.mp4" type="video/mp4">
-  </video>
+    <video autoplay muted loop playsinline>
+      {{ with .Resources.GetMatch "krita-para-iniciantes-preview.mp4" }}
+        <source src="{{ .RelPermalink }}" type="video/mp4">
+      {{ else }}
+        <source src="/videos/krita-para-iniciantes-preview.mp4" type="video/mp4">
+      {{ end }}
+    </video>
 
-    <!-- INDICADOR DE SCROLL -->
+  <!-- INDICADOR DE SCROLL -->
   <div class="scroll-indicator">
     <span>Ver mais</span>
     <div class="arrow"></div>
   </div>
-
 </section>
 
-<!-- 🔹 CONTEÚDO NORMAL -->
-<section class="curso">
+<!-- 🔹 CONTEÚDO EM GRID (ESTILO SOBRE) -->
+<div class="curso-container">
+  <div class="curso-layout-grid">
+    
+    <!-- COLUNA ESQUERDA: CARD DO CURSO (STICKY) -->
+    <aside class="curso-sidebar-card">
+      <div class="curso-cover-wrapper">
+        {{ with .Resources.GetMatch .Params.image }}
+          <img src="{{ .RelPermalink }}" alt="{{ $.Title }}" class="curso-cover-img">
+        {{ else }}
+          <img src="{{ .Params.image }}" alt="{{ .Title }}" class="curso-cover-img">
+        {{ end }}
+      </div>
+      <h2 class="curso-sidebar-title">{{ .Title }}</h2>
+      <p class="curso-sidebar-desc">{{ .Params.description }}</p>
+      
+      <div class="curso-sidebar-price-tag">
+        <span class="price-label">Valor total:</span>
+        <span class="price-value">{{ .Params.price }}</span>
+      </div>
 
-  <!-- CONTEÚDO -->
-  <div class="curso-content">
-    {{ .Content }}
+      <div class="curso-sidebar-badges">
+        <div class="curso-sidebar-badge">
+          <span class="material-symbols-rounded">schedule</span>
+          <div class="badge-info">
+            <span class="badge-value">{{ .Params.hours }}</span>
+          </div>
+        </div>
+        <div class="curso-sidebar-badge">
+          <span class="material-symbols-rounded">vpn_key</span>
+          <div class="badge-info">
+            <span class="badge-value">{{ .Params.access }}</span>
+          </div>
+        </div>
+      </div>
+
+      <a href="{{ .Params.buy }}" target="_blank" class="btn-compra-sidebar">
+        <span class="material-symbols-rounded">shopping_cart</span>
+        Adquirir Curso
+      </a>
+    </aside>
+
+    <!-- COLUNA DIREITA: CONTEÚDO PRINCIPAL -->
+    <section class="curso-main-content">
+      {{ .Content }}
+      
+      <!-- 🔹 VÍDEO EXPLICATIVO -->
+      <div class="curso-section-card explicit-video-card">
+        <div class="card-header-row">
+          <span class="material-symbols-rounded card-icon">smart_display</span>
+          <h2>Vídeo de Apresentação</h2>
+        </div>
+        <div class="video-wrapper">
+          <iframe 
+            src="{{ .Params.video }}"
+            title="Vídeo de apresentação"
+            frameborder="0"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </section>
+
   </div>
-
-  
-  <!-- 🔹 VÍDEO EXPLICATIVO (AGORA MENOR, DENTRO DO CONTEÚDO) -->
-  <section class="curso-video">
-    <div class="video-wrapper">
-      <iframe 
-        src="{{ .Params.video }}"
-        title="Vídeo do curso"
-        frameborder="0"
-        allowfullscreen>
-      </iframe>
-    </div>
-  </section>
-
-</section>
+</div>
 
 {{ end }}

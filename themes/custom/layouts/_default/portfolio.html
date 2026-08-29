@@ -146,6 +146,7 @@
 
     let currentVisibleItems = [];
     let currentIndex = 0;
+    let isLightboxOpen = false;
 
     function updateVisibleItems() {
       currentVisibleItems = Array.from(items).filter(item => item.style.display !== "none");
@@ -181,13 +182,26 @@
         lightboxLink.href = "";
       }
 
+      if (!isLightboxOpen) {
+        isLightboxOpen = true;
+        history.pushState({ lightboxOpen: true }, "");
+      }
+
       lightbox.classList.add("active");
       document.body.style.overflow = "hidden"; // Desativa scroll da página
     }
 
-    function closeLightbox() {
+    function closeLightbox(isPopState = false) {
+      if (!isLightboxOpen) return;
+      isLightboxOpen = false;
       lightbox.classList.remove("active");
       document.body.style.overflow = ""; // Ativa scroll da página
+
+      if (!isPopState) {
+        if (history.state && history.state.lightboxOpen) {
+          history.back();
+        }
+      }
     }
 
     function showPrev() {
@@ -204,6 +218,13 @@
       openLightbox(newIndex);
     }
 
+    // Ouvinte para o botão de voltar do navegador (ou gesto de voltar do celular)
+    window.addEventListener("popstate", (e) => {
+      if (isLightboxOpen) {
+        closeLightbox(true);
+      }
+    });
+
     // Eventos de clique nas imagens
     items.forEach((item) => {
       item.addEventListener("click", () => {
@@ -215,21 +236,21 @@
       });
     });
 
-    closeBtn.addEventListener("click", closeLightbox);
+    closeBtn.addEventListener("click", () => closeLightbox(false));
     prevBtn.addEventListener("click", (e) => { e.stopPropagation(); showPrev(); });
     nextBtn.addEventListener("click", (e) => { e.stopPropagation(); showNext(); });
 
     // Fecha ao clicar fora do wrapper
     lightbox.addEventListener("click", (e) => {
       if (e.target === lightbox) {
-        closeLightbox();
+        closeLightbox(false);
       }
     });
 
     // Atalhos do teclado
     document.addEventListener("keydown", (e) => {
       if (!lightbox.classList.contains("active")) return;
-      if (e.key === "Escape") closeLightbox();
+      if (e.key === "Escape") closeLightbox(false);
       if (e.key === "ArrowLeft") showPrev();
       if (e.key === "ArrowRight") showNext();
     });

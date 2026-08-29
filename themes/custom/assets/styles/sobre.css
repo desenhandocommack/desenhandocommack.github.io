@@ -150,6 +150,9 @@
   padding: 0.5rem;
   border-radius: 10px;
   flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .badge-info {
@@ -247,6 +250,9 @@
   background: rgba(234, 73, 139, 0.08);
   padding: 0.4rem;
   border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .card-header-row h2 {
@@ -299,6 +305,9 @@
   font-size: 2.25rem;
   color: #ffb703;
   animation: shine 2.5s infinite ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .milestone-highlight p {

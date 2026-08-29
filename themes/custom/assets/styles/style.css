@@ -1233,3 +1233,35 @@ kbd {
 .btn-portfolio-ver-todos .material-symbols-rounded {
   font-size: 1.2rem;
 }
+
+/* --- PROTEÇÃO CONTRA CÓPIA/DOWNLOAD DE IMAGENS E VÍDEOS --- */
+img,
+video {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
+
+/* --- CORREÇÃO GLOBAL DOS ÍCONES (MATERIAL SYMBOLS ROUNDED) --- */
+.material-symbols-rounded {
+  font-family: 'Material Symbols Rounded' !important;
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'liga';
+}
