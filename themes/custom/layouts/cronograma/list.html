@@ -1,14 +1,10 @@
-{{ define "styles" }}
-{{ with resources.Get "styles/portfolio.css" | resources.Fingerprint }}
-<link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}">
-{{ end }}
-{{ end }}
+{{ define "styles" }} {{ with resources.Get "styles/portfolio.css" | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" />
+{{ end }} {{ end }} {{ define "main" }}
 
-{{ define "main" }}
-
-<div class="portfolio-container" style="max-width: 1410px; margin: 0 auto; padding-top: 1.5rem; padding-bottom: 0;">
-  <section class="portfolio-hero" style="padding: 2rem 2rem; margin-bottom: 1rem;">
-    <h1 style="margin-bottom: 0;">Cronograma</h1>
+<div class="portfolio-container" style="max-width: 1410px; margin: 0 auto; padding-top: 1.5rem; padding-bottom: 0">
+  <section class="portfolio-hero" style="padding: 2rem 2rem; margin-bottom: 1rem">
+    <h1 style="margin-bottom: 0">Cronograma</h1>
   </section>
 </div>
 
@@ -135,7 +131,7 @@
     }
   }
 
-  .container>*+* {
+  .container > * + * {
     margin-top: 16px;
     /* space-y-4 */
   }
@@ -183,7 +179,6 @@
   }
 
   @keyframes ping {
-
     75%,
     100% {
       transform: scale(2);
@@ -312,7 +307,7 @@
     display: none;
   }
 
-  .tab-content>*+* {
+  .tab-content > * + * {
     margin-top: 16px;
   }
 
@@ -326,7 +321,7 @@
     margin: 0 0 8px 0;
   }
 
-  .list-stack>*+* {
+  .list-stack > * + * {
     margin-top: 8px;
   }
 
@@ -465,7 +460,6 @@
   }
 
   @keyframes pulse {
-
     0%,
     100% {
       opacity: 1;
@@ -686,7 +680,7 @@
     margin-top: 16px;
   }
 
-  .historico-group>*+* {
+  .historico-group > * + * {
     margin-top: 8px;
   }
 
@@ -837,7 +831,10 @@
     border-radius: 8px;
     background-color: #ffffff;
     border: 1px solid var(--slate-200);
-    transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+    transition:
+      transform 0.2s,
+      border-color 0.2s,
+      box-shadow 0.2s;
   }
 
   .footer-social-link:hover {
@@ -854,7 +851,6 @@
 
   /* ============ Mobile Query ============ */
   @media (max-width: 576px) {
-
     .proxima-card,
     .historico-card {
       flex-direction: column !important;
@@ -955,6 +951,10 @@
 
     // Category style generator
     function getCategoryBadge(category, isDarkOverlay = false) {
+      if (!category) {
+        return "";
+      }
+
       const cat = category.toLowerCase();
       const overlayClass = isDarkOverlay ? " overlay" : "";
       if (cat.includes("desenho")) {

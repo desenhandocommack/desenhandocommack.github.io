@@ -9,7 +9,7 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
   workflow_run:
-    workflows: ["Check Live Status"]
+    workflows: ["Check Live Status", "Atualiza status da live"]
     types:
       - completed
 

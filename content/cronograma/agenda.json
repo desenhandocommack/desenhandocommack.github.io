@@ -1,16 +1,16 @@
 {
   "atualizado": "24/08/2026",
   "aoVivo": {
-    "ativo": true,
-    "titulo": "Live no YouTube",
-    "dia": "Sábado",
-    "data": "29/08",
-    "capa": "images/image1.png",
+    "ativo": false,
+    "titulo": null,
+    "dia": null,
+    "data": null,
+    "capa": null,
+    "link": null,
+    "categoria": null,
     "horario": "Agora",
-    "categoria": "Desenho",
     "plataforma": "youtube",
-    "canal": "@desenhandocommack",
-    "link": "https://www.youtube.com/watch?v=yJ-1qqq4BpM"
+    "canal": "@desenhandocommack"
   },
   "proximas": [
     {

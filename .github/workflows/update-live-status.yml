@@ -1,0 +1,90 @@
+name: Atualiza status da live
+
+on:
+  workflow_dispatch:
+    inputs:
+      live-status:
+        description: "Status da live"
+        required: true
+        type: choice
+        options:
+          - "on"
+          - "off"
+
+jobs:
+  update-live-status:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Atualiza JSON (live OFF)
+        if: ${{ inputs.live-status == 'off' }}
+        run: |
+          jq '.atualizado = (now | strftime("%d/%m/%Y")) | .aoVivo.ativo = false' \
+            content/cronograma/agenda.json > content/cronograma/agenda.tmp.json && mv content/cronograma/agenda.tmp.json content/cronograma/agenda.json
+
+      - name: Busca video ao vivo
+        if: ${{ inputs.live-status == 'on' }}
+        id: search
+        env:
+          API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          CHANNEL_ID: ${{ secrets.YOUTUBE_CHANNEL_ID }}
+        run: |
+          sleep 10
+
+          RESPONSE=$(curl -s "https://www.googleapis.com/youtube/v3/search?part=snippet&fields=items(id(videoId),snippet(title,description))&eventType=live&type=video&channelId=${CHANNEL_ID}&key=${API_KEY}")
+
+          VIDEO_ID=$(echo "$RESPONSE" | jq -r '.items[0].id.videoId // empty')
+
+          echo '```json' >> "$GITHUB_STEP_SUMMARY"
+          echo "$RESPONSE" >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+
+          if [ -z "$VIDEO_ID" ]; then
+            echo "Nenhuma live encontrada. Abortando."
+            exit 1
+          fi
+
+          echo "$RESPONSE" > video-details.json
+
+      - name: Atualiza JSON (live ON)
+        if: ${{ inputs.live-status == 'on' }}
+        run: |
+          VIDEO_ID=$(jq -r '.items[0].id.videoId' video-details.json)
+          TITULO=$(jq -r '.items[0].snippet.title' video-details.json)
+          DESCRICAO=$(jq -r '.items[0].snippet.description' video-details.json)
+          CATEGORIA=$(echo "$DESCRICAO" | grep -oE '\[Categoria: [^]]+\]' | sed -E 's/\[Categoria: (.+)\]/\1/')
+
+          DIA_PT=$(date -u +%A | sed \
+            -e 's/Monday/Segunda-feira/' -e 's/Tuesday/Terça-feira/' \
+            -e 's/Wednesday/Quarta-feira/' -e 's/Thursday/Quinta-feira/' \
+            -e 's/Friday/Sexta-feira/' -e 's/Saturday/Sábado/' -e 's/Sunday/Domingo/')
+          DATA=$(date -u +%d/%m)
+
+          jq --arg titulo "$TITULO" \
+             --arg categoria "$CATEGORIA" \
+             --arg dia "$DIA_PT" \
+             --arg data "$DATA" \
+             --arg link "https://www.youtube.com/watch?v=${VIDEO_ID}" \
+             --arg cover "https://i.ytimg.com/vi/${VIDEO_ID}/maxresdefault_live.jpg" \
+             --arg atualizado "$(date -u +%d/%m/%Y)" \
+             '.atualizado = $atualizado
+              | .aoVivo.ativo = true
+              | .aoVivo.titulo = $titulo
+              | .aoVivo.categoria = $categoria
+              | .aoVivo.capa = $cover
+              | .aoVivo.dia = $dia
+              | .aoVivo.data = $data
+              | .aoVivo.link = $link' \
+            content/cronograma/agenda.json > content/cronograma/agenda.tmp.json && mv content/cronograma/agenda.tmp.json content/cronograma/agenda.json
+
+      - name: Commit e push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add content/cronograma/agenda.json
+          git diff --staged --quiet || git commit -m "chore: atualiza status da live"
+          git push

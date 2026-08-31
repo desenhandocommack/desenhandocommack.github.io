@@ -1,10 +1,9 @@
 name: Check Live Status
 
 on:
-  schedule:
-    # Roda a cada 5 minutos
-    - cron: "*/5 * * * *"
-  workflow_dispatch: # Permite rodar manualmente pelo painel do GitHub
+  # schedule:
+  # - cron: "*/5 * * * *"
+  workflow_dispatch:
 
 jobs:
   check-live:
