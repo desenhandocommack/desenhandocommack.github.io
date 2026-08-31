@@ -1,0 +1,50 @@
+{
+  "atualizado": "24/08/2026",
+  "aoVivo": {
+    "ativo": false,
+    "titulo": null,
+    "dia": null,
+    "data": null,
+    "capa": null,
+    "link": null,
+    "categoria": null,
+    "horario": "Agora",
+    "plataforma": "youtube",
+    "canal": "@desenhandocommack"
+  },
+  "proximas": [
+    {
+      "dia": "Terça-feira",
+      "data": "01/09",
+      "capa": "images/image2.png",
+      "horario": "19:00",
+      "categoria": "Desenho",
+      "titulo": "Testando meus pincéis no Krita",
+      "plataforma": "YouTube",
+      "link": "https://www.youtube.com/@desenhandocommack/streams"
+    }
+  ],
+  "historico": [
+    {
+      "mesAno": "Agosto 2026",
+      "lives": [
+        {
+          "data": "25/08",
+          "capa": "images/image1.png",
+          "plataforma": "YouTube",
+          "status": "Concluída",
+          "titulo": "Dia de testar a live",
+          "categoria": "Bate-Papo"
+        },
+        {
+          "data": "27/08",
+          "capa": "images/image3.png",
+          "plataforma": "YouTube",
+          "status": "Adiada",
+          "titulo": "O Driver bugou minha caneta",
+          "categoria": "Bate-Papo"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1272 @@
+/* RESET SIMPLES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1 0 auto;
+}
+
+/* Tema claro - padrão */
+:root {
+  --color-bg: #ffffff;
+  --color-menu: #f6f4f1;
+  --color-text: #173657;
+  --color-accent: #ea498b;
+}
+
+/* MENU PRINCIPAL */
+.main-nav {
+  position: sticky;
+  top: 0;
+  background: linear-gradient(to right, rgba(240, 249, 255, 0.85), rgba(255, 240, 250, 0.85));
+  /* Degradê translúcido alinhado com o rodapé */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(23, 54, 87, 0.08);
+  padding: 0.75rem 2rem;
+  /* espaço interno da nav */
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+/* ITEM DO MENU PRINCIPAL */
+.main-nav .container-nav {
+  max-width: 1400px;
+  /* define largura máxima */
+  display: flex;
+  /* Flex container aqui */
+  justify-content: space-between;
+  /* Distribui itens horizontalmente */
+  align-items: center;
+  /* Alinha verticalmente */
+  margin: 0 auto;
+  /* centraliza horizontalmente */
+  padding: 0 1rem;
+  /* garante espaço nas laterais em telas pequenas */
+  background: transparent;
+  /* Consistente com nav translúcida */
+}
+
+/* MENU LINKS PRINCIPAIS */
+.main-nav .menu {
+  list-style: none;
+  /* remove bolinhas */
+  display: flex;
+  /* horizontal */
+  align-items: center;
+  gap: 1.5rem;
+  /* espaçamento moderno entre os links */
+}
+
+.main-nav .menu a {
+  text-decoration: none;
+  color: var(--color-text);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  /* ligeiramente mais espesso */
+  font-size: 0.95rem;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  /* pastilha */
+  display: flex;
+  height: 100%;
+  align-items: center;
+  transition: all 0.25s ease;
+}
+
+.main-nav .menu a:hover {
+  color: var(--color-accent);
+  background-color: rgba(234, 73, 139, 0.06);
+  /* pill sutil rosa */
+}
+
+.main-nav .menu a.active {
+  color: #ffffff !important;
+  background: linear-gradient(135deg, #2bb8fc, #fe55bd);
+  /* gradiente do design */
+  box-shadow: 0 4px 10px rgba(43, 184, 252, 0.2);
+}
+
+.main-nav .nav-right {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  /* espaço entre menu, busca e ícones */
+}
+
+/* ÍCONES DO MENU */
+.main-nav .material-symbols-rounded {
+  cursor: pointer;
+  color: var(--color-accent);
+}
+
+.nav-actions {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+/* Botão Doar CTA Moderno */
+.nav-actions .botao-doar {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #ffffff !important;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  background: linear-gradient(135deg, #fe55bd, #2bb8fc);
+  /* gradiente invertido para destaque */
+  padding: 0.5rem 1.2rem;
+  border-radius: 9999px;
+  box-shadow: 0 4px 12px rgba(254, 85, 189, 0.25);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.nav-actions .botao-doar .material-symbols-rounded {
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.nav-actions .botao-doar:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(254, 85, 189, 0.35);
+}
+
+.nav-actions .botao-doar:active {
+  transform: translateY(1px);
+}
+
+/* Botão Hamburguer Animado */
+.menu-toggle {
+  display: none;
+  /* oculto por padrão (desktop) */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+}
+
+.hamburger-bar {
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-text);
+  /* Mudar de rosa para o azul escuro da marca para dar contraste */
+  border-radius: 4px;
+  transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
+}
+
+/* Animação do hamburguer para X */
+.menu-toggle.open .hamburger-bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle.open .hamburger-bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.open .hamburger-bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* CAIXA DE BUSCA */
+.search {
+  display: flex;
+  align-items: center;
+  background-color: rgba(23, 54, 87, 0.05);
+  border: 1px solid rgba(23, 54, 87, 0.08);
+  border-radius: 9999px;
+  /* pastilha */
+  overflow: hidden;
+  width: 44px;
+  /* tamanho do botão de busca fechado */
+  height: 44px;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.search:hover {
+  border-color: rgba(254, 85, 189, 0.2);
+  background-color: rgba(254, 85, 189, 0.04);
+}
+
+.search.expanded {
+  width: 220px;
+  /* mais larga e moderna */
+  background-color: #ffffff;
+  border: 1px solid transparent;
+  background-image: linear-gradient(#ffffff, #ffffff), linear-gradient(135deg, #fe55bd, #2bb8fc);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  box-shadow: 0 4px 14px rgba(254, 85, 189, 0.15);
+  justify-content: space-between;
+  padding: 0 6px 0 14px;
+}
+
+.search input {
+  width: 0;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  /* invisível */
+  transition: width 0.3s ease, opacity 0.2s ease;
+}
+
+.search.expanded input {
+  width: 140px;
+  padding-left: 8px;
+}
+
+.search button {
+  background: linear-gradient(135deg, #fe55bd, #2bb8fc);
+  /* botão gradiente */
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(254, 85, 189, 0.2);
+  transition: transform 0.2s;
+  flex-shrink: 0;
+}
+
+.search button:hover {
+  transform: scale(1.05);
+}
+
+.search button span {
+  font-size: 18px;
+  color: #ffffff !important;
+  /* ícone branco no botão gradiente */
+  transition: transform 0.3s ease;
+}
+
+.search.expanded button span {
+  transform: rotate(90deg);
+  /* rotação moderna ao abrir */
+}
+
+/* MAIN DA PÁGINA INICIAL */
+
+.slides-container {
+  min-height: 100vh;
+  /* ocupa toda a tela vh = viewport height (altura da janela de visualização) */
+  background: linear-gradient(to bottom, #349eff, #34d0ff);
+  display: flex;
+  /* flex para alinhar o conteúdo interno */
+  align-items: center;
+  /* centraliza verticalmente */
+}
+
+/* CONTAINER INTERNO PARA CENTRALIZAR E LIMITAR LARGURA */
+.slide-content {
+  width: 100%;
+}
+
+.slide-content .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* TEXTO DO SLIDE*/
+
+.slide-text p {
+  font-size: 19px;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.nome-do-curso-krita {
+  color: #fff751;
+  font-size: 7rem;
+  font-weight: 900;
+}
+
+.nome-do-curso-krita2 {
+  color: #ffffff;
+  font-size: 3rem;
+  display: block;
+  /* cada span ocupa uma linha */
+  padding-bottom: 1rem;
+  margin-top: -1.5rem;
+  /* puxa o texto para cima */
+}
+
+/*BOTÃO DO SLIDE */
+
+.slides-btn {
+  /* estilo dos botões dos slides */
+  background-color: #fff751;
+  display: inline-flex;
+  /*o container se comporta como inline (ocupa só o espaço necessário*/
+  gap: 1rem;
+  /* espaço entre ícone e texto */
+  margin-top: 1.5rem;
+  padding: 1rem 2.5rem;
+  color: #173657;
+  text-decoration: none;
+  align-items: center;
+  font-weight: 700;
+  transition: transform 0.3s ease;
+  /* 👈 tempo + suavidade do efeito */
+}
+
+.slides-btn:hover {
+  transform: scale(1.05);
+  /* 👈 aumenta 5% no hover */
+}
+
+/* BOTÃO GLOBAL */
+
+.btn-main {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem 2.5rem;
+  text-decoration: none;
+  font-weight: 700;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.btn-main:hover {
+  transform: scale(1.05);
+}
+
+.btn-wrapper {
+  display: inline-flex;
+  /* mantém o botão alinhado à esquerda */
+  flex-direction: column;
+  /* empilha botão e info verticalmente */
+  align-items: flex-start;
+  /* botão à esquerda */
+}
+
+.slide-text .info-btn {
+  font-size: 1rem;
+  color: #ffffff;
+  margin: 0.5rem;
+  align-self: center;
+  /* centraliza horizontalmente em relação ao botão */
+  font-style: italic;
+  font-weight: 400;
+}
+
+/*EFEITO IMAGEM DO SLIDE*/
+
+.slide-image {
+  transition: transform 0.3s ease;
+}
+
+.slide-image img {
+  max-width: 100%;
+  /* imagem nunca maior que o container */
+  height: auto;
+  /* mantém proporção */
+  display: block;
+  /* evita espaços brancos indesejados */
+}
+
+.slide-image:hover {
+  transform: scale(1.04);
+  /* aumenta levemente o ícone ao passar o mouse */
+}
+
+/* SEÇÃO CONTEÚDOS (Por Intenção) */
+.conteudos-secao {
+  min-height: 100vh;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  padding: 8rem 0 6rem;
+  overflow: hidden;
+}
+
+.conteudos-secao .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+}
+
+.secao-titulo {
+  color: var(--color-accent);
+  font-size: 2.75rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+.secao-subtitulo {
+  color: var(--color-text);
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-align: center;
+  opacity: 0.8;
+  margin-bottom: 4rem;
+}
+
+/* Rolagem Horizontal Configs com Botões */
+.conteudos-nav-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.conteudos-scroll-wrapper {
+  width: 100%;
+  padding: 1rem 0 2rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  /* Esconde a barra de rolagem por padrão em navegadores modernos */
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+}
+
+/* Esconde a barra de rolagem no Chrome, Safari e Opera */
+.conteudos-scroll-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+/* Container de Controles (Setas no rodapé) */
+.conteudos-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Botões de navegação menores e posicionados abaixo do subtítulo */
+.scroll-btn {
+  width: 46px;
+  height: 46px;
+  background-color: #ffffff;
+  border: 1px solid rgba(23, 54, 87, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(23, 54, 87, 0.05);
+  transition: all 0.25s ease;
+  color: var(--color-text);
+}
+
+.scroll-btn:hover {
+  background-color: var(--color-accent);
+  color: #ffffff;
+  border-color: var(--color-accent);
+  box-shadow: 0 6px 16px rgba(234, 73, 139, 0.15);
+}
+
+/* Desabilita sumiço de setas no mobile, apenas ajustando as margens do wrapper */
+@media (max-width: 768px) {
+  .conteudos-scroll-wrapper {
+    margin: 0 -1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+.conteudos-scroll-container {
+  display: flex;
+  gap: 2rem;
+  width: max-content;
+  padding: 0 1rem;
+}
+
+/* CARDS VERTICAIS */
+.conteudo-card {
+  width: 320px;
+  background: #ffffff;
+  border: 1px solid rgba(23, 54, 87, 0.08);
+  border-radius: 24px;
+  padding: 2.25rem 2rem;
+  box-shadow: 0 10px 30px rgba(23, 54, 87, 0.02);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s;
+}
+
+.conteudo-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(43, 184, 252, 0.2);
+  box-shadow: 0 20px 40px var(--card-glow, rgba(23, 54, 87, 0.06));
+}
+
+.card-icon {
+  width: 56px;
+  height: 56px;
+  background-color: rgba(234, 73, 139, 0.06);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.conteudo-card:hover .card-icon {
+  transform: scale(1.08) rotate(-3deg);
+  background-color: var(--color-accent);
+}
+
+.card-icon .material-symbols-rounded {
+  font-size: 1.75rem;
+  color: var(--color-accent);
+  transition: color 0.3s;
+}
+
+.conteudo-card:hover .card-icon .material-symbols-rounded {
+  color: #ffffff;
+}
+
+.conteudo-card h2 {
+  font-size: 1.5rem;
+  font-weight: 750;
+  color: var(--color-text);
+  margin-bottom: 0.75rem;
+}
+
+.card-desc {
+  font-size: 0.925rem;
+  color: rgba(23, 54, 87, 0.75);
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+  flex-grow: 0;
+}
+
+/* LINKS DO CARD */
+.card-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.card-link-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-text);
+  padding: 0.65rem 1rem;
+  background-color: rgba(23, 54, 87, 0.03);
+  border-radius: 12px;
+  border: 1px solid rgba(23, 54, 87, 0.04);
+  transition: all 0.25s ease;
+}
+
+.card-link-item:hover {
+  background-color: rgba(234, 73, 139, 0.06);
+  border-color: rgba(234, 73, 139, 0.2);
+  color: var(--color-accent);
+  transform: translateX(4px);
+}
+
+/* CARDS COM IMAGEM (VISUAL LINKS HORIZONTAIS) */
+.card-link-item.visual {
+  flex-direction: row;
+  align-items: center;
+  padding: 0.5rem;
+  gap: 1rem;
+  overflow: hidden;
+  background-color: #ffffff;
+  border: 1px solid rgba(23, 54, 87, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(23, 54, 87, 0.02);
+}
+
+.card-link-item.visual:hover {
+  transform: translateX(4px);
+  border-color: rgba(234, 73, 139, 0.2);
+  box-shadow: 0 6px 16px rgba(234, 73, 139, 0.06);
+  background-color: #ffffff;
+}
+
+.card-link-image-wrapper {
+  width: 70px;
+  height: 50px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #000000;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.card-link-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.card-link-item.visual:hover .card-link-image-wrapper img {
+  transform: scale(1.08);
+}
+
+.card-link-text-wrapper {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  align-items: flex-start;
+  flex-grow: 1;
+}
+
+.card-link-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1.3;
+}
+
+.card-link-item.visual:hover .card-link-title {
+  color: var(--color-accent);
+}
+
+/* BADGES DE CATEGORIA */
+.badge {
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+  letter-spacing: 0.05em;
+}
+
+.badge.video {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+}
+
+.badge.live {
+  background-color: rgba(168, 85, 247, 0.1);
+  color: #a855f7;
+}
+
+.badge.projeto {
+  background-color: rgba(253, 126, 20, 0.1);
+  color: #fd7e14;
+}
+
+.badge.setup {
+  background-color: rgba(43, 184, 252, 0.1);
+  color: #2bb8fc;
+}
+
+.badge.post {
+  background-color: rgba(254, 85, 189, 0.1);
+  color: #fe55bd;
+}
+
+/* RODAPÉ GERAL */
+.main-footer {
+  background: linear-gradient(135deg, #f0f9ff, #fff0fa);
+  /* Degradê azul suave para rosa suave */
+  color: #173657;
+  /* Azul escuro da marca */
+  border-top: 3px solid;
+  border-image: linear-gradient(to right, #2bb8fc, #fe55bd) 1;
+  /* Borda gradiente com as cores da agenda */
+}
+
+/* CONTAINER PRINCIPAL DO RODAPÉ */
+.container-footer {
+  display: flex;
+  align-items: center;
+  /* centraliza verticalmente */
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: 0 auto;
+  /* centraliza horizontalmente */
+  padding: 1.8rem 1.5rem;
+  /* garante espaço nas laterais em telas pequenas */
+  box-sizing: border-box;
+  /* inclui padding dentro da largura total do container */
+}
+
+/* TEXTO DO COPYRIGHT */
+.footer-text {
+  margin: 0;
+  /* remove margens padrão do <p> */
+  font-size: 0.85rem;
+  font-weight: 600;
+  /* ligeiramente mais nítido */
+  color: var(--color-text);
+  opacity: 0.75;
+  letter-spacing: 0.02em;
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.footer-link {
+  font-size: 0.75rem;
+  color: var(--color-accent);
+  text-decoration: none;
+  opacity: 0.9;
+  font-weight: 700;
+  transition: opacity 0.25s ease, color 0.25s ease;
+}
+
+.footer-link:hover {
+  opacity: 1;
+  color: #fe55bd;
+}
+
+/* CONTAINER DOS ÍCONES DAS REDES SOCIAIS DO RODAPÉ */
+.footer-icons {
+  display: flex;
+  /* alinha os ícones horizontalmente */
+  gap: 1rem;
+  /* espaçamento de 1rem entre cada ícone */
+  align-items: center;
+}
+
+/*ESTILO DOS BOTÕES DE ATALHOS DE TECLADO*/
+kbd {
+  font-family: ui-monospace, monospace;
+  background: #f1f1f1;
+  padding: 3px 6px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  color: #000;
+}
+
+/* BOTOES DAS REDES SOCIAIS */
+.footer-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 1px solid rgba(23, 54, 87, 0.1);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ESTILO DAS IMAGENS DOS ÍCONES */
+.footer-icons a img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  transition: transform 0.25s ease;
+}
+
+/* EFEITO AO PASSAR O MOUSE EM CIMA DOS ÍCONES (ESPECÍFICO DE ACORDO COM A REDE SOCIAL) */
+.footer-icons a[aria-label="Instagram"]:hover {
+  border-color: #fe55bd;
+  /* Rosa da agenda */
+  box-shadow: 0 6px 16px rgba(254, 85, 189, 0.15);
+  transform: translateY(-3px);
+}
+
+.footer-icons a[aria-label="YouTube"]:hover {
+  border-color: #ef4444;
+  /* Vermelho do YouTube */
+  box-shadow: 0 6px 16px rgba(239, 68, 68, 0.15);
+  transform: translateY(-3px);
+}
+
+.footer-icons a[aria-label="Twitch"]:hover {
+  border-color: #a855f7;
+  /* Roxo da Twitch */
+  box-shadow: 0 6px 16px rgba(168, 85, 247, 0.15);
+  transform: translateY(-3px);
+}
+
+.footer-icons a[aria-label="TikTok"]:hover {
+  border-color: #000000;
+  /* Preto do TikTok */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  transform: translateY(-3px);
+}
+
+.footer-icons a:hover img {
+  transform: scale(1.12);
+}
+
+
+
+/*========= MOBILE =========*/
+
+/* Botão hamburguer sempre visível no mobile */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .botao-doar-text {
+    display: none;
+    /* no mobile esconde o texto 'Apoiar' e fica só o ícone para economizar espaço */
+  }
+
+  .nav-actions .botao-doar {
+    padding: 0.5rem;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    justify-content: center;
+  }
+
+  /* MENU FULLSCREEN AO CLICAR - MOBILE */
+  .main-nav .menu {
+    position: fixed;
+    /* fica fixo na tela inteira */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100dvh;
+    /* ocupa só o espaço disponível real */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(246, 244, 241, 0.98);
+    /* fundo translúcido no mobile */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    gap: 2rem;
+    opacity: 0;
+    /* invisível por padrão */
+    pointer-events: none;
+    /* não clicável por padrão */
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+    transform: translateY(-20px);
+    z-index: 1000;
+  }
+
+  .main-nav.fixed {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+  }
+
+  /* Ajuste da caixa de busca para mobile */
+  .main-nav .menu .search {
+    width: 240px !important;
+    /* Sempre aberta no mobile */
+    height: 42px;
+    background-color: #ffffff;
+    border-color: rgba(23, 54, 87, 0.15);
+    padding: 0 14px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+    justify-content: space-between;
+    margin: 1rem auto 0 auto;
+    /* centraliza */
+  }
+
+  .main-nav .menu .search input {
+    width: 180px !important;
+    padding-left: 8px;
+    font-size: 0.95rem;
+  }
+
+  /* Menu ativo */
+  .main-nav .menu.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  /* Links maiores para o menu fullscreen */
+  .main-nav .menu li a {
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    text-align: center;
+    border-bottom: none;
+    width: auto;
+  }
+
+  /*LOGO MENOR*/
+  .logo img {
+    max-width: 36px;
+  }
+
+  /* SLIDES */
+  .slide-text {
+    text-align: center;
+  }
+
+  .slide-text .btn-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+  }
+
+  .slide-content .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .slide-image {
+    order: 2;
+    margin-top: 2rem;
+    width: 40%;
+    max-width: 317px;
+  }
+
+  .slide-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* CONTEÚDOS */
+  .conteudos-secao {
+    padding: 4rem 0 3rem;
+  }
+
+  .conteudos-secao .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .secao-titulo {
+    font-size: 2.25rem;
+  }
+
+  .secao-subtitulo {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+
+  .conteudos-scroll-wrapper {
+    margin: 0 -1rem;
+    padding: 0.5rem 1rem 1.5rem;
+  }
+
+  .conteudos-scroll-container {
+    gap: 1.25rem;
+  }
+
+  .conteudo-card {
+    width: 290px;
+    padding: 1.75rem 1.5rem;
+  }
+
+  /* FOOTER */
+  .container-footer {
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-info {
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-links {
+    justify-content: center;
+  }
+}
+
+/* MOBILE PEQUENO (até 576px) */
+@media (max-width: 576px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .main-nav {
+    padding: 0.8rem 0.6rem;
+    /* espaço interno da nav, primeiro vertical e depois o horizontal */
+  }
+
+  .slides-container {
+    min-height: auto;
+    /* deixa altura se adaptar */
+    padding: 6rem 1rem;
+    /* controla o espaço total do slide */
+  }
+
+  .slide-text {
+    margin: 0 0 1.5rem 0;
+    /* apenas espaço abaixo do texto */
+  }
+
+  .nome-do-curso-krita {
+    font-size: 5rem;
+  }
+
+  .nome-do-curso-krita2 {
+    font-size: 2rem;
+    margin-top: -1rem;
+    /* puxa o texto para cima */
+  }
+
+  .footer-text {
+    text-align: center;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+}
+
+/* MOBILE PEQUENO (até 375px) */
+@media (max-width: 375px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .footer-text {
+    text-align: center;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+}
+
+/* SEÇÃO DESTAQUES PORTFÓLIO (Home Page) */
+.portfolio-destaques {
+  padding: 6rem 0;
+  background-color: var(--color-menu);
+  border-top: 1px solid rgba(23, 54, 87, 0.05);
+}
+
+.portfolio-destaques .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* MOSAICO HORIZONTAL DESTAQUES (Página Inicial) */
+.destaques-mosaico-wrapper {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 3rem;
+  background-color: transparent;
+  border-top: 1px solid rgba(23, 54, 87, 0.05);
+  border-bottom: 1px solid rgba(23, 54, 87, 0.05);
+}
+
+.destaques-mosaico-scroll {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  gap: 0;
+  padding: 0;
+  justify-content: safe center;
+}
+
+/* Custom scrollbar para o mosaico horizontal */
+.destaques-mosaico-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.destaques-mosaico-scroll::-webkit-scrollbar-track {
+  background: rgba(23, 54, 87, 0.02);
+}
+
+.destaques-mosaico-scroll::-webkit-scrollbar-thumb {
+  background: rgba(43, 184, 252, 0.3);
+  border-radius: 3px;
+}
+
+.destaques-mosaico-item {
+  flex: 0 0 280px;
+  /* largura de cada imagem vertical no desktop */
+  aspect-ratio: 2 / 3;
+  /* proporção vertical */
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  scroll-snap-align: start;
+}
+
+.destaques-mosaico-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.destaques-mosaico-item:hover img {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .destaques-mosaico-item {
+    flex: 0 0 200px;
+    /* largura menor em telas mobile */
+  }
+}
+
+/* ESTILOS DE CARDS DE DESTAQUES (Reutilizados no Blog) */
+.portfolio-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.destaque-card {
+  background: #ffffff;
+  border: 1px solid rgba(23, 54, 87, 0.06);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(23, 54, 87, 0.02);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s;
+}
+
+.destaque-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(43, 184, 252, 0.2);
+  box-shadow: 0 15px 35px rgba(23, 54, 87, 0.06);
+}
+
+.destaque-img-box {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.destaque-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.destaque-card:hover .destaque-img-box img {
+  transform: scale(1.05);
+}
+
+.destaque-tag {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: linear-gradient(135deg, #2bb8fc, #fe55bd);
+  padding: 0.3rem 0.75rem;
+  border-radius: 9999px;
+  box-shadow: 0 4px 10px rgba(254, 85, 189, 0.25);
+  letter-spacing: 0.02em;
+}
+
+.destaque-info {
+  padding: 1.25rem 1.5rem;
+  text-align: center;
+}
+
+.destaque-info h3 {
+  font-size: 1.1rem;
+  font-weight: 750;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.portfolio-cta-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 3.5rem;
+}
+
+.btn-portfolio-ver-todos {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: #ffffff !important;
+  font-weight: 700;
+  font-size: 0.95rem;
+  background: linear-gradient(135deg, #2bb8fc, #fe55bd);
+  padding: 0.8rem 2rem;
+  border-radius: 9999px;
+  box-shadow: 0 4px 15px rgba(254, 85, 189, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-portfolio-ver-todos:hover {
+  transform: scale(1.04);
+  box-shadow: 0 6px 20px rgba(254, 85, 189, 0.3);
+}
+
+.btn-portfolio-ver-todos .material-symbols-rounded {
+  font-size: 1.2rem;
+}
+
+/* --- PROTEÇÃO CONTRA CÓPIA/DOWNLOAD DE IMAGENS E VÍDEOS --- */
+img,
+video {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
+
+/* --- CORREÇÃO GLOBAL DOS ÍCONES (MATERIAL SYMBOLS ROUNDED) --- */
+.material-symbols-rounded {
+  font-family: 'Material Symbols Rounded' !important;
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'liga';
+}
