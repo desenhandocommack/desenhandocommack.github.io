@@ -928,10 +928,7 @@
                 {{ with .snippet.description }}
                   {{ $category := replaceRE `^\[Categoria:\s+([\w ]+)\][\s\S]*$` "$1" . }}
                   {{ if ne $category . }}
-                    <span class="badge-ao-vivo">
-                      <span class="badge-ao-vivo-dot"></span>
-                      <span class="badge-category badge-cat-{{ lower $category }} overlay">{{ $category }}</span>
-                    </span>
+                    <span class="badge-category badge-cat-{{ lower $category }} overlay">{{ $category }}</span>
                   {{ end }}
                 {{ end }}
               </div>
@@ -986,10 +983,7 @@
                     {{ with .snippet.description }}
                       {{ $category := replaceRE `^\[Categoria:\s+([\w ]+)\][\s\S]*$` "$1" . }}
                       {{ if ne $category . }}
-                        <span class="badge-ao-vivo">
-                          <span class="badge-ao-vivo-dot"></span>
-                          <span class="badge-category badge-cat-{{ lower $category }} overlay">{{ $category }}</span>
-                        </span>
+                        <span class="badge-category badge-cat-{{ lower $category }}">{{ $category }}</span>
                       {{ end }}
                     {{ end }}
                     
@@ -1037,10 +1031,7 @@
                   {{ with .snippet.description }}
                     {{ $category := replaceRE `^\[Categoria:\s+([\w ]+)\][\s\S]*$` "$1" . }}
                     {{ if ne $category . }}
-                      <span class="badge-ao-vivo">
-                        <span class="badge-ao-vivo-dot"></span>
-                        <span class="badge-category badge-cat-{{ lower $category }} overlay">{{ $category }}</span>
-                      </span>
+                      <span class="badge-category badge-cat-{{ lower $category }}">{{ $category }}</span>
                     {{ end }}
                   {{ end }}
                 </div>
