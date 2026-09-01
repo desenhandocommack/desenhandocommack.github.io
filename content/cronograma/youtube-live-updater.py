@@ -9,7 +9,7 @@ workflow_file = "update-live-status.yml"
 github_ref = "main"
 
 
-def dispatch_workflow(live_status):
+def dispatch_workflow():
     if not github_token or not github_owner or not github_repo:
         obs.script_log(obs.LOG_WARNING, "GitHub token/owner/repo não configurados.")
         return
@@ -18,9 +18,7 @@ def dispatch_workflow(live_status):
 
     payload = json.dumps({
         "ref": github_ref,
-        "inputs": {
-            "live-status": live_status
-        }
+        "inputs": { "event-type": "live" }
     }).encode("utf-8")
 
     req = urllib.request.Request(url, data=payload, method="POST")
@@ -32,7 +30,7 @@ def dispatch_workflow(live_status):
         with urllib.request.urlopen(req) as response:
             status = response.getcode()
             if status == 204:
-                obs.script_log(obs.LOG_INFO, f"Workflow disparado com live-status={live_status}")
+                obs.script_log(obs.LOG_INFO, f"Workflow disparado")
             else:
                 obs.script_log(obs.LOG_WARNING, f"Resposta inesperada: {status}")
     except urllib.error.HTTPError as e:
@@ -44,10 +42,10 @@ def dispatch_workflow(live_status):
 def on_event(event):
     if event == obs.OBS_FRONTEND_EVENT_STREAMING_STARTED:
         obs.script_log(obs.LOG_INFO, "Stream iniciada.")
-        dispatch_workflow("on")
+        dispatch_workflow()
     if event == obs.OBS_FRONTEND_EVENT_STREAMING_STOPPED:
         obs.script_log(obs.LOG_INFO, "Stream encerrada.")
-        dispatch_workflow("off")
+        dispatch_workflow()
 
 
 def script_load(settings):

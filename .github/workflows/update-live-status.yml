@@ -3,31 +3,26 @@ name: Atualiza status da live
 on:
   workflow_dispatch:
     inputs:
-      live-status:
-        description: "Status da live"
-        required: true
+      event-type:
+        description: "Event type"
+        default: live
         type: choice
         options:
-          - "on"
-          - "off"
+          - live
+          - upcoming
 
 jobs:
   update-live-status:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+    env:
+      AGENDA: content/cronograma/agenda.json
     steps:
       - name: Checkout
         uses: actions/checkout@v7
 
-      - name: Atualiza JSON (live OFF)
-        if: ${{ inputs.live-status == 'off' }}
-        run: |
-          jq '.atualizado = (now | strftime("%d/%m/%Y")) | .aoVivo.ativo = false' \
-            content/cronograma/agenda.json > content/cronograma/agenda.tmp.json && mv content/cronograma/agenda.tmp.json content/cronograma/agenda.json
-
       - name: Busca video ao vivo
-        if: ${{ inputs.live-status == 'on' }}
         id: search
         env:
           API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
@@ -35,33 +30,27 @@ jobs:
         run: |
           sleep 10
 
-          RESPONSE=$(curl -s "https://www.googleapis.com/youtube/v3/search?part=snippet&fields=items(id(videoId),snippet(title,description))&eventType=live&type=video&channelId=${CHANNEL_ID}&key=${API_KEY}")
+          RESPONSE=$(curl -s "https://www.googleapis.com/youtube/v3/search?part=snippet&fields=items(id(videoId),snippet(title,description))&eventType=${{ inputs.event-type }}&type=video&channelId=${CHANNEL_ID}&key=${API_KEY}")
 
           VIDEO_ID=$(echo "$RESPONSE" | jq -r '.items[0].id.videoId // empty')
 
-          echo '```json' >> "$GITHUB_STEP_SUMMARY"
-          echo "$RESPONSE" >> "$GITHUB_STEP_SUMMARY"
-          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          echo -e '```json\n'"$RESPONSE"'\n```' >> "$GITHUB_STEP_SUMMARY"
 
           if [ -z "$VIDEO_ID" ]; then
-            echo "Nenhuma live encontrada. Abortando."
-            exit 1
+            echo 'Não há live em andamento.'
+            jq '.atualizado = (now | strftime("%d/%m/%Y")) | .aoVivo.ativo = false' $AGENDA > tmp.json && mv tmp.json $AGENDA
+            exit 0
           fi
 
-          echo "$RESPONSE" > video-details.json
+          echo 'Entrado live em andamento.'
 
-      - name: Atualiza JSON (live ON)
-        if: ${{ inputs.live-status == 'on' }}
-        run: |
-          VIDEO_ID=$(jq -r '.items[0].id.videoId' video-details.json)
-          TITULO=$(jq -r '.items[0].snippet.title' video-details.json)
-          DESCRICAO=$(jq -r '.items[0].snippet.description' video-details.json)
+          VIDEO_ID=$(jq -r '.items[0].id.videoId' <<< "$RESPONSE")
+          TITULO=$(jq -r '.items[0].snippet.title' <<< "$RESPONSE")
+          DESCRICAO=$(jq -r '.items[0].snippet.description' <<< "$RESPONSE")
           CATEGORIA=$(echo "$DESCRICAO" | grep -oE '\[Categoria: [^]]+\]' | sed -E 's/\[Categoria: (.+)\]/\1/')
 
-          DIA_PT=$(date -u +%A | sed \
-            -e 's/Monday/Segunda-feira/' -e 's/Tuesday/Terça-feira/' \
-            -e 's/Wednesday/Quarta-feira/' -e 's/Thursday/Quinta-feira/' \
-            -e 's/Friday/Sexta-feira/' -e 's/Saturday/Sábado/' -e 's/Sunday/Domingo/')
+          DIAS=('Segunda-feira' 'Terça-feira' 'Quarta-feira' 'Quinta-feira' 'Sexta-feira' 'Sábado' 'Domingo')
+          DIA_PT="${DIAS[$(date -u +%u)-1]}"
           DATA=$(date -u +%d/%m)
 
           jq --arg titulo "$TITULO" \
@@ -79,12 +68,12 @@ jobs:
               | .aoVivo.dia = $dia
               | .aoVivo.data = $data
               | .aoVivo.link = $link' \
-            content/cronograma/agenda.json > content/cronograma/agenda.tmp.json && mv content/cronograma/agenda.tmp.json content/cronograma/agenda.json
+            $AGENDA > tmp.json && mv tmp.json $AGENDA
 
       - name: Commit e push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add content/cronograma/agenda.json
+          git add $AGENDA
           git diff --staged --quiet || git commit -m "chore: atualiza status da live"
           git push
