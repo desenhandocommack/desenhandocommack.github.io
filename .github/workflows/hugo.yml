@@ -1,11 +1,11 @@
-name: Deploy Hugo site to Pages
+name: Deploy Hugo
 
 on:
   push:
     branches: ["main"]
   workflow_dispatch:
   workflow_run:
-    workflows: ["Check Live Status", "Atualiza status da live"]
+    workflows: ["YouTube live update"]
     types:
       - completed
 

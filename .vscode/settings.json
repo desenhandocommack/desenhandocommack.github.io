@@ -2,5 +2,8 @@
   "files.exclude": {
     "**/.hugo_build.lock": true,
     "**/__pycache__": true
-  }
+  },
+  "[html]": {
+    "editor.formatOnSave": false
+  },
 }

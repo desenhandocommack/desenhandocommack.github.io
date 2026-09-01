@@ -1,10 +1,14 @@
-name: Atualiza status da live
+name: YouTube live update
 
 on:
   workflow_dispatch:
     inputs:
+      empty-history:
+        description: Should empty history array?
+        default: false
+        type: boolean
       event-type:
-        description: "Event type"
+        description: Event type
         default: live
         type: choice
         options:
@@ -17,7 +21,9 @@ jobs:
     permissions:
       contents: write
     env:
-      AGENDA: content/cronograma/agenda.json
+      AGENDA_LIVE: data/lives/live.json
+      AGENDA_HISTORY: data/lives/history.json
+      AGENDA_UPCOMING: data/lives/upcoming.json
     steps:
       - name: Checkout
         uses: actions/checkout@v7
@@ -28,52 +34,43 @@ jobs:
           API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
           CHANNEL_ID: ${{ secrets.YOUTUBE_CHANNEL_ID }}
         run: |
-          sleep 10
+          fetch_data() {
+            local eventType="$1"
+            local destination="$2"
+            local shouldMoveToHistory="$3"
+            local idList=$(curl -s "https://www.googleapis.com/youtube/v3/search?part=snippet&fields=items(id(videoId))&eventType=${eventType}&type=video&maxResults=50&channelId=${CHANNEL_ID}&key=${API_KEY}" | jq -r '[.items[].id.videoId] | join(",")')
 
-          RESPONSE=$(curl -s "https://www.googleapis.com/youtube/v3/search?part=snippet&fields=items(id(videoId),snippet(title,description))&eventType=${{ inputs.event-type }}&type=video&channelId=${CHANNEL_ID}&key=${API_KEY}")
+            if [ -n "$idList" ]; then
+              echo "IDs: $idList"
+              local detailList=$(curl -s "https://www.googleapis.com/youtube/v3/videos?part=snippet,liveStreamingDetails&fields=items(id,snippet(title,description),liveStreamingDetails(scheduledStartTime))&maxResults=50&id=${idList}&key=${API_KEY}" | jq '.items')
+              echo -e '```json\n'"$detailList"'\n```' >> "$GITHUB_STEP_SUMMARY"
+              echo "$detailList" > "$destination"
+              return
+            fi
 
-          VIDEO_ID=$(echo "$RESPONSE" | jq -r '.items[0].id.videoId // empty')
+            echo "Nenhum vídeo marcado como $eventType."
 
-          echo -e '```json\n'"$RESPONSE"'\n```' >> "$GITHUB_STEP_SUMMARY"
+            if [ "$shouldMoveToHistory" = "true" ]; then
+              if [ -s "$destination" ]; then
+                jq -s '.[0] + .[1]' "$AGENDA_HISTORY" "$destination" > "${AGENDA_HISTORY}.tmp" && mv "${AGENDA_HISTORY}.tmp" "$AGENDA_HISTORY"
+              fi
+              echo '[]' > "$destination"
+            fi
+          }
 
-          if [ -z "$VIDEO_ID" ]; then
-            echo 'Não há live em andamento.'
-            jq '.atualizado = (now | strftime("%d/%m/%Y")) | .aoVivo.ativo = false' $AGENDA > tmp.json && mv tmp.json $AGENDA
-            exit 0
+          if [ "${{ inputs.empty-history }}" = "true" ]; then
+            echo '[]' > "$AGENDA_HISTORY"
           fi
 
-          echo 'Entrado live em andamento.'
+          sleep 10
 
-          VIDEO_ID=$(jq -r '.items[0].id.videoId' <<< "$RESPONSE")
-          TITULO=$(jq -r '.items[0].snippet.title' <<< "$RESPONSE")
-          DESCRICAO=$(jq -r '.items[0].snippet.description' <<< "$RESPONSE")
-          CATEGORIA=$(echo "$DESCRICAO" | grep -oE '\[Categoria: [^]]+\]' | sed -E 's/\[Categoria: (.+)\]/\1/')
-
-          DIAS=('Segunda-feira' 'Terça-feira' 'Quarta-feira' 'Quinta-feira' 'Sexta-feira' 'Sábado' 'Domingo')
-          DIA_PT="${DIAS[$(date -u +%u)-1]}"
-          DATA=$(date -u +%d/%m)
-
-          jq --arg titulo "$TITULO" \
-             --arg categoria "$CATEGORIA" \
-             --arg dia "$DIA_PT" \
-             --arg data "$DATA" \
-             --arg link "https://www.youtube.com/watch?v=${VIDEO_ID}" \
-             --arg cover "https://i.ytimg.com/vi/${VIDEO_ID}/maxresdefault_live.jpg" \
-             --arg atualizado "$(date -u +%d/%m/%Y)" \
-             '.atualizado = $atualizado
-              | .aoVivo.ativo = true
-              | .aoVivo.titulo = $titulo
-              | .aoVivo.categoria = $categoria
-              | .aoVivo.capa = $cover
-              | .aoVivo.dia = $dia
-              | .aoVivo.data = $data
-              | .aoVivo.link = $link' \
-            $AGENDA > tmp.json && mv tmp.json $AGENDA
+          fetch_data "${{ inputs.event-type }}" "$AGENDA_LIVE"     true
+          fetch_data "upcoming"                 "$AGENDA_UPCOMING" false
 
       - name: Commit e push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add $AGENDA
+          git add "$AGENDA_LIVE" "$AGENDA_HISTORY" "$AGENDA_UPCOMING"
           git diff --staged --quiet || git commit -m "chore: atualiza status da live"
           git push

@@ -912,28 +912,144 @@
 
     <!-- MAIN CONTAINER -->
     <div id="widget-content">
-      <!-- Loading State -->
-      <div id="loading" class="loading">
-        <div class="spinner"></div>
-        <p class="loading-text">Carregando agenda...</p>
-      </div>
-
       <!-- TAB 1: AGENDA -->
-      <div id="tab-agenda" class="tab-content hidden">
-        <!-- LIVE HOJE (Inserido via JS) -->
-        <div id="live-hoje-container"></div>
+      <div id="tab-agenda" class="tab-content has-live">
+        {{ range hugo.Data.lives.live }}
+          <div class="live-hoje-card">
+            <img src="https://i.ytimg.com/vi/{{ .id }}/maxresdefault_live.jpg" alt="Live Cover">
+            <div class="live-hoje-overlay"></div>
+            <div class="live-hoje-content">
+              <div class="live-hoje-badges-row">
+                <span class="badge-ao-vivo">
+                  <span class="badge-ao-vivo-dot"></span>
+                  AO VIVO
+                </span>
+
+                {{ with .snippet.description }}
+                  {{ $category := replaceRE `^\[Categoria:\s+([\w ]+)\][\s\S]*$` "$1" . }}
+                  {{ if ne $category . }}
+                    <span class="badge-ao-vivo">
+                      <span class="badge-ao-vivo-dot"></span>
+                      <span class="badge-category badge-cat-{{ lower $category }} overlay">{{ $category }}</span>
+                    </span>
+                  {{ end }}
+                {{ end }}
+              </div>
+              <h2 class="live-hoje-title">
+                {{ .title }}
+              </h2>
+              <div class="live-hoje-bottom-row">
+                <p class="live-hoje-date">
+                  {{ with partial "format-sao-paulo-datetime.html" .liveStreamingDetails.scheduledStartTime }}
+                    {{ .day }} ({{ .weekday }}) • {{ .time }} <span class="live-hoje-utc">(UTC-3)</span>
+                  {{ end }}
+
+                </p>
+                <a href="https://www.youtube.com/watch?v={{ .id }}" target="_blank" rel="noopener noreferrer" class="btn-assistir">
+                  Assistir
+                  <svg class="icon-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        {{ end }}
 
         <!-- PRÓXIMAS LIVES -->
         <div>
           <h3 class="section-title">Próximas Transmissões</h3>
-          <div id="proximas-lives-list" class="list-stack"></div>
+          <div id="proximas-lives-list" class="list-stack">
+            {{ range hugo.Data.lives.upcoming }}
+              <div class="proxima-card">
+                <!-- Cover Image Left -->
+                <div class="proxima-thumb">
+                  <img src="https://i.ytimg.com/vi/{{ .id }}/maxresdefault_live.jpg" alt="Cover">
+                  <div class="proxima-platform-logo">
+                    <svg style="width:20px;height:20px;color:#ef4444;flex-shrink:0" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.517 3.545 12 3.545 12 3.545s-7.517 0-9.388.508a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.871.508 9.388.508 9.388.508s7.517 0 9.388-.508a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                  </div>
+                </div>
+
+                <!-- Content Right -->
+                <div class="proxima-content">
+                  <div>
+                    <div class="proxima-day-row">
+                      {{ with partial "format-sao-paulo-datetime.html" .liveStreamingDetails.scheduledStartTime }}
+                        <span class="proxima-day">{{ .day }} ({{ .weekday }})</span>
+                        <span class="proxima-time">• {{ .time }}</span>
+                      {{ end }}
+                      
+                    </div>
+                    <h4 class="proxima-title">{{ .snippet.title }}</h4>
+                  </div>
+                  <div class="proxima-bottom-row">
+                    {{ with .snippet.description }}
+                      {{ $category := replaceRE `^\[Categoria:\s+([\w ]+)\][\s\S]*$` "$1" . }}
+                      {{ if ne $category . }}
+                        <span class="badge-ao-vivo">
+                          <span class="badge-ao-vivo-dot"></span>
+                          <span class="badge-category badge-cat-{{ lower $category }} overlay">{{ $category }}</span>
+                        </span>
+                      {{ end }}
+                    {{ end }}
+                    
+                    <a href="https://www.youtube.com/watch?v={{ .id }}" target="_blank" rel="noopener noreferrer" class="link-ver">
+                      Ver link
+                      <svg class="icon-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            {{ end }}
+          </div>
         </div>
       </div>
 
       <!-- TAB 2: HISTÓRICO -->
-      <div id="tab-historico" class="tab-content hidden">
-        <div id="historico-list"></div>
+      {{ if hugo.Data.lives.history }}
+      <div id="tab-historico" class="tab-content">
+        <div id="historico-list">
+          {{ range hugo.Data.lives.history }}
+            <div class="historico-card">
+              <!-- Cover Image Left -->
+              <div class="historico-thumb">
+                <img src="https://i.ytimg.com/vi/{{ .id }}/maxresdefault_live.jpg" alt="Cover">
+                <div class="proxima-platform-logo">
+                  <svg style="width:20px;height:20px;color:#ef4444;flex-shrink:0" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.517 3.545 12 3.545 12 3.545s-7.517 0-9.388.508a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.871.508 9.388.508 9.388.508s7.517 0 9.388-.508a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                </div>
+              </div>
+
+              <!-- Content Right -->
+              <div class="historico-content">
+                <div>
+                  <div class="historico-status-row">
+                    {{ with partial "format-sao-paulo-datetime.html" .liveStreamingDetails.scheduledStartTime }}
+                      <span class="historico-meta">{{ .day }} ({{ .weekday }}) • YouTube</span>
+                    {{ end }}
+
+                    <span class="badge-status ${statusClass}">Offline</span>
+                  </div>
+                  <h4 class="historico-title ${titleClass}">{{ .snippet.title }}</h4>
+                </div>
+                <div class="historico-bottom-row">
+                  {{ with .snippet.description }}
+                    {{ $category := replaceRE `^\[Categoria:\s+([\w ]+)\][\s\S]*$` "$1" . }}
+                    {{ if ne $category . }}
+                      <span class="badge-ao-vivo">
+                        <span class="badge-ao-vivo-dot"></span>
+                        <span class="badge-category badge-cat-{{ lower $category }} overlay">{{ $category }}</span>
+                      </span>
+                    {{ end }}
+                  {{ end }}
+                </div>
+              </div>
+            </div>
+          {{ end }}
+        </div>
       </div>
+      {{ end }}
     </div>
 
     <!-- Footer inside widget -->
@@ -980,12 +1096,12 @@
 
       if (tab === "agenda") {
         agendaTab.classList.remove("hidden");
-        historicoTab.classList.add("hidden");
+        historicoTab?.classList.add("hidden");
         agendaBtn.classList.add("active");
         historicoBtn.classList.remove("active");
       } else {
         agendaTab.classList.add("hidden");
-        historicoTab.classList.remove("hidden");
+        historicoTab?.classList.remove("hidden");
         historicoBtn.classList.add("active");
         agendaBtn.classList.remove("active");
       }
@@ -1019,166 +1135,9 @@
           document.getElementById("atualizado-em").innerText = `Atualizada: ${dateStr}`;
         }
 
-        // 1. Render Live Hoje / Destaque
-        const liveHojeContainer = document.getElementById("live-hoje-container");
-        const tabAgenda = document.getElementById("tab-agenda");
-        if (data.aoVivo && data.aoVivo.ativo) {
-          tabAgenda.classList.add("has-live");
-          const live = data.aoVivo;
-          const liveCapa = live.capa || "images/image1.png";
-          liveHojeContainer.innerHTML = `
-            <div class="live-hoje-card">
-              <img src="${liveCapa}" alt="Live Cover">
-              <div class="live-hoje-overlay"></div>
-              <div class="live-hoje-content">
-                <div class="live-hoje-badges-row">
-                  <span class="badge-ao-vivo">
-                    <span class="badge-ao-vivo-dot"></span>
-                    AO VIVO
-                  </span>
-                  ${getCategoryBadge(live.categoria, true)}
-                </div>
-                <h2 class="live-hoje-title">
-                  ${live.titulo}
-                </h2>
-                <div class="live-hoje-bottom-row">
-                  <p class="live-hoje-date">
-                    ${live.dia} (${live.data}) • ${live.horario} <span class="live-hoje-utc">(UTC-3)</span>
-                  </p>
-                  <a href="${live.link}" target="_blank" rel="noopener noreferrer" class="btn-assistir">
-                    Assistir
-                    <svg class="icon-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-          `;
-        } else {
-          tabAgenda.classList.remove("has-live");
-          liveHojeContainer.innerHTML = "";
-        }
-
-        // 2. Render Próximas Lives
-        const proximasList = document.getElementById("proximas-lives-list");
-        proximasList.innerHTML = "";
-        if (data.proximas && data.proximas.length > 0) {
-          data.proximas.forEach((live) => {
-            const platformLogo = logos[live.plataforma.toLowerCase()] || "";
-            const dateStr = live.data || "";
-            const liveCapa = live.capa || "images/image2.png";
-            const card = document.createElement("div");
-            card.className = "proxima-card";
-            card.innerHTML = `
-              <!-- Cover Image Left -->
-              <div class="proxima-thumb">
-                <img src="${liveCapa}" alt="Cover">
-                <div class="proxima-platform-logo">
-                  ${platformLogo}
-                </div>
-              </div>
-
-              <!-- Content Right -->
-              <div class="proxima-content">
-                <div>
-                  <div class="proxima-day-row">
-                    <span class="proxima-day">${live.dia} (${dateStr})</span>
-                    <span class="proxima-time">• ${live.horario}</span>
-                  </div>
-                  <h4 class="proxima-title">
-                    ${live.titulo}
-                  </h4>
-                </div>
-                <div class="proxima-bottom-row">
-                  ${getCategoryBadge(live.categoria)}
-                  <a href="${live.link}" target="_blank" rel="noopener noreferrer" class="link-ver">
-                    Ver link
-                    <svg class="icon-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            `;
-            proximasList.appendChild(card);
-          });
-        } else {
-          proximasList.innerHTML = '<p class="empty-text">Nenhuma live agendada para esta semana.</p>';
-        }
-
-        // 3. Render Histórico
-        const historicoList = document.getElementById("historico-list");
-        historicoList.innerHTML = "";
-        if (data.historico && data.historico.length > 0) {
-          // Inverte a ordem para mostrar os meses mais recentes primeiro
-          const historicoInvertido = [...data.historico].reverse();
-          historicoInvertido.forEach((group) => {
-            const groupSection = document.createElement("div");
-            groupSection.className = "historico-group";
-
-            let groupHTML = `
-              <h3 class="historico-group-title">
-                ${group.mesAno}
-              </h3>
-            `;
-
-            // Inverte a ordem para mostrar as lives mais recentes daquele mês primeiro
-            const livesInvertidas = [...group.lives].reverse();
-            livesInvertidas.forEach((live) => {
-              const isAdiada = live.status.toLowerCase() === "adiada";
-              const statusClass = isAdiada ? "adiada" : "realizada";
-              const titleClass = isAdiada ? "adiada" : "realizada";
-              const liveCapa = live.capa || "images/image3.png";
-
-              groupHTML += `
-                <div class="historico-card">
-                  <!-- Cover Image Left -->
-                  <div class="historico-thumb">
-                    <img src="${liveCapa}" alt="Cover">
-                    <div class="proxima-platform-logo">
-                      ${logos[live.plataforma.toLowerCase()] || ""}
-                    </div>
-                  </div>
-
-                  <!-- Content Right -->
-                  <div class="historico-content">
-                    <div>
-                      <div class="historico-status-row">
-                        <span class="historico-meta">${live.data} • ${live.plataforma}</span>
-                        <span class="badge-status ${statusClass}">
-                          ${live.status}
-                        </span>
-                      </div>
-                      <h4 class="historico-title ${titleClass}">
-                        ${live.titulo}
-                      </h4>
-                    </div>
-                    <div class="historico-bottom-row">
-                      <span class="historico-cat-tag">
-                        ${live.categoria}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              `;
-            });
-
-            groupSection.innerHTML = groupHTML;
-            historicoList.appendChild(groupSection);
-          });
-        } else {
-          historicoList.innerHTML = '<p class="empty-text">Histórico vazio.</p>';
-        }
-
-        // Hide loader and show active tab
-        document.getElementById("loading").classList.add("hidden");
         switchTab(activeTab);
       } catch (error) {
         console.error(error);
-        document.getElementById("loading").innerHTML = `
-          <p class="error-text">Erro ao carregar a agenda.</p>
-        `;
       }
     }
 

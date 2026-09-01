@@ -1,0 +1,7 @@
+{{- $local := time.In "America/Sao_Paulo" (time.AsTime .) -}}
+{{- $result := dict
+  "day" (dateFormat "02/01" $local)
+  "weekday" (dateFormat "Monday" $local)
+  "time" (dateFormat "15:04" $local)
+-}}
+{{- return $result -}}
