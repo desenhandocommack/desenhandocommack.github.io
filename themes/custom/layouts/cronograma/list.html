@@ -341,53 +341,17 @@
     font-size: 10px;
     font-weight: 700;
     white-space: nowrap;
-  }
-
-  .badge-category.overlay {
-    font-size: 9px;
-    font-weight: 800;
-  }
-
-  .badge-cat-desenho {
     background-color: rgba(254, 85, 189, 0.1);
     color: var(--brand-pink-dark);
     border: 1px solid rgba(254, 85, 189, 0.2);
   }
 
-  .badge-cat-desenho.overlay {
+  .badge-category.overlay {
+    font-size: 9px;
+    font-weight: 800;
     background-color: var(--brand-pink);
     color: #ffffff;
     border: 1px solid rgba(254, 85, 189, 0.2);
-  }
-
-  .badge-cat-jogo {
-    background-color: rgba(43, 184, 252, 0.1);
-    color: var(--brand-blue-dark);
-    border: 1px solid rgba(43, 184, 252, 0.2);
-  }
-
-  .badge-cat-jogo.overlay {
-    background-color: var(--brand-blue);
-    color: #ffffff;
-    border: 1px solid rgba(43, 184, 252, 0.2);
-  }
-
-  .badge-cat-papo {
-    background-color: rgba(246, 230, 95, 0.15);
-    color: var(--brand-yellow-dark);
-    border: 1px solid rgba(246, 230, 95, 0.3);
-  }
-
-  .badge-cat-papo.overlay {
-    background-color: var(--brand-yellow);
-    color: #0f172a;
-    border: 1px solid rgba(246, 230, 95, 0.25);
-  }
-
-  .badge-cat-default {
-    background-color: var(--slate-100);
-    color: #475569;
-    border: 1px solid var(--slate-200);
   }
 
   /* ============ Card: Live Hoje / Destaque ============ */
@@ -926,9 +890,9 @@
                 </span>
 
                 {{ with .snippet.description }}
-                  {{ $category := replaceRE `^\[Categoria:\s+([\w ]+)\][\s\S]*$` "$1" . }}
+                  {{ $category := replaceRE `^\[Categoria:\s*([^\]\r\n]+)\][\s\S]*$` "$1" . }}
                   {{ if ne $category . }}
-                    <span class="badge-category badge-cat-{{ lower $category }} overlay">{{ $category }}</span>
+                    <span class="badge-category overlay">{{ $category }}</span>
                   {{ end }}
                 {{ end }}
               </div>
@@ -981,9 +945,9 @@
                   </div>
                   <div class="proxima-bottom-row">
                     {{ with .snippet.description }}
-                      {{ $category := replaceRE `^\[Categoria:\s+([\w ]+)\][\s\S]*$` "$1" . }}
+                      {{ $category := replaceRE `^\[Categoria:\s*([^\]\r\n]+)\][\s\S]*$` "$1" . }}
                       {{ if ne $category . }}
-                        <span class="badge-category badge-cat-{{ lower $category }}">{{ $category }}</span>
+                        <span class="badge-category">{{ $category }}</span>
                       {{ end }}
                     {{ end }}
                     
@@ -1029,9 +993,9 @@
                 </div>
                 <div class="historico-bottom-row">
                   {{ with .snippet.description }}
-                    {{ $category := replaceRE `^\[Categoria:\s+([\w ]+)\][\s\S]*$` "$1" . }}
+                    {{ $category := replaceRE `^\[Categoria:\s*([^\]\r\n]+)\][\s\S]*$` "$1" . }}
                     {{ if ne $category . }}
-                      <span class="badge-category badge-cat-{{ lower $category }}">{{ $category }}</span>
+                      <span class="badge-category">{{ $category }}</span>
                     {{ end }}
                   {{ end }}
                 </div>
@@ -1061,18 +1025,8 @@
       if (!category) {
         return "";
       }
-
-      const cat = category.toLowerCase();
       const overlayClass = isDarkOverlay ? " overlay" : "";
-      if (cat.includes("desenho")) {
-        return `<span class="badge-category badge-cat-desenho${overlayClass}">${category}</span>`;
-      } else if (cat.includes("jogo")) {
-        return `<span class="badge-category badge-cat-jogo${overlayClass}">${category}</span>`;
-      } else if (cat.includes("papo") || cat.includes("conversa")) {
-        return `<span class="badge-category badge-cat-papo${overlayClass}">${category}</span>`;
-      }
-      // Fallback for new/other categories
-      return `<span class="badge-category badge-cat-default">${category}</span>`;
+      return `<span class="badge-category${overlayClass}">${category}</span>`;
     }
 
     // Active tab state
