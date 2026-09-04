@@ -15,5 +15,6 @@ links:
   "50_3D_primeiras-criações-no-blender.gif": "https://youtu.be/X1fGaoa2kPM"
   "61_personagens_fanart-susana-forte-hora-de-aventura.png": "https://youtu.be/-yaOSRlUQsQ"
   "65_ilustracoes_capa-de-livro-infanto-juvenil.png": "https://youtu.be/bIyOQdcumq8"
+  "67_animações_protótipo-de-jogo-do-baruc.gif": "https://youtube.com/playlist?list=PLIEuiPcrquC4&themeRefresh=1"
 ---
 

@@ -663,6 +663,124 @@ body {
   color: var(--color-accent);
 }
 
+/* ITEM EM DESENVOLVIMENTO / EM BREVE */
+.card-link-item.visual.em-dev {
+  position: relative;
+  background: rgba(255, 255, 255, 0.92);
+  transition: all 0.25s ease;
+}
+
+/* Borda tracejada para Projeto (Índigo) */
+.card-link-item.visual.em-dev.projeto {
+  border: 1px dashed rgba(99, 102, 241, 0.4);
+  cursor: default !important;
+}
+
+.card-link-item.visual.em-dev.projeto:hover {
+  transform: none;
+  border-color: rgba(99, 102, 241, 0.75);
+  box-shadow: 0 4px 12px rgba(23, 54, 87, 0.04);
+}
+
+.card-link-item.visual.em-dev.projeto:hover .card-link-title {
+  color: var(--color-text);
+}
+
+.card-link-item.visual.em-dev.projeto:hover .card-link-image-wrapper img {
+  transform: none;
+}
+
+/* Borda tracejada para Canal (Vermelho) */
+.card-link-item.visual.em-dev.canal {
+  border: 1px dashed rgba(239, 68, 68, 0.4);
+}
+
+.card-link-item.visual.em-dev.canal:hover {
+  border-color: rgba(239, 68, 68, 0.75);
+  box-shadow: 0 6px 16px rgba(239, 68, 68, 0.08);
+}
+
+.card-link-image-wrapper .image-dev-tag {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(2px);
+  color: #ffffff;
+  font-size: 0.65rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: 8px;
+}
+
+.badge-row {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.badge-status-dev {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.65rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #6366f1;
+  background-color: rgba(99, 102, 241, 0.1);
+  padding: 0.2rem 0.45rem;
+  border-radius: 6px;
+}
+
+.dev-pulse-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #6366f1;
+  box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.6);
+  animation: devPulse 2s infinite cubic-bezier(0.66, 0, 0, 1);
+}
+
+@keyframes devPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 6px rgba(99, 102, 241, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(99, 102, 241, 0);
+  }
+}
+
+.badge-status-dev.canal {
+  color: #ef4444;
+  background-color: rgba(239, 68, 68, 0.1);
+}
+
+.dev-pulse-dot.red {
+  background-color: #ef4444;
+  box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.6);
+  animation: devPulseRed 2s infinite cubic-bezier(0.66, 0, 0, 1);
+}
+
+@keyframes devPulseRed {
+  0% {
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 6px rgba(239, 68, 68, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+  }
+}
+
 /* BADGES DE CATEGORIA */
 .badge {
   font-size: 0.7rem;
@@ -673,7 +791,13 @@ body {
   letter-spacing: 0.05em;
 }
 
-.badge.video {
+.badge.video,
+.badge.playlist {
+  background-color: rgba(253, 126, 20, 0.1);
+  color: #fd7e14;
+}
+
+.badge.canal {
   background-color: rgba(239, 68, 68, 0.1);
   color: #ef4444;
 }
@@ -683,9 +807,10 @@ body {
   color: #a855f7;
 }
 
-.badge.projeto {
-  background-color: rgba(253, 126, 20, 0.1);
-  color: #fd7e14;
+.badge.projeto,
+.badge.jogos {
+  background-color: rgba(99, 102, 241, 0.1);
+  color: #6366f1;
 }
 
 .badge.setup {
