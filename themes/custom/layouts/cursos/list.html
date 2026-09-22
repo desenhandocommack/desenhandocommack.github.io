@@ -19,6 +19,8 @@
 
   <div class="cursos-grid">
     {{ range (where .Site.RegularPages "Section" "cursos") }}
+      {{ $launchDate := or .Params.launch_date .Params.data_lancamento .Params.lancamento }}
+      {{ $lastUpdate := or .Params.last_update .Params.data_atualizacao .Params.ultima_atualizacao .Params.updated_date }}
 
       <div class="curso-card">
 
@@ -27,6 +29,12 @@
             <img src="{{ .RelPermalink }}" alt="{{ $.Title }}">
           {{ else }}
             <img src="{{ .Params.image }}" alt="{{ .Title }}">
+          {{ end }}
+          {{ with $lastUpdate }}
+            <span class="curso-badge-updated">
+              <span class="material-symbols-rounded">update</span>
+              Atualizado
+            </span>
           {{ end }}
         </div>
 
@@ -40,6 +48,23 @@
           <p class="curso-meta">
             {{ .Params.hours }} • {{ .Params.access }}
           </p>
+
+          {{ if or $launchDate $lastUpdate }}
+          <div class="curso-card-dates">
+            {{ with $launchDate }}
+            <div class="curso-card-date-item">
+              <span class="material-symbols-rounded date-icon">calendar_today</span>
+              <span class="date-text"><strong class="date-label">Lançamento:</strong> {{ . }}</span>
+            </div>
+            {{ end }}
+            {{ with $lastUpdate }}
+            <div class="curso-card-date-item updated">
+              <span class="material-symbols-rounded date-icon">update</span>
+              <span class="date-text"><strong class="date-label">Última atualização:</strong> {{ . }}</span>
+            </div>
+            {{ end }}
+          </div>
+          {{ end }}
 
           <ul class="curso-features">
   {{ range .Params.features }}

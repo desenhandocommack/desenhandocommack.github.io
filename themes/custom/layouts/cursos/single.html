@@ -47,19 +47,42 @@
         <span class="price-value">{{ .Params.price }}</span>
       </div>
 
+      {{ $launchDate := or .Params.launch_date .Params.data_lancamento .Params.lancamento }}
+      {{ $lastUpdate := or .Params.last_update .Params.data_atualizacao .Params.ultima_atualizacao .Params.updated_date }}
+
       <div class="curso-sidebar-badges">
         <div class="curso-sidebar-badge">
           <span class="material-symbols-rounded">schedule</span>
           <div class="badge-info">
+            <span class="badge-label">Duração</span>
             <span class="badge-value">{{ .Params.hours }}</span>
           </div>
         </div>
         <div class="curso-sidebar-badge">
           <span class="material-symbols-rounded">vpn_key</span>
           <div class="badge-info">
+            <span class="badge-label">Acesso</span>
             <span class="badge-value">{{ .Params.access }}</span>
           </div>
         </div>
+        {{ with $launchDate }}
+        <div class="curso-sidebar-badge">
+          <span class="material-symbols-rounded">calendar_today</span>
+          <div class="badge-info">
+            <span class="badge-label">Lançamento</span>
+            <span class="badge-value">{{ . }}</span>
+          </div>
+        </div>
+        {{ end }}
+        {{ with $lastUpdate }}
+        <div class="curso-sidebar-badge updated-badge">
+          <span class="material-symbols-rounded">update</span>
+          <div class="badge-info">
+            <span class="badge-label">Última atualização</span>
+            <span class="badge-value">{{ . }}</span>
+          </div>
+        </div>
+        {{ end }}
       </div>
 
       <a href="{{ .Params.buy }}" target="_blank" class="btn-compra-sidebar">

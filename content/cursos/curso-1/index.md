@@ -5,6 +5,8 @@ price: "R$ 39,90"
 description: "Nesse curso eu te mostro como usar as ferramentas principais do Krita. Você vai entender exatamente o que precisa para começar no Krita e ganhar confiança para usar o software no seu dia a dia."
 hours: "Quase 4 horas de conteúdo"
 access: "2 anos de acesso"
+launch_date: "Setembro de 2025"
+last_update: "Março de 2026"
 image: "curso-krita-para-iniciantes-imagem-card.png"
 features:
   - "Curso legendado"
