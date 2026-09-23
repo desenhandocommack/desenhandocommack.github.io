@@ -1,16 +1,46 @@
 [
   {
-    "id": "yJ-1qqq4BpM",
+    "id": "QG3vgd2_vT0",
+    "cover": "/images/lives/pedidos-de-desenho-na-live_parte3.png",
+    "link": "https://youtube.com/live/QG3vgd2_vT0",
     "snippet": {
-      "title": "Testando meus pincéis no Krita",
-      "description": "[Categoria: Desenho]\n\nSerá que agora vai? Vamos ver se tem algum brush prestando pra fazer parte do meu pack de brushes.\n\n## Acompanhe tudo o que eu tô fazendo ⬇️\nhttps://desenhandocommack.com.br/\n\nEnvie sua mensagem na live ⬇️\nhttps://livepix.gg/desenhandocommack\n\n⭐ Músicas das lives\nMusic provided by http://spoti.fi/NCS\nhttps://mixkit.co/free-stock-music/\nBiblioteca de áudio - YouTube StudioMusic provided by http://spoti.fi/NCS"
+      "title": "Pedidos de desenho na live - Parte 3",
+      "description": "[Categoria: Desenho]\n\nComecei finalizando a treinadora Pokémon que vinha sendo desenvolvida desde a primeira live. Depois, fiz uma folha de sketches com desenhos pedidos na live."
     },
     "liveStreamingDetails": {
-      "scheduledStartTime": "2026-09-01T22:00:00Z"
+      "scheduledStartTime": "2026-09-16T21:15:00Z"
+    }
+  },
+  {
+    "id": "rwr2-mZNrew",
+    "cover": "/images/lives/pedidos-de-desenho-na-live_parte2.png",
+    "duration": "4h21min",
+    "link": "https://youtube.com/live/rwr2-mZNrew",
+    "snippet": {
+      "title": "Pedidos de desenho na live - Parte 2",
+      "description": "[Categoria: Desenho]\n\nMais uma live de pedidos de desenho!\n\nBora continuar trabalhando nos pedidos enviados durante a transmissão. Também retomei a treinadora Pokémon iniciada na live anterior, agora comecei a fazer a linha final do desenho."
+    },
+    "liveStreamingDetails": {
+      "scheduledStartTime": "2026-09-15T21:00:00Z"
+    }
+  },
+  {
+    "id": "QCZVDpNYTN0",
+    "cover": "/images/lives/pedidos-de-desenho-na-live_parte1.png",
+    "duration": "6h32min",
+    "link": "https://youtube.com/live/QCZVDpNYTN0",
+    "snippet": {
+      "title": "Pedidos de desenho na live - Parte 1",
+      "description": "[Categoria: Desenho]\n\nPrimeira live estreando a minha tabela de preços para os pedidos feitos durante a live. Ao longo da transmissão, desenhei personagens escolhidos pelo chat e comecei uma nova treinadora Pokémon."
+    },
+    "liveStreamingDetails": {
+      "scheduledStartTime": "2026-09-14T21:00:00Z"
     }
   },
   {
     "id": "aiCAgAzsDB0",
+    "cover": "/images/lives/meu-app-de-desenho.png",
+    "duration": "1h41min",
     "snippet": {
       "title": "Trabalhando no meu APP de desenho",
       "description": "[Categoria: Trabalhando]\n\nBora trabalhar no meu aplicativo de desenho. Vou precisar refazer vários desenhos pra completar a série, vamos fazer isso durante as lives.\n\n## Acompanhe tudo o que eu tô fazendo ⬇️\nhttps://desenhandocommack.com.br/\n\nEnvie sua mensagem na live ⬇️\nhttps://livepix.gg/desenhandocommack\n\n⭐ Músicas das lives\nMusic provided by http://spoti.fi/NCS\nhttps://mixkit.co/free-stock-music/\nBiblioteca de áudio - YouTube StudioMusic provided by http://spoti.fi/NCS"
@@ -20,13 +50,15 @@
     }
   },
   {
-    "id": "QG3vgd2_vT0",
+    "id": "yJ-1qqq4BpM",
+    "cover": "/images/lives/testando-meus-brushes.png",
+    "duration": "2h37min",
     "snippet": {
-      "title": "Desenhando de boa",
-      "description": "[Categoria: Desenho]\n\n## Envie sua mensagem na tela a partir de 1 real ⬇️\nhttps://livepix.gg/desenhandocommack\n\n## Acompanhe tudo o que eu tô fazendo ⬇️\nhttps://desenhandocommack.com.br/\n\n⭐ Músicas das lives\nMusic provided by http://spoti.fi/NCS\nhttps://mixkit.co/free-stock-music/\nBiblioteca de áudio - YouTube StudioMusic provided by http://spoti.fi/NCS"
+      "title": "Testando meus pincéis no Krita",
+      "description": "[Categoria: Desenho]\n\nSerá que agora vai? Vamos ver se tem algum brush prestando pra fazer parte do meu pack de brushes.\n\n## Acompanhe tudo o que eu tô fazendo ⬇️\nhttps://desenhandocommack.com.br/\n\nEnvie sua mensagem na live ⬇️\nhttps://livepix.gg/desenhandocommack\n\n⭐ Músicas das lives\nMusic provided by http://spoti.fi/NCS\nhttps://mixkit.co/free-stock-music/\nBiblioteca de áudio - YouTube StudioMusic provided by http://spoti.fi/NCS"
     },
     "liveStreamingDetails": {
-      "scheduledStartTime": "2026-09-16T21:15:00Z"
+      "scheduledStartTime": "2026-09-01T22:00:00Z"
     }
   }
 ]
