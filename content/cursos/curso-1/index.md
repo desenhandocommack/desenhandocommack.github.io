@@ -23,7 +23,7 @@ changelog:
     title: "Módulo Extra: Animação no Krita"
     changes:
       - type: "add"
-        text: "Adicionado módulo extra sobre as ferramentas de Animação 2D no Krita."
+        text: "Adicionado módulo extra sobre as ferramentas de Animação 2D no **Krita 5.2.14**"
   - date: "Setembro de 2025"
     title: "Lançamento Oficial"
     changes:
