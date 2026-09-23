@@ -18,6 +18,17 @@ features:
 buy: "https://hotmart.com/pt-br/marketplace/produtos/krita-para-iniciantes/I98301009X"
 video: "https://www.youtube.com/embed/108QoNjCOiI"
 theme: "krita"
+changelog:
+  - date: "Março de 2026"
+    title: "Módulo Extra: Animação no Krita"
+    changes:
+      - type: "add"
+        text: "Adicionado módulo extra sobre as ferramentas de Animação 2D no Krita."
+  - date: "Setembro de 2025"
+    title: "Lançamento Oficial"
+    changes:
+      - type: "add"
+        text: "Lançamento do curso no **Krita 5.2.9** com 6 módulos essenciais, legendas em português e atalhos para download."
 ---
 
 <h1>Comece a usar o Krita sem travar</h1>

@@ -75,13 +75,14 @@
         </div>
         {{ end }}
         {{ with $lastUpdate }}
-        <div class="curso-sidebar-badge updated-badge">
+        <a href="#changelog" class="curso-sidebar-badge updated-badge" title="Clique para ver o histórico de atualizações">
           <span class="material-symbols-rounded">update</span>
           <div class="badge-info">
             <span class="badge-label">Última atualização</span>
             <span class="badge-value">{{ . }}</span>
           </div>
-        </div>
+          <span class="material-symbols-rounded badge-action-arrow">arrow_downward</span>
+        </a>
         {{ end }}
       </div>
 
@@ -110,6 +111,54 @@
           </iframe>
         </div>
       </div>
+
+      <!-- 🔹 HISTÓRICO DE ATUALIZAÇÕES (CHANGELOG) - ÚLTIMO CONTEÚDO -->
+      {{ with .Params.changelog }}
+      <div class="curso-section-card curso-changelog-card" id="changelog">
+        <div class="card-header-row">
+          <span class="material-symbols-rounded card-icon">history</span>
+          <h2>Histórico de Atualizações</h2>
+        </div>
+        <div class="changelog-timeline">
+          {{ range . }}
+          <div class="changelog-item">
+            <div class="changelog-marker"></div>
+            <div class="changelog-content">
+              <div class="changelog-header">
+                <span class="changelog-date">{{ .date }}</span>
+                {{ with .version }}<span class="changelog-version">{{ . }}</span>{{ end }}
+                {{ with .title }}<h3 class="changelog-title">{{ . }}</h3>{{ end }}
+              </div>
+              {{ with .changes }}
+              <ul class="changelog-list">
+                {{ range . }}
+                  {{ if (reflect.IsMap .) }}
+                    <li class="changelog-change-item change-{{ or .type "add" }}">
+                      {{ if eq .type "add" }}
+                        <span class="change-tag tag-add">Novo</span>
+                      {{ else if eq .type "update" }}
+                        <span class="change-tag tag-update">Atualizado</span>
+                      {{ else if eq .type "fix" }}
+                        <span class="change-tag tag-fix">Melhoria</span>
+                      {{ else }}
+                        <span class="change-tag tag-default">{{ .type }}</span>
+                      {{ end }}
+                      <span class="change-text">{{ .text | markdownify }}</span>
+                    </li>
+                  {{ else }}
+                    <li class="changelog-change-item">
+                      <span class="change-text">{{ . | markdownify }}</span>
+                    </li>
+                  {{ end }}
+                {{ end }}
+              </ul>
+              {{ end }}
+            </div>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+      {{ end }}
     </section>
 
   </div>

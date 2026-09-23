@@ -1365,11 +1365,240 @@ body {
   border: none;
 }
 
+/* ===== Changelog / Histórico de Atualizações ===== */
+html {
+  scroll-behavior: smooth;
+}
+
+a.curso-sidebar-badge.updated-badge {
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  position: relative;
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  background: rgba(16, 185, 129, 0.03);
+}
+
+a.curso-sidebar-badge.updated-badge:hover {
+  transform: translateY(-2px);
+  border-color: #10b981;
+  background: rgba(16, 185, 129, 0.08);
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.15);
+}
+
+.badge-action-arrow {
+  margin-left: auto;
+  font-size: 1.15rem !important;
+  color: #10b981;
+  opacity: 0.7;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  width: auto !important;
+  height: auto !important;
+  padding: 0 !important;
+  background: transparent !important;
+}
+
+a.curso-sidebar-badge.updated-badge:hover .badge-action-arrow {
+  transform: translateY(3px);
+  opacity: 1;
+}
+
+.curso-changelog-card {
+  scroll-margin-top: 2rem;
+}
+
+.changelog-timeline {
+  position: relative;
+  margin-top: 1.5rem;
+  padding-left: 24px;
+}
+
+.changelog-timeline::before {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 8px;
+  bottom: 12px;
+  width: 2px;
+  background: linear-gradient(to bottom, #2bb8fc, #cbd5e1);
+  border-radius: 2px;
+}
+
+.changelog-item {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.changelog-item:last-child {
+  margin-bottom: 0.5rem;
+}
+
+.changelog-marker {
+  position: absolute;
+  left: -24px;
+  top: 4px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 3px solid #2bb8fc;
+  box-shadow: 0 0 0 3px rgba(43, 184, 252, 0.2);
+  z-index: 1;
+}
+
+.changelog-item:first-child .changelog-marker {
+  border-color: #fe55bd;
+  box-shadow: 0 0 0 3px rgba(254, 85, 189, 0.25);
+}
+
+.changelog-content {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 1.25rem 1.5rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.changelog-content:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.changelog-header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  margin-bottom: 1rem;
+}
+
+.changelog-date {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #0f172a;
+  background: #e2e8f0;
+  padding: 4px 10px;
+  border-radius: 6px;
+  letter-spacing: 0.02em;
+}
+
+.changelog-item:first-child .changelog-date {
+  background: rgba(254, 85, 189, 0.12);
+  color: #d1188a;
+}
+
+.changelog-version {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #2bb8fc;
+  background: rgba(43, 184, 252, 0.1);
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+
+.changelog-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+  width: 100%;
+}
+
+.changelog-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.changelog-change-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #334155;
+}
+
+.change-tag {
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.tag-add {
+  background-color: #ecfdf5;
+  color: #059669;
+  border: 1px solid rgba(5, 150, 105, 0.2);
+}
+
+.tag-update {
+  background-color: #eff6ff;
+  color: #2563eb;
+  border: 1px solid rgba(37, 99, 235, 0.2);
+}
+
+.tag-fix {
+  background-color: #fdf2f8;
+  color: #db2777;
+  border: 1px solid rgba(219, 39, 119, 0.2);
+}
+
+.tag-default {
+  background-color: #f1f5f9;
+  color: #64748b;
+  border: 1px solid #cbd5e1;
+}
+
+.change-text {
+  flex-grow: 1;
+}
+
+.change-text strong,
+.change-text code {
+  color: #049ae0;
+  background: rgba(43, 184, 252, 0.12);
+  padding: 1px 7px;
+  border-radius: 6px;
+  font-weight: 700;
+  border: 1px solid rgba(43, 184, 252, 0.25);
+  display: inline-block;
+  font-size: 0.9em;
+  letter-spacing: 0.02em;
+}
+
 @media (max-width: 768px) {
+  .hero-video {
+    height: auto !important;
+    min-height: unset !important;
+    aspect-ratio: 16 / 9;
+    background: #000000;
+  }
+
+  .hero-video video {
+    height: 100% !important;
+    width: 100% !important;
+    object-fit: contain !important;
+  }
+
+  .scroll-indicator {
+    display: none !important;
+  }
+
   .curso-sidebar-card {
     padding: 1.5rem 1.25rem;
   }
   .curso-section-card {
     padding: 1.5rem 1.25rem;
+  }
+  .changelog-content {
+    padding: 1rem 1.15rem;
   }
 }
