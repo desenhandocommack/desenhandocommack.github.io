@@ -37,6 +37,12 @@
     --emerald-500: #10b981;
   }
 
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
   html {
     height: 100%;
   }
@@ -50,9 +56,12 @@
   .cronograma-container {
     flex-grow: 1;
     max-width: 1410px;
+    width: 100%;
     margin: 10px auto 0 auto;
     gap: 20px;
     padding: 20px;
+    box-sizing: border-box;
+    overflow-x: hidden;
   }
 
   /* Custom scrollbar para um visual mais limpo */
@@ -843,7 +852,9 @@
     margin: 4px 0 0 0;
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap;
+    white-space: normal;
+    word-break: break-word;
+    overflow-wrap: break-word;
     transition: color 0.2s;
   }
 
@@ -863,6 +874,8 @@
     color: var(--slate-600);
     margin: 6px 0 4px 0;
     white-space: pre-line;
+    word-break: break-word;
+    overflow-wrap: break-word;
   }
 
   .historico-bottom-row {
@@ -932,13 +945,39 @@
   }
 
   /* ============ Mobile Query ============ */
-  @media (max-width: 576px) {
+  @media (max-width: 768px) {
+    .cronograma-container {
+      padding: 12px 8px !important;
+      overflow-x: hidden !important;
+    }
+
+    .container {
+      width: 100% !important;
+      max-width: 100% !important;
+    }
+
+    .tab-content {
+      width: 100% !important;
+      max-width: 100% !important;
+      overflow-x: hidden !important;
+    }
+
     .proxima-card,
     .historico-card {
       flex-direction: column !important;
       /* empilha imagem em cima e texto abaixo no celular */
       gap: 14px !important;
       padding: 12px !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+    }
+
+    .historico-content,
+    .proxima-content {
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
     }
 
     .proxima-thumb,
@@ -947,13 +986,26 @@
       /* largura total */
       max-width: 100% !important;
       aspect-ratio: 16 / 9 !important;
+      box-sizing: border-box !important;
     }
 
     .proxima-title,
     .historico-title {
       font-size: 14px !important;
       white-space: normal !important;
+      word-break: break-word !important;
+      overflow-wrap: break-word !important;
       /* permite quebra de linha em títulos longos */
+    }
+
+    .supporters-tooltip {
+      max-width: calc(100vw - 32px) !important;
+      left: 0 !important;
+      transform: translateY(4px) !important;
+    }
+
+    .supporters-wrapper:hover .supporters-tooltip {
+      transform: translateY(0) !important;
     }
 
     .timezone-badge {
