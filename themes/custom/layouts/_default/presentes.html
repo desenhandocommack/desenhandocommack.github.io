@@ -1,0 +1,155 @@
+{{ define "styles" }}
+{{ with resources.Get "styles/presentes.css" | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" />
+{{ end }}
+{{ end }}
+
+{{ define "main" }}
+<div class="presentes-container presentes-min-height">
+  <section class="presentes-hero">
+    <h1>Mural de Presentes</h1>
+    <p>Um cantinho especial para homenagear e guardar as artes enviadas pra mim pela comunidade ❤️</p>
+  </section>
+
+  {{ $presentesData := site.Data.presentes | default slice }}
+
+  {{ if gt (len $presentesData) 0 }}
+  <div class="presentes-authors-list">
+    {{ range $presentesData }}
+    {{ $author := . }}
+    <article class="author-card" id="{{ $author.id }}">
+      <div class="author-header">
+        <div class="author-profile">
+          <div class="author-emblem-badge" title="{{ $author.name }}">
+            {{ if $author.avatar }}
+              <img src="{{ $author.avatar }}" alt="{{ $author.name }}">
+            {{ else if $author.featuredArt }}
+              <img src="{{ $author.featuredArt }}" alt="{{ $author.name }}">
+            {{ else }}
+              <div class="default-avatar">
+                <span class="material-symbols-rounded">palette</span>
+              </div>
+            {{ end }}
+          </div>
+          <div class="author-meta">
+            <h2>
+              {{ $author.name }}
+              {{ if $author.gifts }}
+                <span class="author-badge-count">{{ len $author.gifts }} {{ if eq (len $author.gifts) 1 }}presente{{ else }}presentes{{ end }}</span>
+              {{ end }}
+            </h2>
+            {{ if $author.bio }}
+              <p>{{ $author.bio }}</p>
+            {{ end }}
+          </div>
+        </div>
+
+        {{ if $author.social }}
+        <div class="author-socials">
+          {{ if $author.social.instagram }}
+            <a href="{{ $author.social.instagram }}" target="_blank" rel="noopener noreferrer" class="author-social-link" title="Instagram">
+              <span class="material-symbols-rounded">photo_camera</span>
+            </a>
+          {{ end }}
+          {{ if $author.social.youtube }}
+            <a href="{{ $author.social.youtube }}" target="_blank" rel="noopener noreferrer" class="author-social-link" title="YouTube">
+              <span class="material-symbols-rounded">play_circle</span>
+            </a>
+          {{ end }}
+          {{ if $author.social.twitch }}
+            <a href="{{ $author.social.twitch }}" target="_blank" rel="noopener noreferrer" class="author-social-link" title="Twitch">
+              <span class="material-symbols-rounded">live_tv</span>
+            </a>
+          {{ end }}
+          {{ if $author.social.twitter }}
+            <a href="{{ $author.social.twitter }}" target="_blank" rel="noopener noreferrer" class="author-social-link" title="Twitter/X">
+              <span class="material-symbols-rounded">chat</span>
+            </a>
+          {{ end }}
+        </div>
+        {{ end }}
+      </div>
+
+      {{ if $author.gifts }}
+      <div class="author-gallery">
+        {{ range $author.gifts }}
+        {{ if .image }}
+        <div class="gift-item" data-src="{{ .image }}" data-title="{{ .title }}" data-author="{{ $author.name }}" data-desc="{{ .description }}">
+          <img src="{{ .image }}" alt="{{ .title }}" loading="lazy">
+          <div class="gift-overlay">
+            <h4>{{ .title }}</h4>
+            {{ if .description }}
+              <p>{{ .description }}</p>
+            {{ end }}
+          </div>
+        </div>
+        {{ end }}
+        {{ end }}
+      </div>
+      {{ end }}
+    </article>
+    {{ end }}
+  </div>
+  {{ else }}
+  <div class="empty-gifts-notice">
+    <span class="material-symbols-rounded">card_giftcard</span>
+    <h3>O mural está sendo preparado!</h3>
+    <p>Em breve todas as fanarts recebidas estarão disponíveis por aqui.</p>
+  </div>
+  {{ end }}
+</div>
+
+<!-- Modal Lightbox -->
+<div id="presentesLightbox" class="presentes-lightbox" role="dialog" aria-modal="true">
+  <button class="lightbox-close" id="presentesClose" aria-label="Fechar">&times;</button>
+  <div class="lightbox-content-wrapper">
+    <img src="" alt="" id="presentesImg" class="lightbox-img">
+    <div class="lightbox-caption" id="presentesCaption">
+      <h3 id="presentesTitle"></h3>
+      <p id="presentesAuthorDesc"></p>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const lightbox = document.getElementById('presentesLightbox');
+    const lightboxImg = document.getElementById('presentesImg');
+    const lightboxTitle = document.getElementById('presentesTitle');
+    const lightboxAuthorDesc = document.getElementById('presentesAuthorDesc');
+    const closeBtn = document.getElementById('presentesClose');
+
+    document.querySelectorAll('.gift-item').forEach(item => {
+      item.addEventListener('click', () => {
+        const src = item.dataset.src;
+        const title = item.dataset.title;
+        const author = item.dataset.author;
+        const desc = item.dataset.desc;
+
+        if (src) {
+          lightboxImg.src = src;
+          lightboxTitle.textContent = title;
+          lightboxAuthorDesc.textContent = (desc ? `${desc} • ` : '') + `Por ${author}`;
+          lightbox.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        }
+      });
+    });
+
+    const closeLightbox = () => {
+      lightbox.classList.remove('active');
+      document.body.style.overflow = '';
+    };
+
+    if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+        closeLightbox();
+      }
+    });
+  });
+</script>
+{{ end }}

@@ -1,0 +1,107 @@
+[
+  {
+    "id": "juan",
+    "name": "Juan",
+    "avatar": "/images/presentes/avatar-juan.jpg",
+    "featuredArt": "/images/presentes/juan_15maio2024.png",
+    "bio": "@JuanPablo_again",
+    "social": {
+      "instagram": "",
+      "youtube": "",
+      "twitch": "",
+      "twitter": ""
+    },
+    "gifts": [
+      {
+        "title": "Fanart da skin Minecraft",
+        "image": "/images/presentes/juan_15maio2024.png",
+        "date": "2024-05-15",
+        "description": "Juan fez uma fanart no estilo dele da skin minecraft que eu ganhei do Jaum."
+      }
+    ]
+  },
+  {
+    "id": "fanatico",
+    "name": "Fanático",
+    "avatar": "/images/presentes/avatar-fanatico.jpg",
+    "featuredArt": "/images/presentes/jogo-top-fanatico.png",
+    "bio": "",
+    "social": {
+      "instagram": "",
+      "youtube": "",
+      "twitch": "",
+      "twitter": ""
+    },
+    "gifts": [
+      {
+        "title": "Jogo do Fanático",
+        "image": "/images/presentes/jogo-top-fanatico.png",
+        "date": "",
+        "description": "O Fanático fez um jogo pra mim tudo usando apenas o celular. Ele é incrível <3"
+      }
+    ]
+  },
+  {
+    "id": "jaumrock",
+    "name": "Jaum",
+    "avatar": "/images/presentes/avatar-jaum.png",
+    "featuredArt": "/images/presentes/skin-mack-craft-minecraft_jaumrock.png",
+    "bio": "",
+    "social": {
+      "instagram": "",
+      "youtube": "",
+      "twitch": "",
+      "twitter": ""
+    },
+    "gifts": [
+      {
+        "title": "Skin Mack Craft (Minecraft)",
+        "image": "/images/presentes/skin-mack-craft-minecraft_jaumrock.png",
+        "date": "",
+        "description": "O Jaum criou uma skin pra eu usar quando tivesse jogando Minecraft. Olha esse moletom com o mascote do canal.. num guento <3"
+      }
+    ]
+  },
+  {
+    "id": "caio",
+    "name": "Caio",
+    "avatar": "/images/presentes/caio-cookiessalgad0.jpg",
+    "featuredArt": "/images/presentes/desenho-cookiessalgad0_caio.png",
+    "bio": "@cookiesalgad0",
+    "social": {
+      "instagram": "",
+      "youtube": "",
+      "twitch": "",
+      "twitter": ""
+    },
+    "gifts": [
+      {
+        "title": "Fanart do Mack",
+        "image": "/images/presentes/desenho-cookiessalgad0_caio.png",
+        "date": "",
+        "description": "Desenho do Caio que trouxe um visual estiloso demais pro Aprendiz, também conhecido por ele como Março huahua"
+      }
+    ]
+  },
+  {
+    "id": "seu-pedilhi",
+    "name": "Seu Pedilhi",
+    "avatar": "/images/presentes/avatar-seu-pedilhi.jpg",
+    "featuredArt": "/images/presentes/desenho-seu-pedilhi.webp",
+    "bio": "@SeuPedilhi",
+    "social": {
+      "instagram": "",
+      "youtube": "",
+      "twitch": "",
+      "twitter": ""
+    },
+    "gifts": [
+      {
+        "title": "Desenho do Seu Pedilhi",
+        "image": "/images/presentes/desenho-seu-pedilhi.webp",
+        "date": "",
+        "description": "Desenho especial enviado pelo Seu Pedilhi, e claro, não poderia faltar Pizza 🍕 A melhor comida do mundo <3"
+      }
+    ]
+  }
+]
