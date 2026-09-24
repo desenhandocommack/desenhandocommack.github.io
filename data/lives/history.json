@@ -1,5 +1,21 @@
 [
   {
+    "id": "Y2EFxxEwwKo",
+    "cover": "/images/lives/noite-de-sketches.png",
+    "duration": "2h52min",
+    "link": "https://youtube.com/live/Y2EFxxEwwKo",
+    "snippet": {
+      "title": "Noite de sketches aleatórios",
+      "description": "[Categoria: Desenho]\n\nTestando as novas configurações da live enquanto rabisco desenhos aleatórios. Gravity Falls, Pica Pau, Hora de Aventura e Apenas um Show."
+    },
+    "supporters": [
+      "Rikelme"
+    ],
+    "liveStreamingDetails": {
+      "scheduledStartTime": "2026-09-23T21:15:00Z"
+    }
+  },
+  {
     "id": "QG3vgd2_vT0",
     "cover": "/images/lives/pedidos-de-desenho-na-live_parte3.png",
     "duration": "3h03min",
@@ -21,6 +37,10 @@
       "title": "Pedidos de desenho na live - Parte 2",
       "description": "[Categoria: Desenho]\n\nMais uma live de pedidos de desenho!\n\nBora continuar trabalhando nos pedidos enviados durante a transmissão. Também retomei a treinadora Pokémon iniciada na live anterior, agora comecei a fazer a linha final do desenho."
     },
+    "supporters": [
+      "Seu Pedilhi",
+      "Rikelme"
+    ],
     "liveStreamingDetails": {
       "scheduledStartTime": "2026-09-15T21:00:00Z"
     }
@@ -34,6 +54,11 @@
       "title": "Pedidos de desenho na live - Parte 1",
       "description": "[Categoria: Desenho]\n\nPrimeira live estreando a minha tabela de preços para os pedidos feitos durante a live. Ao longo da transmissão, desenhei personagens escolhidos pelo chat e comecei uma nova treinadora Pokémon."
     },
+    "supporters": [
+      "Rikelme",
+      "Seu Pedilhi",
+      "Avillis (Renne)"
+    ],
     "liveStreamingDetails": {
       "scheduledStartTime": "2026-09-14T21:00:00Z"
     }
@@ -58,6 +83,9 @@
       "title": "Testando meus pincéis no Krita",
       "description": "[Categoria: Desenho]\n\nSerá que agora vai? Vamos ver se tem algum brush prestando pra fazer parte do meu pack de brushes.\n\n## Acompanhe tudo o que eu tô fazendo ⬇️\nhttps://desenhandocommack.com.br/\n\nEnvie sua mensagem na live ⬇️\nhttps://livepix.gg/desenhandocommack\n\n⭐ Músicas das lives\nMusic provided by http://spoti.fi/NCS\nhttps://mixkit.co/free-stock-music/\nBiblioteca de áudio - YouTube StudioMusic provided by http://spoti.fi/NCS"
     },
+    "supporters": [
+      "Seu Pedilhi"
+    ],
     "liveStreamingDetails": {
       "scheduledStartTime": "2026-09-01T22:00:00Z"
     }

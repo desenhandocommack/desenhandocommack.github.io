@@ -60,7 +60,7 @@ jobs:
 
             if [ "$shouldMoveToHistory" = "true" ]; then
               if [ -s "$destination" ]; then
-                jq -s '.[0] + .[1]' "$AGENDA_HISTORY" "$destination" > "${AGENDA_HISTORY}.tmp" && mv "${AGENDA_HISTORY}.tmp" "$AGENDA_HISTORY"
+                jq -s '.[1] + .[0]' "$AGENDA_HISTORY" "$destination" > "${AGENDA_HISTORY}.tmp" && mv "${AGENDA_HISTORY}.tmp" "$AGENDA_HISTORY"
               fi
               echo '[]' > "$destination"
             fi
