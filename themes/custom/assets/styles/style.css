@@ -877,6 +877,7 @@ body {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .footer-link {
@@ -885,12 +886,24 @@ body {
   text-decoration: none;
   opacity: 0.9;
   font-weight: 700;
-  transition: opacity 0.25s ease, color 0.25s ease;
+  transition: opacity 0.25s ease, color 0.25s ease, filter 0.25s ease;
 }
 
 .footer-link:hover {
   opacity: 1;
   color: #fe55bd;
+}
+
+.footer-link-conquistas {
+  background: linear-gradient(135deg, #2bb8fc 0%, #fe55bd 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 1;
+}
+
+.footer-link-conquistas:hover {
+  filter: brightness(1.2);
 }
 
 /* CONTAINER DOS ÍCONES DAS REDES SOCIAIS DO RODAPÉ */

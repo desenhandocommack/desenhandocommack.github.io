@@ -1,0 +1,350 @@
+/* ESTILOS DO QUADRO DE CONQUISTAS */
+
+.conquistas-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 5rem 1.5rem;
+}
+
+.conquistas-min-height {
+  min-height: calc(100vh - 250px);
+}
+
+.conquistas-hero {
+  text-align: center;
+  padding: 2.5rem 1rem 2rem 1rem;
+}
+
+.conquistas-hero h1 {
+  font-size: 2.6rem;
+  font-weight: 900;
+  color: var(--color-text);
+  margin-bottom: 0.75rem;
+  background: linear-gradient(135deg, #2bb8fc 0%, #fe55bd 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.conquistas-hero p {
+  font-size: 1.1rem;
+  color: #64748b;
+  max-width: 650px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.conquistas-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  margin-top: 1rem;
+}
+
+.category-header {
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid rgba(23, 54, 87, 0.06);
+  padding-bottom: 0.75rem;
+}
+
+.category-header h2 {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: var(--color-text);
+  margin-bottom: 0.25rem;
+}
+
+.category-header p {
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+/* GRID DE BRASÕES COMPACTO E ELEGANTE */
+.badges-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2rem 1.5rem;
+  justify-items: center;
+}
+
+.badge-card {
+  background: #ffffff;
+  border-radius: 20px;
+  border: 1px solid rgba(23, 54, 87, 0.08);
+  box-shadow: 0 6px 20px rgba(23, 54, 87, 0.04);
+  padding: 1.75rem 1.25rem 1.4rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: 240px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.badge-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 36px var(--badge-glow), 0 4px 14px rgba(23, 54, 87, 0.08);
+  border-color: rgba(23, 54, 87, 0.18);
+}
+
+/* BRASÃO / ESCUDO HERÁLDICO */
+.badge-icon-wrapper {
+  position: relative;
+  width: 86px;
+  height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  /* Formato de Brasão / Escudo */
+  clip-path: polygon(50% 0%, 100% 12%, 100% 70%, 50% 100%, 0% 70%, 0% 12%);
+  background: var(--badge-grad);
+  padding: 4px;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.15));
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.35s ease;
+  margin-bottom: 1.1rem;
+}
+
+.badge-card:hover .badge-icon-wrapper {
+  transform: scale(1.12) rotate(3deg);
+  filter: drop-shadow(0 10px 22px var(--badge-glow));
+}
+
+.badge-icon-bg {
+  position: absolute;
+  inset: 3px;
+  clip-path: polygon(50% 0%, 100% 12%, 100% 70%, 50% 100%, 0% 70%, 0% 12%);
+  background: var(--badge-grad);
+  z-index: 1;
+}
+
+.badge-ring {
+  display: none;
+}
+
+.badge-icon {
+  font-size: 2.8rem;
+  z-index: 3;
+  color: #ffffff;
+  margin-top: -4px;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.45));
+}
+
+.badge-emblem-wrapper {
+  position: relative;
+  width: 120px;
+  height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.1rem;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.badge-emblem-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.12));
+  transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.badge-card:hover .badge-emblem-wrapper {
+  transform: scale(1.12) rotate(2deg);
+}
+
+.badge-card:hover .badge-emblem-img {
+  filter: drop-shadow(0 12px 22px var(--badge-glow));
+}
+
+.badge-emblem-shine-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 5;
+  overflow: hidden;
+  -webkit-mask-image: var(--emblem-url);
+  mask-image: var(--emblem-url);
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+}
+
+.badge-shine {
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 300%;
+  height: 300%;
+  background: linear-gradient(
+    45deg,
+    transparent 40%,
+    rgba(255, 255, 255, 0.75) 50%,
+    transparent 60%
+  );
+  transform: rotate(35deg) translate(-100%, -100%);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 4;
+  transition: transform 0.75s ease-out, opacity 0.25s ease;
+}
+
+.badge-card:hover .badge-shine {
+  opacity: 1;
+  transform: rotate(35deg) translate(60%, 60%);
+}
+
+/* INFORMAÇÕES (TÍTULO E DATA) */
+.badge-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  width: 100%;
+}
+
+.badge-title {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--color-text);
+  line-height: 1.3;
+  margin: 0;
+}
+
+.badge-date {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #64748b;
+  background: rgba(23, 54, 87, 0.05);
+  padding: 0.18rem 0.65rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(23, 54, 87, 0.06);
+}
+
+/* TOOLTIP COM DESCRIÇÃO NO HOVER */
+.badge-tooltip {
+  position: absolute;
+  bottom: calc(100% + 12px);
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #ffffff;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  width: max-content;
+  max-width: 240px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
+  z-index: 100;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.badge-tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: rgba(15, 23, 42, 0.95) transparent transparent transparent;
+}
+
+.badge-tooltip p {
+  margin: 0;
+  color: #f1f5f9;
+}
+
+/* MOSTRA O TOOLTIP NO HOVER E FOCUS */
+.badge-card:hover .badge-tooltip,
+.badge-card:focus-within .badge-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* ESTADO VAZIO */
+.empty-conquistas-notice {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  background: linear-gradient(to right, rgba(240, 249, 255, 0.6), rgba(255, 240, 250, 0.6));
+  border-radius: 16px;
+  border: 1px dashed rgba(23, 54, 87, 0.15);
+  color: #64748b;
+  margin-top: 2rem;
+}
+
+.empty-conquistas-notice .material-symbols-rounded {
+  font-size: 3rem;
+  color: var(--color-accent);
+  margin-bottom: 0.75rem;
+}
+
+@media (max-width: 768px) {
+  .conquistas-hero h1 {
+    font-size: 2rem;
+  }
+
+  .badges-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1.25rem;
+  }
+
+  .badge-card {
+    padding: 1.25rem 0.85rem 1rem 0.85rem;
+  }
+
+  .badge-icon-wrapper {
+    width: 72px;
+    height: 80px;
+  }
+
+  .badge-icon {
+    font-size: 2.3rem;
+  }
+
+  .badge-title {
+    font-size: 0.9rem;
+  }
+}
+
+/* ESTADO VAZIO */
+.empty-conquistas-notice {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  background: linear-gradient(to right, rgba(240, 249, 255, 0.6), rgba(255, 240, 250, 0.6));
+  border-radius: 16px;
+  border: 1px dashed rgba(23, 54, 87, 0.15);
+  color: #64748b;
+  margin-top: 2rem;
+}
+
+.empty-conquistas-notice .material-symbols-rounded {
+  font-size: 3rem;
+  color: var(--color-accent);
+  margin-bottom: 0.75rem;
+}
+
+@media (max-width: 768px) {
+  .conquistas-hero h1 {
+    font-size: 2rem;
+  }
+
+  .badges-grid {
+    grid-template-columns: 1fr;
+  }
+}

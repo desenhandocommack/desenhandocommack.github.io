@@ -33,7 +33,7 @@
           </div>
           <div class="author-meta">
             <h2>
-              {{ $author.name }}
+              <span class="author-name-text">{{ $author.name }}</span>
               {{ if $author.gifts }}
                 <span class="author-badge-count">{{ len $author.gifts }} {{ if eq (len $author.gifts) 1 }}presente{{ else }}presentes{{ end }}</span>
               {{ end }}

@@ -1,0 +1,71 @@
+{{ define "styles" }}
+{{ with resources.Get "styles/conquistas.css" | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" />
+{{ end }}
+{{ end }}
+
+{{ define "main" }}
+<div class="conquistas-container conquistas-min-height">
+  <section class="conquistas-hero">
+    <h1>Quadro de Conquistas</h1>
+    <p>Emblemas, marcos históricos e conquistas alcançadas na jornada do Desenhando com Mack ✨</p>
+  </section>
+
+  {{ $conquistasData := site.Data.conquistas | default slice }}
+
+  {{ if gt (len $conquistasData) 0 }}
+  <div class="conquistas-sections">
+    {{ range $conquistasData }}
+    <div class="conquistas-category-group">
+      <div class="category-header">
+        <h2>{{ .category }}</h2>
+      </div>
+
+      <div class="badges-grid">
+        {{ range .badges }}
+        {{ $grad := .gradient | default "linear-gradient(135deg, #2bb8fc 0%, #fe55bd 100%)" }}
+        {{ $glow := .glow | default "rgba(43, 184, 252, 0.45)" }}
+        <div class="badge-card {{ if .unlocked }}unlocked{{ else }}locked{{ end }}" style="--badge-grad: {{ $grad | safeCSS }}; --badge-glow: {{ $glow | safeCSS }};" tabindex="0">
+          
+          {{ if .image }}
+          <div class="badge-emblem-wrapper" style="--emblem-url: url('{{ .image }}');">
+            <img src="{{ .image }}" alt="{{ .title }}" class="badge-emblem-img">
+            <div class="badge-emblem-shine-layer">
+              <div class="badge-shine"></div>
+            </div>
+          </div>
+          {{ else }}
+          <div class="badge-icon-wrapper" style="background: {{ $grad | safeCSS }};">
+            <div class="badge-icon-bg" style="background: {{ $grad | safeCSS }};"></div>
+            <span class="material-symbols-rounded badge-icon">{{ .icon | default "military_tech" }}</span>
+            <div class="badge-shine"></div>
+          </div>
+          {{ end }}
+
+          <div class="badge-info">
+            <h3 class="badge-title">{{ .title }}</h3>
+            {{ with .date }}
+            <span class="badge-date">{{ . }}</span>
+            {{ end }}
+          </div>
+
+          {{ with .description }}
+          <div class="badge-tooltip" role="tooltip">
+            <p>{{ . }}</p>
+          </div>
+          {{ end }}
+
+        </div>
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+  </div>
+  {{ else }}
+  <div class="empty-conquistas-notice">
+    <span class="material-symbols-rounded">military_tech</span>
+    <p>Nenhuma conquista cadastrada no momento.</p>
+  </div>
+  {{ end }}
+</div>
+{{ end }}

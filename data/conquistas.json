@@ -1,0 +1,146 @@
+[
+  {
+    "category": "Marcos de Inscritos no YouTube",
+    "description": "A jornada de crescimento da nossa comunidade de desenho e arte.",
+    "badges": [
+      {
+        "id": "canal-inicio",
+        "title": "Início do Canal",
+        "description": "Considero setembro o início oficial, que foi quando eu comecei minha primeira playlist.",
+        "image": "/images/conquistas/inicio-oficial.png",
+        "icon": "rocket_launch",
+        "date": "Set 2016",
+        "gradient": "linear-gradient(135deg, #f59e0b 0%, #ef4444 100%)",
+        "glow": "rgba(245, 158, 11, 0.45)",
+        "unlocked": true
+      },
+      {
+        "id": "sub-100",
+        "title": "Primeiros 100 Inscritos",
+        "description": "Primeiros Aprendizes que me motivaram a continuar nessa jornada.",
+        "image": "/images/conquistas/100-inscritos.png",
+        "icon": "flag",
+        "date": "17 Mar 2017",
+        "gradient": "linear-gradient(135deg, #e59a65 0%, #b86a34 100%)",
+        "glow": "rgba(229, 154, 101, 0.45)",
+        "unlocked": true
+      },
+      {
+        "id": "sub-1k",
+        "title": "1.000 Inscritos",
+        "description": "O primeiro grande marco! Nessa época eu nem acreditei, mil inscritos era realmente muita coisa pra mim.",
+        "image": "/images/conquistas/1000-inscritos.png",
+        "icon": "military_tech",
+        "date": "02 Jul 2017",
+        "gradient": "linear-gradient(135deg, #e2e8f0 0%, #94a3b8 50%, #64748b 100%)",
+        "glow": "rgba(148, 163, 184, 0.5)",
+        "unlocked": true
+      },
+      {
+        "id": "sub-5k",
+        "title": "5.000 Inscritos",
+        "description": "Continuamos trabalhando nos vídeos e o resultados foram vindo até que bem rápido.",
+        "image": "/images/conquistas/5000-inscritos.png",
+        "icon": "workspace_premium",
+        "date": "20 Out 2017",
+        "gradient": "linear-gradient(135deg, #38bdf8 0%, #0284c7 100%)",
+        "glow": "rgba(2, 132, 199, 0.45)",
+        "unlocked": true
+      },
+      {
+        "id": "sub-11k",
+        "title": "11.000 Inscritos",
+        "description": "Mais de 10 mil pessoas que gostam de desenhar ou ver desenhos.",
+        "image": "/images/conquistas/11000-inscritos.png",
+        "icon": "auto_awesome",
+        "date": "06 Fev 2018",
+        "gradient": "linear-gradient(135deg, #4ade80 0%, #16a34a 100%)",
+        "glow": "rgba(34, 197, 94, 0.45)",
+        "unlocked": true
+      },
+      {
+        "id": "sub-21k",
+        "title": "21.000 Inscritos",
+        "description": "Novos quadros, Desafios, Lançamento do meu primeiro aplicativo pra Android (App Mesa de Luz que o Well fez pra gente).",
+        "image": "/images/conquistas/21000-inscritos.png",
+        "icon": "stars",
+        "date": "21 Jun 2018",
+        "gradient": "linear-gradient(135deg, #f59e0b 0%, #d97706 100%)",
+        "glow": "rgba(245, 158, 11, 0.45)",
+        "unlocked": true
+      },
+      {
+        "id": "sub-35k",
+        "title": "35.000 Inscritos",
+        "description": "Novos contatos, mais desenhos, continuamos no 3D e fomos indo.",
+        "image": "/images/conquistas/35000-inscritos.png",
+        "icon": "verified",
+        "date": "18 Jan 2019",
+        "gradient": "linear-gradient(135deg, #10b981 0%, #059669 100%)",
+        "glow": "rgba(16, 185, 129, 0.45)",
+        "unlocked": true
+      },
+      {
+        "id": "sub-50k",
+        "title": "50.000 Inscritos",
+        "description": "Inacreditável! Aqui eu já tava pensando que seria possível chegar nos 100K.",
+        "image": "/images/conquistas/50000-inscritos.png",
+        "icon": "military_tech",
+        "date": "2019",
+        "gradient": "linear-gradient(135deg, #c084fc 0%, #9333ea 100%)",
+        "glow": "rgba(168, 85, 247, 0.45)",
+        "unlocked": true
+      },
+      {
+        "id": "sub-100k",
+        "title": "100.000 Inscritos",
+        "description": "Meu muito obrigada por todos que fizeram parte dessa jornada junto comigo, todos mesmo. Os aprendizes inscritos, as oportunidades de trabalhar com isso e claro, ao Well, que tá sempre apoiando essas loucuras <3",
+        "image": "/images/conquistas/100000-inscritos.png",
+        "icon": "shield_with_heart",
+        "date": "16 Jan 2021",
+        "gradient": "linear-gradient(135deg, #fe55bd 0%, #2bb8fc 100%)",
+        "glow": "rgba(254, 85, 189, 0.5)",
+        "unlocked": true
+      }
+    ]
+  },
+  {
+    "category": "Conquistas da Minha Jornada",
+    "description": "Marcos oficiais de verificação, premiações e lançamentos.",
+    "badges": [
+      {
+        "id": "selo-verificacao",
+        "title": "Selo de Verificação do YouTube",
+        "description": "Aêee. Conquistamos o selo de verificado do YouTube.",
+        "image": "/images/conquistas/selo-de-verificacao.png",
+        "icon": "verified_user",
+        "date": "25 Jan 2021",
+        "gradient": "linear-gradient(135deg, #2bb8fc 0%, #0099ff 100%)",
+        "glow": "rgba(43, 184, 252, 0.45)",
+        "unlocked": true
+      },
+      {
+        "id": "placa-prata",
+        "title": "Placa de Prata de 100k (YouTube)",
+        "description": "Absurdo! Solicitei a placa no dia 22 de fevereiro de 2021 e ela já tava aqui em casa no dia 5 de março de 2021.",
+        "image": "/images/conquistas/placa-de-prata-100k-youtube.png",
+        "icon": "trophy",
+        "date": "05 Mar 2021",
+        "gradient": "linear-gradient(135deg, #cbd5e1 0%, #64748b 50%, #94a3b8 100%)",
+        "glow": "rgba(148, 163, 184, 0.5)",
+        "unlocked": true
+      },
+      {
+        "id": "curso-krita",
+        "title": "Curso Krita para Iniciantes",
+        "description": "Lançamento do meu primeiro curso sobre uma das feramentas gratuitas mais incríveis que temos hoje no mercado. Obrigada a todos que já compraram e apoiam esse projeto <3",
+        "image": "/images/conquistas/primeiro-curso-krita-para-iniciantes.png",
+        "icon": "brush",
+        "date": "Set 2025",
+        "gradient": "linear-gradient(135deg, #fe55bd 0%, #ff0844 100%)",
+        "glow": "rgba(254, 85, 189, 0.5)",
+        "unlocked": true
+      }
+    ]
+  }
+]
