@@ -1,5 +1,22 @@
 [
   {
+    "id": "6UCUtHtC-V0",
+    "cover": "/images/lives/blender-na-mesa-digitalizadora_3D-do-gumball.png",
+    "duration": "2h 45min",
+    "link": "https://youtube.com/live/6UCUtHtC-V0",
+    "snippet": {
+      "title": "Minha Primeira Escultura no Blender com Mesa Digitalizadora",
+      "description": "[Categoria: 3D no Blender]\n\nEu nunca tinha tentado usar o Blender com a caneta, então configurei o que consegui para deixar o fluxo de trabalho o mais parecido possível com o mouse e escolhi o Gumball para tentar esculpir com a mesa digitalizadora em live."
+    },
+    "supporters": [
+      "Rikelme",
+      "Seu Pedilhi"
+    ],
+    "liveStreamingDetails": {
+      "scheduledStartTime": "2026-09-29T21:00:00Z"
+    }
+  },
+  {
     "id": "izrUwNmwv6I",
     "cover": "/images/lives/pedidos-de-desenho_live26setembro2026.png",
     "duration": "3h21min",
