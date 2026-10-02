@@ -174,6 +174,68 @@
   color: var(--color-text);
 }
 
+.profile-email-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  margin-top: 0.25rem;
+  padding: 0.75rem 0.85rem;
+  background: var(--color-bg, #ffffff);
+  border: 1px dashed rgba(23, 54, 87, 0.2);
+  border-radius: 12px;
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+  transition: all 0.25s ease;
+  color: inherit;
+}
+
+.profile-email-btn:hover {
+  background: rgba(234, 73, 139, 0.04);
+  border-color: var(--color-accent);
+  transform: translateY(-1px);
+}
+
+.profile-email-btn:active {
+  transform: translateY(0);
+}
+
+.profile-email-btn .badge-icon {
+  font-size: 1.35rem;
+  padding: 0.45rem;
+  transition: all 0.25s ease;
+}
+
+.email-copy-icon {
+  font-size: 1.15rem;
+  margin-left: auto;
+  color: var(--color-text);
+  opacity: 0.4;
+  transition: all 0.25s ease;
+}
+
+.profile-email-btn:hover .email-copy-icon {
+  opacity: 0.85;
+  color: var(--color-accent);
+}
+
+.profile-email-btn.copied {
+  border-color: #10b981;
+  background: rgba(16, 185, 129, 0.08);
+}
+
+.profile-email-btn.copied .badge-icon {
+  background: rgba(16, 185, 129, 0.15);
+  color: #10b981;
+}
+
+.profile-email-btn.copied .email-copy-icon {
+  color: #10b981;
+  opacity: 1;
+}
+
+
 .profile-socials {
   display: flex;
   justify-content: center;

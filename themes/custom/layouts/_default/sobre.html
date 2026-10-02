@@ -34,6 +34,14 @@
             <span class="badge-value">Chibi & Cartoon</span>
           </div>
         </div>
+        <button type="button" id="copy-email-btn" class="profile-email-btn" title="Copiar e-mail de contato">
+          <span class="material-symbols-rounded badge-icon" id="copy-email-icon">mail</span>
+          <div class="badge-info">
+            <span class="badge-label" id="copy-email-label">Contato</span>
+            <span class="badge-value" id="copy-email-text">Copiar e-mail</span>
+          </div>
+          <span class="material-symbols-rounded email-copy-icon" id="copy-email-action-icon">content_copy</span>
+        </button>
       </div>
 
       <div class="profile-socials">
@@ -180,6 +188,50 @@
       modal.addEventListener("click", (e) => {
         if (e.target === modal) {
           closeModal();
+        }
+      });
+    }
+
+    const copyBtn = document.getElementById("copy-email-btn");
+    if (copyBtn) {
+      // Montagem ofuscada para não expor em texto puro no crawler/bot
+      const user = "desenhandocommack";
+      const domain = "gmail.com";
+      const email = user + "@" + domain;
+      const textSpan = document.getElementById("copy-email-text");
+      const icon = document.getElementById("copy-email-icon");
+      const actionIcon = document.getElementById("copy-email-action-icon");
+      let timeoutId = null;
+
+      copyBtn.addEventListener("click", async () => {
+        try {
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            await navigator.clipboard.writeText(email);
+          } else {
+            const textarea = document.createElement("textarea");
+            textarea.value = email;
+            textarea.style.position = "fixed";
+            textarea.style.opacity = "0";
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand("copy");
+            document.body.removeChild(textarea);
+          }
+
+          copyBtn.classList.add("copied");
+          if (textSpan) textSpan.textContent = "E-mail copiado!";
+          if (icon) icon.textContent = "check_circle";
+          if (actionIcon) actionIcon.textContent = "done";
+
+          if (timeoutId) clearTimeout(timeoutId);
+          timeoutId = setTimeout(() => {
+            copyBtn.classList.remove("copied");
+            if (textSpan) textSpan.textContent = "Copiar e-mail";
+            if (icon) icon.textContent = "mail";
+            if (actionIcon) actionIcon.textContent = "content_copy";
+          }, 2500);
+        } catch (err) {
+          console.error("Falha ao copiar:", err);
         }
       });
     }
