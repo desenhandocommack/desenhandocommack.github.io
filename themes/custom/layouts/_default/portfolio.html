@@ -63,16 +63,12 @@
       {{ if not $link }}
         {{ $link = index $.Params.links $nameWithoutExt }}
       {{ end }}
-      {{/* 3. Busca pelo slug/nome limpo (sem número e sem -vertical) */}}
-      {{ if not $link }}
-        {{ $link = index $.Params.links $titleSlug }}
-      {{ end }}
-      {{/* 4. Busca por prefixo numérico ou chave parcial se você renomear */}}
+      {{/* 3. Busca estrita pelo prefixo numérico exato (ex: se no YAML estiver '11_' ou '11') */}}
       {{ if not $link }}
         {{ $numPrefix := index $parts 0 }}
         {{ range $k, $v := $.Params.links }}
           {{ if not $link }}
-            {{ if or (hasPrefix $k (printf "%s_" $numPrefix)) (eq $k $numPrefix) (in $filename $k) (in $k $titleSlug) }}
+            {{ if or (hasPrefix $k (printf "%s_" $numPrefix)) (eq $k $numPrefix) }}
               {{ $link = $v }}
             {{ end }}
           {{ end }}
