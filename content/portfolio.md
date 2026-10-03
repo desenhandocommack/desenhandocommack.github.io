@@ -4,7 +4,7 @@ layout: "portfolio"
 description: "Confira meus melhores desenhos, divididos entre personagens, ilustrações completas e estudos de arte."
 links:
   "21_personagens_criação-de-personagem-cartoon-vertical.png": "https://youtu.be/AkugFjja4Nc"
-  "11_personagens_pintura-digital.png": "https://youtu.be/5Ym7Vxwl3xg"
+  "11_personagens_pintura-digital.png": "https://www.youtube.com/watch?v=5Ym7Vxwl3xg"
   "13_3D_fanart-design-do-fanatico.png": "https://www.instagram.com/p/Cyehetsuppj/?img_index=1"
   "29_personagens_desafio-em-live-vallen.png": "https://youtu.be/dsWEHK4d_pI"
   "18_personagens_desenho-de-personagem-criado-em-live-vertical.png": "https://youtube.com/live/XOQ0HO0keCo"
