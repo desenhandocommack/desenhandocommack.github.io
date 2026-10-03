@@ -60,10 +60,15 @@
     {{ $link = index $.Params.links $filename }}
     {{ end }}
 
+    {{ $isVideo := or (hasSuffix $filename ".mp4") (hasSuffix $filename ".webm") }}
     <div class="portfolio-item {{ if $isVertical }}portfolio-item-vertical{{ end }}" data-category="{{ $category }}"
       data-link="{{ $link }}">
       <div class="portfolio-img-box">
+        {{ if $isVideo }}
+        <video src="{{ $imgSrc }}" autoplay loop muted playsinline></video>
+        {{ else }}
         <img src="{{ $imgSrc }}" alt="{{ $title }}">
+        {{ end }}
       </div>
       {{ if $link }}
       <div class="portfolio-item-link-badge" title="Possui vídeo do processo">
@@ -90,6 +95,7 @@
 
   <div class="lightbox-content-wrapper">
     <img src="" alt="" id="lightboxImg" class="lightbox-img">
+    <video src="" id="lightboxVideo" class="lightbox-video" autoplay loop muted playsinline style="display: none;"></video>
     <div class="lightbox-caption" id="lightboxCaption">
       <h3></h3>
       <span class="lightbox-tag"></span>
@@ -138,6 +144,7 @@
     // Funcionalidade da Lightbox
     const lightbox = document.getElementById("portfolioLightbox");
     const lightboxImg = document.getElementById("lightboxImg");
+    const lightboxVideo = document.getElementById("lightboxVideo");
     const lightboxTitle = document.querySelector("#lightboxCaption h3");
     const lightboxTag = document.querySelector("#lightboxCaption .lightbox-tag");
     const closeBtn = document.getElementById("lightboxClose");
@@ -158,13 +165,27 @@
       const currentItem = currentVisibleItems[currentIndex];
       if (!currentItem) return;
 
-      const img = currentItem.querySelector(".portfolio-img-box img");
+      const mediaImg = currentItem.querySelector(".portfolio-img-box img");
+      const mediaVideo = currentItem.querySelector(".portfolio-img-box video");
       const title = currentItem.querySelector(".portfolio-info h3").textContent;
       const tag = currentItem.querySelector(".portfolio-info .portfolio-tag").textContent;
       const link = currentItem.getAttribute("data-link");
 
-      lightboxImg.src = img.src;
-      lightboxImg.alt = img.alt;
+      if (mediaVideo) {
+        lightboxImg.style.display = "none";
+        lightboxImg.src = "";
+        lightboxVideo.style.display = "block";
+        lightboxVideo.src = mediaVideo.src;
+        lightboxVideo.play().catch(() => {});
+      } else if (mediaImg) {
+        lightboxVideo.pause();
+        lightboxVideo.style.display = "none";
+        lightboxVideo.src = "";
+        lightboxImg.style.display = "block";
+        lightboxImg.src = mediaImg.src;
+        lightboxImg.alt = mediaImg.alt;
+      }
+
       lightboxTitle.textContent = title;
       lightboxTag.textContent = tag;
 
@@ -194,6 +215,8 @@
     function closeLightbox(isPopState = false) {
       if (!isLightboxOpen) return;
       isLightboxOpen = false;
+      lightboxVideo.pause();
+      lightboxVideo.src = "";
       lightbox.classList.remove("active");
       document.body.style.overflow = ""; // Ativa scroll da página
 

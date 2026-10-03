@@ -16,5 +16,6 @@ links:
   "61_personagens_fanart-susana-forte-hora-de-aventura.png": "https://youtu.be/-yaOSRlUQsQ"
   "65_ilustracoes_capa-de-livro-infanto-juvenil.png": "https://youtu.be/bIyOQdcumq8"
   "67_animações_protótipo-de-jogo-do-baruc.gif": "https://youtube.com/playlist?list=PLIEuiPcrquC4&themeRefresh=1"
+  "68_3D_gumball.mp4": "https://youtube.com/live/6UCUtHtC-V0"
 ---
 

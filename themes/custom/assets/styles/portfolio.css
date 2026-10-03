@@ -119,14 +119,16 @@
   background-color: #f6f4f1;
 }
 
-.portfolio-img-box img {
+.portfolio-img-box img,
+.portfolio-img-box video {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.4s ease;
 }
 
-.portfolio-item:hover .portfolio-img-box img {
+.portfolio-item:hover .portfolio-img-box img,
+.portfolio-item:hover .portfolio-img-box video {
   transform: scale(1.05);
 }
 
@@ -209,7 +211,8 @@
   justify-content: center;
 }
 
-.lightbox-img {
+.lightbox-img,
+.lightbox-video {
   max-width: 100%;
   max-height: 70vh;
   object-fit: contain;
@@ -219,7 +222,8 @@
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.portfolio-lightbox.active .lightbox-img {
+.portfolio-lightbox.active .lightbox-img,
+.portfolio-lightbox.active .lightbox-video {
   transform: scale(1);
 }
 
