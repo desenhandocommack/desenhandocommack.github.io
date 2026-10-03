@@ -457,3 +457,60 @@
 .lightbox-link-btn .material-symbols-rounded {
   font-size: 1.3rem;
 }
+
+/* Badge de Comissão Disponível no Card do Portfólio */
+.portfolio-item-commission-badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: #ffffff;
+  padding: 0.35rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  z-index: 10;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+  transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.25s ease;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.portfolio-item-commission-badge .material-symbols-rounded {
+  font-size: 0.95rem;
+}
+
+.portfolio-item:hover .portfolio-item-commission-badge {
+  transform: scale(1.06);
+  box-shadow: 0 6px 16px rgba(16, 185, 129, 0.55);
+}
+
+/* Botão de Pedir Comissão no Lightbox */
+.lightbox-commission-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: #ffffff;
+  padding: 0.6rem 1.4rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  box-shadow: 0 6px 18px rgba(16, 185, 129, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.lightbox-commission-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(16, 185, 129, 0.5);
+  color: #ffffff;
+}
+
+.lightbox-commission-btn .material-symbols-rounded {
+  font-size: 1.2rem;
+}

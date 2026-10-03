@@ -63,16 +63,12 @@
       {{ if not $link }}
         {{ $link = index $.Params.links $nameWithoutExt }}
       {{ end }}
-      {{/* 3. Busca pelo slug/nome limpo (sem número e sem -vertical) */}}
-      {{ if not $link }}
-        {{ $link = index $.Params.links $titleSlug }}
-      {{ end }}
-      {{/* 4. Busca por prefixo numérico ou chave parcial se você renomear */}}
+      {{/* 3. Busca estrita pelo prefixo numérico exato (ex: se no YAML estiver '11_' ou '11') */}}
       {{ if not $link }}
         {{ $numPrefix := index $parts 0 }}
         {{ range $k, $v := $.Params.links }}
           {{ if not $link }}
-            {{ if or (hasPrefix $k (printf "%s_" $numPrefix)) (eq $k $numPrefix) (in $filename $k) (in $k $titleSlug) }}
+            {{ if or (hasPrefix $k (printf "%s_" $numPrefix)) (eq $k $numPrefix) }}
               {{ $link = $v }}
             {{ end }}
           {{ end }}
@@ -80,9 +76,26 @@
       {{ end }}
     {{ end }}
 
+    {{/* Checa se a imagem é elegível para comissão a partir de data/comissoes.json */}}
+    {{ $comissoesData := site.Data.comissoes }}
+    {{ $commissionType := "" }}
+    {{ $commissionTypeId := "" }}
+    {{ if $comissoesData }}
+      {{ range $comissoesData.types }}
+        {{ $cId := .id }}
+        {{ $cTitle := .title }}
+        {{ range .portfolio_highlight_ids }}
+          {{ if or (eq . $filename) (in $filename .) (in . $titleSlug) }}
+            {{ $commissionType = $cTitle }}
+            {{ $commissionTypeId = $cId }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+
     {{ $isVideo := or (hasSuffix $filename ".mp4") (hasSuffix $filename ".webm") }}
     <div class="portfolio-item {{ if $isVertical }}portfolio-item-vertical{{ end }}" data-category="{{ $category }}"
-      data-link="{{ $link }}">
+      data-link="{{ $link }}" data-commission-id="{{ $commissionTypeId }}">
       <div class="portfolio-img-box">
         {{ if $isVideo }}
         <video src="{{ $imgSrc }}" autoplay loop muted playsinline></video>
@@ -90,6 +103,12 @@
         <img src="{{ $imgSrc }}" alt="{{ $title }}">
         {{ end }}
       </div>
+      {{ if $commissionType }}
+      <a href="/comissoes/#{{ $commissionTypeId }}" class="portfolio-item-commission-badge" title="Disponível para comissão! Clique para saber mais">
+        <span class="material-symbols-rounded">brush</span>
+        Comissão
+      </a>
+      {{ end }}
       {{ if $link }}
       <div class="portfolio-item-link-badge" title="Possui vídeo do processo">
         <span class="material-symbols-rounded">play_circle</span>
@@ -119,7 +138,11 @@
     <div class="lightbox-caption" id="lightboxCaption">
       <h3></h3>
       <span class="lightbox-tag"></span>
-      <div style="margin-top: 1rem;">
+      <div style="margin-top: 1rem; display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap;">
+        <a href="" id="lightboxCommissionLink" class="lightbox-commission-btn" style="display: none;">
+          <span class="material-symbols-rounded">brush</span>
+          Encomendar Arte Deste Estilo
+        </a>
         <a href="" id="lightboxLink" target="_blank" class="lightbox-link-btn" style="display: none;">
           <span class="material-symbols-rounded">play_circle</span>
           Assistir Processo
@@ -209,7 +232,16 @@
       lightboxTitle.textContent = title;
       lightboxTag.textContent = tag;
 
-      const lightboxLink = document.getElementById("lightboxLink");
+      const lightboxCommissionLink = document.getElementById("lightboxCommissionLink");
+      const commissionId = currentItem.getAttribute("data-commission-id");
+      if (commissionId && commissionId.trim() !== "") {
+        lightboxCommissionLink.href = `/comissoes/#${commissionId}`;
+        lightboxCommissionLink.style.display = "inline-flex";
+      } else {
+        lightboxCommissionLink.style.display = "none";
+        lightboxCommissionLink.href = "";
+      }
+
       if (link && link.trim() !== "") {
         lightboxLink.href = link;
         lightboxLink.style.display = "inline-flex";

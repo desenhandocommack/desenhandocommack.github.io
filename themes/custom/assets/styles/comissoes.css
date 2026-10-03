@@ -1,0 +1,511 @@
+/* ESTILOS DA PÁGINA DE COMISSÕES */
+.comissoes-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 5rem 1.5rem;
+}
+
+.comissoes-min-height {
+  min-height: 80vh;
+}
+
+/* HERO SECTION */
+.comissoes-hero {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.comissoes-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1.2rem;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  color: #059669;
+  font-weight: 700;
+  font-size: 0.88rem;
+  border-radius: 9999px;
+  margin-bottom: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.comissoes-status-pill.closed {
+  background: rgba(239, 68, 68, 0.12);
+  border-color: rgba(239, 68, 68, 0.35);
+  color: #dc2626;
+}
+
+.comissoes-status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #10b981;
+  box-shadow: 0 0 10px #10b981;
+  animation: pulse-dot 2s infinite;
+}
+
+.comissoes-status-pill.closed .comissoes-status-dot {
+  background-color: #ef4444;
+  box-shadow: 0 0 10px #ef4444;
+}
+
+@keyframes pulse-dot {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  50% { transform: scale(1.3); opacity: 1; }
+  100% { transform: scale(0.95); opacity: 0.8; }
+}
+
+.comissoes-hero h1 {
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: var(--color-text);
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #173657 0%, #ea498b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.comissoes-hero p {
+  font-size: 1.15rem;
+  color: #556980;
+  max-width: 680px;
+  margin: 0 auto 1.8rem auto;
+  line-height: 1.6;
+}
+
+.comissoes-cta-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-comissao-principal {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: linear-gradient(135deg, #ea498b, #d81b60);
+  color: #ffffff;
+  padding: 0.85rem 1.8rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  box-shadow: 0 8px 25px rgba(234, 73, 139, 0.35);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn-comissao-principal:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(234, 73, 139, 0.5);
+  color: #ffffff;
+}
+
+.btn-comissao-secundario {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #ffffff;
+  color: var(--color-text);
+  border: 1px solid rgba(23, 54, 87, 0.15);
+  padding: 0.85rem 1.6rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-comissao-secundario:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  background: rgba(234, 73, 139, 0.04);
+}
+
+/* CARDS DE TIPOS DE COMISSÕES */
+.comissoes-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  margin-bottom: 4.5rem;
+}
+
+.comissao-card {
+  background: #ffffff;
+  border: 1px solid rgba(23, 54, 87, 0.08);
+  border-radius: 24px;
+  padding: 2.2rem;
+  box-shadow: 0 15px 35px rgba(23, 54, 87, 0.05);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.comissao-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 45px rgba(23, 54, 87, 0.1);
+  border-color: rgba(234, 73, 139, 0.25);
+}
+
+.comissao-tag {
+  align-self: flex-start;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: rgba(234, 73, 139, 0.1);
+  color: #ea498b;
+  padding: 0.35rem 0.9rem;
+  border-radius: 9999px;
+  margin-bottom: 1rem;
+}
+
+.comissao-card h2 {
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: var(--color-text);
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+}
+
+.comissao-desc {
+  font-size: 0.95rem;
+  color: #556980;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* Mini Galeria no Card */
+.comissao-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1.75rem;
+}
+
+.comissao-gallery-item {
+  aspect-ratio: 1;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f1f5f9;
+  border: 1px solid rgba(23, 54, 87, 0.06);
+}
+
+.comissao-gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.comissao-gallery-item:hover img {
+  transform: scale(1.08);
+}
+
+/* Features */
+.comissao-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+  flex: 1;
+}
+
+.comissao-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-size: 0.92rem;
+  color: #334155;
+  margin-bottom: 0.75rem;
+  line-height: 1.45;
+}
+
+.comissao-features li .material-symbols-rounded {
+  color: #10b981;
+  font-size: 1.2rem;
+  margin-top: 1px;
+  flex-shrink: 0;
+}
+
+/* Preço e Pedido */
+.comissao-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba(23, 54, 87, 0.08);
+  padding-top: 1.25rem;
+  margin-top: auto;
+}
+
+.comissao-price-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.comissao-price-label {
+  font-size: 0.75rem;
+  color: #64748b;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.comissao-price-val {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--color-text);
+}
+
+.btn-card-solicitar {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--color-text);
+  color: #ffffff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 9999px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-card-solicitar:hover {
+  background: var(--color-accent);
+  color: #ffffff;
+  transform: scale(1.03);
+}
+
+/* PROCESSO PASSO A PASSO */
+.comissoes-process-section {
+  background: linear-gradient(180deg, rgba(240, 249, 255, 0.5) 0%, rgba(255, 240, 250, 0.5) 100%);
+  border-radius: 28px;
+  border: 1px solid rgba(23, 54, 87, 0.06);
+  padding: 3rem 2.5rem;
+  margin-bottom: 4rem;
+}
+
+.comissoes-process-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.comissoes-process-header h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+}
+
+.comissoes-process-header p {
+  color: #64748b;
+  font-size: 1rem;
+}
+
+.comissoes-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.step-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 1.8rem 1.4rem;
+  border: 1px solid rgba(23, 54, 87, 0.06);
+  box-shadow: 0 6px 16px rgba(23, 54, 87, 0.03);
+  text-align: center;
+  position: relative;
+}
+
+.step-number {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ea498b, #2bb8fc);
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem auto;
+  box-shadow: 0 4px 12px rgba(234, 73, 139, 0.3);
+}
+
+.step-card h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+}
+
+.step-card p {
+  font-size: 0.88rem;
+  color: #64748b;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* TERMOS & DÚVIDAS */
+.comissoes-terms {
+  background: #ffffff;
+  border: 1px solid rgba(23, 54, 87, 0.08);
+  border-radius: 20px;
+  padding: 2.2rem;
+  margin-bottom: 3.5rem;
+}
+
+.comissoes-terms h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--color-text);
+  margin-bottom: 1.2rem;
+}
+
+.comissoes-terms h3 .material-symbols-rounded {
+  color: var(--color-accent);
+}
+
+.comissoes-terms ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.comissoes-terms li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.85rem;
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.6;
+}
+
+.comissoes-terms li::before {
+  content: "•";
+  position: absolute;
+  left: 0.4rem;
+  color: var(--color-accent);
+  font-size: 1.3rem;
+  line-height: 1.3;
+}
+
+/* BANNER DE CONTATO / FINAL CTA */
+.comissoes-contact-box {
+  text-align: center;
+  background: linear-gradient(135deg, #173657 0%, #204975 100%);
+  color: #ffffff;
+  border-radius: 24px;
+  padding: 3.5rem 2rem;
+  box-shadow: 0 16px 40px rgba(23, 54, 87, 0.2);
+}
+
+.comissoes-contact-box h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 0.8rem;
+}
+
+.comissoes-contact-box p {
+  color: #cbd5e1;
+  max-width: 580px;
+  margin: 0 auto 2rem auto;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.contact-buttons-row {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.btn-contact-insta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  color: #ffffff;
+  padding: 0.85rem 1.8rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 8px 22px rgba(220, 39, 67, 0.4);
+  transition: transform 0.25s ease;
+}
+
+.btn-contact-insta:hover {
+  transform: translateY(-3px);
+  color: #ffffff;
+}
+
+.btn-contact-email {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #ffffff;
+  color: #173657;
+  padding: 0.85rem 1.8rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.15);
+  transition: transform 0.25s ease;
+}
+
+.btn-contact-email:hover {
+  transform: translateY(-3px);
+  color: var(--color-accent);
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+  .comissoes-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .comissoes-steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+  }
+
+  .comissoes-hero h1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .comissoes-container {
+    padding: 2rem 1rem 4rem 1rem;
+  }
+
+  .comissoes-steps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .comissao-gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .comissao-card {
+    padding: 1.5rem;
+  }
+
+  .comissoes-process-section {
+    padding: 2rem 1.2rem;
+  }
+
+  .comissoes-contact-box {
+    padding: 2.5rem 1.2rem;
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "status": {
+    "open": true,
+    "badge_text": "Vagas Abertas",
+    "updated_at": "Outubro 2026",
+    "contact_email": "desenhandocommack@gmail.com",
+    "contact_instagram": "https://www.instagram.com/desenhandocommack/"
+  },
+  "types": [
+    {
+      "id": "treinador-pokemon",
+      "title": "Treinador(a) Pokémon Personalizado",
+      "tag": "Mais Popular",
+      "description": "Você ou seu personagem desenhado como um(a) treinador(a) Pokémon oficial, com direito ao seu Pokémon favorito ao lado ou uma pose de batalha cheia de estilo!",
+      "images": [
+        "/images/portfolio/63_personagens_treinadora-pokemon-vertical.png",
+        "/images/portfolio/60_personagens_treinador-pokemon-vertical.png",
+        "/images/portfolio/53_ilustracoes_treinador-pokémon.png"
+      ],
+      "features": [
+        "Arte em alta resolução (ideal para posters, perfil e impressão)",
+        "Você escolhe suas roupas, acessórios e o Pokémon parceiro",
+        "Opção de fundo com tema de estádio, rota ou gradiente limpo",
+        "Fase de rascunho com aprovação antes da colorização"
+      ],
+      "starting_price": "Sob Consulta",
+      "portfolio_highlight_ids": [
+        "63_personagens_treinadora-pokemon-vertical.png",
+        "60_personagens_treinador-pokemon-vertical.png",
+        "53_ilustracoes_treinador-pokémon.png"
+      ]
+    },
+    {
+      "id": "chibi-art",
+      "title": "Ilustração Estilo Chibi / Ícones",
+      "tag": "Fofo & Versátil",
+      "description": "Personagens no estilo chibi expressivo, perfeito para fotos de perfil, emotes da Twitch, adesivos, presentes fofos para casal ou pets!",
+      "images": [
+        "/images/portfolio/02_ilustracoes_ref-sheet-estilo-chibi.png",
+        "/images/portfolio/15_personagens_fanart-ash-estilo-chibi-vertical.png",
+        "/images/portfolio/49_retratos_casal-e-pet-estilo-chibi.png"
+      ],
+      "features": [
+        "Traço super fofo, expressivo e colorido",
+        "Ótimo para fotos de perfil em redes sociais e Twitch",
+        "Versão com fundo transparente (PNG) inclusa para adesivos/emotes",
+        "Pode incluir pets ou itens temáticos"
+      ],
+      "starting_price": "Sob Consulta",
+      "portfolio_highlight_ids": [
+        "02_ilustracoes_ref-sheet-estilo-chibi.png",
+        "15_personagens_fanart-ash-estilo-chibi-vertical.png",
+        "49_retratos_casal-e-pet-estilo-chibi.png"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "step": "1",
+      "title": "Contato & Ideia",
+      "description": "Você me envia uma mensagem com suas referências (fotos, poses, estilo e ideia desejada)."
+    },
+    {
+      "step": "2",
+      "title": "Orçamento & Prazo",
+      "description": "Calculamos o valor, prazo de entrega e alinhamos todos os detalhes do pedido."
+    },
+    {
+      "step": "3",
+      "title": "Rascunho & Aprovação",
+      "description": "Eu produzo o esboço para você conferir e pedir ajustes na composição e pose antes das cores."
+    },
+    {
+      "step": "4",
+      "title": "Entrega Final",
+      "description": "Receba sua arte finalizada em altíssima definição (PNG/JPG) pronta para uso!"
+    }
+  ],
+  "terms": [
+    "O pagamento geralmente é feito via Pix com 50% de entrada e 50% na aprovação final do rascunho.",
+    "O prazo varia de acordo com a complexidade e fila de pedidos (normalmente 7 a 20 dias úteis).",
+    "Uso pessoal incluso. Para projetos comerciais (livros, jogos ou marcas), nos avise no contato para alinhamento dos direitos de uso."
+  ]
+}

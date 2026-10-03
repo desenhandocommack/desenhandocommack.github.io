@@ -1,0 +1,139 @@
+{{ define "styles" }}
+{{ with resources.Get "styles/comissoes.css" | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" />
+{{ end }}
+{{ end }}
+
+{{ define "main" }}
+{{ $comissoesData := site.Data.comissoes }}
+
+<div class="comissoes-container comissoes-min-height">
+  <!-- HERO HEADER -->
+  <section class="comissoes-hero">
+    {{ if $comissoesData.status.open }}
+    <div class="comissoes-status-pill">
+      <span class="comissoes-status-dot"></span>
+      {{ $comissoesData.status.badge_text }}
+    </div>
+    {{ else }}
+    <div class="comissoes-status-pill closed">
+      <span class="comissoes-status-dot"></span>
+      Comissões Fechadas Temporariamente
+    </div>
+    {{ end }}
+
+    <h1>Comissões de Desenho & Ilustração</h1>
+    <p>
+      Quer uma arte única, personalizada e feita exclusivamente para você? 
+      Confira os tipos de projetos que estou produzindo no momento e solicite sua vaga!
+    </p>
+
+    <div class="comissoes-cta-group">
+      <a href="#tipos-comissao" class="btn-comissao-principal">
+        <span class="material-symbols-rounded">palette</span>
+        Ver Opções Disponíveis
+      </a>
+      <a href="/portfolio/" class="btn-comissao-secundario">
+        <span class="material-symbols-rounded">photo_library</span>
+        Explorar Portfólio
+      </a>
+    </div>
+  </section>
+
+  <!-- CARDS DOS TIPOS DE COMISSÕES -->
+  <section id="tipos-comissao" class="comissoes-grid">
+    {{ range $comissoesData.types }}
+    <div class="comissao-card" id="{{ .id }}">
+      {{ with .tag }}
+      <span class="comissao-tag">{{ . }}</span>
+      {{ end }}
+
+      <h2>{{ .title }}</h2>
+      <p class="comissao-desc">{{ .description }}</p>
+
+      <!-- Mini Galeria de Referências -->
+      <div class="comissao-gallery">
+        {{ range .images }}
+        <div class="comissao-gallery-item">
+          <img src="{{ . }}" alt="Exemplo de Comissão" loading="lazy">
+        </div>
+        {{ end }}
+      </div>
+
+      <!-- Vantagens / O que está incluso -->
+      <ul class="comissao-features">
+        {{ range .features }}
+        <li>
+          <span class="material-symbols-rounded">check_circle</span>
+          <span>{{ . }}</span>
+        </li>
+        {{ end }}
+      </ul>
+
+      <!-- Rodapé do Card com CTA -->
+      <div class="comissao-footer">
+        <div class="comissao-price-box">
+          <span class="comissao-price-label">Investimento</span>
+          <span class="comissao-price-val">{{ .starting_price }}</span>
+        </div>
+        <a href="{{ $comissoesData.status.contact_instagram }}" target="_blank" rel="noopener noreferrer" class="btn-card-solicitar">
+          <span class="material-symbols-rounded">send</span>
+          Pedir no Direct
+        </a>
+      </div>
+    </div>
+    {{ end }}
+  </section>
+
+  <!-- PROCESSO DE CRIAÇÃO -->
+  <section class="comissoes-process-section">
+    <div class="comissoes-process-header">
+      <h2>Como Funciona o Processo?</h2>
+      <p>Passo a passo simples, transparente e com acompanhamento do início ao fim.</p>
+    </div>
+
+    <div class="comissoes-steps-grid">
+      {{ range $comissoesData.steps }}
+      <div class="step-card">
+        <div class="step-number">{{ .step }}</div>
+        <h3>{{ .title }}</h3>
+        <p>{{ .description }}</p>
+      </div>
+      {{ end }}
+    </div>
+  </section>
+
+  <!-- TERMOS E INFORMAÇÕES IMPORTANTES -->
+  {{ with $comissoesData.terms }}
+  <section class="comissoes-terms">
+    <h3>
+      <span class="material-symbols-rounded">info</span>
+      Termos & Informações Importantes
+    </h3>
+    <ul>
+      {{ range . }}
+      <li>{{ . }}</li>
+      {{ end }}
+    </ul>
+  </section>
+  {{ end }}
+
+  <!-- CONTATO FINAL -->
+  <section class="comissoes-contact-box">
+    <h2>Pronto para dar vida à sua ideia?</h2>
+    <p>
+      Me mande uma mensagem com o que você imaginou, referências ou dúvidas. Respondo assim que possível!
+    </p>
+    <div class="contact-buttons-row">
+      <a href="{{ $comissoesData.status.contact_instagram }}" target="_blank" rel="noopener noreferrer" class="btn-contact-insta">
+        <span class="material-symbols-rounded">chat</span>
+        Falar pelo Instagram Direct
+      </a>
+      <a href="mailto:{{ $comissoesData.status.contact_email }}?subject=Comissao%20de%20Arte%20-%20Desenhando%20com%20Mack" class="btn-contact-email">
+        <span class="material-symbols-rounded">mail</span>
+        Enviar por E-mail
+      </a>
+    </div>
+  </section>
+</div>
+{{ end }}
