@@ -57,7 +57,27 @@
 
     {{ $link := "" }}
     {{ if isset $.Params "links" }}
-    {{ $link = index $.Params.links $filename }}
+      {{/* 1. Busca pelo nome exato do arquivo */}}
+      {{ $link = index $.Params.links $filename }}
+      {{/* 2. Busca pelo nome sem extensão */}}
+      {{ if not $link }}
+        {{ $link = index $.Params.links $nameWithoutExt }}
+      {{ end }}
+      {{/* 3. Busca pelo slug/nome limpo (sem número e sem -vertical) */}}
+      {{ if not $link }}
+        {{ $link = index $.Params.links $titleSlug }}
+      {{ end }}
+      {{/* 4. Busca por prefixo numérico ou chave parcial se você renomear */}}
+      {{ if not $link }}
+        {{ $numPrefix := index $parts 0 }}
+        {{ range $k, $v := $.Params.links }}
+          {{ if not $link }}
+            {{ if or (hasPrefix $k (printf "%s_" $numPrefix)) (eq $k $numPrefix) (in $filename $k) (in $k $titleSlug) }}
+              {{ $link = $v }}
+            {{ end }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
     {{ end }}
 
     {{ $isVideo := or (hasSuffix $filename ".mp4") (hasSuffix $filename ".webm") }}
