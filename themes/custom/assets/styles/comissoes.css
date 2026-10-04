@@ -62,7 +62,7 @@
   font-weight: 900;
   color: var(--color-text);
   margin-bottom: 1rem;
-  background: linear-gradient(135deg, #173657 0%, #ea498b 100%);
+  background: linear-gradient(135deg, #2bb8fc 0%, #ea498b 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -87,7 +87,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
-  background: linear-gradient(135deg, #ea498b, #d81b60);
+  background: linear-gradient(135deg, #ea498b 0%, #d81b60 100%);
   color: #ffffff;
   padding: 0.85rem 1.8rem;
   border-radius: 9999px;
@@ -110,19 +110,20 @@
   gap: 0.5rem;
   background: #ffffff;
   color: var(--color-text);
-  border: 1px solid rgba(23, 54, 87, 0.15);
+  border: 1.5px solid rgba(43, 184, 252, 0.4);
   padding: 0.85rem 1.6rem;
   border-radius: 9999px;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 0.95rem;
   text-decoration: none;
   transition: all 0.2s ease;
 }
 
 .btn-comissao-secundario:hover {
-  border-color: var(--color-accent);
-  color: var(--color-accent);
-  background: rgba(234, 73, 139, 0.04);
+  border-color: #2bb8fc;
+  color: #0284c7;
+  background: rgba(43, 184, 252, 0.08);
+  transform: translateY(-3px);
 }
 
 /* CARDS DE TIPOS DE COMISSÕES */
@@ -151,6 +152,76 @@
   border-color: rgba(234, 73, 139, 0.25);
 }
 
+/* Personalização do Card Pokémon com Azuis Super Vibrantes (#0062ff e #00d2ff) */
+#treinador-pokemon {
+  border-color: rgba(0, 98, 255, 0.35);
+}
+
+#treinador-pokemon:hover {
+  border-color: #0062ff;
+  box-shadow: 0 22px 45px rgba(0, 98, 255, 0.22);
+}
+
+#treinador-pokemon .comissao-tag {
+  background: linear-gradient(135deg, #fff04d 0%, #ffe600 100%);
+  color: #0052cc;
+  font-weight: 800;
+  border: 1px solid rgba(0, 82, 204, 0.4);
+  box-shadow: 0 2px 8px rgba(255, 230, 0, 0.35);
+}
+
+#treinador-pokemon .comissao-features li .material-symbols-rounded {
+  color: #0062ff;
+}
+
+#treinador-pokemon .btn-card-solicitar {
+  background: linear-gradient(135deg, #0052cc 0%, #0062ff 50%, #00d2ff 100%);
+  color: #ffffff;
+  font-weight: 800;
+  box-shadow: 0 4px 18px rgba(0, 98, 255, 0.4);
+}
+
+#treinador-pokemon .btn-card-solicitar:hover {
+  transform: scale(1.04);
+  background: linear-gradient(135deg, #00d2ff 0%, #0062ff 50%, #0052cc 100%);
+  box-shadow: 0 6px 24px rgba(0, 210, 255, 0.6);
+  color: #ffffff;
+}
+
+/* Personalização do Card Chibi com Verde #07bc0c e Amarelo mais claro (#fef08a / #fde047) */
+#chibi-art {
+  border-color: rgba(7, 188, 12, 0.25);
+}
+
+#chibi-art:hover {
+  border-color: rgba(7, 188, 12, 0.55);
+  box-shadow: 0 22px 45px rgba(7, 188, 12, 0.14);
+}
+
+#chibi-art .comissao-tag {
+  background: linear-gradient(135deg, rgba(7, 188, 12, 0.15) 0%, rgba(254, 240, 138, 0.4) 100%);
+  color: #059669;
+  border: 1px solid rgba(7, 188, 12, 0.35);
+}
+
+#chibi-art .comissao-features li .material-symbols-rounded {
+  color: #07bc0c;
+}
+
+#chibi-art .btn-card-solicitar {
+  background: linear-gradient(135deg, #07bc0c 0%, #fef08a 100%);
+  color: #164e63;
+  font-weight: 800;
+  box-shadow: 0 4px 15px rgba(7, 188, 12, 0.3);
+}
+
+#chibi-art .btn-card-solicitar:hover {
+  transform: scale(1.04);
+  background: linear-gradient(135deg, #fef08a 0%, #07bc0c 100%);
+  box-shadow: 0 6px 20px rgba(254, 240, 138, 0.7);
+  color: #164e63;
+}
+
 .comissao-tag {
   align-self: flex-start;
   font-size: 0.78rem;
@@ -177,6 +248,15 @@
   color: #556980;
   line-height: 1.6;
   margin-bottom: 1.5rem;
+}
+
+.highlight-chibi {
+  font-weight: 800;
+  background: linear-gradient(135deg, #0284c7 0%, #84cc16 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  padding: 0 0.15rem;
 }
 
 /* Mini Galeria no Card */
@@ -401,21 +481,23 @@
 /* BANNER DE CONTATO / FINAL CTA */
 .comissoes-contact-box {
   text-align: center;
-  background: linear-gradient(135deg, #173657 0%, #204975 100%);
-  color: #ffffff;
+  background: #ffffff;
+  color: var(--color-text);
+  border: 1px solid rgba(23, 54, 87, 0.08);
   border-radius: 24px;
   padding: 3.5rem 2rem;
-  box-shadow: 0 16px 40px rgba(23, 54, 87, 0.2);
+  box-shadow: 0 15px 35px rgba(23, 54, 87, 0.05);
 }
 
 .comissoes-contact-box h2 {
   font-size: 2.2rem;
   font-weight: 800;
   margin-bottom: 0.8rem;
+  color: var(--color-text);
 }
 
 .comissoes-contact-box p {
-  color: #cbd5e1;
+  color: #556980;
   max-width: 580px;
   margin: 0 auto 2rem auto;
   font-size: 1.05rem;
@@ -439,12 +521,13 @@
   border-radius: 9999px;
   font-weight: 700;
   text-decoration: none;
-  box-shadow: 0 8px 22px rgba(220, 39, 67, 0.4);
-  transition: transform 0.25s ease;
+  box-shadow: 0 8px 22px rgba(220, 39, 67, 0.35);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .btn-contact-insta:hover {
   transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(220, 39, 67, 0.5);
   color: #ffffff;
 }
 
@@ -452,19 +535,20 @@
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
-  background: #ffffff;
-  color: #173657;
+  background: linear-gradient(135deg, #ea498b 0%, #d81b60 100%);
+  color: #ffffff;
   padding: 0.85rem 1.8rem;
   border-radius: 9999px;
   font-weight: 700;
   text-decoration: none;
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.15);
-  transition: transform 0.25s ease;
+  box-shadow: 0 8px 22px rgba(234, 73, 139, 0.35);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .btn-contact-email:hover {
   transform: translateY(-3px);
-  color: var(--color-accent);
+  box-shadow: 0 12px 28px rgba(234, 73, 139, 0.5);
+  color: #ffffff;
 }
 
 /* RESPONSIVO */

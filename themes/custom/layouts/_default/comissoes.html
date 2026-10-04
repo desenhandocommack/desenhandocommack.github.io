@@ -22,10 +22,9 @@
     </div>
     {{ end }}
 
-    <h1>Comissões de Desenho & Ilustração</h1>
+    <h1>Comissões de Desenho</h1>
     <p>
-      Quer uma arte única, personalizada e feita exclusivamente para você? 
-      Confira os tipos de projetos que estou produzindo no momento e solicite sua vaga!
+      Encomende uma comissão personalizada comigo. Esses são os estilos disponíveis no momento.
     </p>
 
     <div class="comissoes-cta-group">
@@ -49,7 +48,7 @@
       {{ end }}
 
       <h2>{{ .title }}</h2>
-      <p class="comissao-desc">{{ .description }}</p>
+      <p class="comissao-desc">{{ .description | safeHTML }}</p>
 
       <!-- Mini Galeria de Referências -->
       <div class="comissao-gallery">

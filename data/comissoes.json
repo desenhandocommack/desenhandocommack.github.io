@@ -9,18 +9,18 @@
   "types": [
     {
       "id": "treinador-pokemon",
-      "title": "Treinador(a) Pokémon Personalizado",
+      "title": "Início da Jornada: Treinador Personalizado",
       "tag": "Mais Popular",
-      "description": "Você ou seu personagem desenhado como um(a) treinador(a) Pokémon oficial, com direito ao seu Pokémon favorito ao lado ou uma pose de batalha cheia de estilo!",
+      "description": "Você ou seu personagem desenhado como um treinador no estilo Pokémon, com direito ao seu Pokémon favorito ao lado.",
       "images": [
         "/images/portfolio/63_personagens_treinadora-pokemon-vertical.png",
         "/images/portfolio/60_personagens_treinador-pokemon-vertical.png",
         "/images/portfolio/53_ilustracoes_treinador-pokémon.png"
       ],
       "features": [
-        "Arte em alta resolução (ideal para posters, perfil e impressão)",
+        "Alta resolução e qualidade de impressão: entregue com e sem fundo (PNG transparente)",
         "Você escolhe suas roupas, acessórios e o Pokémon parceiro",
-        "Opção de fundo com tema de estádio, rota ou gradiente limpo",
+        "Fundo personalizado com opções prontas: escolha entre gradientes limpos, padrões temáticos ou cenários estilizados pré-definidos",
         "Fase de rascunho com aprovação antes da colorização"
       ],
       "starting_price": "Sob Consulta",
@@ -32,9 +32,9 @@
     },
     {
       "id": "chibi-art",
-      "title": "Ilustração Estilo Chibi / Ícones",
+      "title": "Chibi: Retratos e OCs",
       "tag": "Fofo & Versátil",
-      "description": "Personagens no estilo chibi expressivo, perfeito para fotos de perfil, emotes da Twitch, adesivos, presentes fofos para casal ou pets!",
+      "description": "Personagens no estilo chibi em duas versões: <span class=\"highlight-chibi\">Super Chibi</span> e <span class=\"highlight-chibi\">Chibi Pocket</span>. Perfeito para presentes fofos de casal, pets e para dar vida aos seus próprios personagens.",
       "images": [
         "/images/portfolio/02_ilustracoes_ref-sheet-estilo-chibi.png",
         "/images/portfolio/15_personagens_fanart-ash-estilo-chibi-vertical.png",
@@ -42,8 +42,8 @@
       ],
       "features": [
         "Traço super fofo, expressivo e colorido",
-        "Ótimo para fotos de perfil em redes sociais e Twitch",
-        "Versão com fundo transparente (PNG) inclusa para adesivos/emotes",
+        "Ideal para OCs, Ref Sheets e presentes de casal",
+        "Versão com fundo transparente (PNG) inclusa",
         "Pode incluir pets ou itens temáticos"
       ],
       "starting_price": "Sob Consulta",
@@ -68,7 +68,7 @@
     {
       "step": "3",
       "title": "Rascunho & Aprovação",
-      "description": "Eu produzo o esboço para você conferir e pedir ajustes na composição e pose antes das cores."
+      "description": "Eu produzo o esboço para você conferir e pedir os ajustes finais antes das cores."
     },
     {
       "step": "4",
