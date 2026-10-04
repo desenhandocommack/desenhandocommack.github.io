@@ -1,0 +1,373 @@
+/* ========================================================
+   ESTILOS DA PÁGINA DE MEMBROS (/membros/)
+   ======================================================== */
+.membros-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 5rem 1.5rem;
+}
+
+.membros-min-height {
+  min-height: 80vh;
+}
+
+/* HERO SECTION */
+.membros-hero {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.membros-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1.2rem;
+  background: rgba(234, 73, 139, 0.12);
+  border: 1px solid rgba(234, 73, 139, 0.35);
+  color: #ea498b;
+  font-weight: 700;
+  font-size: 0.88rem;
+  border-radius: 9999px;
+  margin-bottom: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.membros-hero h1 {
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: var(--color-text);
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #2bb8fc 0%, #ea498b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.membros-hero p {
+  font-size: 1.15rem;
+  color: #556980;
+  max-width: 680px;
+  margin: 0 auto 2rem auto;
+  line-height: 1.6;
+}
+
+/* GRID DOS NÍVEIS (TIERS) */
+.membros-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  margin-bottom: 4.5rem;
+  align-items: stretch;
+}
+
+.membros-card {
+  background: #ffffff;
+  border: 1px solid rgba(23, 54, 87, 0.08);
+  border-radius: 26px;
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 30px rgba(23, 54, 87, 0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  position: relative;
+}
+
+.membros-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(23, 54, 87, 0.08);
+}
+
+/* Card Aprendiz (Nível 1 - Azul) */
+#guilda-do-aprendiz {
+  border-color: rgba(43, 184, 252, 0.3);
+}
+
+#guilda-do-aprendiz:hover {
+  border-color: rgba(43, 184, 252, 0.6);
+  box-shadow: 0 20px 45px rgba(43, 184, 252, 0.15);
+}
+
+#guilda-do-aprendiz .membros-tag {
+  background: rgba(43, 184, 252, 0.12);
+  color: #0284c7;
+  border: 1px solid rgba(43, 184, 252, 0.35);
+}
+
+#guilda-do-aprendiz .btn-membro {
+  background: linear-gradient(135deg, #2bb8fc 0%, #0062ff 100%);
+  color: #ffffff;
+  box-shadow: 0 6px 20px rgba(43, 184, 252, 0.35);
+}
+
+#guilda-do-aprendiz .btn-membro:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 28px rgba(0, 98, 255, 0.5);
+  color: #ffffff;
+}
+
+/* Card Mestre (Nível 2 - Rosa/Vibrante) */
+#guilda-do-mestre {
+  border-color: rgba(234, 73, 139, 0.35);
+  position: relative;
+}
+
+#guilda-do-mestre:hover {
+  border-color: rgba(234, 73, 139, 0.7);
+  box-shadow: 0 20px 45px rgba(234, 73, 139, 0.18);
+}
+
+#guilda-do-mestre .membros-tag {
+  background: linear-gradient(135deg, #ea498b 0%, #d81b60 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(234, 73, 139, 0.3);
+}
+
+#guilda-do-mestre .btn-membro {
+  background: linear-gradient(135deg, #ea498b 0%, #d81b60 100%);
+  color: #ffffff;
+  box-shadow: 0 6px 20px rgba(234, 73, 139, 0.35);
+}
+
+#guilda-do-mestre .btn-membro:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 28px rgba(234, 73, 139, 0.5);
+  color: #ffffff;
+}
+
+.membros-card-header {
+  margin-bottom: 1.5rem;
+}
+
+.membros-tag {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.35rem 0.9rem;
+  border-radius: 9999px;
+  margin-bottom: 1rem;
+}
+
+.membros-card h2 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--color-text);
+  margin-bottom: 0.4rem;
+  line-height: 1.3;
+}
+
+.membros-card-subtitle {
+  font-size: 0.95rem;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+/* Preço */
+.membros-price-box {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  padding: 1.2rem 0;
+  border-top: 1px solid rgba(23, 54, 87, 0.08);
+  border-bottom: 1px dashed rgba(23, 54, 87, 0.12);
+  margin-bottom: 1.5rem;
+}
+
+.membros-price-val {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--color-text);
+}
+
+.membros-price-period {
+  font-size: 0.9rem;
+  color: #64748b;
+  font-weight: 600;
+}
+
+/* Lista de Vantagens */
+.membros-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+  flex-grow: 1;
+}
+
+.membros-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  margin-bottom: 0.85rem;
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.5;
+}
+
+.membros-features li .material-symbols-rounded {
+  color: #10b981;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+#guilda-do-mestre .membros-features li:first-child {
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+/* Botão de Tornar Membro */
+.btn-membro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.95rem 1.8rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-top: auto;
+}
+
+/* SEÇÃO FAQ */
+.membros-faq-section {
+  background: linear-gradient(180deg, rgba(240, 249, 255, 0.5) 0%, rgba(255, 240, 250, 0.5) 100%);
+  border-radius: 28px;
+  border: 1px solid rgba(23, 54, 87, 0.06);
+  padding: 3.5rem 2.5rem;
+  margin-bottom: 4rem;
+}
+
+.membros-faq-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.membros-faq-header h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+}
+
+.membros-faq-header p {
+  color: #64748b;
+  font-size: 1rem;
+}
+
+.membros-faq-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.faq-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 1.8rem 1.5rem;
+  border: 1px solid rgba(23, 54, 87, 0.06);
+  box-shadow: 0 6px 16px rgba(23, 54, 87, 0.03);
+}
+
+.faq-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 0.6rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.faq-card h3 .material-symbols-rounded {
+  color: var(--color-accent);
+  font-size: 1.25rem;
+}
+
+.faq-card p {
+  font-size: 0.9rem;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+/* BANNER FINAL / YOUTUBE CTA */
+.membros-cta-banner {
+  text-align: center;
+  background: linear-gradient(180deg, #f0f9ff 0%, #e0f2fe 100%);
+  border: 1px solid rgba(43, 184, 252, 0.25);
+  border-radius: 24px;
+  padding: 3.5rem 2rem;
+  box-shadow: 0 15px 35px rgba(43, 184, 252, 0.08);
+}
+
+.membros-cta-banner h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 0.8rem;
+  color: var(--color-text);
+}
+
+.membros-cta-banner p {
+  color: #556980;
+  max-width: 580px;
+  margin: 0 auto 2rem auto;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.btn-youtube-join {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #ff0000;
+  color: #ffffff;
+  padding: 0.95rem 2rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  box-shadow: 0 8px 25px rgba(255, 0, 0, 0.3);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn-youtube-join:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(255, 0, 0, 0.45);
+  color: #ffffff;
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+  .membros-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .membros-faq-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .membros-hero h1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .membros-container {
+    padding: 2rem 1rem 4rem 1rem;
+  }
+
+  .membros-card {
+    padding: 1.8rem 1.4rem;
+  }
+
+  .membros-faq-section {
+    padding: 2rem 1.2rem;
+  }
+
+  .membros-cta-banner {
+    padding: 2.5rem 1.2rem;
+  }
+}

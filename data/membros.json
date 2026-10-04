@@ -1,0 +1,59 @@
+{
+  "header": {
+    "badge": "Clube de Membros",
+    "title": "Seja Membro do Canal",
+    "subtitle": "Apoie a produção de conteúdo do Desenhando com Mack, faça parte da guilda e desbloqueie recompensas exclusivas!",
+    "youtube_join_url": "https://www.youtube.com/c/DesenhandocomMack/join"
+  },
+  "tiers": [
+    {
+      "id": "guilda-do-aprendiz",
+      "name": "Guilda do Aprendiz",
+      "subtitle": "Para quem quer apoiar o canal e estar mais perto",
+      "price": "R$ 3,99",
+      "period": "por mês",
+      "popular": false,
+      "tag": "Nível 1",
+      "gradient": "linear-gradient(135deg, #2bb8fc 0%, #0062ff 100%)",
+      "features": [
+        "Selos de fidelidade exclusivos ao lado do seu nome nos comentários e lives",
+        "Acesso aos emojis personalizados exclusivos para usar no chat",
+        "Fotos, postagens e atualizações de status da aba Comunidade (Bastidores)",
+        "Agradecimento especial e prioridade de resposta nos comentários"
+      ],
+      "button_text": "Entrar na Guilda do Aprendiz"
+    },
+    {
+      "id": "guilda-do-mestre",
+      "name": "Guilda dos Mestres",
+      "subtitle": "Para quem quer apoiar ainda mais e aprender com conteúdo exclusivo",
+      "price": "R$ 7,99",
+      "period": "por mês",
+      "popular": true,
+      "tag": "Mais Completo",
+      "gradient": "linear-gradient(135deg, #ea498b 0%, #d81b60 100%)",
+      "features": [
+        "Todos os benefícios da Guilda do Aprendiz inclusos",
+        "Vídeos exclusivos para membros (processos completos, estudos e dicas avançadas)",
+        "Acesso antecipado a vídeos e novidades selecionadas",
+        "Enquetes exclusivas para sugerir e votar nos próximos temas de desenho",
+        "Acesso a downloads/materiais extras quando disponíveis"
+      ],
+      "button_text": "Virar Membro Mestre"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Como faço para assinar pelo YouTube?",
+      "answer": "Basta clicar em qualquer um dos botões 'Seja Membro' para ser redirecionado à página oficial do YouTube, ou clicar no botão 'Seja Membro' diretamente abaixo de qualquer vídeo do canal."
+    },
+    {
+      "question": "Posso cancelar quando quiser?",
+      "answer": "Sim! A assinatura é mensal, cobrada diretamente pelo YouTube e você pode cancelar a qualquer momento sem taxas ou complicações nas configurações da sua conta Google."
+    },
+    {
+      "question": "Quais são as formas de pagamento aceitas?",
+      "answer": "O YouTube aceita cartões de crédito, saldo do Mercado Pago, cartões presente (Google Play Gift Cards) e métodos locais suportados pelo Google Pay."
+    }
+  ]
+}

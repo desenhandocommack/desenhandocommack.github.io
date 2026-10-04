@@ -91,6 +91,9 @@
   color: #ffffff;
   padding: 0.85rem 1.8rem;
   border-radius: 9999px;
+  border: none;
+  font-family: inherit;
+  cursor: pointer;
   font-weight: 700;
   font-size: 1rem;
   text-decoration: none;
@@ -406,7 +409,7 @@
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #ea498b, #2bb8fc);
+  background: linear-gradient(135deg, #ea498b 0%, #d81b60 100%);
   color: #ffffff;
   font-weight: 800;
   font-size: 1.2rem;
@@ -414,7 +417,13 @@
   align-items: center;
   justify-content: center;
   margin: 0 auto 1rem auto;
-  box-shadow: 0 4px 12px rgba(234, 73, 139, 0.3);
+  box-shadow: 0 4px 14px rgba(234, 73, 139, 0.35);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.step-card:hover .step-number {
+  transform: scale(1.08);
+  box-shadow: 0 6px 18px rgba(234, 73, 139, 0.45);
 }
 
 .step-card h3 {
@@ -481,12 +490,12 @@
 /* BANNER DE CONTATO / FINAL CTA */
 .comissoes-contact-box {
   text-align: center;
-  background: #ffffff;
+  background: linear-gradient(180deg, #f0f9ff 0%, #e0f2fe 100%);
   color: var(--color-text);
-  border: 1px solid rgba(23, 54, 87, 0.08);
+  border: 1px solid rgba(43, 184, 252, 0.25);
   border-radius: 24px;
   padding: 3.5rem 2rem;
-  box-shadow: 0 15px 35px rgba(23, 54, 87, 0.05);
+  box-shadow: 0 15px 35px rgba(43, 184, 252, 0.08);
 }
 
 .comissoes-contact-box h2 {
@@ -591,5 +600,262 @@
 
   .comissoes-contact-box {
     padding: 2.5rem 1.2rem;
+  }
+}
+
+/* ========================================================
+   MODAL / OVERLAY DA TABELA DE PREÇOS
+   ======================================================== */
+.modal-tabela-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s;
+}
+
+.modal-tabela-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-tabela-container {
+  background: #ffffff;
+  border-radius: 28px;
+  max-width: 860px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 2.8rem 2.5rem;
+  position: relative;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(43, 184, 252, 0.2);
+  transform: scale(0.92) translateY(20px);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-tabela-overlay.active .modal-tabela-container {
+  transform: scale(1) translateY(0);
+}
+
+.modal-tabela-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: rgba(23, 54, 87, 0.05);
+  border: none;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+  transition: all 0.2s ease;
+}
+
+.modal-tabela-close:hover {
+  background: rgba(234, 73, 139, 0.12);
+  color: #ea498b;
+  transform: rotate(90deg);
+}
+
+.modal-tabela-header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.modal-tabela-header h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+}
+
+.modal-tabela-header p {
+  color: #64748b;
+  font-size: 0.98rem;
+  max-width: 520px;
+}
+
+.tabela-precos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.8rem;
+  margin-bottom: 1.8rem;
+}
+
+.tabela-preco-card {
+  background: #f8fafc;
+  border: 1px solid rgba(23, 54, 87, 0.08);
+  border-radius: 20px;
+  padding: 1.8rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tabela-preco-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(23, 54, 87, 0.06);
+}
+
+.tabela-card-badge {
+  align-self: flex-start;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.3rem 0.75rem;
+  border-radius: 9999px;
+  margin-bottom: 0.75rem;
+}
+
+.tabela-card-badge.tag-poke {
+  background: #ffe600;
+  color: #0052cc;
+  border: 1px solid #0052cc;
+}
+
+.tabela-card-badge.tag-chibi {
+  background: linear-gradient(135deg, rgba(7, 188, 12, 0.15) 0%, rgba(254, 240, 138, 0.4) 100%);
+  color: #059669;
+  border: 1px solid rgba(7, 188, 12, 0.35);
+}
+
+.tabela-preco-card h3 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--color-text);
+  margin-bottom: 0.75rem;
+}
+
+.tabela-preco-valor {
+  display: flex;
+  flex-direction: column;
+  padding: 0.75rem 0 1rem 0;
+  border-bottom: 1px dashed rgba(23, 54, 87, 0.12);
+  margin-bottom: 1rem;
+}
+
+.preco-prefixo {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.preco-num {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: #0284c7;
+}
+
+.tabela-preco-itens {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+  flex-grow: 1;
+}
+
+.tabela-preco-itens li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: #475569;
+  margin-bottom: 0.65rem;
+  line-height: 1.4;
+}
+
+.tabela-preco-itens li .material-symbols-rounded {
+  font-size: 1.15rem;
+  color: #10b981;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.tabela-preco-itens li .material-symbols-rounded:contains("add_circle"),
+.tabela-preco-itens li span.material-symbols-rounded:last-of-type {
+  color: #0284c7;
+}
+
+.btn-tabela-pedir {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.4rem;
+  border-radius: 9999px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  margin-top: auto;
+}
+
+.btn-tabela-pedir.poke-btn {
+  background: linear-gradient(135deg, #0062ff 0%, #00d2ff 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(0, 98, 255, 0.3);
+}
+
+.btn-tabela-pedir.poke-btn:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 20px rgba(0, 98, 255, 0.45);
+  color: #ffffff;
+}
+
+.btn-tabela-pedir.chibi-btn {
+  background: linear-gradient(135deg, #07bc0c 0%, #fef08a 100%);
+  color: #164e63;
+  box-shadow: 0 4px 15px rgba(7, 188, 12, 0.3);
+}
+
+.btn-tabela-pedir.chibi-btn:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 20px rgba(7, 188, 12, 0.45);
+  color: #164e63;
+}
+
+.modal-tabela-footer {
+  text-align: center;
+  background: rgba(43, 184, 252, 0.08);
+  border: 1px solid rgba(43, 184, 252, 0.2);
+  border-radius: 14px;
+  padding: 0.9rem 1.2rem;
+}
+
+.modal-tabela-footer p {
+  margin: 0;
+  font-size: 0.88rem;
+  color: #0369a1;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .tabela-precos-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .modal-tabela-container {
+    padding: 2rem 1.4rem;
   }
 }

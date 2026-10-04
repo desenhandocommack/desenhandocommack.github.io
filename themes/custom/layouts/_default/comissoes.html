@@ -28,16 +28,123 @@
     </p>
 
     <div class="comissoes-cta-group">
-      <a href="#tipos-comissao" class="btn-comissao-principal">
-        <span class="material-symbols-rounded">palette</span>
-        Ver Opções Disponíveis
-      </a>
+      <button type="button" id="btnOpenTabelaPrecos" class="btn-comissao-principal">
+        <span class="material-symbols-rounded">payments</span>
+        Tabela de Preços
+      </button>
       <a href="/portfolio/" class="btn-comissao-secundario">
         <span class="material-symbols-rounded">photo_library</span>
         Explorar Portfólio
       </a>
     </div>
   </section>
+
+  <!-- MODAL / OVERLAY DA TABELA DE PREÇOS -->
+  <div id="modalTabelaPrecos" class="modal-tabela-overlay" aria-hidden="true" role="dialog" aria-labelledby="tabelaPrecosTitulo">
+    <div class="modal-tabela-container">
+      <button type="button" class="modal-tabela-close" id="btnCloseTabelaPrecos" aria-label="Fechar Tabela de Preços">
+        <span class="material-symbols-rounded">close</span>
+      </button>
+
+      <div class="modal-tabela-header">
+        <span class="comissao-tag" style="margin-bottom: 0.5rem; align-self: center;">Valores & Opções</span>
+        <h2 id="tabelaPrecosTitulo">Tabela de Preços</h2>
+        <p>Valores base para comissões. Ajustes ou elementos extras podem alterar o valor final.</p>
+      </div>
+
+      <div class="tabela-precos-grid">
+        <!-- Card 1: Pokémon -->
+        <div class="tabela-preco-card">
+          <div class="tabela-card-badge tag-poke">Estilo Pokémon</div>
+          <h3>Treinador Personalizado</h3>
+          <div class="tabela-preco-valor">
+            <span class="preco-prefixo">A partir de</span>
+            <span class="preco-num">Sob Consulta</span>
+          </div>
+          <ul class="tabela-preco-itens">
+            <li><span class="material-symbols-rounded">check</span> Treinador + 1 Pokémon favorito</li>
+            <li><span class="material-symbols-rounded">check</span> Arte com e sem fundo (PNG transparente)</li>
+            <li><span class="material-symbols-rounded">check</span> Escolha de roupas e itens temáticos</li>
+            <li><span class="material-symbols-rounded">check</span> Fundo geométrico / gradiente incluso</li>
+            <li><span class="material-symbols-rounded">add_circle</span> Pokémon ou personagem adicional sob consulta</li>
+          </ul>
+          <a href="{{ $comissoesData.status.contact_instagram }}" target="_blank" rel="noopener noreferrer" class="btn-tabela-pedir poke-btn">
+            <span class="material-symbols-rounded">send</span>
+            Pedir no Direct
+          </a>
+        </div>
+
+        <!-- Card 2: Chibi -->
+        <div class="tabela-preco-card">
+          <div class="tabela-card-badge tag-chibi">Estilo Chibi</div>
+          <h3>Chibi Retratos & OCs</h3>
+          <div class="tabela-preco-valor">
+            <span class="preco-prefixo">A partir de</span>
+            <span class="preco-num">Sob Consulta</span>
+          </div>
+          <ul class="tabela-preco-itens">
+            <li><span class="material-symbols-rounded">check</span> Versões <strong>Super Chibi</strong> ou <strong>Chibi Pocket</strong></li>
+            <li><span class="material-symbols-rounded">check</span> Personagem individual, casal ou com pet</li>
+            <li><span class="material-symbols-rounded">check</span> Alta resolução em PNG transparente</li>
+            <li><span class="material-symbols-rounded">check</span> Ideal para avatares, adesivos e presentes</li>
+            <li><span class="material-symbols-rounded">add_circle</span> Elementos adicionais ou pets sob consulta</li>
+          </ul>
+          <a href="{{ $comissoesData.status.contact_instagram }}" target="_blank" rel="noopener noreferrer" class="btn-tabela-pedir chibi-btn">
+            <span class="material-symbols-rounded">send</span>
+            Pedir no Direct
+          </a>
+        </div>
+      </div>
+
+      <div class="modal-tabela-footer">
+        <p>💡 Tem uma ideia diferente ou projeto especial? Me chame para conversarmos e montarmos uma proposta sob medida!</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const openBtn = document.getElementById("btnOpenTabelaPrecos");
+      const closeBtn = document.getElementById("btnCloseTabelaPrecos");
+      const modal = document.getElementById("modalTabelaPrecos");
+
+      function openModal() {
+        if (!modal) return;
+        modal.classList.add("active");
+        modal.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeModal() {
+        if (!modal) return;
+        modal.classList.remove("active");
+        modal.setAttribute("aria-hidden", "true");
+        document.body.style.overflow = "";
+      }
+
+      if (openBtn) {
+        openBtn.addEventListener("click", openModal);
+      }
+
+      if (closeBtn) {
+        closeBtn.addEventListener("click", closeModal);
+      }
+
+      if (modal) {
+        modal.addEventListener("click", (e) => {
+          if (e.target === modal) {
+            closeModal();
+          }
+        });
+      }
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && modal && modal.classList.contains("active")) {
+          closeModal();
+        }
+      });
+    });
+  </script>
 
   <!-- CARDS DOS TIPOS DE COMISSÕES -->
   <section id="tipos-comissao" class="comissoes-grid">
@@ -119,7 +226,7 @@
 
   <!-- CONTATO FINAL -->
   <section class="comissoes-contact-box">
-    <h2>Pronto para dar vida à sua ideia?</h2>
+    <h2>Encomende sua comissão</h2>
     <p>
       Me mande uma mensagem com o que você imaginou, referências ou dúvidas. Respondo assim que possível!
     </p>

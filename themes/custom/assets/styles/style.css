@@ -894,7 +894,9 @@ body {
   color: #fe55bd;
 }
 
-.footer-link-conquistas {
+.footer-link-conquistas,
+.footer-link-comissoes,
+.footer-link-membros {
   background: linear-gradient(135deg, #2bb8fc 0%, #fe55bd 100%);
   -webkit-background-clip: text;
   background-clip: text;
@@ -902,7 +904,9 @@ body {
   opacity: 1;
 }
 
-.footer-link-conquistas:hover {
+.footer-link-conquistas:hover,
+.footer-link-comissoes:hover,
+.footer-link-membros:hover {
   filter: brightness(1.2);
 }
 

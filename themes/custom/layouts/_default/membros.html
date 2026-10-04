@@ -1,0 +1,92 @@
+{{ define "styles" }}
+{{ with resources.Get "styles/membros.css" | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" />
+{{ end }}
+{{ end }}
+
+{{ define "main" }}
+{{ $membrosData := site.Data.membros }}
+
+<div class="membros-container membros-min-height">
+  <!-- HERO HEADER -->
+  <section class="membros-hero">
+    {{ with $membrosData.header.badge }}
+    <div class="membros-badge">
+      <span class="material-symbols-rounded">loyalty</span>
+      {{ . }}
+    </div>
+    {{ end }}
+
+    <h1>{{ $membrosData.header.title }}</h1>
+    <p>{{ $membrosData.header.subtitle }}</p>
+  </section>
+
+  <!-- CARDS DOS NÍVEIS DE MEMBRO -->
+  <section class="membros-grid">
+    {{ range $membrosData.tiers }}
+    <div class="membros-card" id="{{ .id }}">
+      <div class="membros-card-header">
+        {{ with .tag }}
+        <span class="membros-tag">{{ . }}</span>
+        {{ end }}
+        <h2>{{ .name }}</h2>
+        <p class="membros-card-subtitle">{{ .subtitle }}</p>
+      </div>
+
+      <div class="membros-price-box">
+        <span class="membros-price-val">{{ .price }}</span>
+        <span class="membros-price-period">{{ .period }}</span>
+      </div>
+
+      <ul class="membros-features">
+        {{ range .features }}
+        <li>
+          <span class="material-symbols-rounded">check_circle</span>
+          <span>{{ . }}</span>
+        </li>
+        {{ end }}
+      </ul>
+
+      <a href="{{ $membrosData.header.youtube_join_url }}" target="_blank" rel="noopener noreferrer" class="btn-membro">
+        <span class="material-symbols-rounded">stars</span>
+        {{ .button_text }}
+      </a>
+    </div>
+    {{ end }}
+  </section>
+
+  <!-- FAQ / DÚVIDAS FREQUENTES -->
+  {{ with $membrosData.faq }}
+  <section class="membros-faq-section">
+    <div class="membros-faq-header">
+      <h2>Dúvidas Frequentes</h2>
+      <p>Tudo o que você precisa saber sobre como funciona a assinatura de membros no YouTube.</p>
+    </div>
+
+    <div class="membros-faq-grid">
+      {{ range . }}
+      <div class="faq-card">
+        <h3>
+          <span class="material-symbols-rounded">help</span>
+          {{ .question }}
+        </h3>
+        <p>{{ .answer }}</p>
+      </div>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+
+  <!-- BANNER FINAL / YOUTUBE CTA -->
+  <section class="membros-cta-banner">
+    <h2>Faça Parte da Nossa Guilda</h2>
+    <p>
+      Sua assinatura ajuda a manter o canal vivo, com vídeos semanais, tutoriais de desenho e lives com a comunidade.
+    </p>
+    <a href="{{ $membrosData.header.youtube_join_url }}" target="_blank" rel="noopener noreferrer" class="btn-youtube-join">
+      <span class="material-symbols-rounded">smart_display</span>
+      Tornar-se Membro no YouTube
+    </a>
+  </section>
+</div>
+{{ end }}
