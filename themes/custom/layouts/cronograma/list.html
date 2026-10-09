@@ -1304,7 +1304,7 @@
                 <div>
                   <div class="historico-status-row">
                     {{ with partial "format-sao-paulo-datetime.html" .liveStreamingDetails.scheduledStartTime }}
-                      <span class="historico-meta">{{ .day }} ({{ .weekday }}) • YouTube</span>
+                      <span class="historico-meta">{{ .dateWithYear }} ({{ .weekday }}) • YouTube</span>
                     {{ end }}
 
                     {{ with $duration }}

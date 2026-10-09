@@ -1,6 +1,8 @@
 {{- $local := time.In "America/Sao_Paulo" (time.AsTime .) -}}
 {{- $result := dict
   "day" (dateFormat "02/01" $local)
+  "year" (dateFormat "2006" $local)
+  "dateWithYear" (dateFormat "02/01/2006" $local)
   "weekday" (dateFormat "Monday" $local)
   "time" (dateFormat "15:04" $local)
 -}}
