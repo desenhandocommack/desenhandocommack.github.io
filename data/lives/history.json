@@ -1,5 +1,34 @@
 [
   {
+    "id": "cj4If8St6vM",
+    "cover": "/images/lives/rabisco-livre.png",
+    "duration": "3h36min",
+    "link": "https://youtube.com/live/cj4If8St6vM",
+    "snippet": {
+      "title": "Dia de rabisco livre",
+      "description": "[Categoria: Desenho]\n\nSem ideia pra hoje, então vamos nos manter  rabiscando pra manter o ritmo enquanto a gente conversa. Bora \\o"
+    },
+    "supporters": [
+      "Ikazemin"
+    ],
+    "liveStreamingDetails": {
+      "scheduledStartTime": "2026-10-13T22:00:00Z"
+    }
+  },
+  {
+    "id": "iBRos1Enkus",
+    "cover": "/images/lives/furry-aprendiz-sketch.png",
+    "duration": "2h12min",
+    "link": "https://youtube.com/live/iBRos1Enkus",
+    "snippet": {
+      "title": "Um novo Aprendiz",
+      "description": "[Categoria: Desenho]\n\nHoje a estrategia foi pegar um rabisco que eu já tinha feito em outro momento pra dar uma refinada. Saiu um novo aprendiz que pode virar alguma coisa no futuro."
+    },
+    "liveStreamingDetails": {
+      "scheduledStartTime": "2026-10-09T22:00:00Z"
+    }
+  },
+  {
     "id": "Xphwj7tyITM",
     "cover": "/images/lives/retrato-falado-sketch.png",
     "duration": "3h53min",
