@@ -52,7 +52,7 @@
   text-align: center;
   font-size: clamp(2rem, 5vw, 3.2rem);
   font-weight: 900;
-  color: #ffffff;
+  color: var(--color-text, #173657);
   line-height: 1.15;
   margin: 0 0 1.25rem 0;
 }
@@ -60,13 +60,14 @@
 .destaque-gradiente {
   background: linear-gradient(135deg, #2bb8fc 0%, #fe55bd 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .clube-hero-sub {
   display: block;
   font-size: 1.1rem;
-  color: #a0aec0;
+  color: #64748b;
   line-height: 1.6;
   max-width: 680px;
   text-align: center;
@@ -215,8 +216,9 @@
 }
 
 .tier-card {
-  background: #141724;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #ffffff;
+  border: 1px solid rgba(23, 54, 87, 0.08);
+  box-shadow: 0 8px 24px rgba(23, 54, 87, 0.05);
   border-radius: 24px;
   padding: 2.6rem 2.4rem;
   display: flex;
@@ -227,19 +229,19 @@
 
 .tier-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(43, 184, 252, 0.4);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+  border-color: rgba(43, 184, 252, 0.45);
+  box-shadow: 0 14px 30px rgba(43, 184, 252, 0.12), 0 4px 12px rgba(23, 54, 87, 0.06);
 }
 
 .tier-card.tier-featured {
-  background: linear-gradient(180deg, #181d30 0%, #121422 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
   border: 2px solid #2bb8fc;
-  box-shadow: 0 8px 30px rgba(43, 184, 252, 0.15);
+  box-shadow: 0 10px 30px rgba(43, 184, 252, 0.14);
 }
 
 .tier-card.tier-featured:hover {
   border-color: #fe55bd;
-  box-shadow: 0 12px 35px rgba(254, 85, 189, 0.25);
+  box-shadow: 0 14px 35px rgba(254, 85, 189, 0.2);
 }
 
 .tier-ribbon {
@@ -254,13 +256,13 @@
   letter-spacing: 0.05em;
   padding: 4px 14px;
   border-radius: 9999px;
-  box-shadow: 0 4px 10px rgba(43, 184, 252, 0.4);
+  box-shadow: 0 4px 10px rgba(43, 184, 252, 0.35);
 }
 
 .tier-badge-label {
   display: inline-block;
-  background: rgba(255, 255, 255, 0.06);
-  color: #2bb8fc;
+  background: rgba(43, 184, 252, 0.12);
+  color: #0284c7;
   font-size: 0.75rem;
   font-weight: 700;
   padding: 4px 10px;
@@ -272,20 +274,20 @@
 .tier-name {
   font-size: 1.55rem;
   font-weight: 800;
-  color: #ffffff;
+  color: var(--color-text, #173657);
   margin-bottom: 0.6rem;
 }
 
 .tier-summary {
   font-size: 0.98rem;
-  color: #94a3b8;
+  color: #64748b;
   line-height: 1.55;
   min-height: 48px;
 }
 
 .tier-divider {
   height: 1px;
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(23, 54, 87, 0.08);
   margin: 1.75rem 0;
 }
 
@@ -298,7 +300,7 @@
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #ffffff;
+  color: var(--color-text, #173657);
   margin-bottom: 1.1rem;
 }
 
@@ -316,7 +318,7 @@
   align-items: flex-start;
   gap: 12px;
   font-size: 0.98rem;
-  color: #cbd5e1;
+  color: #334155;
   line-height: 1.45;
 }
 
@@ -346,14 +348,15 @@
 }
 
 .tier-btn.btn-outline {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  color: #ffffff !important;
+  background: rgba(23, 54, 87, 0.04);
+  border: 1px solid rgba(23, 54, 87, 0.14);
+  color: var(--color-text, #173657) !important;
 }
 
 .tier-btn.btn-outline:hover {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(255, 255, 255, 0.3);
+  background: rgba(43, 184, 252, 0.1);
+  border-color: #2bb8fc;
+  color: #0284c7 !important;
 }
 
 .tier-btn.btn-primary {
@@ -597,6 +600,135 @@
 }
 
 /* ==========================================================================
+   SEÇÃO EMOJIS EXCLUSIVOS
+   ========================================================================== */
+.clube-emojis-section {
+  padding: 2rem 1rem 4rem;
+}
+
+.emojis-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.emoji-card {
+  background: #ffffff;
+  border: 1px solid rgba(23, 54, 87, 0.08);
+  box-shadow: 0 6px 20px rgba(23, 54, 87, 0.04);
+  border-radius: 16px;
+  padding: 1.5rem 1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.emoji-card:hover,
+.emoji-card:focus-within {
+  transform: translateY(-5px);
+  border-color: var(--emoji-glow);
+  box-shadow: 0 12px 28px -4px var(--emoji-glow), 0 4px 12px rgba(23, 54, 87, 0.06);
+}
+
+.emoji-tag-gif {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  color: #059669;
+  font-size: 0.62rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 1px 7px;
+  border-radius: 9999px;
+}
+
+.emoji-image-box {
+  width: 68px;
+  height: 68px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.85rem;
+  background: #f8fafc;
+  border: 1px solid rgba(23, 54, 87, 0.06);
+  border-radius: 16px;
+  padding: 8px;
+}
+
+.emoji-aura {
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  background: var(--emoji-glow);
+  filter: blur(14px);
+  opacity: 0.25;
+  transition: opacity 0.3s ease, filter 0.3s ease;
+  z-index: 1;
+}
+
+.emoji-card:hover .emoji-aura {
+  opacity: 0.65;
+  filter: blur(18px);
+}
+
+.emoji-img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(0 3px 6px rgba(23, 54, 87, 0.12));
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.emoji-card:hover .emoji-img {
+  transform: scale(1.18) rotate(-4deg);
+}
+
+.emoji-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  z-index: 2;
+}
+
+.emoji-code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #0284c7;
+  background: rgba(43, 184, 252, 0.12);
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+.emoji-titulo {
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: var(--color-text, #173657);
+  line-height: 1.25;
+  margin: 0;
+}
+
+.emoji-card:hover .emblema-tooltip,
+.emoji-card:focus-within .emblema-tooltip {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* ==========================================================================
    SEÇÃO CONTEÚDOS / PREVIEWS
    ========================================================================== */
 .clube-conteudos-section {
@@ -612,18 +744,20 @@
 }
 
 .preview-item {
-  background: #141724;
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: #ffffff;
+  border: 1px solid rgba(23, 54, 87, 0.08);
+  box-shadow: 0 6px 20px rgba(23, 54, 87, 0.04);
   border-radius: 16px;
   padding: 2rem 1.5rem;
   display: flex;
   flex-direction: column;
-  transition: transform 0.2s ease, border-color 0.2s ease;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .preview-item:hover {
   transform: translateY(-3px);
-  border-color: rgba(254, 85, 189, 0.3);
+  border-color: rgba(254, 85, 189, 0.35);
+  box-shadow: 0 12px 26px rgba(254, 85, 189, 0.12);
 }
 
 .preview-icon {
@@ -659,13 +793,13 @@
 .preview-item h3 {
   font-size: 1.15rem;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--color-text, #173657);
   margin-bottom: 0.6rem;
 }
 
 .preview-item p {
   font-size: 0.9rem;
-  color: #8c9ba5;
+  color: #64748b;
   line-height: 1.5;
   margin: 0;
 }
@@ -674,8 +808,8 @@
 .clube-final-banner {
   max-width: 980px;
   margin: 0 auto;
-  background: linear-gradient(135deg, rgba(43, 184, 252, 0.15) 0%, rgba(254, 85, 189, 0.15) 100%), #141724;
-  border: 1px solid rgba(254, 85, 189, 0.3);
+  background: linear-gradient(135deg, rgba(240, 249, 255, 0.95) 0%, rgba(255, 240, 250, 0.95) 100%);
+  border: 1px solid rgba(254, 85, 189, 0.25);
   border-radius: 20px;
   padding: 3rem 2.5rem;
   display: flex;
@@ -684,7 +818,7 @@
   justify-content: center;
   text-align: center;
   gap: 1.5rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 30px rgba(23, 54, 87, 0.06);
 }
 
 .clube-final-banner .banner-content {
@@ -694,13 +828,13 @@
 .clube-final-banner h2 {
   font-size: 1.6rem;
   font-weight: 800;
-  color: #ffffff;
+  color: var(--color-text, #173657);
   margin-bottom: 0.4rem;
   text-align: center;
 }
 
 .clube-final-banner p {
-  color: #a0aec0;
+  color: #475569;
   font-size: 0.95rem;
   margin: 0;
   text-align: center;
@@ -760,5 +894,10 @@
   .emblemas-lore-box {
     flex-direction: column;
     text-align: center;
+  }
+
+  .emojis-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.85rem;
   }
 }

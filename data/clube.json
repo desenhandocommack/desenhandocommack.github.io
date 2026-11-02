@@ -100,5 +100,40 @@
       "glow": "rgba(239, 68, 68, 0.55)",
       "iconeFallback": "workspace_premium"
     }
+  ],
+  "emojis": [
+    {
+      "id": "ola",
+      "codigo": ":ola:",
+      "titulo": "Olá!",
+      "descricao": "Para chegar dando aquele salve animado nas lives e comentários.",
+      "imagem": "/images/membros/ola.png",
+      "glow": "rgba(43, 184, 252, 0.45)"
+    },
+    {
+      "id": "ctrl-z",
+      "codigo": ":ctrl-z:",
+      "titulo": "Ctrl + Z",
+      "descricao": "Errou o traço? O atalho mais sagrado de todo desenhista digital.",
+      "imagem": "/images/membros/ctrl-z.png",
+      "glow": "rgba(255, 193, 7, 0.45)"
+    },
+    {
+      "id": "medo",
+      "codigo": ":medo:",
+      "titulo": "Medo",
+      "descricao": "Quando o programa trava sem salvar ou o esboço sai do controle!",
+      "imagem": "/images/membros/medo.png",
+      "glow": "rgba(254, 85, 189, 0.45)"
+    },
+    {
+      "id": "corte",
+      "codigo": ":corte:",
+      "titulo": "Corte",
+      "descricao": "Emoji especial para reagir aos momentos mais tensos do chat.",
+      "imagem": "/images/membros/corte.gif",
+      "glow": "rgba(32, 201, 151, 0.45)",
+      "animado": true
+    }
   ]
 }

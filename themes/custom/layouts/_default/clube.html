@@ -137,6 +137,45 @@
     </div>
   </section>
 
+  <!-- SEÇÃO EMOJIS EXCLUSIVOS -->
+  <section class="clube-emojis-section" id="emojis">
+    <div class="container">
+      <div class="clube-section-header">
+        <span class="badge-mini">Expressões do Chat</span>
+        <h2>Emojis Exclusivos</h2>
+        <p>Use nossos emojis personalizados nos comentários dos vídeos e no chat das lives</p>
+      </div>
+
+      <div class="emojis-grid">
+        {{ range $clube.emojis }}
+        <div class="emoji-card" style="--emoji-glow: {{ .glow | safeCSS }};" tabindex="0">
+          {{ if .animado }}
+          <span class="emoji-tag-gif">GIF</span>
+          {{ end }}
+
+          <div class="emoji-image-box">
+            <div class="emoji-aura"></div>
+            <img src="{{ .imagem }}" alt="{{ .titulo }}" class="emoji-img" />
+          </div>
+
+          <div class="emoji-info">
+            <code class="emoji-code">{{ .codigo }}</code>
+            <h3 class="emoji-titulo">{{ .titulo }}</h3>
+          </div>
+
+          <div class="emblema-tooltip" role="tooltip">
+            <div class="tooltip-header">
+              <span class="material-symbols-rounded">sentiment_very_satisfied</span>
+              <strong>{{ .titulo }}</strong>
+            </div>
+            <p>{{ .descricao }}</p>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+
   <!-- SEÇÃO ÁREA DE MEMBROS (VÍDEOS & CONTEÚDOS) -->
   <section class="clube-conteudos-section" id="conteudos">
     <div class="container">
