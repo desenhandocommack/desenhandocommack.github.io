@@ -1,0 +1,104 @@
+{
+  "title": "Clube do Aprendiz",
+  "joinUrl": "https://www.youtube.com/channel/UC6YRUJ8u87onWYaVjFiSbCw/join",
+  "tiers": [
+    {
+      "id": "tier-1",
+      "name": "Clube do Aprendiz Tier I",
+      "badge": "Iniciante",
+      "summary": "Para quem quer apoiar o canal, interagir nos chats com emojis exclusivos e ver tudo primeiro.",
+      "benefits": [
+        "Selos de fidelidade exclusivos ao lado do seu nome nos comentários e no chat ao vivo.",
+        "Emojis personalizados para usar em comentários e lives.",
+        "Novidades e bastidores em primeira mão."
+      ]
+    },
+    {
+      "id": "tier-2",
+      "name": "Clube do Aprendiz Tier II",
+      "badge": "Avançado",
+      "featured": true,
+      "summary": "Acesso total ao clube com aulas, vídeos especiais e todos os benefícios anteriores.",
+      "benefits": [
+        "Selos de fidelidade exclusivos ao lado do seu nome.",
+        "Emojis personalizados para usar em comentários e lives.",
+        "Novidades e bastidores em primeira mão.",
+        "Vídeos exclusivos para membros."
+      ]
+    }
+  ],
+  "badges": [
+    {
+      "id": "novo-membro",
+      "tempo": "Novo membro",
+      "titulo": "Lápis",
+      "descricao": "O material inicial de todo Aprendiz",
+      "imagem": "/images/membros/01-novo-membro.png",
+      "glow": "rgba(43, 184, 252, 0.4)",
+      "iconeFallback": "edit"
+    },
+    {
+      "id": "1-mes",
+      "tempo": "Após 1 mês",
+      "titulo": "O Elixir do Traço",
+      "descricao": "Dois meses marcando presença; seu nome agora está gravado com tinta mágica no clube.",
+      "imagem": "/images/membros/02-1-mes.png",
+      "glow": "rgba(168, 85, 247, 0.45)",
+      "iconeFallback": "science"
+    },
+    {
+      "id": "2-meses",
+      "tempo": "Após 2 meses",
+      "titulo": "A Faísca",
+      "descricao": "Momento em que as coisas começam a fluir.",
+      "imagem": "/images/membros/03-2-meses.png",
+      "glow": "rgba(253, 126, 20, 0.45)",
+      "iconeFallback": "local_fire_department"
+    },
+    {
+      "id": "6-meses",
+      "tempo": "Após 6 meses",
+      "titulo": "A Fogueira do Clube",
+      "descricao": "Seis meses de estrada; a fogueira da ordem arde mais forte com a sua companhia no chat!",
+      "imagem": "/images/membros/04-6-meses.png",
+      "glow": "rgba(254, 85, 189, 0.45)",
+      "iconeFallback": "fireplace"
+    },
+    {
+      "id": "1-ano",
+      "tempo": "Depois de 1 ano",
+      "titulo": "O Guardião do Capuz",
+      "descricao": "Forjado no aço do clube; um ano de batalha honrada defendendo todo este projeto.",
+      "imagem": "/images/membros/05-1-ano.png",
+      "glow": "rgba(43, 184, 252, 0.45)",
+      "iconeFallback": "shield"
+    },
+    {
+      "id": "2-anos",
+      "tempo": "Depois de 2 anos",
+      "titulo": "A Ascensão do Aprendiz",
+      "descricao": "Dois ciclos completos; você subiu de nível e agora você veste o manto official.",
+      "imagem": "/images/membros/06-2-anos.png",
+      "glow": "rgba(255, 193, 7, 0.5)",
+      "iconeFallback": "auto_awesome"
+    },
+    {
+      "id": "3-anos",
+      "tempo": "Depois de 3 anos",
+      "titulo": "Mestre do Clube",
+      "descricao": "Status de veterano consolidado; você domina todos os cantos e bastidores deste lugar.",
+      "imagem": "/images/membros/07-3-anos.png",
+      "glow": "rgba(32, 201, 151, 0.5)",
+      "iconeFallback": "military_tech"
+    },
+    {
+      "id": "4-anos",
+      "tempo": "Depois de 4 anos",
+      "titulo": "Ancião",
+      "descricao": "Membro lendário; você estava aqui quando tudo era mato e viu o clube nascer.",
+      "imagem": "/images/membros/08-4-anos.png",
+      "glow": "rgba(239, 68, 68, 0.55)",
+      "iconeFallback": "workspace_premium"
+    }
+  ]
+}

@@ -1,0 +1,764 @@
+/* ==========================================================================
+   ESTILOS: PÁGINA DO CLUBE DO APRENDIZ
+   ========================================================================== */
+
+.clube-page {
+  padding-bottom: 5rem;
+}
+
+/* Hero Section */
+.clube-hero {
+  padding: 4rem 1.5rem 3rem;
+  width: 100%;
+  display: block;
+  text-align: center;
+  position: relative;
+}
+
+.clube-hero-inner {
+  width: 100%;
+  max-width: 840px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.clube-hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(254, 85, 189, 0.12);
+  border: 1px solid rgba(254, 85, 189, 0.3);
+  color: #fe55bd;
+  padding: 6px 16px;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin: 0 auto 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.clube-hero-tag .material-symbols-rounded {
+  font-size: 18px;
+}
+
+.clube-hero-title {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1.15;
+  margin: 0 0 1.25rem 0;
+}
+
+.destaque-gradiente {
+  background: linear-gradient(135deg, #2bb8fc 0%, #fe55bd 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.clube-hero-sub {
+  display: block;
+  font-size: 1.1rem;
+  color: #a0aec0;
+  line-height: 1.6;
+  max-width: 680px;
+  text-align: center;
+  margin: 0 auto 2.5rem;
+}
+
+.clube-hero-cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto 1.25rem;
+  text-align: center;
+}
+
+.clube-hero-sub-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.link-emblemas-anchor {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 8px 18px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  transition: all 0.25s ease;
+}
+
+.link-emblemas-anchor .material-symbols-rounded {
+  font-size: 20px;
+  color: #2bb8fc;
+  transition: transform 0.2s ease;
+}
+
+.link-emblemas-anchor:hover {
+  color: #ffffff;
+  background: linear-gradient(135deg, rgba(43, 184, 252, 0.25), rgba(254, 85, 189, 0.25));
+  border-color: #2bb8fc;
+  box-shadow: 0 4px 18px rgba(43, 184, 252, 0.35);
+  transform: translateY(-2px);
+}
+
+.link-emblemas-anchor:hover .material-symbols-rounded {
+  transform: scale(1.15) rotate(15deg);
+  color: #fe55bd;
+}
+
+/* Botões Customizados */
+.btn-clube-join {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #fe55bd 0%, #2bb8fc 100%);
+  color: #ffffff !important;
+  font-weight: 700;
+  font-size: 1.05rem;
+  padding: 0.95rem 2.4rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  box-shadow: 0 4px 20px rgba(254, 85, 189, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-clube-join:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(254, 85, 189, 0.55);
+}
+
+.btn-clube-sec {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.85rem 1.8rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  backdrop-filter: blur(10px);
+  transition: all 0.2s ease;
+}
+
+.btn-clube-sec:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Headers de Seções */
+.clube-section-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 3.5rem;
+}
+
+.badge-mini {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #2bb8fc;
+  margin-bottom: 0.5rem;
+}
+
+.clube-section-header h2 {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 800;
+  color: var(--color-text, #173657);
+  margin-bottom: 0.75rem;
+}
+
+.clube-section-header p {
+  color: #64748b;
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   SEÇÃO TIERS / PLANOS
+   ========================================================================== */
+.clube-tiers-section {
+  padding: 4rem 1.5rem;
+}
+
+.clube-tiers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2.5rem;
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+.tier-card {
+  background: #141724;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 2.6rem 2.4rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.tier-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(43, 184, 252, 0.4);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.tier-card.tier-featured {
+  background: linear-gradient(180deg, #181d30 0%, #121422 100%);
+  border: 2px solid #2bb8fc;
+  box-shadow: 0 8px 30px rgba(43, 184, 252, 0.15);
+}
+
+.tier-card.tier-featured:hover {
+  border-color: #fe55bd;
+  box-shadow: 0 12px 35px rgba(254, 85, 189, 0.25);
+}
+
+.tier-ribbon {
+  position: absolute;
+  top: -12px;
+  right: 24px;
+  background: linear-gradient(135deg, #2bb8fc, #fe55bd);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 4px 14px;
+  border-radius: 9999px;
+  box-shadow: 0 4px 10px rgba(43, 184, 252, 0.4);
+}
+
+.tier-badge-label {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.06);
+  color: #2bb8fc;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 6px;
+  margin-bottom: 0.8rem;
+  text-transform: uppercase;
+}
+
+.tier-name {
+  font-size: 1.55rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 0.6rem;
+}
+
+.tier-summary {
+  font-size: 0.98rem;
+  color: #94a3b8;
+  line-height: 1.55;
+  min-height: 48px;
+}
+
+.tier-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.08);
+  margin: 1.75rem 0;
+}
+
+.tier-benefits-list {
+  flex-grow: 1;
+  margin-bottom: 2.2rem;
+}
+
+.tier-benefits-list h4 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  margin-bottom: 1.1rem;
+}
+
+.tier-benefits-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.tier-benefits-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.98rem;
+  color: #cbd5e1;
+  line-height: 1.45;
+}
+
+.tier-benefits-list .check-icon {
+  color: #2bb8fc;
+  font-size: 20px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.tier-featured .check-icon {
+  color: #fe55bd;
+}
+
+.tier-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 0.85rem;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.tier-btn.btn-outline {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff !important;
+}
+
+.tier-btn.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.tier-btn.btn-primary {
+  background: linear-gradient(135deg, #2bb8fc 0%, #fe55bd 100%);
+  color: #ffffff !important;
+  box-shadow: 0 4px 15px rgba(43, 184, 252, 0.3);
+}
+
+.tier-btn.btn-primary:hover {
+  box-shadow: 0 6px 20px rgba(254, 85, 189, 0.45);
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   SEÇÃO EMBLEMAS
+   ========================================================================== */
+.clube-badges-section {
+  padding: 4rem 1rem;
+  background: radial-gradient(circle at 50% 20%, rgba(43, 184, 252, 0.04) 0%, transparent 70%);
+}
+
+.emblemas-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 0.85rem;
+  max-width: 1180px;
+  margin: 0 auto 3rem;
+}
+
+.emblema-card {
+  background: #141724;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 14px;
+  padding: 1.25rem 0.6rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.emblema-card:hover,
+.emblema-card:focus-within {
+  transform: translateY(-5px);
+  border-color: var(--emblema-glow);
+  box-shadow: 0 10px 25px -5px var(--emblema-glow);
+}
+
+.emblema-card.emblema-em-breve {
+  opacity: 0.85;
+  border-style: dashed;
+}
+
+.emblema-tag-breve {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  color: #ef4444;
+  font-size: 0.6rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 1px 6px;
+  border-radius: 9999px;
+}
+
+.emblema-image-box {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+}
+
+.emblema-aura {
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  background: var(--emblema-glow);
+  filter: blur(14px);
+  opacity: 0.35;
+  transition: opacity 0.3s ease, filter 0.3s ease;
+  z-index: 1;
+}
+
+.emblema-card:hover .emblema-aura {
+  opacity: 0.8;
+  filter: blur(18px);
+}
+
+.emblema-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.4));
+  transition: transform 0.25s ease;
+}
+
+.emblema-card:hover .emblema-img {
+  transform: scale(1.08) rotate(3deg);
+}
+
+.emblema-fallback-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.emblema-fallback-icon .material-symbols-rounded {
+  font-size: 26px;
+  color: #2bb8fc;
+}
+
+.emblema-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  z-index: 2;
+}
+
+.emblema-tempo {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #8c9ba5;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+.emblema-titulo {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.25;
+}
+
+/* Tooltip Discreto no Hover / Focus */
+.emblema-tooltip {
+  position: absolute;
+  bottom: calc(100% + 12px);
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  width: 230px;
+  background: #1a1e2e;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+  border-radius: 12px;
+  padding: 0.85rem;
+  text-align: left;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transition: opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1), transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 20;
+}
+
+.emblema-tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: #1a1e2e transparent transparent transparent;
+}
+
+.emblema-card:hover .emblema-tooltip,
+.emblema-card:focus-within .emblema-tooltip {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+.tooltip-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 6px;
+  color: #2bb8fc;
+  font-size: 0.85rem;
+}
+
+.tooltip-header .material-symbols-rounded {
+  font-size: 16px;
+}
+
+.emblema-tooltip p {
+  font-size: 0.8rem;
+  color: #cbd5e1;
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* Caixa de Explicação Lore */
+.emblemas-lore-box {
+  max-width: 760px;
+  margin: 0 auto;
+  background: #141724;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 1.25rem 1.75rem;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.emblemas-lore-box .material-symbols-rounded {
+  font-size: 32px;
+  color: #2bb8fc;
+  flex-shrink: 0;
+}
+
+.emblemas-lore-box h4 {
+  font-size: 0.95rem;
+  color: #ffffff;
+  margin-bottom: 0.25rem;
+}
+
+.emblemas-lore-box p {
+  font-size: 0.85rem;
+  color: #cbd5e1;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ==========================================================================
+   SEÇÃO CONTEÚDOS / PREVIEWS
+   ========================================================================== */
+.clube-conteudos-section {
+  padding: 3rem 1rem 1rem;
+}
+
+.membros-grid-preview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.75rem;
+  max-width: 980px;
+  margin: 0 auto 4rem;
+}
+
+.preview-item {
+  background: #141724;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.preview-item:hover {
+  transform: translateY(-3px);
+  border-color: rgba(254, 85, 189, 0.3);
+}
+
+.preview-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  background: rgba(43, 184, 252, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+.preview-icon .material-symbols-rounded {
+  font-size: 26px;
+  color: #2bb8fc;
+}
+
+.preview-item:nth-child(2) .preview-icon {
+  background: rgba(254, 85, 189, 0.12);
+}
+.preview-item:nth-child(2) .preview-icon .material-symbols-rounded {
+  color: #fe55bd;
+}
+
+.preview-item:nth-child(3) .preview-icon {
+  background: rgba(32, 201, 151, 0.12);
+}
+.preview-item:nth-child(3) .preview-icon .material-symbols-rounded {
+  color: #20c997;
+}
+
+.preview-item h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.6rem;
+}
+
+.preview-item p {
+  font-size: 0.9rem;
+  color: #8c9ba5;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Banner de Chamada Final */
+.clube-final-banner {
+  max-width: 980px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, rgba(43, 184, 252, 0.15) 0%, rgba(254, 85, 189, 0.15) 100%), #141724;
+  border: 1px solid rgba(254, 85, 189, 0.3);
+  border-radius: 20px;
+  padding: 3rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.clube-final-banner .banner-content {
+  text-align: center;
+}
+
+.clube-final-banner h2 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 0.4rem;
+  text-align: center;
+}
+
+.clube-final-banner p {
+  color: #a0aec0;
+  font-size: 0.95rem;
+  margin: 0;
+  text-align: center;
+}
+
+.clube-final-banner .btn-clube-join {
+  margin: 0 auto;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .emblemas-grid {
+    grid-template-columns: repeat(8, minmax(105px, 1fr));
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    scrollbar-width: thin;
+  }
+}
+
+@media (max-width: 768px) {
+  .clube-hero {
+    padding: 3rem 1rem 2rem;
+  }
+
+  .clube-hero-cta {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .clube-hero-cta a {
+    width: 100%;
+  }
+
+  .clube-final-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1.5rem;
+  }
+
+  .clube-final-banner .btn-clube-join {
+    width: 100%;
+  }
+
+  .emblemas-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 0.75rem;
+    padding: 0.5rem 0.25rem 1.25rem;
+  }
+
+  .emblema-card {
+    flex: 0 0 130px;
+    scroll-snap-align: start;
+  }
+
+  .emblemas-lore-box {
+    flex-direction: column;
+    text-align: center;
+  }
+}

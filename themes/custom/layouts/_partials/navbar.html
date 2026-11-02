@@ -25,14 +25,11 @@
         </li>
       </ul>
 
-      <!-- ÍCONES E AÇÕES DO MENU-->
       <div class="nav-actions">
-        {{ with .Site.Params.donationLink }}
-        <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="botao-doar" aria-label="Apoiar">
-          <span class="material-symbols-rounded">volunteer_activism</span>
-          <span class="botao-doar-text">Apoiar</span>
+        <a href="/clube/" class="botao-membro" aria-label="Clube do Aprendiz (Seja Membro)" title="Clube do Aprendiz">
+          <span class="material-symbols-rounded">stars</span>
+          <span class="botao-membro-text">Seja Membro</span>
         </a>
-        {{ end }}
 
         <!-- BOTÃO HAMBÚRGUER (visível só no mobile) -->
         <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">

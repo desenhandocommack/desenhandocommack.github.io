@@ -1,0 +1,189 @@
+{{ define "styles" }}
+{{ with resources.Get "styles/clube.css" | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" />
+{{ end }}
+{{ end }}
+
+{{ define "main" }}
+{{ $clube := site.Data.clube }}
+{{ $joinUrl := $clube.joinUrl | default "https://www.youtube.com/channel/UC6YRUJ8u87onWYaVjFiSbCw/join" }}
+
+<div class="clube-page">
+  <!-- HERO BANNER -->
+  <section class="clube-hero">
+    <div class="clube-hero-inner">
+      <div class="clube-hero-tag">
+        <span class="material-symbols-rounded">shield_person</span>
+        <span>Comunidade Exclusiva</span>
+      </div>
+      <h1 class="clube-hero-title">
+        <span class="destaque-gradiente">Clube do Aprendiz</span>
+      </h1>
+      <p class="clube-hero-sub">
+        Apoie o canal, ganhe selos lendários, participe dos bastidores e tenha acesso a conteúdos exclusivos.
+      </p>
+
+      <div class="clube-hero-cta">
+        <a href="{{ $joinUrl }}" target="_blank" rel="noopener noreferrer" class="btn-clube-join">
+          <span class="material-symbols-rounded">card_membership</span>
+          Quero ser Membro do Clube
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO DE NÍVEIS (TIERS) -->
+  <section class="clube-tiers-section" id="planos">
+    <div class="container">
+      <div class="clube-section-header">
+        <span class="badge-mini">Planos do Clube</span>
+        <h2>Escolha seu Nível de Jornada</h2>
+        <p>Dois caminhos para apoiar o canal e desbloquear vantagens exclusivas</p>
+      </div>
+
+      <div class="clube-tiers-grid">
+        {{ range $clube.tiers }}
+        <div class="tier-card {{ if .featured }}tier-featured{{ end }}">
+          {{ if .featured }}
+          <div class="tier-ribbon">Recomendado</div>
+          {{ end }}
+          
+          <div class="tier-top">
+            <span class="tier-badge-label">{{ .badge }}</span>
+            <h3 class="tier-name">{{ .name }}</h3>
+            <p class="tier-summary">{{ .summary }}</p>
+          </div>
+
+          <div class="tier-divider"></div>
+
+          <div class="tier-benefits-list">
+            <h4>Benefícios inclusos:</h4>
+            <ul>
+              {{ range .benefits }}
+              <li>
+                <span class="material-symbols-rounded check-icon">check_circle</span>
+                <span>{{ . }}</span>
+              </li>
+              {{ end }}
+            </ul>
+          </div>
+
+          <div class="tier-action">
+            <a href="{{ $joinUrl }}" target="_blank" rel="noopener noreferrer" class="tier-btn {{ if .featured }}btn-primary{{ else }}btn-outline{{ end }}">
+              <span class="material-symbols-rounded">stars</span>
+              Virar Membro
+            </a>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO EMBLEMAS DE LEALDADE -->
+  <section class="clube-badges-section" id="emblemas">
+    <div class="container">
+      <div class="clube-section-header">
+        <span class="badge-mini">Evolução & Prestígio</span>
+        <h2>Emblemas de Lealdade do Clube</h2>
+      </div>
+
+      <div class="emblemas-grid">
+        {{ range $clube.badges }}
+        <div class="emblema-card {{ if .emBreve }}emblema-em-breve{{ end }}" style="--emblema-glow: {{ .glow | safeCSS }};" tabindex="0">
+          
+          {{ if .emBreve }}
+          <span class="emblema-tag-breve">Em breve</span>
+          {{ end }}
+
+          <div class="emblema-image-box">
+            <!-- Camada de brilho cósmico -->
+            <div class="emblema-aura"></div>
+            
+            <img src="{{ .imagem }}" alt="{{ .titulo }}" class="emblema-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            
+            <!-- Fallback visual com ícone caso a imagem ainda não esteja na pasta -->
+            <div class="emblema-fallback-icon" style="display: none;">
+              <span class="material-symbols-rounded">{{ .iconeFallback | default "military_tech" }}</span>
+            </div>
+          </div>
+
+          <div class="emblema-info">
+            <span class="emblema-tempo">{{ .tempo }}</span>
+            <h3 class="emblema-titulo">{{ .titulo }}</h3>
+          </div>
+
+          <!-- Tooltip interativo discreto ao passar o mouse -->
+          <div class="emblema-tooltip" role="tooltip">
+            <div class="tooltip-header">
+              <span class="material-symbols-rounded">auto_awesome</span>
+              <strong>{{ .titulo }}</strong>
+            </div>
+            <p>{{ .descricao }}</p>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+
+      <div class="emblemas-lore-box">
+        <span class="material-symbols-rounded">psychology</span>
+        <div>
+          <h4>Como funcionam os selos?</h4>
+          <p>
+            Os selos aparecem automaticamente ao lado do seu nome no chat das lives e na área de comentários do YouTube. Conforme seu tempo de permanência no clube avança, o seu emblema evolui para o próximo nível!
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO ÁREA DE MEMBROS (VÍDEOS & CONTEÚDOS) -->
+  <section class="clube-conteudos-section" id="conteudos">
+    <div class="container">
+      <div class="clube-section-header">
+        <span class="badge-mini">Conteúdo Exclusivo</span>
+        <h2>O Que Rola no Clube</h2>
+        <p>Um vislumbre dos conteúdos e materiais dedicados aos nossos membros</p>
+      </div>
+
+      <div class="membros-grid-preview">
+        <div class="preview-item">
+          <div class="preview-icon">
+            <span class="material-symbols-rounded">palette</span>
+          </div>
+          <h3>Novidades e Bastidores</h3>
+          <p>Atualizações Espontâneas. Veja esboços, processos de arte e saiba das novidades do canal antes de todo mundo!</p>
+        </div>
+
+        <div class="preview-item">
+          <div class="preview-icon">
+            <span class="material-symbols-rounded">play_circle</span>
+          </div>
+          <h3>Vídeos Exclusivos</h3>
+          <p>Acesso a vídeos exclusivos e a conteúdos do canal que ficam salvos para membros do Tier II.</p>
+        </div>
+
+        <div class="preview-item">
+          <div class="preview-icon">
+            <span class="material-symbols-rounded">how_to_vote</span>
+          </div>
+          <h3>Votações & Voz no Clube</h3>
+          <p>Opine e ajude a decidir os rumos do canal.</p>
+        </div>
+      </div>
+
+      <!-- BANNER DE CHAMADA FINAL -->
+      <div class="clube-final-banner">
+        <div class="banner-content">
+          <h2>Pronto para assumir o seu lugar no Clube?</h2>
+          <p>Junte-se ao clube do aprendiz.</p>
+        </div>
+        <a href="{{ $joinUrl }}" target="_blank" rel="noopener noreferrer" class="btn-clube-join">
+          <span class="material-symbols-rounded">card_membership</span>
+          Tornar-se Membro no YouTube
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
+{{ end }}

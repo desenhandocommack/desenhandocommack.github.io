@@ -125,6 +125,42 @@ body {
   align-items: center;
 }
 
+/* Botão Membro CTA Moderno */
+.nav-actions .botao-membro {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #ffffff !important;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  background: linear-gradient(135deg, #fe55bd, #2bb8fc);
+  padding: 0.5rem 1.2rem;
+  border-radius: 9999px;
+  box-shadow: 0 4px 12px rgba(254, 85, 189, 0.25);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.nav-actions .botao-membro .material-symbols-rounded {
+  color: #ffffff;
+  font-size: 18px;
+  transition: transform 0.2s;
+}
+
+.nav-actions .botao-membro:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(254, 85, 189, 0.35);
+}
+
+.nav-actions .botao-membro:hover .material-symbols-rounded {
+  transform: rotate(25deg) scale(1.1);
+}
+
+.nav-actions .botao-membro:active {
+  transform: translateY(1px);
+}
+
 /* Botão Doar CTA Moderno */
 .nav-actions .botao-doar {
   display: inline-flex;
@@ -989,12 +1025,14 @@ kbd {
     display: flex;
   }
 
-  .botao-doar-text {
+  .botao-doar-text,
+  .botao-membro-text {
     display: none;
-    /* no mobile esconde o texto 'Apoiar' e fica só o ícone para economizar espaço */
+    /* no mobile esconde o texto para economizar espaço */
   }
 
-  .nav-actions .botao-doar {
+  .nav-actions .botao-doar,
+  .nav-actions .botao-membro {
     padding: 0.5rem;
     border-radius: 50%;
     width: 36px;
