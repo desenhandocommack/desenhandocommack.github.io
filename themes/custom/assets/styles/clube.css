@@ -278,6 +278,32 @@
   margin-bottom: 0.6rem;
 }
 
+.tier-price-box {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  margin: 0.35rem 0 0.85rem 0;
+}
+
+.tier-currency {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #ea498b;
+}
+
+.tier-price-val {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--color-text, #173657);
+  line-height: 1;
+}
+
+.tier-period {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #64748b;
+}
+
 .tier-summary {
   font-size: 0.98rem;
   color: #64748b;

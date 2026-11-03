@@ -1,5 +1,41 @@
 [
   {
+    "id": "7WrVAsKjgaE",
+    "cover": "/images/lives/novidades-mascotes-membros.png",
+    "duration": "2h44min",
+    "link": "https://youtube.com/live/7WrVAsKjgaE",
+    "snippet": {
+      "title": "Clube do Aprendiz, Mascotes e Canal de Games",
+      "description": "[Categoria: Desenho]\n\nNovidades sobre o Clube do Aprendiz, criação de mascotes e o canal de games."
+    },
+    "supporters": [
+      "Rikelme"
+    ],
+    "liveStreamingDetails": {
+      "scheduledStartTime": "2026-11-02T22:00:00Z"
+    },
+    "members": [
+      "Juan (1º membro)",
+      "Arialon (2º membro)"
+    ],
+    "gifts": [
+      "kurooyoshida"
+    ]
+  },
+  {
+    "id": "fPpqTQiCe-8",
+    "cover": "/images/lives/live-blender-lula-molusco.png",
+    "duration": "2h47min",
+    "link": "https://youtube.com/live/fPpqTQiCe-8",
+    "snippet": {
+      "title": "Lula Molusco 3D no Blender",
+      "description": "[Categoria: 3D no Blender]\n\nModelagem e escultura 3D no Blender."
+    },
+    "liveStreamingDetails": {
+      "scheduledStartTime": "2026-10-14T22:00:00Z"
+    }
+  },
+  {
     "id": "cj4If8St6vM",
     "cover": "/images/lives/rabisco-livre.png",
     "duration": "3h36min",
@@ -40,7 +76,7 @@
     "supporters": [
       "Zaxtremiun",
       "Zuca",
-      "Lony"
+      "Arialon"
     ],
     "liveStreamingDetails": {
       "scheduledStartTime": "2026-10-08T22:00:00Z"
@@ -96,7 +132,7 @@
       "Pavi"
     ],
     "gifts": [
-      "Lony",
+      "Arialon",
       "Juan"
     ],
     "liveStreamingDetails": {
@@ -129,7 +165,7 @@
       "description": "[Categoria: Desenho]\n\nComecei finalizando a treinadora Pokémon que vinha sendo desenvolvida desde a primeira live. Depois, fiz uma folha de sketches com desenhos pedidos na live."
     },
     "gifts": [
-      "Lony"
+      "Arialon"
     ],
     "liveStreamingDetails": {
       "scheduledStartTime": "2026-09-16T21:15:00Z"

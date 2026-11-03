@@ -51,6 +51,13 @@
           <div class="tier-top">
             <span class="tier-badge-label">{{ .badge }}</span>
             <h3 class="tier-name">{{ .name }}</h3>
+            {{ if .preco }}
+            <div class="tier-price-box">
+              <span class="tier-currency">R$</span>
+              <span class="tier-price-val">{{ .preco }}</span>
+              <span class="tier-period">/{{ .periodo | default "mês" }}</span>
+            </div>
+            {{ end }}
             <p class="tier-summary">{{ .summary }}</p>
           </div>
 

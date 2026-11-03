@@ -11,7 +11,9 @@
         "Selos de fidelidade exclusivos ao lado do seu nome nos comentários e no chat ao vivo.",
         "Emojis personalizados para usar em comentários e lives.",
         "Novidades e bastidores em primeira mão."
-      ]
+      ],
+      "preco": "3,99",
+      "periodo": "mês"
     },
     {
       "id": "tier-2",
@@ -24,7 +26,9 @@
         "Emojis personalizados para usar em comentários e lives.",
         "Novidades e bastidores em primeira mão.",
         "Vídeos exclusivos para membros."
-      ]
+      ],
+      "preco": "7,99",
+      "periodo": "mês"
     }
   ],
   "badges": [

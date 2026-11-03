@@ -930,7 +930,7 @@ body {
   color: #fe55bd;
 }
 
-.footer-link-conquistas {
+.footer-link-clube {
   background: linear-gradient(135deg, #2bb8fc 0%, #fe55bd 100%);
   -webkit-background-clip: text;
   background-clip: text;
@@ -938,7 +938,7 @@ body {
   opacity: 1;
 }
 
-.footer-link-conquistas:hover {
+.footer-link-clube:hover {
   filter: brightness(1.2);
 }
 

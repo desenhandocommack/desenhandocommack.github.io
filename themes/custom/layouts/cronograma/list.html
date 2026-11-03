@@ -1,1477 +1,4002 @@
 {{ define "styles" }} {{ with resources.Get "styles/portfolio.css" | resources.Fingerprint }}
+
 <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" />
+
 {{ end }} {{ end }} {{ define "main" }}
 
+
+
 <div class="portfolio-container" style="max-width: 1410px; margin: 0 auto; padding-top: 1.5rem; padding-bottom: 0">
+
   <section class="portfolio-hero" style="padding: 2rem 2rem; margin-bottom: 1rem">
+
     <h1 style="margin-bottom: 0">Cronograma</h1>
+
   </section>
+
 </div>
 
+
+
 <style>
+
   /* ============ Variáveis / Cores da marca ============ */
+
   :root {
+
     --brand-blue: #2bb8fc;
+
     --brand-blue-light: #f0f9ff;
+
     --brand-blue-dark: #049ae0;
 
+
+
     --brand-pink: #fe55bd;
+
     --brand-pink-light: #fff0fa;
+
     --brand-pink-dark: #e0289b;
 
+
+
     --brand-yellow: #f6e65f;
+
     --brand-yellow-light: #fefde8;
+
     --brand-yellow-dark: #bda700;
 
+
+
     --slate-50: #f8fafc;
+
     --slate-100: #f1f5f9;
+
     --slate-200: #e2e8f0;
+
     --slate-250: #dde3ec;
+
     --slate-400: #94a3b8;
+
     --slate-500: #64748b;
+
     --slate-700: #334155;
+
     --slate-800: #1e293b;
+
     --slate-950: #020617;
 
+
+
     --amber-500: #f59e0b;
+
     --emerald-500: #10b981;
+
   }
+
+
 
   html,
+
   body {
+
     max-width: 100%;
+
     overflow-x: hidden;
+
   }
+
+
 
   html {
+
     height: 100%;
+
   }
+
+
 
   body {
+
     display: flex;
+
     flex-direction: column;
+
     height: 100%;
+
   }
+
+
 
   .cronograma-container {
+
     flex-grow: 1;
+
     max-width: 1410px;
+
     width: 100%;
+
     margin: 10px auto 0 auto;
+
     gap: 20px;
+
     padding: 20px;
+
     box-sizing: border-box;
+
     overflow-x: hidden;
+
   }
+
+
 
   /* Custom scrollbar para um visual mais limpo */
+
   ::-webkit-scrollbar {
+
     width: 6px;
+
   }
+
+
 
   ::-webkit-scrollbar-track {
+
     background: rgba(241, 245, 249, 0.8);
+
   }
+
+
 
   ::-webkit-scrollbar-thumb {
+
     background: rgba(43, 184, 252, 0.4);
+
     border-radius: 3px;
+
   }
+
+
 
   ::-webkit-scrollbar-thumb:hover {
+
     background: rgba(43, 184, 252, 0.6);
+
   }
+
+
 
   a {
+
     text-decoration: none;
+
   }
+
+
 
   img {
+
     display: block;
+
   }
+
+
 
   /* ============ Layout geral ============ */
+
   .container {
+
     width: 100%;
+
     max-width: 1200px;
+
     /* Expandido de 38rem (~600px) para 1200px para excelente aproveitamento no desktop */
+
     margin: 0 auto;
+
   }
+
+
 
   /* Ajustes para cards largos ocupando toda a largura no Desktop */
+
   @media (min-width: 768px) {
+
     .container {
+
       width: 100% !important;
+
       max-width: 900px !important;
+
     }
+
+
 
     .live-hoje-card {
+
       aspect-ratio: 21 / 9 !important;
+
       /* Visual cinematográfico ultra-largo */
+
       max-height: 380px;
+
     }
+
+
 
     .proxima-thumb,
+
     .historico-thumb {
+
       width: 260px !important;
+
       /* Thumbnail maior para equilibrar o card esticado */
+
     }
+
+
 
     .proxima-title,
+
     .historico-title {
+
       font-size: 18px !important;
+
       /* Títulos maiores e mais legíveis */
+
     }
+
+
 
     .proxima-card,
+
     .historico-card {
+
       width: 100% !important;
+
       /* Garante que ambos fiquem exatamente com a mesma largura */
+
       padding: 20px !important;
+
       /* Mais espaçamento interno */
+
       gap: 24px !important;
+
     }
+
   }
+
+
 
   @media (min-width: 900px) {
+
     .container {
+
       width: 900px !important;
+
       /* Força a largura exata de 900px em telas grandes para evitar oscilação de abas */
+
     }
+
   }
+
+
 
   .container > * + * {
+
     margin-top: 16px;
+
     /* space-y-4 */
+
   }
+
+
 
   /* ============ Header ============ */
+
   .header {
+
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
+
     border-bottom: 1px solid var(--slate-200);
+
     padding-bottom: 12px;
+
   }
+
+
 
   .header-left {
+
     display: flex;
+
     align-items: center;
+
     gap: 8px;
+
   }
+
+
 
   .ping-dot-wrapper {
+
     position: relative;
+
     display: flex;
+
     height: 12px;
+
     width: 12px;
+
   }
+
+
 
   .ping-dot-ping {
+
     animation: ping 1.4s cubic-bezier(0, 0, 0.2, 1) infinite;
+
     position: absolute;
+
     display: inline-flex;
+
     height: 100%;
+
     width: 100%;
+
     border-radius: 9999px;
+
     background-color: var(--brand-pink);
+
     opacity: 0.75;
+
   }
+
+
 
   .ping-dot-solid {
+
     position: relative;
+
     display: inline-flex;
+
     border-radius: 9999px;
+
     height: 12px;
+
     width: 12px;
+
     background-color: var(--brand-pink);
+
   }
+
+
 
   @keyframes ping {
+
     75%,
+
     100% {
+
       transform: scale(2);
+
       opacity: 0;
+
     }
+
   }
+
+
 
   .title-main {
+
     font-size: 18px;
+
     font-weight: 800;
+
     letter-spacing: -0.025em;
+
     margin: 0;
+
     background: linear-gradient(to right, var(--brand-blue-dark), var(--brand-pink), var(--brand-pink));
+
     -webkit-background-clip: text;
+
     background-clip: text;
+
     -webkit-text-fill-color: transparent;
+
     color: transparent;
+
   }
+
+
 
   .updated-label {
+
     font-size: 9px;
+
     color: var(--slate-400);
+
     font-weight: 600;
+
     line-height: 1;
+
     margin-top: 4px;
+
   }
+
+
 
   .timezone-badge {
+
     font-size: 10px;
+
     color: var(--slate-500);
+
     font-weight: 700;
+
     background-color: #ffffff;
+
     border: 1px solid rgba(226, 232, 240, 0.8);
+
     padding: 4px 8px;
+
     border-radius: 6px;
+
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+
   }
+
+
 
   /* ============ Tabs ============ */
+
   .tabs-nav {
+
     display: flex;
+
     background-color: rgba(226, 232, 240, 0.6);
+
     padding: 4px;
+
     border-radius: 12px;
+
     border: 1px solid rgba(226, 232, 240, 0.4);
+
     box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+
   }
+
+
 
   .tab-btn {
+
     flex: 1 1 0%;
+
     text-align: center;
+
     padding: 8px 0;
+
     font-size: 12px;
+
     font-weight: 700;
+
     border-radius: 8px;
+
     border: none;
+
     background: none;
+
     cursor: pointer;
+
     color: var(--slate-500);
+
     transition: all 0.15s ease;
+
     font-family: inherit;
+
   }
+
+
 
   .tab-btn:hover {
+
     color: #334155;
+
   }
+
+
 
   .tab-btn.active {
+
     background: linear-gradient(to right, var(--brand-blue), var(--brand-pink), var(--brand-pink));
+
     color: #ffffff;
+
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+
   }
+
+
 
   .tab-btn.active:hover {
+
     color: #ffffff;
+
   }
+
+
 
   /* ============ Loading ============ */
+
   .loading {
+
     padding: 48px 0;
+
     display: flex;
+
     flex-direction: column;
+
     align-items: center;
+
     justify-content: center;
+
     gap: 12px;
+
   }
+
+
 
   .spinner {
+
     width: 32px;
+
     height: 32px;
+
     border: 4px solid var(--brand-blue);
+
     border-top-color: transparent;
+
     border-radius: 9999px;
+
     animation: spin 0.7s linear infinite;
+
   }
+
+
 
   @keyframes spin {
+
     to {
+
       transform: rotate(360deg);
+
     }
+
   }
+
+
 
   .loading-text {
+
     font-size: 12px;
+
     color: var(--slate-500);
+
     margin: 0;
+
   }
+
+
 
   .error-text {
+
     font-size: 12px;
+
     color: #f43f5e;
+
     font-weight: 600;
+
     margin: 0;
+
   }
+
+
 
   .hidden {
+
     display: none;
+
   }
+
+
 
   /* ============ Conteúdo das abas ============ */
+
   .tab-content {
+
     margin-top: 16px;
+
   }
+
+
 
   .tab-content.hidden {
+
     display: none;
+
   }
+
+
 
   .tab-content > * + * {
+
     margin-top: 16px;
+
   }
+
+
 
   .section-title {
+
     font-size: 12px;
+
     font-weight: 700;
+
     color: var(--slate-400);
+
     letter-spacing: 0.05em;
+
     text-transform: uppercase;
+
     padding-left: 4px;
+
     margin: 0 0 8px 0;
+
   }
+
+
 
   .list-stack > * + * {
+
     margin-top: 8px;
+
   }
+
+
 
   .empty-text {
+
     font-size: 12px;
+
     color: var(--slate-400);
+
     padding-left: 4px;
+
     font-weight: 500;
+
     margin: 0;
+
   }
+
+
 
   /* ============ Badges de categoria ============ */
+
   .badge-category {
+
     display: inline-block;
+
     padding: 2px 8px;
+
     border-radius: 9999px;
+
     font-size: 10px;
+
     font-weight: 700;
+
     white-space: nowrap;
+
     background-color: rgba(254, 85, 189, 0.1);
+
     color: var(--brand-pink-dark);
+
     border: 1px solid rgba(254, 85, 189, 0.2);
+
   }
+
+
 
   .badge-category.overlay {
+
     font-size: 9px;
+
     font-weight: 800;
+
     background-color: var(--brand-pink);
+
     color: #ffffff;
+
     border: 1px solid rgba(254, 85, 189, 0.2);
+
   }
+
+
 
   /* ============ Card: Live Hoje / Destaque ============ */
+
   .live-hoje-card {
+
     position: relative;
+
     overflow: hidden;
+
     border-radius: 16px;
+
     border: 1px solid rgba(254, 85, 189, 0.35);
+
     background-color: var(--slate-950);
+
     aspect-ratio: 16 / 9;
+
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+
     transition: border-color 0.3s;
+
   }
+
+
 
   .live-hoje-card:hover {
+
     border-color: rgba(254, 85, 189, 0.65);
+
   }
+
+
 
   .live-hoje-card img {
+
     width: 100%;
+
     height: 100%;
+
     object-fit: cover;
+
     position: absolute;
+
     inset: 0;
+
     opacity: 0.85;
+
     transition: transform 0.5s;
+
   }
+
+
 
   .live-hoje-card:hover img {
+
     transform: scale(1.05);
+
   }
+
+
 
   .live-hoje-overlay {
+
     position: absolute;
+
     inset: 0;
+
     background: linear-gradient(to top, var(--slate-950), rgba(2, 6, 23, 0.65), transparent);
+
   }
+
+
 
   .live-hoje-content {
+
     position: absolute;
+
     left: 0;
+
     right: 0;
+
     bottom: 0;
+
     padding: 16px;
+
     display: flex;
+
     flex-direction: column;
+
     justify-content: flex-end;
+
   }
+
+
 
   .live-hoje-badges-row {
+
     display: flex;
+
     flex-wrap: wrap;
+
     align-items: center;
+
     gap: 8px;
+
     margin-bottom: 6px;
+
   }
+
+
 
   .badge-ao-vivo {
+
     display: inline-flex;
+
     align-items: center;
+
     gap: 4px;
+
     padding: 2px 10px;
+
     border-radius: 9999px;
+
     font-size: 9px;
+
     font-weight: 800;
+
     background-color: var(--brand-pink);
+
     color: #ffffff;
+
     border: 1px solid rgba(254, 85, 189, 0.2);
+
     animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+
   }
+
+
 
   @keyframes pulse {
+
     0%,
+
     100% {
+
       opacity: 1;
+
     }
+
+
 
     50% {
+
       opacity: 0.5;
+
     }
+
   }
+
+
 
   .badge-ao-vivo-dot {
+
     height: 6px;
+
     width: 6px;
+
     border-radius: 9999px;
+
     background-color: #ffffff;
+
   }
+
+
 
   .live-hoje-title {
+
     font-size: 16px;
+
     font-weight: 800;
+
     color: #ffffff;
+
     line-height: 1.25;
+
     margin: 0;
+
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+
     overflow: hidden;
+
     text-overflow: ellipsis;
+
     white-space: nowrap;
+
     transition: color 0.2s;
+
   }
+
+
 
   .live-hoje-card:hover .live-hoje-title {
+
     color: var(--brand-pink);
+
   }
+
+
 
   .live-hoje-bottom-row {
+
     margin-top: 8px;
+
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
+
     gap: 16px;
+
   }
+
+
 
   .live-hoje-date {
+
     font-size: 10px;
+
     color: #e2e8f0;
+
     font-weight: 600;
+
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+
     margin: 0;
+
   }
+
+
 
   .live-hoje-utc {
+
     font-size: 9px;
+
     color: #cbd5e1;
+
     font-weight: 700;
+
   }
+
+
 
   .btn-assistir {
+
     display: inline-flex;
+
     align-items: center;
+
     justify-content: center;
+
     gap: 4px;
+
     padding: 6px 12px;
+
     font-size: 10px;
+
     font-weight: 800;
+
     color: #ffffff;
+
     background-color: var(--brand-pink);
+
     border-radius: 8px;
+
     box-shadow: 0 4px 6px -1px rgba(254, 85, 189, 0.2);
+
     transition:
+
       background-color 0.2s,
+
       transform 0.15s;
+
     flex-shrink: 0;
+
   }
+
+
 
   .btn-assistir:hover {
+
     background-color: var(--brand-pink-dark);
+
   }
+
+
 
   .btn-assistir:active {
+
     transform: scale(0.95);
+
   }
+
+
 
   .icon-sm {
+
     width: 12px;
+
     height: 12px;
+
   }
+
+
 
   /* ============ Card: Próximas Lives ============ */
+
   .proxima-card {
+
     display: flex;
+
     gap: 18px;
+
     background-color: #ffffff;
+
     border: 1px solid rgba(226, 232, 240, 0.8);
+
     border-radius: 12px;
+
     padding: 14px;
+
     transition:
+
       border-color 0.2s,
+
       box-shadow 0.2s;
+
   }
+
+
 
   .proxima-card:hover {
+
     border-color: rgba(43, 184, 252, 0.5);
+
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+
   }
+
+
 
   .proxima-thumb {
+
     position: relative;
+
     width: 160px;
+
     aspect-ratio: 16 / 9;
+
     border-radius: 8px;
+
     overflow: hidden;
+
     flex-shrink: 0;
+
     box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+
     background-color: var(--slate-100);
+
     border: 1px solid var(--slate-200);
+
   }
+
+
 
   .proxima-thumb img {
+
     width: 100%;
+
     height: 100%;
+
     object-fit: cover;
+
     transition: transform 0.3s;
+
   }
+
+
 
   .proxima-card:hover .proxima-thumb img {
+
     transform: scale(1.05);
+
   }
+
+
 
   .proxima-platform-logo {
+
     position: absolute;
+
     bottom: 4px;
+
     right: 4px;
+
     background-color: rgba(255, 255, 255, 0.95);
+
     padding: 4px;
+
     border-radius: 4px;
+
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+
     border: 1px solid var(--slate-100);
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
   }
+
+
 
   .proxima-content {
+
     min-width: 0;
+
     flex: 1 1 0%;
+
     display: flex;
+
     flex-direction: column;
+
     justify-content: space-between;
+
     padding: 2px 0;
+
   }
+
+
 
   .proxima-day-row {
+
     display: flex;
+
     align-items: center;
+
     flex-wrap: wrap;
+
     gap: 4px;
+
   }
+
+
 
   .proxima-day {
+
     font-size: 11px;
+
     font-weight: 800;
+
     letter-spacing: 0.05em;
+
     color: var(--brand-blue-dark);
+
     text-transform: uppercase;
+
   }
+
+
 
   .proxima-time {
+
     font-size: 11px;
+
     font-weight: 600;
+
     color: var(--slate-400);
+
   }
+
+
 
   .proxima-title {
+
     font-size: 15px;
+
     font-weight: 700;
+
     color: var(--slate-800);
+
     line-height: 1.4;
+
     margin: 4px 0 0 0;
+
     transition: color 0.2s;
+
     display: -webkit-box;
+
     -webkit-box-orient: vertical;
+
     overflow: hidden;
+
   }
+
+
 
   .proxima-card:hover .proxima-title {
+
     color: var(--brand-blue-dark);
+
   }
+
+
 
   .proxima-bottom-row {
+
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
+
     gap: 8px;
+
     margin-top: 4px;
+
   }
+
+
 
   .link-ver {
+
     display: inline-flex;
+
     align-items: center;
+
     gap: 2px;
+
     font-size: 9px;
+
     font-weight: 700;
+
     color: var(--brand-blue);
+
     transition: color 0.2s;
+
   }
+
+
 
   .link-ver:hover {
+
     color: var(--brand-blue-dark);
+
   }
+
+
 
   .icon-xs {
+
     width: 10px;
+
     height: 10px;
+
   }
+
+
 
   /* ============ Histórico ============ */
+
   .historico-group {
+
     margin-top: 16px;
+
   }
+
+
 
   .historico-group > * + * {
+
     margin-top: 8px;
+
   }
+
+
 
   .historico-group-title {
+
     font-size: 12px;
+
     font-weight: 800;
+
     color: var(--slate-400);
+
     letter-spacing: 0.05em;
+
     text-transform: uppercase;
+
     padding-left: 4px;
+
     margin-left: 4px;
+
     border-left: 2px solid var(--brand-blue);
+
     margin-bottom: 8px;
+
   }
+
+
 
   .historico-card {
+
     display: flex;
+
     align-items: flex-start;
+
     gap: 16px;
+
     background-color: #ffffff;
+
     border: 1px solid var(--slate-200);
+
     border-radius: 12px;
+
     padding: 12px;
+
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+
     margin-top: 8px;
+
   }
+
+
 
   .historico-thumb {
+
     position: relative;
+
     width: 150px;
+
     aspect-ratio: 16 / 9;
+
     height: auto;
+
     border-radius: 6px;
+
     overflow: hidden;
+
     flex-shrink: 0;
+
     align-self: flex-start;
+
     background-color: var(--slate-50);
+
     border: 1px solid var(--slate-200);
+
   }
+
+
 
   .historico-thumb img {
+
     width: 100%;
+
     height: 100%;
+
     object-fit: cover;
+
     display: block;
+
   }
+
+
 
   .historico-content {
+
     min-width: 0;
+
     flex: 1 1 0%;
+
     display: flex;
+
     flex-direction: column;
+
     justify-content: space-between;
+
     padding: 2px 0;
+
     gap: 6px;
+
   }
+
+
 
   .historico-status-row {
+
     display: flex;
+
     align-items: center;
+
     gap: 6px;
+
     flex-wrap: wrap;
+
   }
+
+
 
   .historico-meta {
+
     font-size: 10px;
+
     font-weight: 700;
+
     color: var(--slate-400);
+
   }
+
+
 
   .badge-status {
+
     padding: 2px 8px;
+
     border-radius: 9999px;
+
     font-size: 10px;
+
     font-weight: 700;
+
   }
 
+
+
   .badge-status.adiada {
+
     background-color: rgba(245, 158, 11, 0.1);
+
     color: var(--amber-500);
+
     border: 1px solid rgba(245, 158, 11, 0.2);
+
   }
 
   .badge-status.realizada {
-    background-color: rgba(16, 185, 129, 0.1);
-    color: var(--emerald-500);
-    border: 1px solid rgba(16, 185, 129, 0.2);
+    background-color: rgba(234, 73, 139, 0.12);
+    color: #ea498b;
+    border: 1px solid rgba(234, 73, 139, 0.3);
   }
+
+
 
   .badge-duration {
+
     display: inline-flex;
+
     align-items: center;
+
     gap: 3px;
+
     padding: 2px 7px;
+
     border-radius: 9999px;
+
     font-size: 10px;
+
     font-weight: 700;
+
     background-color: rgba(43, 184, 252, 0.1);
+
     color: var(--brand-blue-dark);
+
     border: 1px solid rgba(43, 184, 252, 0.25);
+
   }
+
+
 
   .badge-duration .material-symbols-rounded {
+
     font-size: 12px;
+
   }
+
+
 
   .supporters-wrapper {
+
     position: relative;
+
     display: inline-flex;
+
     align-items: center;
+
   }
+
+
 
   .badge-supporters {
+
     display: inline-flex;
+
     align-items: center;
+
     gap: 4px;
+
     padding: 2px 8px;
+
     border-radius: 9999px;
+
     font-size: 10px;
+
     font-weight: 700;
+
     background: linear-gradient(135deg, rgba(251, 191, 36, 0.15), rgba(245, 158, 11, 0.12));
+
     color: #b45309;
+
     border: 1px solid rgba(245, 158, 11, 0.35);
+
     cursor: default;
+
     transition: all 0.2s ease;
+
     user-select: none;
+
   }
+
+
 
   .badge-supporters:hover {
+
     background: linear-gradient(135deg, rgba(251, 191, 36, 0.25), rgba(245, 158, 11, 0.2));
+
     border-color: rgba(245, 158, 11, 0.6);
+
     box-shadow: 0 2px 6px rgba(245, 158, 11, 0.15);
+
   }
+
+
 
   .badge-supporters .heart-icon {
+
     font-size: 11px;
+
     line-height: 1;
+
     filter: drop-shadow(0 1px 1px rgba(180, 83, 9, 0.3));
+
   }
+
+
 
   .supporters-tooltip {
+
     visibility: hidden;
+
     opacity: 0;
+
     position: absolute;
+
     top: calc(100% + 8px);
+
     left: 0;
+
     background-color: #1e293b;
+
     color: #f8fafc;
+
     padding: 8px 12px;
+
     border-radius: 8px;
+
     font-size: 11px;
+
     font-weight: 600;
+
     white-space: normal;
+
     word-break: normal;
+
     overflow-wrap: break-word;
+
     width: max-content;
+
     min-width: 120px;
+
     max-width: 220px;
+
     text-align: left;
+
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+
     border: 1px solid rgba(255, 255, 255, 0.15);
+
     z-index: 100;
+
     pointer-events: none;
+
     transform: translateY(-4px);
+
     transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+
   }
+
+
 
   .supporters-list {
+
     list-style: none;
+
     padding: 0;
+
     margin: 0;
+
     display: flex;
+
     flex-direction: column;
+
     gap: 4px;
+
   }
+
+
 
   .supporters-list li {
+
     display: flex;
+
     align-items: center;
+
     gap: 6px;
+
     line-height: 1.3;
+
     white-space: nowrap;
+
     overflow: hidden;
+
     text-overflow: ellipsis;
+
   }
+
+
 
   .supporters-list li::before {
+
     content: "•";
+
     color: var(--amber-500);
+
     font-size: 13px;
+
     line-height: 1;
+
   }
+
+
 
   .supporters-tooltip::after {
+
     content: "";
+
     position: absolute;
+
     bottom: 100%;
+
     left: 18px;
+
     border-width: 5px;
+
     border-style: solid;
+
     border-color: transparent transparent #1e293b transparent;
+
   }
+
+
 
   .supporters-wrapper:hover .supporters-tooltip {
+
     visibility: visible;
+
     opacity: 1;
+
     transform: translateY(0);
+
   }
+
+
+
+  /* ============ Membros do Clube ============ */
+
+  .members-wrapper {
+
+    position: relative;
+
+    display: inline-flex;
+
+    align-items: center;
+
+  }
+
+
+
+  .badge-members {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 4px;
+
+    padding: 2px 8px;
+
+    border-radius: 9999px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    background: linear-gradient(135deg, rgba(254, 85, 189, 0.15), rgba(43, 184, 252, 0.12));
+
+    color: #db2777;
+
+    border: 1px solid rgba(254, 85, 189, 0.35);
+
+    cursor: default;
+
+    transition: all 0.2s ease;
+
+    user-select: none;
+
+  }
+
+
+
+  .badge-members:hover {
+
+    background: linear-gradient(135deg, rgba(254, 85, 189, 0.25), rgba(43, 184, 252, 0.2));
+
+    border-color: rgba(254, 85, 189, 0.6);
+
+    box-shadow: 0 2px 6px rgba(254, 85, 189, 0.2);
+
+  }
+
+
+
+  .badge-members .member-icon {
+
+    font-size: 11px;
+
+    line-height: 1;
+
+    filter: drop-shadow(0 1px 1px rgba(219, 39, 119, 0.3));
+
+  }
+
+
+
+  .members-tooltip {
+
+    visibility: hidden;
+
+    opacity: 0;
+
+    position: absolute;
+
+    top: calc(100% + 8px);
+
+    left: 0;
+
+    background-color: #1e293b;
+
+    color: #f8fafc;
+
+    padding: 8px 12px;
+
+    border-radius: 8px;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    white-space: normal;
+
+    word-break: normal;
+
+    overflow-wrap: break-word;
+
+    width: max-content;
+
+    min-width: 120px;
+
+    max-width: 220px;
+
+    text-align: left;
+
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    z-index: 100;
+
+    pointer-events: none;
+
+    transform: translateY(-4px);
+
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+
+  }
+
+
+
+  .members-list {
+
+    list-style: none;
+
+    padding: 0;
+
+    margin: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+
+  }
+
+
+
+  .members-list li {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    line-height: 1.3;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+  }
+
+
+
+  .members-list li::before {
+
+    content: "⭐";
+
+    font-size: 10px;
+
+    line-height: 1;
+
+  }
+
+
+
+  .members-tooltip::after {
+
+    content: "";
+
+    position: absolute;
+
+    bottom: 100%;
+
+    left: 18px;
+
+    border-width: 5px;
+
+    border-style: solid;
+
+    border-color: transparent transparent #1e293b transparent;
+
+  }
+
+
+
+  .members-wrapper:hover .members-tooltip {
+
+    visibility: visible;
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+  }
+
+
 
   /* ============ Presentes (Gifts) ============ */
+
   .gifts-wrapper {
+
     position: relative;
+
     display: inline-flex;
+
     align-items: center;
+
   }
+
+
 
   .badge-gifts {
+
     display: inline-flex;
+
     align-items: center;
+
     gap: 4px;
+
     padding: 2px 7px;
+
     border-radius: 9999px;
+
     font-size: 10px;
+
     font-weight: 600;
+
     background: rgba(148, 163, 184, 0.08);
+
     color: var(--slate-500);
+
     border: 1px solid rgba(148, 163, 184, 0.25);
+
     cursor: default;
+
     transition: all 0.2s ease;
+
     user-select: none;
+
   }
+
+
 
   .badge-gifts:hover {
+
     background: rgba(148, 163, 184, 0.16);
+
     color: var(--slate-700);
+
     border-color: rgba(148, 163, 184, 0.45);
+
   }
+
+
 
   .badge-gifts .gift-icon {
+
     font-size: 11px;
+
     line-height: 1;
+
   }
+
+
 
   .gifts-tooltip {
+
     visibility: hidden;
+
     opacity: 0;
+
     position: absolute;
+
     top: calc(100% + 8px);
+
     left: 0;
+
     background-color: #1e293b;
+
     color: #f8fafc;
+
     padding: 8px 12px;
+
     border-radius: 8px;
+
     font-size: 11px;
+
     font-weight: 600;
+
     white-space: normal;
+
     word-break: normal;
+
     overflow-wrap: break-word;
+
     width: max-content;
+
     min-width: 120px;
+
     max-width: 220px;
+
     text-align: left;
+
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+
     border: 1px solid rgba(255, 255, 255, 0.15);
+
     z-index: 100;
+
     pointer-events: none;
+
     transform: translateY(-4px);
+
     transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+
   }
+
+
 
   .gifts-list {
+
     list-style: none;
+
     padding: 0;
+
     margin: 0;
+
     display: flex;
+
     flex-direction: column;
+
     gap: 4px;
+
   }
+
+
 
   .gifts-list li {
+
     display: flex;
+
     align-items: center;
+
     gap: 6px;
+
     line-height: 1.3;
+
     white-space: nowrap;
+
     overflow: hidden;
+
     text-overflow: ellipsis;
+
   }
+
+
 
   .gifts-list li::before {
+
     content: "🎁";
+
     font-size: 10px;
+
     line-height: 1;
+
   }
+
+
 
   .gifts-tooltip::after {
+
     content: "";
+
     position: absolute;
+
     bottom: 100%;
+
     left: 18px;
+
     border-width: 5px;
+
     border-style: solid;
+
     border-color: transparent transparent #1e293b transparent;
+
   }
+
+
 
   .gifts-wrapper:hover .gifts-tooltip {
+
     visibility: visible;
+
     opacity: 1;
+
     transform: translateY(0);
+
   }
+
+
 
   .historico-link {
+
     text-decoration: none;
+
     color: inherit;
+
     display: inline-block;
+
   }
+
+
 
   .historico-link:hover .historico-title {
+
     color: var(--brand-blue);
+
   }
+
+
 
   .historico-title {
+
     font-size: 14px;
+
     line-height: 1.4;
+
     margin: 4px 0 0 0;
+
     overflow: hidden;
+
     text-overflow: ellipsis;
+
     white-space: normal;
+
     word-break: break-word;
+
     overflow-wrap: break-word;
+
     transition: color 0.2s;
+
   }
+
+
 
   .historico-title.realizada {
+
     color: var(--slate-700);
+
     font-weight: 700;
+
   }
+
+
 
   .historico-title.adiada {
+
     color: var(--slate-400);
+
     text-decoration: line-through;
+
   }
+
+
 
   .historico-desc {
+
     font-size: 12px;
+
     line-height: 1.55;
+
     color: var(--slate-600);
+
     margin: 6px 0 4px 0;
+
     white-space: pre-line;
+
     word-break: break-word;
+
     overflow-wrap: break-word;
+
   }
+
+
 
   .historico-bottom-row {
+
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
+
     gap: 8px;
+
     margin-top: 6px;
+
   }
+
+
 
   .historico-cat-tag {
+
     font-size: 9px;
+
     color: var(--slate-400);
+
     font-weight: 700;
+
     padding: 2px 6px;
+
     background-color: var(--slate-50);
+
     border-radius: 4px;
+
     border: 1px solid var(--slate-250);
+
   }
+
+
 
   /* ============ Footer ============ */
+
   .footer {
+
     text-align: center;
+
     padding-top: 16px;
+
     border-top: 1px solid rgba(226, 232, 240, 0.6);
+
     margin-top: 24px !important;
+
   }
+
+
 
   .footer p {
+
     font-size: 11px;
+
     color: var(--slate-400);
+
     font-weight: 500;
+
     margin: 0 0 10px 0;
+
   }
+
+
 
   .footer-socials {
+
     display: flex;
+
     justify-content: center;
+
     gap: 14px;
+
   }
+
+
 
   .footer-social-link {
+
     display: inline-flex;
+
     align-items: center;
+
     justify-content: center;
+
     width: 36px;
+
     height: 36px;
+
     border-radius: 8px;
+
     background-color: #ffffff;
+
     border: 1px solid var(--slate-200);
+
     transition:
+
       transform 0.2s,
+
       border-color 0.2s,
+
       box-shadow 0.2s;
+
   }
+
+
 
   .footer-social-link:hover {
+
     transform: translateY(-2px);
+
     border-color: rgba(43, 184, 252, 0.6);
+
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+
   }
+
+
 
   .footer-social-link img {
+
     width: 20px;
+
     height: 20px;
+
     object-fit: contain;
+
   }
+
+
 
   /* ============ Mobile Query ============ */
+
   @media (max-width: 768px) {
+
     .cronograma-container {
+
       padding: 12px 8px !important;
+
       overflow-x: hidden !important;
+
     }
+
+
 
     .container {
+
       width: 100% !important;
+
       max-width: 100% !important;
+
     }
+
+
 
     .tab-content {
+
       width: 100% !important;
+
       max-width: 100% !important;
+
       overflow-x: hidden !important;
+
     }
+
+
 
     .proxima-card,
+
     .historico-card {
+
       flex-direction: column !important;
+
       /* empilha imagem em cima e texto abaixo no celular */
+
       gap: 14px !important;
+
       padding: 12px !important;
+
       width: 100% !important;
+
       max-width: 100% !important;
+
       box-sizing: border-box !important;
+
     }
+
+
 
     .historico-content,
+
     .proxima-content {
+
       width: 100% !important;
+
       max-width: 100% !important;
+
       box-sizing: border-box !important;
+
     }
+
+
 
     .proxima-thumb,
+
     .historico-thumb {
+
       width: 100% !important;
+
       /* largura total */
+
       max-width: 100% !important;
+
       aspect-ratio: 16 / 9 !important;
+
       box-sizing: border-box !important;
+
     }
+
+
 
     .proxima-title,
+
     .historico-title {
+
       font-size: 14px !important;
+
       white-space: normal !important;
+
       word-break: break-word !important;
+
       overflow-wrap: break-word !important;
+
       /* permite quebra de linha em títulos longos */
+
     }
+
+
 
     .supporters-tooltip,
+
     .gifts-tooltip {
+
       max-width: min(220px, calc(100vw - 64px)) !important;
+
       left: 0 !important;
+
     }
+
+
 
     .timezone-badge {
+
       font-size: 9px !important;
+
       padding: 3px 6px !important;
+
     }
+
+
 
     .title-main {
+
       font-size: 20px !important;
+
     }
+
   }
+
+
+
+  /* ============ CALENDÁRIO SEMANAL DE VÍDEOS E PROGRAMAÇÃO ============ */
+
+  .programacao-semana-section {
+
+    margin-top: 3rem;
+
+    padding-top: 2rem;
+
+    border-top: 1px dashed rgba(23, 54, 87, 0.12);
+
+  }
+
+
+
+  .programacao-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 1.25rem;
+
+    flex-wrap: wrap;
+
+    gap: 0.5rem;
+
+  }
+
+
+
+  .programacao-header h3 {
+
+    font-size: 1.15rem;
+
+    font-weight: 800;
+
+    color: var(--brand-dark, #173657);
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin: 0;
+
+  }
+
+
+
+  .programacao-header h3 .material-symbols-rounded {
+
+    color: var(--brand-pink, #ea498b);
+
+    font-size: 22px;
+
+  }
+
+
+
+  .programacao-badge-tag {
+
+    font-size: 0.72rem;
+
+    font-weight: 700;
+
+    color: #64748b;
+
+    background: rgba(23, 54, 87, 0.05);
+
+    padding: 3px 10px;
+
+    border-radius: 9999px;
+
+  }
+
+
+
+  .calendario-semana-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(7, 1fr);
+
+    gap: 0.75rem;
+
+    margin-bottom: 1rem;
+
+  }
+
+
+
+  @media (max-width: 900px) {
+
+    .calendario-semana-grid {
+
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+
+    }
+
+  }
+
+
+
+  @media (max-width: 500px) {
+
+    .calendario-semana-grid {
+
+      grid-template-columns: 1fr;
+
+    }
+
+  }
+
+
+
+  .cal-dia-card {
+
+    background: #ffffff;
+
+    border: 1px solid rgba(23, 54, 87, 0.08);
+
+    border-radius: 14px;
+
+    padding: 0.85rem 0.65rem;
+
+    display: flex;
+
+    flex-direction: column;
+
+    min-height: 120px;
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+
+    position: relative;
+
+  }
+
+
+
+  .cal-dia-card:hover {
+
+    transform: translateY(-2px);
+
+    border-color: rgba(43, 184, 252, 0.4);
+
+    box-shadow: 0 4px 14px rgba(23, 54, 87, 0.06);
+
+  }
+
+
+
+  .cal-dia-card.tem-evento {
+
+    background: linear-gradient(180deg, #ffffff 0%, #fcf8fa 100%);
+
+    border: 1.5px solid rgba(234, 73, 139, 0.35);
+
+  }
+
+
+
+  .cal-dia-card.tem-evento:hover {
+
+    border-color: #ea498b;
+
+    box-shadow: 0 6px 18px rgba(234, 73, 139, 0.15);
+
+  }
+
+
+
+  .cal-dia-card.hoje {
+
+    border-color: var(--brand-blue, #2bb8fc);
+
+    box-shadow: 0 0 0 1px var(--brand-blue, #2bb8fc);
+
+  }
+
+
+
+  .cal-dia-header {
+
+    display: flex;
+
+    align-items: baseline;
+
+    justify-content: space-between;
+
+    margin-bottom: 0.5rem;
+
+    padding-bottom: 0.4rem;
+
+    border-bottom: 1px solid rgba(23, 54, 87, 0.05);
+
+  }
+
+
+
+  .cal-dia-nome {
+
+    font-size: 0.72rem;
+
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.03em;
+
+    color: #64748b;
+
+  }
+
+
+
+  .cal-dia-card.tem-evento .cal-dia-nome {
+
+    color: #ea498b;
+
+  }
+
+
+
+  .cal-dia-num {
+
+    font-size: 0.85rem;
+
+    font-weight: 800;
+
+    color: var(--brand-dark, #173657);
+
+  }
+
+
+
+  .cal-dia-vazio {
+
+    flex: 1;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 0.75rem;
+
+    color: #cbd5e1;
+
+    font-style: italic;
+
+  }
+
+
+
+  .cal-item-evento {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+
+    text-decoration: none;
+
+    color: inherit;
+
+    margin-top: 2px;
+
+  }
+
+
+
+  .cal-thumb-wrap {
+
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    background: #000;
+
+    margin-bottom: 4px;
+
+  }
+
+
+
+  .cal-thumb-wrap img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.3s ease;
+
+  }
+
+
+
+  .cal-item-evento:hover .cal-thumb-wrap img {
+
+    transform: scale(1.06);
+
+  }
+
+
+
+  
+  .thumb-tag-tipo {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    font-size: 0.65rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #ffffff;
+    background: linear-gradient(135deg, #ef4444, #ea498b);
+    padding: 2px 7px;
+    border-radius: 4px;
+    letter-spacing: 0.04em;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+    z-index: 2;
+    user-select: none;
+    line-height: 1.2;
+  }
+
+  .cal-tag-tipo {
+
+    position: absolute;
+
+    top: 4px;
+
+    left: 4px;
+
+    font-size: 0.6rem;
+
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+    color: #ffffff;
+
+    background: linear-gradient(135deg, #ef4444, #ea498b);
+
+    padding: 1px 5px;
+
+    border-radius: 4px;
+
+    letter-spacing: 0.03em;
+
+  }
+
+
+
+  .cal-tag-horario {
+
+    font-size: 0.68rem;
+
+    font-weight: 700;
+
+    color: #0284c7;
+
+    background: rgba(43, 184, 252, 0.12);
+
+    padding: 1px 5px;
+
+    border-radius: 4px;
+
+    width: fit-content;
+
+  }
+
+
+
+  .cal-evento-titulo {
+
+    font-size: 0.76rem;
+
+    font-weight: 700;
+
+    color: var(--brand-dark, #173657);
+
+    line-height: 1.3;
+
+    display: -webkit-box;
+
+    -webkit-line-clamp: 2;
+
+    -webkit-box-orient: vertical;
+
+    overflow: hidden;
+
+  }
+
+
+
+  .cal-item-evento:hover .cal-evento-titulo {
+
+    color: #ea498b;
+
+  }
+
+
+
 </style>
 
+
+
 <!--  -->
+
+
 
 <section class="cronograma-container">
+
   <div class="container">
+
     <!-- Header -->
+
     <div class="header">
+
       <div class="header-left">
+
         <span class="ping-dot-wrapper">
+
           <span class="ping-dot-ping"></span>
+
           <span class="ping-dot-solid"></span>
+
         </span>
+
         <div>
-          <h1 class="title-main">Agenda de Lives</h1>
-          <p id="atualizado-em" class="updated-label"></p>
+
+          <h1 class="title-main">Agenda de Conteúdos</h1>
+
+          <p id="atualizado-em" class="updated-label">Atualizada: Terça-feira, 03/11</p>
+
         </div>
+
       </div>
+
       <span id="fuso-info" class="timezone-badge"> Fuso: Brasília (UTC-3) </span>
+
     </div>
+
+
 
     <!-- TABS NAVIGATION -->
+
     <div class="tabs-nav">
+
       <button id="tab-agenda-btn" onclick="switchTab('agenda')" class="tab-btn active">Agenda</button>
+
       <button id="tab-historico-btn" onclick="switchTab('historico')" class="tab-btn">Histórico</button>
+
     </div>
+
+
 
     <!-- MAIN CONTAINER -->
+
     <div id="widget-content">
+
       <!-- TAB 1: AGENDA -->
+
       <div id="tab-agenda" class="tab-content has-live">
+
         {{ range hugo.Data.lives.live }}
+
           <div class="live-hoje-card">
+
             <img src="https://i.ytimg.com/vi/{{ .id }}/maxresdefault_live.jpg" alt="Live Cover">
+
             <div class="live-hoje-overlay"></div>
+
             <div class="live-hoje-content">
+
               <div class="live-hoje-badges-row">
+
                 <span class="badge-ao-vivo">
+
                   <span class="badge-ao-vivo-dot"></span>
+
                   AO VIVO
+
                 </span>
 
+
+
                 {{ with .snippet.description }}
+
                   {{ $category := replaceRE `^\[Categoria:\s*([^\]\r\n]+)\][\s\S]*$` "$1" . }}
+
                   {{ if ne $category . }}
+
                     <span class="badge-category overlay">{{ $category }}</span>
+
                   {{ end }}
+
                 {{ end }}
+
               </div>
+
               <h2 class="live-hoje-title">
+
                 {{ .title }}
+
               </h2>
+
               <div class="live-hoje-bottom-row">
+
                 <p class="live-hoje-date">
+
                   {{ with partial "format-sao-paulo-datetime.html" .liveStreamingDetails.scheduledStartTime }}
+
                     {{ .day }} ({{ .weekday }}) • {{ .time }} <span class="live-hoje-utc">(UTC-3)</span>
+
                   {{ end }}
+
+
 
                 </p>
+
                 <a href="https://www.youtube.com/watch?v={{ .id }}" target="_blank" rel="noopener noreferrer" class="btn-assistir">
+
                   Assistir
+
                   <svg class="icon-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+
                   </svg>
+
                 </a>
+
               </div>
+
             </div>
+
           </div>
+
         {{ end }}
 
+
+
         <!-- PRÓXIMAS LIVES -->
+
         <div>
-          <h3 class="section-title">Próximas Transmissões</h3>
+
+          <h3 class="section-title">Próximos Conteúdos & Novidades</h3>
+
           <div id="proximas-lives-list" class="list-stack">
+
             {{ range hugo.Data.lives.upcoming }}
+
               <div class="proxima-card">
+
                 <!-- Cover Image Left -->
+
                 <div class="proxima-thumb">
+
                   <img src="https://i.ytimg.com/vi/{{ .id }}/maxresdefault_live.jpg" alt="Cover">
+
                   <div class="proxima-platform-logo">
+
                     <svg style="width:20px;height:20px;color:#ef4444;flex-shrink:0" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.517 3.545 12 3.545 12 3.545s-7.517 0-9.388.508a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.871.508 9.388.508 9.388.508s7.517 0 9.388-.508a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+
                   </div>
+
                 </div>
+
+
 
                 <!-- Content Right -->
+
                 <div class="proxima-content">
+
                   <div>
+
                     <div class="proxima-day-row">
+
                       {{ with partial "format-sao-paulo-datetime.html" .liveStreamingDetails.scheduledStartTime }}
+
                         <span class="proxima-day">{{ .day }} ({{ .weekday }})</span>
+
                         <span class="proxima-time">• {{ .time }}</span>
+
                       {{ end }}
+
                       
+
                     </div>
+
                     <h4 class="proxima-title">{{ .snippet.title }}</h4>
+
                   </div>
+
                   <div class="proxima-bottom-row">
+
                     {{ with .snippet.description }}
+
                       {{ $category := replaceRE `^\[Categoria:\s*([^\]\r\n]+)\][\s\S]*$` "$1" . }}
+
                       {{ if ne $category . }}
+
                         <span class="badge-category">{{ $category }}</span>
+
                       {{ end }}
+
                     {{ end }}
+
                     
+
                     <a href="https://www.youtube.com/watch?v={{ .id }}" target="_blank" rel="noopener noreferrer" class="link-ver">
+
                       Ver link
+
                       <svg class="icon-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+
                       </svg>
+
                     </a>
+
                   </div>
+
                 </div>
+
               </div>
+
             {{ end }}
+
           </div>
+
         </div>
+
+
+
+        <!-- CALENDÁRIO SEMANAL DE VÍDEOS & PROGRAMAÇÃO -->
+
+        <div class="programacao-semana-section">
+
+          <div class="programacao-header">
+
+            <h3>
+
+              <span class="material-symbols-rounded">calendar_month</span>
+
+              Programação da Semana
+
+            </h3>
+
+            <span class="programacao-badge-tag">Novos Vídeos & Estreias</span>
+
+          </div>
+
+
+
+          <div id="calendario-semana-container" class="calendario-semana-grid">
+
+            <!-- Renderizado dinamicamente via JS -->
+
+          </div>
+
+        </div>
+
       </div>
+
+
 
       <!-- TAB 2: HISTÓRICO -->
+
       {{ if hugo.Data.lives.history }}
+
       <div id="tab-historico" class="tab-content">
+
         <div id="historico-list">
+
           {{ range hugo.Data.lives.history }}
+
             {{ $duration := or .duration .horas .snippet.duration }}
+
             {{ $liveLink := or .link (and (ne .id "") (printf "https://www.youtube.com/watch?v=%s" .id)) }}
+
             {{ $rawDesc := or .description .snippet.description }}
+
             {{ $category := "" }}
+
             {{ $cleanDesc := "" }}
+
             {{ if $rawDesc }}
+
               {{ $catMatch := replaceRE `^\[Categoria:\s*([^\]\r\n]+)\][\s\S]*$` "$1" $rawDesc }}
+
               {{ if ne $catMatch $rawDesc }}
+
                 {{ $category = $catMatch }}
+
                 {{ $cleanDesc = replaceRE `^\[Categoria:\s*[^\]\r\n]+\]\s*` "" $rawDesc }}
+
               {{ else }}
+
                 {{ $cleanDesc = $rawDesc }}
+
               {{ end }}
+
               {{ $cleanDesc = index (split $cleanDesc "##") 0 }}
+
               {{ $cleanDesc = index (split $cleanDesc "http") 0 }}
+
               {{ $cleanDesc = strings.TrimSpace $cleanDesc }}
+
             {{ end }}
 
+
+
             <div class="historico-card">
+
               <!-- Cover Image Left -->
+
               <div class="historico-thumb">
+
                 {{ $coverImg := or .cover .image .capa }}
+
+                <span class="thumb-tag-tipo">Live</span>
                 {{ if $coverImg }}
+
                   <img src="{{ $coverImg }}" alt="Cover" onerror="this.onerror=null; this.src='/images/agenda-lives.png';">
+
                 {{ else if (ne .id "") }}
+
                   <img src="https://i.ytimg.com/vi/{{ .id }}/hqdefault.jpg" alt="Cover" onerror="this.onerror=null; this.src='/images/agenda-lives.png';">
+
                 {{ else }}
+
                   <img src="/images/agenda-lives.png" alt="Cover">
+
                 {{ end }}
+
                 <div class="proxima-platform-logo">
+
                   <svg style="width:20px;height:20px;color:#ef4444;flex-shrink:0" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.517 3.545 12 3.545 12 3.545s-7.517 0-9.388.508a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.871.508 9.388.508 9.388.508s7.517 0 9.388-.508a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+
                 </div>
+
               </div>
+
+
 
               <!-- Content Right -->
+
               <div class="historico-content">
+
                 <div>
+
                   <div class="historico-status-row">
+
                     {{ with partial "format-sao-paulo-datetime.html" .liveStreamingDetails.scheduledStartTime }}
+
                       <span class="historico-meta">{{ .dateWithYear }} ({{ .weekday }}) • YouTube</span>
+
                     {{ end }}
+
+
 
                     {{ with $duration }}
+
                       <span class="badge-duration">
+
                         <span class="material-symbols-rounded">schedule</span>
+
                         {{ . }}
+
                       </span>
+
                     {{ end }}
+
+
 
                     {{ with .supporters }}
+
                       {{ $count := len . }}
+
                       <div class="supporters-wrapper">
+
                         <span class="badge-supporters">
+
                           <span class="heart-icon">💛</span>
+
                           {{ if eq $count 1 }}1 apoiador{{ else }}{{ $count }} apoiadores{{ end }}
+
                         </span>
+
                         <div class="supporters-tooltip">
+
                           <ul class="supporters-list">
+
                             {{ range . }}
+
                               <li>{{ . }}</li>
+
                             {{ end }}
+
                           </ul>
+
                         </div>
+
                       </div>
+
                     {{ end }}
+
+
+
+                    {{ with (or .members .membros) }}
+
+                      {{ $count := len . }}
+
+                      <div class="members-wrapper">
+
+                        <span class="badge-members">
+
+                          <span class="member-icon">⭐</span>
+
+                          {{ if eq $count 1 }}1 membro{{ else }}{{ $count }} membros{{ end }}
+
+                        </span>
+
+                        <div class="members-tooltip">
+
+                          <ul class="members-list">
+
+                            {{ range . }}
+
+                              <li>{{ . }}</li>
+
+                            {{ end }}
+
+                          </ul>
+
+                        </div>
+
+                      </div>
+
+                    {{ end }}
+
+
 
                     {{ with .gifts }}
+
                       {{ $count := len . }}
+
                       <div class="gifts-wrapper">
+
                         <span class="badge-gifts">
+
                           <span class="gift-icon">🎁</span>
+
                           {{ if eq $count 1 }}1 presente{{ else }}{{ $count }} presentes{{ end }}
+
                         </span>
+
                         <div class="gifts-tooltip">
+
                           <ul class="gifts-list">
+
                             {{ range . }}
+
                               <li>{{ . }}</li>
+
                             {{ end }}
+
                           </ul>
+
                         </div>
+
                       </div>
+
                     {{ end }}
 
-                    <span class="badge-status realizada">Concluída</span>
+
+
+                    
+
                   </div>
 
+
+
                   {{ if $liveLink }}
+
                     <a href="{{ $liveLink }}" target="_blank" rel="noopener noreferrer" class="historico-link">
+
                       <h4 class="historico-title realizada">{{ or .snippet.title .title }}</h4>
+
                     </a>
+
                   {{ else }}
+
                     <h4 class="historico-title realizada">{{ or .snippet.title .title }}</h4>
+
                   {{ end }}
+
+
 
                   {{ with $cleanDesc }}
+
                     <p class="historico-desc">{{ . }}</p>
+
                   {{ end }}
+
                 </div>
+
+
 
                 <div class="historico-bottom-row">
+
                   <div>
+
                     {{ with $category }}
+
                       <span class="badge-category">{{ . }}</span>
+
                     {{ end }}
+
                   </div>
 
+
+
                   {{ if $liveLink }}
+
                     <a href="{{ $liveLink }}" target="_blank" rel="noopener noreferrer" class="link-ver">
+
                       Assistir gravação
+
                       <svg class="icon-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+
                       </svg>
+
                     </a>
+
                   {{ end }}
+
                 </div>
+
               </div>
+
             </div>
+
           {{ end }}
+
         </div>
+
       </div>
+
       {{ end }}
+
     </div>
+
+
 
     <!-- Footer inside widget -->
+
     <div class="footer">
+
       <p>Inscrições e novidades no canal principal.</p>
+
     </div>
+
   </div>
 
+
+
   <script>
+
     // SVG Logos
+
     const logos = {
+
       youtube: `<svg style="width:20px;height:20px;color:#ef4444;flex-shrink:0" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.517 3.545 12 3.545 12 3.545s-7.517 0-9.388.508a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.871.508 9.388.508 9.388.508s7.517 0 9.388-.508a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>`,
+
       twitch: `<svg style="width:20px;height:20px;color:#a855f7;flex-shrink:0" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>`,
+
     };
 
+
+
     // Category style generator
+
     function getCategoryBadge(category, isDarkOverlay = false) {
+
       if (!category) {
+
         return "";
+
       }
+
       const overlayClass = isDarkOverlay ? " overlay" : "";
+
       return `<span class="badge-category${overlayClass}">${category}</span>`;
+
     }
+
+
 
     // Active tab state
+
     let activeTab = "agenda";
 
+
+
     function switchTab(tab) {
+
       activeTab = tab;
+
       const agendaTab = document.getElementById("tab-agenda");
+
       const historicoTab = document.getElementById("tab-historico");
+
       const agendaBtn = document.getElementById("tab-agenda-btn");
+
       const historicoBtn = document.getElementById("tab-historico-btn");
 
+
+
       if (tab === "agenda") {
+
         agendaTab.classList.remove("hidden");
+
         historicoTab?.classList.add("hidden");
+
         agendaBtn.classList.add("active");
+
         historicoBtn.classList.remove("active");
+
       } else {
+
         agendaTab.classList.add("hidden");
+
         historicoTab?.classList.remove("hidden");
+
         historicoBtn.classList.add("active");
+
         agendaBtn.classList.remove("active");
+
       }
+
     }
 
-    // Load data from agenda.json
-    async function loadAgenda() {
-      try {
-        const response = await fetch("agenda.json?t=" + new Date().getTime());
-        if (!response.ok) throw new Error("Não foi possível carregar os dados.");
-        const data = await response.json();
 
-        // Render Atualizado em
-        if (data.atualizado) {
-          const dateParts = data.atualizado.split("/");
-          let dateStr = data.atualizado;
-          if (dateParts.length === 3) {
-            const dateObj = new Date(dateParts[2], dateParts[1] - 1, dateParts[0]);
-            const weekdays = [
-              "Domingo",
-              "Segunda-feira",
-              "Terça-feira",
-              "Quarta-feira",
-              "Quinta-feira",
-              "Sexta-feira",
-              "Sábado",
-            ];
-            const weekday = weekdays[dateObj.getDay()];
-            dateStr = `${weekday}, ${dateParts[0]}/${dateParts[1]}`;
+
+    
+
+    // Carregar e renderizar Calendário Semanal e mover para histórico se expirado
+
+    async function loadProgramacaoSemana() {
+
+      try {
+
+                const programados = [
+
+          {
+
+            "id": "como-animar-no-krita-10minutos",
+
+            "tipo": "video",
+
+            "titulo": "Como animar no Krita em 10 minutos (versão 5.3, para iniciantes)",
+
+            "capa": "/images/videos/como-animar-no-krita-10minutos_thumb1.png",
+
+            "categoria": "Tutorial Krita",
+
+            "dataHora": "2026-11-06T15:30:00-03:00",
+
+            "link": "https://www.youtube.com/@desenhandocommack"
+
           }
-          document.getElementById("atualizado-em").innerText = `Atualizada: ${dateStr}`;
+
+        ];
+
+
+
+        const agora = new Date();
+
+        const diasSemana = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"];
+
+        const nomesDiasCompletos = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"];
+
+
+
+        const diaAtualSemana = agora.getDay();
+
+        const diffSegunda = diaAtualSemana === 0 ? -6 : 1 - diaAtualSemana;
+
+        const inicioSemana = new Date(agora);
+
+        inicioSemana.setDate(agora.getDate() + diffSegunda);
+
+        inicioSemana.setHours(0, 0, 0, 0);
+
+
+
+        const diasDaSemanaObj = [];
+
+        for (let i = 0; i < 7; i++) {
+
+          const d = new Date(inicioSemana);
+
+          d.setDate(inicioSemana.getDate() + i);
+
+          diasDaSemanaObj.push(d);
+
         }
 
-        switchTab(activeTab);
-      } catch (error) {
-        console.error(error);
+
+
+        const container = document.getElementById("calendario-semana-container");
+
+        if (container) {
+
+          container.innerHTML = "";
+
+
+
+          diasDaSemanaObj.forEach((dataDia) => {
+
+            const diaNum = String(dataDia.getDate()).padStart(2, "0");
+
+            const mesNum = String(dataDia.getMonth() + 1).padStart(2, "0");
+
+            const diaSemanaNome = diasSemana[dataDia.getDay()];
+
+            const isHoje = dataDia.toDateString() === agora.toDateString();
+
+
+
+            const eventosDoDia = programados.filter(item => {
+
+              if (!item.dataHora) return false;
+
+              const dt = new Date(item.dataHora);
+
+              return dt.getFullYear() === dataDia.getFullYear() &&
+
+                     dt.getMonth() === dataDia.getMonth() &&
+
+                     dt.getDate() === dataDia.getDate();
+
+            });
+
+
+
+            const temEvento = eventosDoDia.length > 0;
+
+            const card = document.createElement("div");
+
+            card.className = `cal-dia-card ${temEvento ? 'tem-evento' : ''} ${isHoje ? 'hoje' : ''}`;
+
+
+
+            let eventosHtml = "";
+
+            if (temEvento) {
+
+              eventosDoDia.forEach(ev => {
+
+                const evDate = new Date(ev.dataHora);
+
+                const horaStr = evDate.toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" });
+
+                const ehPassado = agora >= evDate;
+
+
+
+                eventosHtml += `
+
+                  <a href="${ev.link || '#'}" target="_blank" rel="noopener noreferrer" class="cal-item-evento" title="${ev.titulo}">
+
+                    <div class="cal-thumb-wrap">
+
+                      <img src="${ev.capa}" alt="${ev.titulo}" onerror="this.src='/images/agenda-lives.png';">
+
+                      <span class="cal-tag-tipo">${ehPassado ? 'Lançado' : (ev.tipo === 'video' ? 'Vídeo' : 'Live')}</span>
+
+                    </div>
+
+                    <span class="cal-tag-horario">${horaStr}</span>
+
+                    <span class="cal-evento-titulo">${ev.titulo}</span>
+
+                  </a>
+
+                `;
+
+              });
+
+            } else {
+
+              eventosHtml = `<div class="cal-dia-vazio">Sem evento</div>`;
+
+            }
+
+
+
+            card.innerHTML = `
+
+              <div class="cal-dia-header">
+
+                <span class="cal-dia-nome">${diaSemanaNome}</span>
+
+                <span class="cal-dia-num">${diaNum}/${mesNum}</span>
+
+              </div>
+
+              ${eventosHtml}
+
+            `;
+
+
+
+            container.appendChild(card);
+
+          });
+
+        }
+
+
+
+        // Injetar em Próximos Conteúdos & Novidades se a data ainda for futura
+
+        const proximasList = document.getElementById("proximas-lives-list");
+
+        if (proximasList) {
+
+          programados.forEach(item => {
+
+            if (!item.dataHora) return;
+
+            const dt = new Date(item.dataHora);
+
+            if (agora < dt) {
+
+              const idCard = "prox-prog-" + (item.id || item.titulo.replace(/\s+/g, '-'));
+
+              if (!document.getElementById(idCard)) {
+
+                const horaFormatada = dt.toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" });
+
+                const diaFormatado = String(dt.getDate()).padStart(2, "0") + "/" + String(dt.getMonth() + 1).padStart(2, "0");
+
+                const diaSemana = nomesDiasCompletos[dt.getDay()];
+
+
+
+                const proxCard = document.createElement("div");
+
+                proxCard.id = idCard;
+
+                proxCard.className = "proxima-card";
+
+                proxCard.innerHTML = `
+
+                  <div class="proxima-thumb">
+
+                    <img src="${item.capa}" alt="${item.titulo}" onerror="this.src='/images/agenda-lives.png';">
+
+                    <div class="proxima-platform-logo">
+
+                      <svg style="width:20px;height:20px;color:#ef4444;flex-shrink:0" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.517 3.545 12 3.545 12 3.545s-7.517 0-9.388.508a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.871.508 9.388.508 9.388.508s7.517 0 9.388-.508a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+
+                    </div>
+
+                  </div>
+
+                  <div class="proxima-content">
+
+                    <div>
+
+                      <div class="proxima-day-row">
+
+                        <span class="proxima-day">${diaFormatado} (${diaSemana})</span>
+
+                        <span class="proxima-time">• ${horaFormatada}</span>
+
+                      </div>
+
+                      <h4 class="proxima-title">${item.titulo}</h4>
+
+                    </div>
+
+                    <div class="proxima-bottom-row">
+
+                      <span class="badge-category" style="background: rgba(234, 73, 139, 0.12); color: #ea498b; border: 1px solid rgba(234, 73, 139, 0.3);">${item.categoria || 'Vídeo'}</span>
+
+                      <a href="${item.link || '#'}" target="_blank" rel="noopener noreferrer" class="link-ver">
+
+                        Ver canal
+
+                        <svg class="icon-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+
+                        </svg>
+
+                      </a>
+
+                    </div>
+
+                  </div>
+
+                `;
+
+                proximasList.appendChild(proxCard);
+
+              }
+
+            }
+
+          });
+
+        }
+
+
+
+        const historicoList = document.getElementById("historico-list");
+
+        if (historicoList) {
+
+          programados.forEach(item => {
+
+            if (!item.dataHora) return;
+
+            const dt = new Date(item.dataHora);
+
+            if (agora >= dt) {
+
+              const idCard = "hist-prog-" + (item.id || item.titulo.replace(/\s+/g, '-'));
+
+              if (!document.getElementById(idCard)) {
+
+                const diaFormatado = String(dt.getDate()).padStart(2, "0") + "/" + String(dt.getMonth() + 1).padStart(2, "0") + "/" + dt.getFullYear();
+
+                const diaSemana = nomesDiasCompletos[dt.getDay()];
+
+
+
+                const histCard = document.createElement("div");
+
+                histCard.id = idCard;
+
+                histCard.className = "historico-card";
+
+                histCard.innerHTML = `
+
+                  <div class="historico-thumb">
+
+                    <img src="${item.capa}" alt="${item.titulo}" onerror="this.onerror=null; this.src='/images/agenda-lives.png';">
+
+                    <div class="proxima-platform-logo">
+
+                      <svg style="width:20px;height:20px;color:#ef4444;flex-shrink:0" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.517 3.545 12 3.545 12 3.545s-7.517 0-9.388.508a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.871.508 9.388.508 9.388.508s7.517 0 9.388-.508a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+
+                    </div>
+
+                  </div>
+
+                  <div class="historico-content">
+
+                    <div>
+
+                      <div class="historico-status-row">
+
+                        <span class="historico-meta">${diaFormatado} (${diaSemana}) • YouTube</span>
+
+                        
+
+                      </div>
+
+                      <a href="${item.link || '#'}" target="_blank" rel="noopener noreferrer" class="historico-link">
+
+                        <h4 class="historico-title realizada">${item.titulo}</h4>
+
+                      </a>
+
+                    </div>
+
+                  </div>
+
+                `;
+
+                historicoList.insertBefore(histCard, historicoList.firstChild);
+
+              }
+
+            }
+
+          });
+
+        }
+
+      } catch (e) {
+
+        console.error("Erro ao carregar programação:", e);
+
       }
+
     }
 
+
+
+    // Load data from agenda.json
+
+    async function loadAgenda() {
+
+      try {
+
+        const response = await fetch("agenda.json?t=" + new Date().getTime());
+
+        if (!response.ok) throw new Error("Não foi possível carregar os dados.");
+
+        const data = await response.json();
+
+
+
+        // Render Atualizado em
+
+        if (data.atualizado) {
+
+          const dateParts = data.atualizado.split("/");
+
+          let dateStr = data.atualizado;
+
+          if (dateParts.length === 3) {
+
+            const dateObj = new Date(dateParts[2], dateParts[1] - 1, dateParts[0]);
+
+            const weekdays = [
+
+              "Domingo",
+
+              "Segunda-feira",
+
+              "Terça-feira",
+
+              "Quarta-feira",
+
+              "Quinta-feira",
+
+              "Sexta-feira",
+
+              "Sábado",
+
+            ];
+
+            const weekday = weekdays[dateObj.getDay()];
+
+            dateStr = `${weekday}, ${dateParts[0]}/${dateParts[1]}`;
+
+          }
+
+          document.getElementById("atualizado-em").innerText = `Atualizada: ${dateStr}`;
+
+        }
+
+
+
+        switchTab(activeTab);
+
+      } catch (error) {
+
+        console.error(error);
+
+      }
+
+    }
+
+
+
     // Initialize
-    window.addEventListener("DOMContentLoaded", loadAgenda);
+
+    window.addEventListener("DOMContentLoaded", () => {
+
+      loadAgenda();
+
+      loadProgramacaoSemana();
+
+    });
+
   </script>
+
 </section>
+
+
 
 <!--  -->
 
+
+
 {{ end }}
+
