@@ -3558,31 +3558,31 @@
 
       try {
 
-                const programados = [
-
+                        const programados = [
           {
-
-            "id": "como-animar-no-krita-10minutos",
-
-            "tipo": "video",
-
-            "titulo": "Como animar no Krita em 10 minutos (versão 5.3, para iniciantes)",
-
-            "capa": "/images/videos/como-animar-no-krita-10minutos_thumb1.png",
-
-            "categoria": "Tutorial Krita",
-
-            "dataHora": "2026-11-06T15:30:00-03:00",
-
+            "id": "live-desenhando-de-boa-04nov2026",
+            "tipo": "live",
+            "titulo": "Desenhando de boa",
+            "capa": "/images/lives/banner-dia-de-live-no-desenhandocommack.png",
+            "categoria": "Desenho",
+            "dataHora": "2026-11-04T18:30:00-03:00",
             "link": "https://www.youtube.com/@desenhandocommack"
-
+          },
+          {
+            "id": "como-animar-no-krita-10minutos",
+            "tipo": "video",
+            "titulo": "Como animar no Krita em 10 minutos (versão 5.3, para iniciantes)",
+            "capa": "/images/videos/como-animar-no-krita-10minutos_thumb1.png",
+            "categoria": "Tutorial Krita",
+            "dataHora": "2026-11-06T15:30:00-03:00",
+            "link": "https://www.youtube.com/@desenhandocommack"
           }
-
         ];
 
 
 
         const agora = new Date();
+        programados.sort((a, b) => new Date(a.dataHora) - new Date(b.dataHora));
 
         const diasSemana = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"];
 
@@ -3764,6 +3764,7 @@
 
                   <div class="proxima-thumb">
 
+                    <span class="thumb-tag-tipo">${item.tipo === "live" ? "Live" : "Vídeo"}</span>
                     <img src="${item.capa}" alt="${item.titulo}" onerror="this.src='/images/agenda-lives.png';">
 
                     <div class="proxima-platform-logo">
