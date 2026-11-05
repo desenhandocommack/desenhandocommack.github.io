@@ -2492,11 +2492,11 @@
 
   .programacao-semana-section {
 
-    margin-top: 3rem;
+    margin-top: 1rem;
 
-    padding-top: 2rem;
+    padding-top: 0;
 
-    border-top: 1px dashed rgba(23, 54, 87, 0.12);
+    border-top: none;
 
   }
 
@@ -2641,6 +2641,34 @@
   }
 
 
+
+  
+  /* Estilo quando o evento do dia já foi Lançado/Realizado */
+  .cal-dia-card.evento-passado {
+    background: linear-gradient(180deg, #ffffff 0%, #f0fdf4 100%) !important;
+    border: 1.5px solid #22c55e !important;
+    box-shadow: 0 4px 14px rgba(34, 197, 94, 0.12) !important;
+  }
+
+  .cal-dia-card.evento-passado:hover {
+    border-color: #16a34a !important;
+    box-shadow: 0 6px 18px rgba(34, 197, 94, 0.22) !important;
+  }
+
+  .cal-dia-card.evento-passado .cal-dia-nome {
+    color: #16a34a !important;
+  }
+
+  .cal-tag-tipo.tag-lancado {
+    background: linear-gradient(135deg, #16a34a, #22c55e) !important;
+    color: #ffffff !important;
+    box-shadow: 0 2px 6px rgba(22, 163, 74, 0.35);
+  }
+
+  .cal-tag-horario.horario-lancado {
+    color: #16a34a !important;
+    background: rgba(34, 197, 94, 0.15) !important;
+  }
 
   .cal-dia-card.tem-evento {
 
@@ -3040,100 +3068,6 @@
           </div>
 
         {{ end }}
-
-
-
-        <!-- PRÓXIMAS LIVES -->
-
-        <div>
-
-          <h3 class="section-title">Próximos Conteúdos & Novidades</h3>
-
-          <div id="proximas-lives-list" class="list-stack">
-
-            {{ range hugo.Data.lives.upcoming }}
-
-              <div class="proxima-card">
-
-                <!-- Cover Image Left -->
-
-                <div class="proxima-thumb">
-
-                  <img src="https://i.ytimg.com/vi/{{ .id }}/maxresdefault_live.jpg" alt="Cover">
-
-                  <div class="proxima-platform-logo">
-
-                    <svg style="width:20px;height:20px;color:#ef4444;flex-shrink:0" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.517 3.545 12 3.545 12 3.545s-7.517 0-9.388.508a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.871.508 9.388.508 9.388.508s7.517 0 9.388-.508a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-
-                  </div>
-
-                </div>
-
-
-
-                <!-- Content Right -->
-
-                <div class="proxima-content">
-
-                  <div>
-
-                    <div class="proxima-day-row">
-
-                      {{ with partial "format-sao-paulo-datetime.html" .liveStreamingDetails.scheduledStartTime }}
-
-                        <span class="proxima-day">{{ .day }} ({{ .weekday }})</span>
-
-                        <span class="proxima-time">• {{ .time }}</span>
-
-                      {{ end }}
-
-                      
-
-                    </div>
-
-                    <h4 class="proxima-title">{{ .snippet.title }}</h4>
-
-                  </div>
-
-                  <div class="proxima-bottom-row">
-
-                    {{ with .snippet.description }}
-
-                      {{ $category := replaceRE `^\[Categoria:\s*([^\]\r\n]+)\][\s\S]*$` "$1" . }}
-
-                      {{ if ne $category . }}
-
-                        <span class="badge-category">{{ $category }}</span>
-
-                      {{ end }}
-
-                    {{ end }}
-
-                    
-
-                    <a href="https://www.youtube.com/watch?v={{ .id }}" target="_blank" rel="noopener noreferrer" class="link-ver">
-
-                      Ver link
-
-                      <svg class="icon-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
-
-                      </svg>
-
-                    </a>
-
-                  </div>
-
-                </div>
-
-              </div>
-
-            {{ end }}
-
-          </div>
-
-        </div>
 
 
 
@@ -3653,10 +3587,10 @@
 
 
             const temEvento = eventosDoDia.length > 0;
+            const todosPassados = temEvento && eventosDoDia.every(ev => agora >= new Date(ev.dataHora));
 
             const card = document.createElement("div");
-
-            card.className = `cal-dia-card ${temEvento ? 'tem-evento' : ''} ${isHoje ? 'hoje' : ''}`;
+            card.className = `cal-dia-card ${temEvento ? 'tem-evento' : ''} ${todosPassados ? 'evento-passado' : ''} ${isHoje ? 'hoje' : ''}`;
 
 
 
@@ -3682,11 +3616,11 @@
 
                       <img src="${ev.capa}" alt="${ev.titulo}" onerror="this.src='/images/agenda-lives.png';">
 
-                      <span class="cal-tag-tipo">${ehPassado ? 'Lançado' : (ev.tipo === 'video' ? 'Vídeo' : 'Live')}</span>
+                      <span class="cal-tag-tipo ${ehPassado ? 'tag-lancado' : ''}">${ehPassado ? (ev.tipo === 'live' ? 'Realizada' : 'Lançado') : (ev.tipo === 'video' ? 'Vídeo' : 'Live')}</span>
 
                     </div>
 
-                    <span class="cal-tag-horario">${horaStr}</span>
+                    <span class="cal-tag-horario ${ehPassado ? 'horario-lancado' : ''}">${horaStr}</span>
 
                     <span class="cal-evento-titulo">${ev.titulo}</span>
 
@@ -3726,102 +3660,6 @@
 
         }
 
-
-
-        // Injetar em Próximos Conteúdos & Novidades se a data ainda for futura
-
-        const proximasList = document.getElementById("proximas-lives-list");
-
-        if (proximasList) {
-
-          programados.forEach(item => {
-
-            if (!item.dataHora) return;
-
-            const dt = new Date(item.dataHora);
-
-            if (agora < dt) {
-
-              const idCard = "prox-prog-" + (item.id || item.titulo.replace(/\s+/g, '-'));
-
-              if (!document.getElementById(idCard)) {
-
-                const horaFormatada = dt.toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" });
-
-                const diaFormatado = String(dt.getDate()).padStart(2, "0") + "/" + String(dt.getMonth() + 1).padStart(2, "0");
-
-                const diaSemana = nomesDiasCompletos[dt.getDay()];
-
-
-
-                const proxCard = document.createElement("div");
-
-                proxCard.id = idCard;
-
-                proxCard.className = "proxima-card";
-
-                proxCard.innerHTML = `
-
-                  <div class="proxima-thumb">
-
-                    <span class="thumb-tag-tipo">${item.tipo === "live" ? "Live" : "Vídeo"}</span>
-                    <img src="${item.capa}" alt="${item.titulo}" onerror="this.src='/images/agenda-lives.png';">
-
-                    <div class="proxima-platform-logo">
-
-                      <svg style="width:20px;height:20px;color:#ef4444;flex-shrink:0" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.517 3.545 12 3.545 12 3.545s-7.517 0-9.388.508a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.871.508 9.388.508 9.388.508s7.517 0 9.388-.508a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-
-                    </div>
-
-                  </div>
-
-                  <div class="proxima-content">
-
-                    <div>
-
-                      <div class="proxima-day-row">
-
-                        <span class="proxima-day">${diaFormatado} (${diaSemana})</span>
-
-                        <span class="proxima-time">• ${horaFormatada}</span>
-
-                      </div>
-
-                      <h4 class="proxima-title">${item.titulo}</h4>
-
-                    </div>
-
-                    <div class="proxima-bottom-row">
-
-                      <span class="badge-category" style="background: rgba(234, 73, 139, 0.12); color: #ea498b; border: 1px solid rgba(234, 73, 139, 0.3);">${item.categoria || 'Vídeo'}</span>
-
-                      <a href="${item.link || '#'}" target="_blank" rel="noopener noreferrer" class="link-ver">
-
-                        Ver canal
-
-                        <svg class="icon-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
-
-                        </svg>
-
-                      </a>
-
-                    </div>
-
-                  </div>
-
-                `;
-
-                proximasList.appendChild(proxCard);
-
-              }
-
-            }
-
-          });
-
-        }
 
 
 
