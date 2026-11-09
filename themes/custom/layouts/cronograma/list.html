@@ -3501,44 +3501,48 @@
 
       try {
 
-                                const programados = [
-          {
-            "id": "live-desenhando-de-boa-04nov2026",
-            "tipo": "live",
-            "titulo": "Desenhando de boa",
-            "capa": "/images/lives/banner-dia-de-live-no-desenhandocommack.png",
-            "categoria": "Desenho",
-            "dataHora": "2026-11-04T18:30:00-03:00",
-            "link": "https://www.youtube.com/@desenhandocommack"
-          },
-          {
-            "id": "como-animar-no-krita-10minutos",
-            "tipo": "video",
-            "titulo": "Como animar no Krita em 10 minutos (versão 5.3, para iniciantes)",
-            "capa": "/images/videos/como-animar-no-krita-10minutos_thumb1.png",
-            "categoria": "Tutorial Krita",
-            "dataHora": "2026-11-06T15:30:00-03:00",
-            "link": "https://www.youtube.com/@desenhandocommack"
-          },
-          {
-            "id": "live-desenhando-cartoons-no-krita-10nov2026",
-            "tipo": "live",
-            "titulo": "Desenhando cartoons no Krita",
-            "capa": "/images/lives/desenhe-comigo-lives.png",
-            "categoria": "Desenho",
-            "dataHora": "2026-11-10T19:30:00-03:00",
-            "link": "https://www.youtube.com/@desenhandocommack"
-          },
-          {
-            "id": "video-desenhando-um-personagem-do-zero-13nov2026",
-            "tipo": "video",
-            "titulo": "Desenhando um personagem do zero no Krita (meu processo completo)",
-            "capa": "/images/videos/desenhando-um-personagem-do-zero_thumb1.png",
-            "categoria": "Processo Completo",
-            "dataHora": "2026-11-13T15:30:00-03:00",
-            "link": "https://www.youtube.com/@desenhandocommack"
-          }
-        ];
+                                        const programados = [
+  {
+    "id": "live-desenhando-de-boa-04nov2026",
+    "tipo": "live",
+    "categoria": "Desenho",
+    "capa": "/images/lives/banner-dia-de-live-no-desenhandocommack.png",
+    "link": "https://www.youtube.com/@desenhandocommack",
+    "dataHora": "2026-11-04T18:30:00-03:00",
+    "titulo": "Desenhando de boa",
+    "descricao": "Testando as novas configurações da live enquanto rabisco desenhos aleatórios e converso com o chat."
+  },
+  {
+    "id": "como-animar-no-krita-10minutos",
+    "tipo": "video",
+    "categoria": "Tutorial Krita",
+    "capa": "/images/videos/como-animar-no-krita-10minutos_thumb1.png",
+    "link": "https://www.youtube.com/@desenhandocommack",
+    "dataHora": "2026-11-06T15:30:00-03:00",
+    "titulo": "Como animar no Krita em 10 minutos (versão 5.3, para iniciantes)",
+    "descricao": "Aprenda a animar no Krita de forma rápida, simples e sem travar na interface do Krita. Neste guia prático de 10 minutos para o Krita 5.3 eu vou te mostrar a linha do tempo de animação, as Casca de Cebola (Onion Skin) e também a como exportar sua primeira animação 2D."
+  },
+  {
+    "id": "live-desenhando-cartoons-no-krita-10nov2026",
+    "tipo": "live",
+    "categoria": "Desenho",
+    "capa": "/images/lives/desenhe-comigo-lives.png",
+    "link": "https://www.youtube.com/@desenhandocommack",
+    "dataHora": "2026-11-10T19:30:00-03:00",
+    "titulo": "Desenhando cartoons no Krita",
+    "descricao": "Live de desenho focada em cartoons, criação e técnicas de traço no Krita."
+  },
+  {
+    "id": "video-desenhando-um-personagem-do-zero-13nov2026",
+    "tipo": "video",
+    "categoria": "Processo Completo",
+    "capa": "/images/videos/desenhando-um-personagem-do-zero_thumb1.png",
+    "link": "https://www.youtube.com/@desenhandocommack",
+    "dataHora": "2026-11-13T15:30:00-03:00",
+    "titulo": "Desenhando um personagem do zero no Krita (meu processo completo)",
+    "descricao": "Acompanhe comigo o processo completo desenhando um personagem no Krita do zero, passando pelo rascunho solto, lineart limpa e até fazendo a pintura com aquela sombra maneira pro nosso desenho."
+  }
+];
 
 
 
@@ -3740,13 +3744,35 @@
 
                         <span class="historico-meta">${diaFormatado} (${diaSemana}) • YouTube</span>
 
-                        
-
                       </div>
 
                       <a href="${item.link || '#'}" target="_blank" rel="noopener noreferrer" class="historico-link">
 
                         <h4 class="historico-title realizada">${item.titulo}</h4>
+
+                      </a>
+
+                      ${item.descricao ? `<p class="historico-desc">${item.descricao}</p>` : ''}
+
+                    </div>
+
+                    <div class="historico-bottom-row">
+
+                      <div>
+
+                        ${item.categoria ? `<span class="badge-category">${item.categoria}</span>` : ''}
+
+                      </div>
+
+                      <a href="${item.link || '#'}" target="_blank" rel="noopener noreferrer" class="link-ver">
+
+                        ${item.tipo === 'video' ? 'Assistir vídeo' : 'Assistir gravação'}
+
+                        <svg class="icon-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+
+                        </svg>
 
                       </a>
 
