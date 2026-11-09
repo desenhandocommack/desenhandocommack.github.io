@@ -16,5 +16,23 @@
     "link": "https://www.youtube.com/@desenhandocommack",
     "dataHora": "2026-11-06T15:30:00-03:00",
     "titulo": "Como animar no Krita em 10 minutos (versão 5.3, para iniciantes)"
+  },
+  {
+    "id": "live-desenhando-cartoons-no-krita-10nov2026",
+    "tipo": "live",
+    "categoria": "Desenho",
+    "capa": "/images/lives/desenhe-comigo-lives.png",
+    "link": "https://www.youtube.com/@desenhandocommack",
+    "dataHora": "2026-11-10T19:30:00-03:00",
+    "titulo": "Desenhando cartoons no Krita"
+  },
+  {
+    "id": "video-desenhando-um-personagem-do-zero-13nov2026",
+    "tipo": "video",
+    "categoria": "Processo Completo",
+    "capa": "/images/videos/desenhando-um-personagem-do-zero_thumb1.png",
+    "link": "https://www.youtube.com/@desenhandocommack",
+    "dataHora": "2026-11-13T15:30:00-03:00",
+    "titulo": "Desenhando um personagem do zero no Krita (meu processo completo)"
   }
 ]

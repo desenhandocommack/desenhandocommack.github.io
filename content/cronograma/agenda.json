@@ -1,5 +1,5 @@
 {
-  "atualizado": "03/11/2026",
+  "atualizado": "09/11/2026",
   "aoVivo": {
     "ativo": false,
     "titulo": null,
@@ -15,13 +15,13 @@
   "proximas": [
     {
       "dia": "Terça-feira",
-      "data": "01/09",
-      "capa": "images/image2.png",
-      "horario": "19:00",
+      "data": "10/11",
+      "capa": "/images/lives/desenhe-comigo-lives.png",
+      "horario": "19:30",
       "categoria": "Desenho",
-      "titulo": "Testando meus pincéis no Krita",
+      "titulo": "Desenhando cartoons no Krita",
       "plataforma": "YouTube",
-      "link": "https://www.youtube.com/@desenhandocommack/streams"
+      "link": "https://www.youtube.com/@desenhandocommack"
     }
   ],
   "historico": [
@@ -48,3 +48,4 @@
     }
   ]
 }
+

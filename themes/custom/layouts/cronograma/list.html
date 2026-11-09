@@ -2659,6 +2659,15 @@
     color: #16a34a !important;
   }
 
+  
+  /* Tag Azul para VÍDEO */
+  .cal-tag-tipo.tag-video,
+  .thumb-tag-tipo.tag-video {
+    background: linear-gradient(135deg, #0284c7, #2bb8fc) !important;
+    color: #ffffff !important;
+    box-shadow: 0 2px 6px rgba(2, 132, 199, 0.35);
+  }
+
   .cal-tag-tipo.tag-lancado {
     background: linear-gradient(135deg, #16a34a, #22c55e) !important;
     color: #ffffff !important;
@@ -2961,7 +2970,7 @@
 
           <h1 class="title-main">Agenda de Conteúdos</h1>
 
-          <p id="atualizado-em" class="updated-label">Atualizada: Terça-feira, 03/11</p>
+          <p id="atualizado-em" class="updated-label">Atualizada: Segunda-feira, 09/11</p>
 
         </div>
 
@@ -3492,7 +3501,7 @@
 
       try {
 
-                        const programados = [
+                                const programados = [
           {
             "id": "live-desenhando-de-boa-04nov2026",
             "tipo": "live",
@@ -3509,6 +3518,24 @@
             "capa": "/images/videos/como-animar-no-krita-10minutos_thumb1.png",
             "categoria": "Tutorial Krita",
             "dataHora": "2026-11-06T15:30:00-03:00",
+            "link": "https://www.youtube.com/@desenhandocommack"
+          },
+          {
+            "id": "live-desenhando-cartoons-no-krita-10nov2026",
+            "tipo": "live",
+            "titulo": "Desenhando cartoons no Krita",
+            "capa": "/images/lives/desenhe-comigo-lives.png",
+            "categoria": "Desenho",
+            "dataHora": "2026-11-10T19:30:00-03:00",
+            "link": "https://www.youtube.com/@desenhandocommack"
+          },
+          {
+            "id": "video-desenhando-um-personagem-do-zero-13nov2026",
+            "tipo": "video",
+            "titulo": "Desenhando um personagem do zero no Krita (meu processo completo)",
+            "capa": "/images/videos/desenhando-um-personagem-do-zero_thumb1.png",
+            "categoria": "Processo Completo",
+            "dataHora": "2026-11-13T15:30:00-03:00",
             "link": "https://www.youtube.com/@desenhandocommack"
           }
         ];
@@ -3616,7 +3643,7 @@
 
                       <img src="${ev.capa}" alt="${ev.titulo}" onerror="this.src='/images/agenda-lives.png';">
 
-                      <span class="cal-tag-tipo ${ehPassado ? 'tag-lancado' : ''}">${ehPassado ? (ev.tipo === 'live' ? 'Realizada' : 'Lançado') : (ev.tipo === 'video' ? 'Vídeo' : 'Live')}</span>
+                      <span class="cal-tag-tipo ${ehPassado ? 'tag-lancado' : (ev.tipo === 'video' ? 'tag-video' : '')}">${ehPassado ? (ev.tipo === 'live' ? 'Realizada' : 'Lançado') : (ev.tipo === 'video' ? 'Vídeo' : 'Live')}</span>
 
                     </div>
 
@@ -3694,7 +3721,7 @@
                 histCard.innerHTML = `
 
                   <div class="historico-thumb">
-
+                    <span class="thumb-tag-tipo ${item.tipo === 'video' ? 'tag-video' : ''}">${item.tipo === 'video' ? 'Vídeo' : 'Live'}</span>
                     <img src="${item.capa}" alt="${item.titulo}" onerror="this.onerror=null; this.src='/images/agenda-lives.png';">
 
                     <div class="proxima-platform-logo">
