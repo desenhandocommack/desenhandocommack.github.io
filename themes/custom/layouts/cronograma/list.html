@@ -2643,40 +2643,59 @@
 
 
   
-  /* Estilo quando o evento do dia já foi Lançado/Realizado */
+    /* Estilo quando o evento do dia já foi Lançado/Realizado: Card Verde */
   .cal-dia-card.evento-passado {
     background: linear-gradient(180deg, #ffffff 0%, #f0fdf4 100%) !important;
     border: 1.5px solid #22c55e !important;
-    box-shadow: 0 4px 14px rgba(34, 197, 94, 0.12) !important;
+    box-shadow: 0 4px 14px rgba(34, 197, 94, 0.15) !important;
+    position: relative;
   }
 
   .cal-dia-card.evento-passado:hover {
     border-color: #16a34a !important;
-    box-shadow: 0 6px 18px rgba(34, 197, 94, 0.22) !important;
+    box-shadow: 0 6px 20px rgba(34, 197, 94, 0.25) !important;
   }
 
   .cal-dia-card.evento-passado .cal-dia-nome {
-    color: #16a34a !important;
+    color: #15803d !important;
+    font-weight: 800;
   }
 
-  
-  /* Tag Azul para VÍDEO */
-  .cal-tag-tipo.tag-video,
-  .thumb-tag-tipo.tag-video {
-    background: linear-gradient(135deg, #0284c7, #2bb8fc) !important;
-    color: #ffffff !important;
-    box-shadow: 0 2px 6px rgba(2, 132, 199, 0.35);
+  /* Overlay de 55% de opacidade para destacar a conclusão */
+  .cal-thumb-wrap .cal-thumb-overlay-concluido {
+    position: absolute;
+    inset: 0;
+    background: rgba(23, 54, 87, 0.55);
+    z-index: 1;
+    pointer-events: none;
+    transition: background 0.2s ease;
   }
 
+  .cal-item-evento:hover .cal-thumb-overlay-concluido {
+    background: rgba(23, 54, 87, 0.40);
+  }
+
+  /* Tag Verde com ícone de check */
   .cal-tag-tipo.tag-lancado {
-    background: linear-gradient(135deg, #16a34a, #22c55e) !important;
+    background: linear-gradient(135deg, #15803d, #22c55e) !important;
     color: #ffffff !important;
-    box-shadow: 0 2px 6px rgba(22, 163, 74, 0.35);
+    box-shadow: 0 2px 8px rgba(21, 128, 61, 0.45);
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    z-index: 2;
+  }
+
+  .cal-tag-tipo.tag-lancado .check-icon {
+    font-size: 11px;
+    line-height: 1;
+    font-weight: 900;
   }
 
   .cal-tag-horario.horario-lancado {
-    color: #16a34a !important;
+    color: #15803d !important;
     background: rgba(34, 197, 94, 0.15) !important;
+    border: 1px solid rgba(34, 197, 94, 0.3);
   }
 
   .cal-dia-card.tem-evento {
@@ -3501,7 +3520,7 @@
 
       try {
 
-                                        const programados = [
+                                                                const programados = [
   {
     "id": "live-desenhando-de-boa-04nov2026",
     "tipo": "live",
@@ -3523,14 +3542,18 @@
     "descricao": "Aprenda a animar no Krita de forma rápida, simples e sem travar na interface do Krita. Neste guia prático de 10 minutos para o Krita 5.3 eu vou te mostrar a linha do tempo de animação, as Casca de Cebola (Onion Skin) e também a como exportar sua primeira animação 2D."
   },
   {
-    "id": "live-desenhando-cartoons-no-krita-10nov2026",
+    "id": "live-10nov2026",
     "tipo": "live",
     "categoria": "Desenho",
     "capa": "/images/lives/desenhe-comigo-lives.png",
     "link": "https://www.youtube.com/@desenhandocommack",
     "dataHora": "2026-11-10T19:30:00-03:00",
     "titulo": "Desenhando cartoons no Krita",
-    "descricao": "Live de desenho focada em cartoons, criação e técnicas de traço no Krita."
+    "descricao": "desenhando uns cartoons pra manter a atividade e testando a tiahuhus com o chat.",
+    "members": [
+      "Alexandre_Rib (3º membro)",
+      "SeuPedilhi (4º membro)"
+    ]
   },
   {
     "id": "video-desenhando-um-personagem-do-zero-13nov2026",
@@ -3644,11 +3667,9 @@
                   <a href="${ev.link || '#'}" target="_blank" rel="noopener noreferrer" class="cal-item-evento" title="${ev.titulo}">
 
                     <div class="cal-thumb-wrap">
-
                       <img src="${ev.capa}" alt="${ev.titulo}" onerror="this.src='/images/agenda-lives.png';">
-
-                      <span class="cal-tag-tipo ${ehPassado ? 'tag-lancado' : (ev.tipo === 'video' ? 'tag-video' : '')}">${ehPassado ? (ev.tipo === 'live' ? 'Realizada' : 'Lançado') : (ev.tipo === 'video' ? 'Vídeo' : 'Live')}</span>
-
+                      ${ehPassado ? '<div class="cal-thumb-overlay-concluido"></div>' : ''}
+                      <span class="cal-tag-tipo ${ehPassado ? 'tag-lancado' : (ev.tipo === 'video' ? 'tag-video' : '')}">${ehPassado ? `<span class="check-icon">✓</span> ${ev.tipo === 'live' ? 'Realizada' : 'Lançado'}` : (ev.tipo === 'video' ? 'Vídeo' : 'Live')}</span>
                     </div>
 
                     <span class="cal-tag-horario ${ehPassado ? 'horario-lancado' : ''}">${horaStr}</span>
@@ -3741,9 +3762,20 @@
                     <div>
 
                       <div class="historico-status-row">
-
                         <span class="historico-meta">${diaFormatado} (${diaSemana}) • YouTube</span>
-
+                        ${item.members && item.members.length > 0 ? `
+                          <div class="members-wrapper">
+                            <span class="badge-members">
+                              <span class="member-icon">⭐</span>
+                              ${item.members.length === 1 ? '1 membro' : `${item.members.length} membros`}
+                            </span>
+                            <div class="members-tooltip">
+                              <ul class="members-list">
+                                ${item.members.map(m => `<li>${m}</li>`).join('')}
+                              </ul>
+                            </div>
+                          </div>
+                        ` : ''}
                       </div>
 
                       <a href="${item.link || '#'}" target="_blank" rel="noopener noreferrer" class="historico-link">

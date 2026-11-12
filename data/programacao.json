@@ -20,14 +20,18 @@
     "descricao": "Aprenda a animar no Krita de forma rápida, simples e sem travar na interface do Krita. Neste guia prático de 10 minutos para o Krita 5.3 eu vou te mostrar a linha do tempo de animação, as Casca de Cebola (Onion Skin) e também a como exportar sua primeira animação 2D."
   },
   {
-    "id": "live-desenhando-cartoons-no-krita-10nov2026",
+    "id": "live-10nov2026",
     "tipo": "live",
     "categoria": "Desenho",
     "capa": "/images/lives/desenhe-comigo-lives.png",
     "link": "https://www.youtube.com/@desenhandocommack",
     "dataHora": "2026-11-10T19:30:00-03:00",
     "titulo": "Desenhando cartoons no Krita",
-    "descricao": "Live de desenho focada em cartoons, criação e técnicas de traço no Krita."
+    "descricao": "desenhando uns cartoons pra manter a atividade e testando a tiahuhus com o chat.",
+    "members": [
+      "Alexandre_Rib (3º membro)",
+      "SeuPedilhi (4º membro)"
+    ]
   },
   {
     "id": "video-desenhando-um-personagem-do-zero-13nov2026",

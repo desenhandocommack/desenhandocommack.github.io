@@ -1,7 +1,7 @@
 ---
-title: "Portfólio"
+title: "Galeria da Mack"
 layout: "portfolio"
-description: "Confira meus melhores desenhos, divididos entre personagens, ilustrações completas e estudos de arte."
+description: "Alguns dos meus desenhos, ilustrações e 3D"
 links:
   "21_personagens_criação-de-personagem-cartoon-vertical.png": "https://youtu.be/AkugFjja4Nc"
   "11_personagens_pintura-digital.png": "https://www.youtube.com/watch?v=5Ym7Vxwl3xg"

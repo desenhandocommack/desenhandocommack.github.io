@@ -7,7 +7,7 @@
 {{ define "main" }}
 <div class="portfolio-container portfolio-min-height">
   <section class="portfolio-hero" style="padding: 2rem 2rem; margin-bottom: 2rem;">
-    <h1 style="margin-bottom: 0;">Meu Portfólio</h1>
+    <h1 style="margin-bottom: 0;">Galeria da Mack</h1>
   </section>
 
   <!-- Filtro por Categorias (Gerado dinamicamente das imagens) -->
@@ -50,6 +50,9 @@
     {{ $parts := split $cleanName "_" }}
 
     {{ if eq (len $parts) 3 }}
+    {{ $numPrefix := index $parts 0 }}
+    {{/* Não exibe 74, 75, 76, 77 como itens avulsos no grid para não poluir; eles fazem parte do projeto 73 */}}
+    {{ if not (in (slice "74" "75" "76" "77") $numPrefix) }}
     {{ $category := index $parts 1 }}
     {{ $titleSlug := index $parts 2 }}
     {{ $title := replace $titleSlug "-" " " | title }}
@@ -63,9 +66,8 @@
       {{ if not $link }}
         {{ $link = index $.Params.links $nameWithoutExt }}
       {{ end }}
-      {{/* 3. Busca estrita pelo prefixo numérico exato (ex: se no YAML estiver '11_' ou '11') */}}
+      {{/* 3. Busca estrita pelo prefixo numérico exato */}}
       {{ if not $link }}
-        {{ $numPrefix := index $parts 0 }}
         {{ range $k, $v := $.Params.links }}
           {{ if not $link }}
             {{ if or (hasPrefix $k (printf "%s_" $numPrefix)) (eq $k $numPrefix) }}
@@ -76,9 +78,15 @@
       {{ end }}
     {{ end }}
 
+    {{/* Se for o projeto 73 Pavi Da Asfalto, anexa a galeria com 73 (vídeo) + 74, 75, 76, 77 (imagens) */}}
+    {{ $galleryJson := "" }}
+    {{ if eq $numPrefix "73" }}
+      {{ $galleryJson = `[{"type":"video","src":"/images/portfolio/73_3D_Pavi-da-asfalto.mp4","thumb":"/images/portfolio/74_3D_Pavi-da-asfalto.png","title":"Pavi Da Asfalto (Vídeo)"},{"type":"image","src":"/images/portfolio/74_3D_Pavi-da-asfalto.png","thumb":"/images/portfolio/74_3D_Pavi-da-asfalto.png","title":"Pavi Da Asfalto - Vista 1"},{"type":"image","src":"/images/portfolio/75_3D_Pavi-da-asfalto.png","thumb":"/images/portfolio/75_3D_Pavi-da-asfalto.png","title":"Pavi Da Asfalto - Vista 2"},{"type":"image","src":"/images/portfolio/76_3D_Pavi-da-asfalto.png","thumb":"/images/portfolio/76_3D_Pavi-da-asfalto.png","title":"Pavi Da Asfalto - Vista 3"},{"type":"image","src":"/images/portfolio/77_3D_Pavi-da-asfalto.png","thumb":"/images/portfolio/77_3D_Pavi-da-asfalto.png","title":"Pavi Da Asfalto - Vista 4"}]` }}
+    {{ end }}
+
     {{ $isVideo := or (hasSuffix $filename ".mp4") (hasSuffix $filename ".webm") }}
     <div class="portfolio-item {{ if $isVertical }}portfolio-item-vertical{{ end }}" data-category="{{ $category }}"
-      data-link="{{ $link }}">
+      data-link="{{ $link }}" {{ if $galleryJson }}data-gallery='{{ $galleryJson | safeHTMLAttr }}'{{ end }}>
       <div class="portfolio-img-box">
         {{ if $isVideo }}
         <video src="{{ $imgSrc }}" autoplay loop muted playsinline></video>
@@ -86,6 +94,12 @@
         <img src="{{ $imgSrc }}" alt="{{ $title }}">
         {{ end }}
       </div>
+      {{ if $galleryJson }}
+      <div class="portfolio-item-gallery-badge" title="Projeto com galeria de imagens">
+        <span class="material-symbols-rounded">photo_library</span>
+        <span>5 mídias</span>
+      </div>
+      {{ end }}
       {{ if $link }}
       <div class="portfolio-item-link-badge" title="Possui vídeo do processo">
         <span class="material-symbols-rounded">play_circle</span>
@@ -96,6 +110,7 @@
         <span class="portfolio-tag">{{ $category }}</span>
       </div>
     </div>
+    {{ end }}
     {{ end }}
     {{ end }}
     {{ end }}
@@ -112,6 +127,10 @@
   <div class="lightbox-content-wrapper">
     <img src="" alt="" id="lightboxImg" class="lightbox-img">
     <video src="" id="lightboxVideo" class="lightbox-video" autoplay loop muted playsinline style="display: none;"></video>
+    
+    <!-- Miniaturas da galeria do projeto (quando houver múltiplas mídias) -->
+    <div id="lightboxExtraGallery" class="lightbox-extra-gallery" style="display: none;"></div>
+
     <div class="lightbox-caption" id="lightboxCaption">
       <h3></h3>
       <span class="lightbox-tag"></span>
@@ -161,6 +180,7 @@
     const lightbox = document.getElementById("portfolioLightbox");
     const lightboxImg = document.getElementById("lightboxImg");
     const lightboxVideo = document.getElementById("lightboxVideo");
+    const lightboxExtraGallery = document.getElementById("lightboxExtraGallery");
     const lightboxTitle = document.querySelector("#lightboxCaption h3");
     const lightboxTag = document.querySelector("#lightboxCaption .lightbox-tag");
     const closeBtn = document.getElementById("lightboxClose");
@@ -175,6 +195,23 @@
       currentVisibleItems = Array.from(items).filter(item => item.style.display !== "none");
     }
 
+    function setLightboxMedia(mediaObj) {
+      if (mediaObj.type === "video") {
+        lightboxImg.style.display = "none";
+        lightboxImg.src = "";
+        lightboxVideo.style.display = "block";
+        lightboxVideo.src = mediaObj.src;
+        lightboxVideo.play().catch(() => {});
+      } else {
+        lightboxVideo.pause();
+        lightboxVideo.style.display = "none";
+        lightboxVideo.src = "";
+        lightboxImg.style.display = "block";
+        lightboxImg.src = mediaObj.src;
+        lightboxImg.alt = mediaObj.title || "";
+      }
+    }
+
     function openLightbox(index) {
       updateVisibleItems();
       currentIndex = index;
@@ -186,20 +223,63 @@
       const title = currentItem.querySelector(".portfolio-info h3").textContent;
       const tag = currentItem.querySelector(".portfolio-info .portfolio-tag").textContent;
       const link = currentItem.getAttribute("data-link");
+      const galleryDataAttr = currentItem.getAttribute("data-gallery");
 
-      if (mediaVideo) {
-        lightboxImg.style.display = "none";
-        lightboxImg.src = "";
-        lightboxVideo.style.display = "block";
-        lightboxVideo.src = mediaVideo.src;
-        lightboxVideo.play().catch(() => {});
-      } else if (mediaImg) {
-        lightboxVideo.pause();
-        lightboxVideo.style.display = "none";
-        lightboxVideo.src = "";
-        lightboxImg.style.display = "block";
-        lightboxImg.src = mediaImg.src;
-        lightboxImg.alt = mediaImg.alt;
+      // Limpa e prepara miniaturas se houver galeria interna
+      lightboxExtraGallery.innerHTML = "";
+      if (galleryDataAttr) {
+        try {
+          const galleryItems = JSON.parse(galleryDataAttr);
+          if (Array.isArray(galleryItems) && galleryItems.length > 1) {
+            lightboxExtraGallery.style.display = "flex";
+
+            galleryItems.forEach((gItem, gIdx) => {
+              const thumbBtn = document.createElement("button");
+              thumbBtn.type = "button";
+              thumbBtn.className = "lightbox-thumb-btn" + (gIdx === 0 ? " active" : "");
+              thumbBtn.title = gItem.title || "";
+
+              if (gItem.type === "video") {
+                const vidIcon = document.createElement("span");
+                vidIcon.className = "material-symbols-rounded";
+                vidIcon.style.cssText = "position:absolute; inset:0; margin:auto; width:24px; height:24px; color:#2bb8fc; z-index:2; text-shadow:0 2px 4px rgba(0,0,0,0.8); pointer-events:none;";
+                vidIcon.textContent = "play_circle";
+                thumbBtn.appendChild(vidIcon);
+
+                const tImg = document.createElement("img");
+                tImg.src = gItem.thumb || gItem.src;
+                thumbBtn.appendChild(tImg);
+              } else {
+                const tImg = document.createElement("img");
+                tImg.src = gItem.thumb || gItem.src;
+                thumbBtn.appendChild(tImg);
+              }
+
+              thumbBtn.addEventListener("click", (e) => {
+                e.stopPropagation();
+                lightboxExtraGallery.querySelectorAll(".lightbox-thumb-btn").forEach(b => b.classList.remove("active"));
+                thumbBtn.classList.add("active");
+                setLightboxMedia(gItem);
+              });
+
+              lightboxExtraGallery.appendChild(thumbBtn);
+            });
+
+            // Inicia exibindo o primeiro item da galeria
+            setLightboxMedia(galleryItems[0]);
+          } else {
+            lightboxExtraGallery.style.display = "none";
+          }
+        } catch (e) {
+          lightboxExtraGallery.style.display = "none";
+        }
+      } else {
+        lightboxExtraGallery.style.display = "none";
+        if (mediaVideo) {
+          setLightboxMedia({ type: "video", src: mediaVideo.src });
+        } else if (mediaImg) {
+          setLightboxMedia({ type: "image", src: mediaImg.src, title: mediaImg.alt });
+        }
       }
 
       lightboxTitle.textContent = title;
@@ -234,6 +314,7 @@
       lightboxVideo.pause();
       lightboxVideo.src = "";
       lightbox.classList.remove("active");
+      lightboxExtraGallery.style.display = "none";
       document.body.style.overflow = ""; // Ativa scroll da página
 
       if (!isPopState) {

@@ -431,6 +431,7 @@
   transform: translateY(-5px);
   border-color: var(--emblema-glow);
   box-shadow: 0 10px 25px -5px var(--emblema-glow);
+  z-index: 100 !important;
 }
 
 .emblema-card.emblema-em-breve {
@@ -550,7 +551,7 @@
   pointer-events: none;
   visibility: hidden;
   transition: opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1), transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-  z-index: 20;
+  z-index: 1000;
 }
 
 .emblema-tooltip::after {
@@ -660,6 +661,7 @@
   transform: translateY(-5px);
   border-color: var(--emoji-glow);
   box-shadow: 0 12px 28px -4px var(--emoji-glow), 0 4px 12px rgba(23, 54, 87, 0.06);
+  z-index: 100 !important;
 }
 
 .emoji-tag-gif {
@@ -925,5 +927,56 @@
   .emojis-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 0.85rem;
+    overflow: visible;
+  }
+
+  .emoji-card {
+    position: relative;
+  }
+
+  .emoji-card:hover,
+  .emoji-card:focus-within,
+  .emoji-card:active {
+    z-index: 999 !important;
+  }
+
+  /* Ajuste inteligente de largura e posição da caixa de descrição do emoji no mobile */
+  .emoji-card .emblema-tooltip {
+    width: min(200px, 80vw);
+    z-index: 1000 !important;
+  }
+
+  /* Emojis da coluna da esquerda (1º e 3º) alinham mais à esquerda para não cortar */
+  .emojis-grid .emoji-card:nth-child(odd) .emblema-tooltip {
+    left: 10%;
+    transform: translateX(0) translateY(8px);
+  }
+
+  .emojis-grid .emoji-card:nth-child(odd):hover .emblema-tooltip,
+  .emojis-grid .emoji-card:nth-child(odd):focus-within .emblema-tooltip {
+    transform: translateX(0) translateY(0);
+  }
+
+  .emojis-grid .emoji-card:nth-child(odd) .emblema-tooltip::after {
+    left: 28px;
+    transform: none;
+  }
+
+  /* Emojis da coluna da direita (2º e 4º) alinham mais à direita para não vazar a tela */
+  .emojis-grid .emoji-card:nth-child(even) .emblema-tooltip {
+    left: auto;
+    right: 10%;
+    transform: translateX(0) translateY(8px);
+  }
+
+  .emojis-grid .emoji-card:nth-child(even):hover .emblema-tooltip,
+  .emojis-grid .emoji-card:nth-child(even):focus-within .emblema-tooltip {
+    transform: translateX(0) translateY(0);
+  }
+
+  .emojis-grid .emoji-card:nth-child(even) .emblema-tooltip::after {
+    left: auto;
+    right: 28px;
+    transform: none;
   }
 }

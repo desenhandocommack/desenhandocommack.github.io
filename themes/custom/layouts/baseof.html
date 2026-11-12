@@ -4,9 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Desenhando com Mack</title>
+    <title>{{ if .IsHome }}Desenhando com Mack - Desenho e arte digital{{ else }}{{ .Title }} - Desenhando com Mack{{ end }}</title>
 
-    <meta name="description" content="Desenho para iniciantes que querem se inspirar e melhorar suas habilidades." />
+    <meta name="description" content="{{ if .Description }}{{ .Description }}{{ else }}Dicas de arte digital e cartoon, tutoriais passo a passo de Krita, processos de criação e inspiração diária para quem precisa de companhia.{{ end }}" />
+
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
+    <meta property="og:url" content="{{ .Permalink }}" />
+    <meta property="og:title" content="{{ if .IsHome }}Desenhando com Mack - Desenho e arte digital{{ else }}{{ .Title }} - Desenhando com Mack{{ end }}" />
+    <meta property="og:description" content="{{ if .Description }}{{ .Description }}{{ else }}Dicas de arte digital e cartoon, tutoriais passo a passo de Krita, processos de criação e inspiração diária para quem precisa de companhia.{{ end }}" />
+    <meta property="og:image" content="{{ if .Params.image }}{{ .Params.image | absURL }}{{ else }}{{ "images/preview-site.png" | absURL }}{{ end }}" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="Desenhando com Mack" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="{{ .Permalink }}" />
+    <meta name="twitter:title" content="{{ if .IsHome }}Desenhando com Mack - Desenho e arte digital{{ else }}{{ .Title }} - Desenhando com Mack{{ end }}" />
+    <meta name="twitter:description" content="{{ if .Description }}{{ .Description }}{{ else }}Dicas de arte digital e cartoon, tutoriais passo a passo de Krita, processos de criação e inspiração diária para quem precisa de companhia.{{ end }}" />
+    <meta name="twitter:image" content="{{ if .Params.image }}{{ .Params.image | absURL }}{{ else }}{{ "images/preview-site.png" | absURL }}{{ end }}" />
 
     {{ with resources.Get "styles/style.css" | resources.Fingerprint }}
     <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" />
