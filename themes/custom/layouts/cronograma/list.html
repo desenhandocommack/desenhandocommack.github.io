@@ -2881,6 +2881,14 @@
     line-height: 1.2;
   }
 
+  /* Tag de Vídeo sempre Azul */
+  .thumb-tag-tipo.tag-video,
+  .cal-tag-tipo.tag-video {
+    background: linear-gradient(135deg, #0284c7, #2bb8fc) !important;
+    color: #ffffff !important;
+    box-shadow: 0 2px 6px rgba(2, 132, 199, 0.35) !important;
+  }
+
   .cal-tag-tipo {
 
     position: absolute;
@@ -3550,6 +3558,9 @@
     "dataHora": "2026-11-10T19:30:00-03:00",
     "titulo": "Desenhando cartoons no Krita",
     "descricao": "desenhando uns cartoons pra manter a atividade e testando a tiahuhus com o chat.",
+    "gifts": [
+      "Zaxtremium"
+    ],
     "members": [
       "Alexandre_Rib (3º membro)",
       "SeuPedilhi (4º membro)"
@@ -3763,6 +3774,19 @@
 
                       <div class="historico-status-row">
                         <span class="historico-meta">${diaFormatado} (${diaSemana}) • YouTube</span>
+                        ${item.supporters && item.supporters.length > 0 ? `
+                          <div class="supporters-wrapper">
+                            <span class="badge-supporters">
+                              <span class="heart-icon">💛</span>
+                              ${item.supporters.length === 1 ? '1 apoiador' : `${item.supporters.length} apoiadores`}
+                            </span>
+                            <div class="supporters-tooltip">
+                              <ul class="supporters-list">
+                                ${item.supporters.map(s => `<li>${s}</li>`).join('')}
+                              </ul>
+                            </div>
+                          </div>
+                        ` : ''}
                         ${item.members && item.members.length > 0 ? `
                           <div class="members-wrapper">
                             <span class="badge-members">
@@ -3772,6 +3796,19 @@
                             <div class="members-tooltip">
                               <ul class="members-list">
                                 ${item.members.map(m => `<li>${m}</li>`).join('')}
+                              </ul>
+                            </div>
+                          </div>
+                        ` : ''}
+                        ${item.gifts && item.gifts.length > 0 ? `
+                          <div class="gifts-wrapper">
+                            <span class="badge-gifts">
+                              <span class="gift-icon">🎁</span>
+                              ${item.gifts.length === 1 ? '1 presente' : `${item.gifts.length} presentes`}
+                            </span>
+                            <div class="gifts-tooltip">
+                              <ul class="gifts-list">
+                                ${item.gifts.map(g => `<li>${g}</li>`).join('')}
                               </ul>
                             </div>
                           </div>
