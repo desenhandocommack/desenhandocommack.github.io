@@ -45,5 +45,35 @@
     "dataHora": "2026-11-13T15:30:00-03:00",
     "titulo": "Desenhando um personagem do zero no Krita (meu processo completo)",
     "descricao": "Acompanhe comigo o processo completo desenhando um personagem no Krita do zero, passando pelo rascunho solto, lineart limpa e até fazendo a pintura com aquela sombra maneira pro nosso desenho."
+  },
+  {
+    "id": "live-16nov2026",
+    "tipo": "live",
+    "categoria": "Desenho",
+    "capa": "/images/lives/desenhe-comigo-lives.png",
+    "link": "https://www.youtube.com/@desenhandocommack",
+    "dataHora": "2026-11-16T19:30:00-03:00",
+    "titulo": "Desenhando cartoons no Krita",
+    "descricao": ""
+  },
+  {
+    "id": "video-10-atalhos-krita-20nov2026",
+    "tipo": "video",
+    "categoria": "Tutorial Krita",
+    "capa": "/images/lives/atalhos-no-krita-desenhe-mais-rapido.png",
+    "link": "https://www.youtube.com/@desenhandocommack",
+    "dataHora": "2026-11-20T15:30:00-03:00",
+    "titulo": "Os 10 atalhos do Krita que todo iniciante precisa saber",
+    "descricao": ""
+  },
+  {
+    "id": "live-18nov2026",
+    "tipo": "live",
+    "categoria": "Desenho",
+    "capa": "/images/lives/desenhe-comigo-lives.png",
+    "link": "https://www.youtube.com/@desenhandocommack",
+    "dataHora": "2026-11-18T20:30:00-03:00",
+    "titulo": "Desenhando no Krita",
+    "descricao": ""
   }
 ]
