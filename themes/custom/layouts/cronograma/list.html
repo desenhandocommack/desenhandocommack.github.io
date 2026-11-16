@@ -2917,6 +2917,13 @@
 
 
 
+  .cal-evento-meta-row {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    flex-wrap: wrap;
+  }
+
   .cal-tag-horario {
 
     font-size: 0.68rem;
@@ -2933,6 +2940,20 @@
 
     width: fit-content;
 
+  }
+
+  .cal-tag-aviso {
+    font-size: 0.62rem;
+    font-weight: 700;
+    color: #b45309;
+    background: rgba(245, 158, 11, 0.14);
+    border: 1px solid rgba(245, 158, 11, 0.35);
+    padding: 1px 5px;
+    border-radius: 4px;
+    line-height: 1.2;
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
   }
 
 
@@ -3577,14 +3598,15 @@
     "descricao": "Acompanhe comigo o processo completo desenhando um personagem no Krita do zero, passando pelo rascunho solto, lineart limpa e até fazendo a pintura com aquela sombra maneira pro nosso desenho."
   },
   {
-    "id": "live-16nov2026",
+    "id": "live-17nov2026",
     "tipo": "live",
     "categoria": "Desenho",
     "capa": "/images/lives/desenhe-comigo-lives.png",
     "link": "https://www.youtube.com/@desenhandocommack",
-    "dataHora": "2026-11-16T19:30:00-03:00",
+    "dataHora": "2026-11-17T19:30:00-03:00",
     "titulo": "Desenhando cartoons no Krita",
-    "descricao": ""
+    "descricao": "",
+    "aviso": "Adiada de ontem"
   },
   {
     "id": "video-10-atalhos-krita-20nov2026",
@@ -3713,7 +3735,10 @@
                       <span class="cal-tag-tipo ${ehPassado ? 'tag-lancado' : (ev.tipo === 'video' ? 'tag-video' : '')}">${ehPassado ? `<span class="check-icon">✓</span> ${ev.tipo === 'live' ? 'Realizada' : 'Lançado'}` : (ev.tipo === 'video' ? 'Vídeo' : 'Live')}</span>
                     </div>
 
-                    <span class="cal-tag-horario ${ehPassado ? 'horario-lancado' : ''}">${horaStr}</span>
+                    <div class="cal-evento-meta-row">
+                      <span class="cal-tag-horario ${ehPassado ? 'horario-lancado' : ''}">${horaStr}</span>
+                      ${ev.aviso ? `<span class="cal-tag-aviso">${ev.aviso}</span>` : ''}
+                    </div>
 
                     <span class="cal-evento-titulo">${ev.titulo}</span>
 
