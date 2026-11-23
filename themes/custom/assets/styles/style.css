@@ -44,7 +44,7 @@ body {
   border-bottom: 1px solid rgba(23, 54, 87, 0.08);
   padding: 0.75rem 2rem;
   /* espaço interno da nav */
-  z-index: 1000;
+  z-index: 9999;
   transition: all 0.3s ease;
 }
 
@@ -215,7 +215,7 @@ body {
   border: none;
   cursor: pointer;
   padding: 0;
-  z-index: 1001;
+  z-index: 10001;
 }
 
 .hamburger-bar {
@@ -715,6 +715,29 @@ body {
   color: var(--color-accent);
 }
 
+.card-link-desc-hover {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #64748b;
+  line-height: 1.35;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease, margin-top 0.25s ease;
+  margin-top: 0;
+}
+
+.card-link-desc-hover strong {
+  color: var(--brand-pink, #ea498b);
+  font-weight: 700;
+}
+
+.card-link-item.visual:hover .card-link-desc-hover {
+  max-height: 120px;
+  opacity: 1;
+  margin-top: 4px;
+}
+
 /* ITEM EM DESENVOLVIMENTO / EM BREVE */
 .card-link-item.visual.em-dev {
   position: relative;
@@ -1111,12 +1134,12 @@ kbd {
     /* não clicável por padrão */
     transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
     transform: translateY(-20px);
-    z-index: 1000;
+    z-index: 10000;
   }
 
   .main-nav.fixed {
     position: fixed;
-    z-index: 1;
+    z-index: 9999;
     width: 100%;
   }
 

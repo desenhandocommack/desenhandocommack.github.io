@@ -71,9 +71,29 @@
     "tipo": "video",
     "categoria": "Tutorial Krita",
     "capa": "/images/lives/atalhos-no-krita-desenhe-mais-rapido.png",
-    "link": "https://www.youtube.com/@desenhandocommack",
+    "link": "https://youtu.be/ZSqt6hkPtuM",
     "dataHora": "2026-11-20T15:30:00-03:00",
     "titulo": "Os 10 atalhos do Krita que todo iniciante precisa saber",
+    "descricao": "Vem ver os 10 atalhos essenciais que todo iniciante precisa dominar para desenhar mais rápido no Krita. Veja como desfazer e recuperar traços, atalho pra achar erros anatômico, o segredo da borraca no Krita e dicas pra todas as etapas do desenho."
+  },
+  {
+    "id": "live-25nov2026",
+    "tipo": "live",
+    "categoria": "Desenho",
+    "capa": "/images/lives/desenhe-comigo-lives.png",
+    "link": "https://www.youtube.com/@desenhandocommack",
+    "dataHora": "2026-11-25T19:30:00-03:00",
+    "titulo": "Desenhe comigo",
+    "descricao": ""
+  },
+  {
+    "id": "video-programas-de-desenho-gratis-27nov2026",
+    "tipo": "video",
+    "categoria": "Desenho",
+    "capa": "/images/lives/programas-de-desenho-gratis-2026-2027-qual-escolher.png",
+    "link": "https://www.youtube.com/@desenhandocommack",
+    "dataHora": "2026-11-27T15:30:00-03:00",
+    "titulo": "Programas de desenho grátis em 2026: qual escolher para começar?",
     "descricao": ""
   }
 ]

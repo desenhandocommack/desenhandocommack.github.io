@@ -1608,17 +1608,13 @@
 
     font-weight: 600;
 
-    white-space: normal;
-
-    word-break: normal;
-
-    overflow-wrap: break-word;
+    white-space: nowrap;
 
     width: max-content;
 
-    min-width: 120px;
+    min-width: fit-content;
 
-    max-width: 220px;
+    max-width: none;
 
     text-align: left;
 
@@ -1668,9 +1664,9 @@
 
     white-space: nowrap;
 
-    overflow: hidden;
+    overflow: visible;
 
-    text-overflow: ellipsis;
+    text-overflow: clip;
 
   }
 
@@ -1816,17 +1812,13 @@
 
     font-weight: 600;
 
-    white-space: normal;
-
-    word-break: normal;
-
-    overflow-wrap: break-word;
+    white-space: nowrap;
 
     width: max-content;
 
-    min-width: 120px;
+    min-width: fit-content;
 
-    max-width: 220px;
+    max-width: none;
 
     text-align: left;
 
@@ -1876,9 +1868,9 @@
 
     white-space: nowrap;
 
-    overflow: hidden;
+    overflow: visible;
 
-    text-overflow: ellipsis;
+    text-overflow: clip;
 
   }
 
@@ -2020,17 +2012,13 @@
 
     font-weight: 600;
 
-    white-space: normal;
-
-    word-break: normal;
-
-    overflow-wrap: break-word;
+    white-space: nowrap;
 
     width: max-content;
 
-    min-width: 120px;
+    min-width: fit-content;
 
-    max-width: 220px;
+    max-width: none;
 
     text-align: left;
 
@@ -2080,9 +2068,9 @@
 
     white-space: nowrap;
 
-    overflow: hidden;
+    overflow: visible;
 
-    text-overflow: ellipsis;
+    text-overflow: clip;
 
   }
 
@@ -2816,6 +2804,60 @@
 
     margin-top: 2px;
 
+    position: relative;
+
+  }
+
+  .cal-titulo-tooltip {
+    display: none;
+    opacity: 0;
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%) translateY(4px);
+    background-color: #1e293b;
+    color: #f8fafc;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.4;
+    white-space: normal;
+    word-break: normal;
+    overflow-wrap: break-word;
+    width: max-content;
+    min-width: 140px;
+    max-width: 240px;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    z-index: 999999;
+    pointer-events: none;
+  }
+
+  .cal-titulo-tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: #1e293b transparent transparent transparent;
+  }
+
+  .cal-dia-card:hover {
+    z-index: 50 !important;
+  }
+
+  .cal-item-evento:hover {
+    z-index: 60 !important;
+  }
+
+  .cal-item-evento:hover .cal-titulo-tooltip {
+    display: block;
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
   }
 
 
@@ -2986,6 +3028,18 @@
 
   }
 
+  .cal-item-evento.nao-lancado {
+    cursor: default;
+  }
+
+  .cal-item-evento.nao-lancado:hover .cal-thumb-wrap img {
+    transform: none;
+  }
+
+  .cal-item-evento.nao-lancado:hover .cal-evento-titulo {
+    color: var(--brand-dark, #173657);
+  }
+
 
 
 </style>
@@ -3018,7 +3072,7 @@
 
           <h1 class="title-main">Agenda de Conteúdos</h1>
 
-          <p id="atualizado-em" class="updated-label">Atualizada: Segunda-feira, 09/11</p>
+          <p id="atualizado-em" class="updated-label">Atualizada: Domingo, 22/11</p>
 
         </div>
 
@@ -3622,9 +3676,29 @@
     "tipo": "video",
     "categoria": "Tutorial Krita",
     "capa": "/images/lives/atalhos-no-krita-desenhe-mais-rapido.png",
-    "link": "https://www.youtube.com/@desenhandocommack",
+    "link": "https://youtu.be/ZSqt6hkPtuM",
     "dataHora": "2026-11-20T15:30:00-03:00",
     "titulo": "Os 10 atalhos do Krita que todo iniciante precisa saber",
+    "descricao": "Vem ver os 10 atalhos essenciais que todo iniciante precisa dominar para desenhar mais rápido no Krita. Veja como desfazer e recuperar traços, atalho pra achar erros anatômico, o segredo da borraca no Krita e dicas pra todas as etapas do desenho."
+  },
+  {
+    "id": "live-25nov2026",
+    "tipo": "live",
+    "categoria": "Desenho",
+    "capa": "/images/lives/desenhe-comigo-lives.png",
+    "link": "https://www.youtube.com/@desenhandocommack",
+    "dataHora": "2026-11-25T19:30:00-03:00",
+    "titulo": "Desenhe comigo",
+    "descricao": ""
+  },
+  {
+    "id": "video-programas-de-desenho-gratis-27nov2026",
+    "tipo": "video",
+    "categoria": "Desenho",
+    "capa": "/images/lives/programas-de-desenho-gratis-2026-2027-qual-escolher.png",
+    "link": "https://www.youtube.com/@desenhandocommack",
+    "dataHora": "2026-11-27T15:30:00-03:00",
+    "titulo": "Programas de desenho grátis em 2026: qual escolher para começar?",
     "descricao": ""
   }
 ];
@@ -3726,7 +3800,8 @@
 
                 eventosHtml += `
 
-                  <a href="${ev.link || '#'}" target="_blank" rel="noopener noreferrer" class="cal-item-evento" title="${ev.titulo}">
+                  <${ehPassado && ev.link ? `a href="${ev.link}" target="_blank" rel="noopener noreferrer"` : 'div'} class="cal-item-evento ${!ehPassado ? 'nao-lancado' : ''}">
+                    <div class="cal-titulo-tooltip">${ev.titulo}</div>
 
                     <div class="cal-thumb-wrap">
                       <img src="${ev.capa}" alt="${ev.titulo}" onerror="this.src='/images/agenda-lives.png';">
@@ -3741,7 +3816,7 @@
 
                     <span class="cal-evento-titulo">${ev.titulo}</span>
 
-                  </a>
+                  </${ehPassado && ev.link ? 'a' : 'div'}>
 
                 `;
 
@@ -3940,43 +4015,25 @@
 
 
         // Render Atualizado em
-
         if (data.atualizado) {
-
           const dateParts = data.atualizado.split("/");
-
           let dateStr = data.atualizado;
-
           if (dateParts.length === 3) {
-
             const dateObj = new Date(dateParts[2], dateParts[1] - 1, dateParts[0]);
-
             const weekdays = [
-
               "Domingo",
-
               "Segunda-feira",
-
               "Terça-feira",
-
               "Quarta-feira",
-
               "Quinta-feira",
-
               "Sexta-feira",
-
               "Sábado",
-
             ];
-
             const weekday = weekdays[dateObj.getDay()];
-
             dateStr = `${weekday}, ${dateParts[0]}/${dateParts[1]}`;
-
           }
-
-          document.getElementById("atualizado-em").innerText = `Atualizada: ${dateStr}`;
-
+          const el = document.getElementById("atualizado-em");
+          if (el) el.innerText = `Atualizada: ${dateStr}`;
         }
 
 
