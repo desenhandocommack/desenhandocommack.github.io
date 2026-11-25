@@ -1516,14 +1516,34 @@
 
 
 
-  .supporters-wrapper {
-
+  .supporters-wrapper,
+  .members-wrapper,
+  .gifts-wrapper {
     position: relative;
-
     display: inline-flex;
-
     align-items: center;
+  }
 
+  .supporters-wrapper:hover,
+  .members-wrapper:hover,
+  .gifts-wrapper:hover {
+    z-index: 1000 !important;
+  }
+
+  .proxima-card,
+  .historico-card {
+    position: relative;
+  }
+
+  .proxima-card:hover,
+  .historico-card:hover {
+    z-index: 50 !important;
+  }
+
+  .supporters-wrapper {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
   }
 
 
@@ -2444,14 +2464,54 @@
 
 
 
+    .supporters-wrapper,
+    .members-wrapper,
+    .gifts-wrapper {
+      position: relative !important;
+    }
+
     .supporters-tooltip,
-
+    .members-tooltip,
     .gifts-tooltip {
+      position: absolute;
+      top: calc(100% + 8px);
+      left: var(--tooltip-left, 0px) !important;
+      right: auto !important;
+      width: max-content !important;
+      min-width: 0 !important;
+      max-width: 240px !important;
+      white-space: normal !important;
+      word-break: break-word !important;
+      overflow-wrap: break-word !important;
+      z-index: 99999 !important;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3) !important;
+    }
 
-      max-width: min(220px, calc(100vw - 64px)) !important;
+    .supporters-tooltip::after,
+    .members-tooltip::after,
+    .gifts-tooltip::after {
+      display: block !important;
+      left: var(--arrow-left, 18px) !important;
+      right: auto !important;
+    }
 
-      left: 0 !important;
+    .supporters-list li,
+    .members-list li,
+    .gifts-list li {
+      white-space: normal !important;
+      word-break: break-word !important;
+      overflow-wrap: break-word !important;
+    }
 
+    .supporters-wrapper:hover,
+    .members-wrapper:hover,
+    .gifts-wrapper:hover {
+      z-index: 1000 !important;
+    }
+
+    .proxima-card:hover,
+    .historico-card:hover {
+      z-index: 50 !important;
     }
 
 
@@ -4057,6 +4117,58 @@
       loadAgenda();
 
       loadProgramacaoSemana();
+
+      // Ajusta dinamicamente a posição dos balões para nunca cortarem a tela nem o card
+      function setupTooltipPositioning() {
+        const adjustTooltip = (wrapper) => {
+          if (!wrapper) return;
+          const tooltip = wrapper.querySelector(".supporters-tooltip, .members-tooltip, .gifts-tooltip");
+          if (!tooltip) return;
+
+          // Mede o wrapper em relação ao card e ao viewport
+          const wrapRect = wrapper.getBoundingClientRect();
+          const card = wrapper.closest(".historico-card, .proxima-card");
+          const cardRect = card ? card.getBoundingClientRect() : null;
+
+          const tooltipWidth = tooltip.offsetWidth || 180;
+          const padding = 16;
+          const minLeftBound = cardRect ? Math.max(padding, cardRect.left + padding) : padding;
+          const maxRightBound = cardRect ? Math.min(window.innerWidth - padding, cardRect.right - padding) : (window.innerWidth - padding);
+
+          // Posição padrão (left: 0 relativo ao wrapper)
+          const defaultLeftEdge = wrapRect.left;
+          const defaultRightEdge = wrapRect.left + tooltipWidth;
+
+          let offsetLeft = 0;
+
+          if (defaultRightEdge > maxRightBound) {
+            // Se passar da borda direita do card/tela, recua para dentro com folga
+            offsetLeft = maxRightBound - defaultRightEdge;
+          }
+          if (defaultLeftEdge + offsetLeft < minLeftBound) {
+            // Se passar da borda esquerda do card/tela, avança para dentro com folga
+            offsetLeft = minLeftBound - defaultLeftEdge;
+          }
+
+          // A seta sempre aponta para o centro do ícone/badge do wrapper
+          const badgeCenter = wrapRect.width / 2;
+          const arrowLeft = Math.max(12, Math.min(tooltipWidth - 12, badgeCenter - offsetLeft));
+
+          tooltip.style.setProperty("--tooltip-left", `${offsetLeft}px`);
+          tooltip.style.setProperty("--arrow-left", `${arrowLeft}px`);
+        };
+
+        const handleInteraction = (e) => {
+          const wrapper = e.target.closest && e.target.closest(".supporters-wrapper, .members-wrapper, .gifts-wrapper");
+          if (wrapper) adjustTooltip(wrapper);
+        };
+
+        document.addEventListener("mouseenter", handleInteraction, true);
+        document.addEventListener("pointerenter", handleInteraction, true);
+        document.addEventListener("touchstart", handleInteraction, { capture: true, passive: true });
+      }
+
+      setupTooltipPositioning();
 
     });
 
