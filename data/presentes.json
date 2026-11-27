@@ -6,7 +6,7 @@
     "featuredArt": "/images/presentes/juan_15maio2024.png",
     "bio": "@JuanPablo_again",
     "social": {
-      "instagram": "",
+      "instagram": "https://www.instagram.com/juan_daart/",
       "youtube": "",
       "twitch": "",
       "twitter": ""
@@ -91,16 +91,36 @@
     "bio": "@SeuPedilhi",
     "social": {
       "instagram": "",
-      "youtube": "",
+      "youtube": "https://www.youtube.com/@SeuPedilhi/videos",
       "twitch": "",
       "twitter": ""
     },
     "gifts": [
       {
-        "title": "Desenho do Seu Pedilhi",
+        "title": "Artes e Quadrinhos do Seu Pedilhi",
         "image": "/images/presentes/desenho-seu-pedilhi.webp",
         "date": "",
-        "description": "Desenho especial enviado pelo Seu Pedilhi, e claro, não poderia faltar Pizza 🍕 A melhor comida do mundo <3"
+        "description": "Desenho especial com Pizza 🍕 e quadrinhos enviados pelo Seu Pedilhi!",
+        "gallery": [
+          {
+            "type": "image",
+            "src": "/images/presentes/desenho-seu-pedilhi.webp",
+            "thumb": "/images/presentes/desenho-seu-pedilhi.webp",
+            "title": "Desenho do Seu Pedilhi - Pizza"
+          },
+          {
+            "type": "image",
+            "src": "/images/presentes/quadrinhos-do-seu-pedilhi_pagina1.webp",
+            "thumb": "/images/presentes/quadrinhos-do-seu-pedilhi_pagina1.webp",
+            "title": "Quadrinhos do Seu Pedilhi - Página 1"
+          },
+          {
+            "type": "image",
+            "src": "/images/presentes/quadrinhos-do-seu-pedilhi_pagina2.webp",
+            "thumb": "/images/presentes/quadrinhos-do-seu-pedilhi_pagina2.webp",
+            "title": "Quadrinhos do Seu Pedilhi - Página 2"
+          }
+        ]
       }
     ]
   }

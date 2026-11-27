@@ -46,14 +46,15 @@
 
         {{ if $author.social }}
         <div class="author-socials">
+          {{ if $author.social.youtube }}
+            <a href="{{ $author.social.youtube }}" target="_blank" rel="noopener noreferrer" class="author-social-link author-channel-btn" title="Canal no YouTube">
+              <span class="material-symbols-rounded">play_circle</span>
+              <span class="channel-text">Canal do {{ $author.name }}</span>
+            </a>
+          {{ end }}
           {{ if $author.social.instagram }}
             <a href="{{ $author.social.instagram }}" target="_blank" rel="noopener noreferrer" class="author-social-link" title="Instagram">
               <span class="material-symbols-rounded">photo_camera</span>
-            </a>
-          {{ end }}
-          {{ if $author.social.youtube }}
-            <a href="{{ $author.social.youtube }}" target="_blank" rel="noopener noreferrer" class="author-social-link" title="YouTube">
-              <span class="material-symbols-rounded">play_circle</span>
             </a>
           {{ end }}
           {{ if $author.social.twitch }}
@@ -74,8 +75,18 @@
       <div class="author-gallery">
         {{ range $author.gifts }}
         {{ if .image }}
-        <div class="gift-item" data-src="{{ .image }}" data-title="{{ .title }}" data-author="{{ $author.name }}" data-desc="{{ .description }}">
+        {{ $galleryAttr := "" }}
+        {{ if .gallery }}
+          {{ $galleryAttr = jsonify .gallery }}
+        {{ end }}
+        <div class="gift-item" data-src="{{ .image }}" data-title="{{ .title }}" data-author="{{ $author.name }}" data-desc="{{ .description }}" {{ if $galleryAttr }}data-gallery='{{ $galleryAttr }}'{{ end }}>
           <img src="{{ .image }}" alt="{{ .title }}" loading="lazy">
+          {{ if .gallery }}
+          <div class="gift-item-gallery-badge" title="Contém galeria com {{ len .gallery }} mídias">
+            <span class="material-symbols-rounded">photo_library</span>
+            <span>{{ len .gallery }} mídias</span>
+          </div>
+          {{ end }}
           <div class="gift-overlay">
             <h4>{{ .title }}</h4>
             {{ if .description }}
@@ -104,6 +115,7 @@
   <button class="lightbox-close" id="presentesClose" aria-label="Fechar">&times;</button>
   <div class="lightbox-content-wrapper">
     <img src="" alt="" id="presentesImg" class="lightbox-img">
+    <div id="presentesExtraGallery" class="presentes-extra-gallery" style="display: none;"></div>
     <div class="lightbox-caption" id="presentesCaption">
       <h3 id="presentesTitle"></h3>
       <p id="presentesAuthorDesc"></p>
@@ -117,6 +129,7 @@
     const lightboxImg = document.getElementById('presentesImg');
     const lightboxTitle = document.getElementById('presentesTitle');
     const lightboxAuthorDesc = document.getElementById('presentesAuthorDesc');
+    const lightboxExtraGallery = document.getElementById('presentesExtraGallery');
     const closeBtn = document.getElementById('presentesClose');
 
     document.querySelectorAll('.gift-item').forEach(item => {
@@ -125,11 +138,52 @@
         const title = item.dataset.title;
         const author = item.dataset.author;
         const desc = item.dataset.desc;
+        const galleryAttr = item.getAttribute('data-gallery');
 
         if (src) {
           lightboxImg.src = src;
           lightboxTitle.textContent = title;
           lightboxAuthorDesc.textContent = (desc ? `${desc} • ` : '') + `Por ${author}`;
+
+          // Galeria extra (múltiplas mídias no estilo Galeria da Mack)
+          lightboxExtraGallery.innerHTML = '';
+          if (galleryAttr) {
+            try {
+              const galleryItems = JSON.parse(galleryAttr);
+              if (Array.isArray(galleryItems) && galleryItems.length > 1) {
+                lightboxExtraGallery.style.display = 'flex';
+
+                galleryItems.forEach((gItem, gIdx) => {
+                  const thumbBtn = document.createElement('button');
+                  thumbBtn.type = 'button';
+                  thumbBtn.className = 'presentes-thumb-btn' + (gIdx === 0 ? ' active' : '');
+                  thumbBtn.title = gItem.title || `Página ${gIdx + 1}`;
+
+                  const tImg = document.createElement('img');
+                  tImg.src = gItem.thumb || gItem.src;
+                  tImg.alt = gItem.title || '';
+                  thumbBtn.appendChild(tImg);
+
+                  thumbBtn.addEventListener('click', (ev) => {
+                    ev.stopPropagation();
+                    lightboxImg.src = gItem.src;
+                    if (gItem.title) lightboxTitle.textContent = gItem.title;
+                    lightboxExtraGallery.querySelectorAll('.presentes-thumb-btn').forEach(btn => btn.classList.remove('active'));
+                    thumbBtn.classList.add('active');
+                  });
+
+                  lightboxExtraGallery.appendChild(thumbBtn);
+                });
+              } else {
+                lightboxExtraGallery.style.display = 'none';
+              }
+            } catch (e) {
+              lightboxExtraGallery.style.display = 'none';
+            }
+          } else {
+            lightboxExtraGallery.style.display = 'none';
+          }
+
           lightbox.classList.add('active');
           document.body.style.overflow = 'hidden';
         }
@@ -139,6 +193,8 @@
     const closeLightbox = () => {
       lightbox.classList.remove('active');
       document.body.style.overflow = '';
+      lightboxExtraGallery.innerHTML = '';
+      lightboxExtraGallery.style.display = 'none';
     };
 
     if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
