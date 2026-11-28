@@ -1,5 +1,5 @@
 {
-  "atualizado": "22/11/2026",
+  "atualizado": "27/11/2026",
   "aoVivo": {
     "ativo": false,
     "titulo": null,
@@ -14,14 +14,15 @@
   },
   "proximas": [
     {
-      "dia": "Terça-feira",
-      "data": "10/11",
-      "capa": "/images/lives/desenhe-comigo-lives.png",
-      "horario": "19:30",
-      "categoria": "Desenho",
-      "titulo": "Desenhando cartoons no Krita",
+      "dia": "Domingo",
+      "data": "29/11",
+      "capa": "/images/cronograma/fanart-em-3d_parte2.png",
+      "horario": "11:00",
+      "categoria": "3D",
+      "titulo": "O personagem dela ganhou uma versão 3D",
       "plataforma": "YouTube",
-      "link": "https://www.youtube.com/@desenhandocommack"
+      "link": "https://www.youtube.com/@desenhandocommack",
+      "aviso": "Apenas para membros Tier II a partir do dia 01/12/2026"
     }
   ],
   "historico": [

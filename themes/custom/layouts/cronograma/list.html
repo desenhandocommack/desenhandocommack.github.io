@@ -3044,6 +3044,14 @@
 
   }
 
+  .cal-tag-tipo.tag-tier2 {
+    background: linear-gradient(135deg, #7c3aed, #db2777) !important;
+    color: #ffffff !important;
+    box-shadow: 0 2px 8px rgba(124, 58, 237, 0.45) !important;
+    font-size: 0.58rem !important;
+    padding: 2px 6px !important;
+  }
+
   .cal-tag-aviso {
     font-size: 0.62rem;
     font-weight: 700;
@@ -3056,6 +3064,86 @@
     display: inline-flex;
     align-items: center;
     gap: 2px;
+  }
+
+  /* Botãozinho de Informações com Ícone de Membro (Stars) e Tooltip */
+  .cal-info-membro-wrapper {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    cursor: help;
+  }
+
+  .cal-info-membro-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    padding: 1px 6px;
+    border-radius: 9999px;
+    font-size: 0.64rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #fe55bd, #2bb8fc);
+    color: #ffffff;
+    box-shadow: 0 2px 6px rgba(254, 85, 189, 0.35);
+    line-height: 1.2;
+    user-select: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .cal-info-membro-btn .material-symbols-rounded {
+    font-size: 11px;
+    color: #ffffff;
+    line-height: 1;
+  }
+
+  .cal-info-membro-wrapper:hover .cal-info-membro-btn {
+    transform: scale(1.06);
+    box-shadow: 0 3px 8px rgba(254, 85, 189, 0.5);
+  }
+
+  .cal-info-tooltip {
+    display: none;
+    opacity: 0;
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%) translateY(4px);
+    background-color: #1e293b;
+    color: #f8fafc;
+    padding: 7px 11px;
+    border-radius: 8px;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.35;
+    white-space: normal;
+    word-break: normal;
+    overflow-wrap: break-word;
+    width: max-content;
+    max-width: 220px;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    z-index: 999999;
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+
+  .cal-info-tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: #1e293b transparent transparent transparent;
+  }
+
+  .cal-info-membro-wrapper:hover .cal-info-tooltip {
+    display: block;
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
   }
 
 
@@ -3132,7 +3220,7 @@
 
           <h1 class="title-main">Agenda de Conteúdos</h1>
 
-          <p id="atualizado-em" class="updated-label">Atualizada: Domingo, 22/11</p>
+          <p id="atualizado-em" class="updated-label">Atualizada: Sexta-feira, 27/11</p>
 
         </div>
 
@@ -3668,7 +3756,7 @@
     "id": "live-desenhando-de-boa-04nov2026",
     "tipo": "live",
     "categoria": "Desenho",
-    "capa": "/images/lives/ajustando-a-tia-vtuber-ia.png",
+    "capa": "/images/cronograma/ajustando-a-tia-vtuber-ia.png",
     "link": "https://youtube.com/live/-C-rSmtKVSU",
     "dataHora": "2026-11-04T18:30:00-03:00",
     "titulo": "Ajustando a Tia Vtuber, desenhando e conversando",
@@ -3688,11 +3776,11 @@
     "id": "live-10nov2026",
     "tipo": "live",
     "categoria": "Desenho",
-    "capa": "/images/lives/desenhe-comigo-lives.png",
+    "capa": "/images/cronograma/desenhe-comigo-lives.png",
     "link": "https://www.youtube.com/@desenhandocommack",
     "dataHora": "2026-11-10T19:30:00-03:00",
     "titulo": "Desenhando cartoons no Krita",
-    "descricao": "Desenhando uns cartoons pra manter a atividade e testando a tiahuhus com o chat.",
+    "descricao": "desenhando uns cartoons pra manter a atividade e testando a tiahuhus com o chat.",
     "members": [
       "Alexandre_Rib (3º membro)",
       "SeuPedilhi (4º membro)"
@@ -3715,7 +3803,7 @@
     "id": "live-17nov2026",
     "tipo": "live",
     "categoria": "Desenho",
-    "capa": "/images/lives/live-shin-chan-no-grid_17-11.png",
+    "capa": "/images/cronograma/live-shin-chan-no-grid_17-11.png",
     "link": "https://youtube.com/live/22pdLzBy6eg",
     "dataHora": "2026-11-17T19:30:00-03:00",
     "titulo": "Sketches na grade de perspectiva",
@@ -3735,7 +3823,7 @@
     "id": "video-10-atalhos-krita-20nov2026",
     "tipo": "video",
     "categoria": "Tutorial Krita",
-    "capa": "/images/lives/atalhos-no-krita-desenhe-mais-rapido.png",
+    "capa": "/images/cronograma/atalhos-no-krita-desenhe-mais-rapido.png",
     "link": "https://youtu.be/ZSqt6hkPtuM",
     "dataHora": "2026-11-20T15:30:00-03:00",
     "titulo": "Os 10 atalhos do Krita que todo iniciante precisa saber",
@@ -3745,21 +3833,32 @@
     "id": "live-25nov2026",
     "tipo": "live",
     "categoria": "Desenho",
-    "capa": "/images/lives/desenhe-comigo-lives.png",
-    "link": "https://www.youtube.com/@desenhandocommack",
+    "capa": "/images/cronograma/surgindo-um-novo-carinha.png",
+    "link": "https://youtube.com/live/uO-lRi60e0c",
     "dataHora": "2026-11-25T19:30:00-03:00",
-    "titulo": "Desenhe comigo",
-    "descricao": ""
+    "titulo": "Sketching tranquilo que pode virar alguma coisa depois",
+    "descricao": "Na tentativa de me manter rabiscando qualquer coisa durante a semana, surgiu um novo carinha que pode ser trabalhado melhor em outro dia. Eu gosto quando surgem coisas com potencial de virar algum projeto ou, pelo menos, uma nova sessão de sketching no futuro, quando eu não estiver muito criativa."
   },
   {
     "id": "video-programas-de-desenho-gratis-27nov2026",
     "tipo": "video",
     "categoria": "Desenho",
-    "capa": "/images/lives/programas-de-desenho-gratis-2026-2027-qual-escolher.png",
-    "link": "https://www.youtube.com/@desenhandocommack",
+    "capa": "/images/cronograma/programas-de-desenho-gratis-2026-2027-qual-escolher.png",
+    "link": "https://youtu.be/nXr06oHI3_w",
     "dataHora": "2026-11-27T15:30:00-03:00",
     "titulo": "Programas de desenho grátis em 2026: qual escolher para começar?",
-    "descricao": ""
+    "descricao": "Se você tá querendo começar na arte digital mas não sabe qual programa escolher, nesse vídeo eu trouxe uma lista com os melhores programas de desenho digital gratuito pra PC bom, PC fraco, tablet e celular. Vem ver essas opções."
+  },
+  {
+    "id": "video-fanart-em-3d-parte2-29nov2026",
+    "tipo": "video",
+    "categoria": "3D",
+    "capa": "/images/cronograma/fanart-em-3d_parte2.png",
+    "link": "https://www.youtube.com/@desenhandocommack",
+    "dataHora": "2026-11-29T11:00:00-03:00",
+    "titulo": "O personagem dela ganhou uma versão 3D",
+    "descricao": "Disponível pro público até segunda-feira. Apenas para membros Tier II a partir do dia 01/12/2026.",
+    "aviso": "Apenas para membros Tier II a partir do dia 01/12/2026"
   }
 ];
 
@@ -3856,7 +3955,39 @@
 
                 const ehPassado = agora >= evDate;
 
+                // Regra para vídeos temporários que viram Tier II (ex: domingo 29/11 até segunda, na terça vira exclusivo Tier II)
+                let tagTexto = (ev.tipo === 'video' ? 'Vídeo' : 'Live');
+                let tagClasse = (ev.tipo === 'video' ? 'tag-video' : '');
 
+                if (ehPassado) {
+                  const dataTerçaBloqueio = new Date("2026-12-01T00:00:00-03:00");
+                  if (ev.id === "video-fanart-em-3d-parte2-29nov2026" && agora >= dataTerçaBloqueio) {
+                    tagTexto = '⭐ Membros Tier II';
+                    tagClasse = 'tag-tier2';
+                  } else {
+                    tagTexto = `<span class="check-icon">✓</span> ${ev.tipo === 'live' ? 'Realizada' : 'Lançado'}`;
+                    tagClasse = 'tag-lancado';
+                  }
+                }
+
+                // Ajuste de aviso / tooltip de informação
+                let avisoHtml = '';
+                if (ev.aviso) {
+                  // Se for o aviso de membros Tier II, renderiza o botão de informações com o símbolo do Seja Membro (stars) e tooltip
+                  if (ev.aviso.includes("Tier II")) {
+                    avisoHtml = `
+                      <div class="cal-info-membro-wrapper" onclick="event.stopPropagation()">
+                        <span class="cal-info-membro-btn" title="Informações de membros">
+                          <span class="material-symbols-rounded">stars</span>
+                          Info
+                        </span>
+                        <div class="cal-info-tooltip">${ev.aviso}</div>
+                      </div>
+                    `;
+                  } else {
+                    avisoHtml = `<span class="cal-tag-aviso">${ev.aviso}</span>`;
+                  }
+                }
 
                 eventosHtml += `
 
@@ -3866,12 +3997,12 @@
                     <div class="cal-thumb-wrap">
                       <img src="${ev.capa}" alt="${ev.titulo}" onerror="this.src='/images/agenda-lives.png';">
                       ${ehPassado ? '<div class="cal-thumb-overlay-concluido"></div>' : ''}
-                      <span class="cal-tag-tipo ${ehPassado ? 'tag-lancado' : (ev.tipo === 'video' ? 'tag-video' : '')}">${ehPassado ? `<span class="check-icon">✓</span> ${ev.tipo === 'live' ? 'Realizada' : 'Lançado'}` : (ev.tipo === 'video' ? 'Vídeo' : 'Live')}</span>
+                      <span class="cal-tag-tipo ${tagClasse}">${tagTexto}</span>
                     </div>
 
                     <div class="cal-evento-meta-row">
                       <span class="cal-tag-horario ${ehPassado ? 'horario-lancado' : ''}">${horaStr}</span>
-                      ${ev.aviso ? `<span class="cal-tag-aviso">${ev.aviso}</span>` : ''}
+                      ${avisoHtml}
                     </div>
 
                     <span class="cal-evento-titulo">${ev.titulo}</span>
